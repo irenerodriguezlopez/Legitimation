@@ -1,0 +1,1 @@
+@article{abou-chadi_2016, title={Niche Party Success and Mainstream Party Policy Shifts – How Green and Radical Right Parties Differ in Their Impact}, volume={46}, DOI={10.1017/S0007123414000155}, number={2}, journal={British Journal of Political Science}, publisher={Cambridge University Press}, author={Abou-Chadi, Tarik}, year={2016}, pages={417–436}}

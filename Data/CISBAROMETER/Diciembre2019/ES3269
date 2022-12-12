@@ -1,0 +1,1469 @@
+* Encoding: windows-1252.
+DATA LIST FILE= 'DA3269'
+/ESTU 1-4 CUES 5-9 CCAA 10-11 PROV 12-13 MUN 14-16 TAMUNI 17 CAPITAL 18 DISTR 19-20 SECCION 21-23
+ENTREV 24-27 A0 28 A1 29 A2 30 A3 31 A4 32 A5 33 A6 34 A7 35 A8 36 A9_1 37-38 A9_2 39-40 A9_3 41-42
+A10_1 43-44 A10_2 45-46 A10_3 47-48 A11 49-50 A11A 51-52 A12_1 53-54 A12_2 55-56 A12_3 57-58
+A12_4 59-60 A12_5 61-62 A12_6 63-64 A12_7 65-66 B1 67 B2 68 B3 69 B4 70 B5_1 71 B5_2 72 B5_3 73
+B5_4 74 B5_5 75 B5_6 76 B5_7 77 B5_8 78 B5_9 79 B5_10 80 B5_11 81 B5_12 82 B6 83 B6A_1 84 B6A_2 85
+B6A_3 86 B6A_4 87 B6A_5 88 B6A_6 89 B6A_7 90 B6A_8 91 B6A_9 92 B6A_10 93 B6A_11 94 B6A_12 95
+B6A_13 96 B6A_14 97 B7 98-99 B7A 100-101 B7B 102 B8 103 B9_1 104-105 B9_2 106-107 B9_3 108-109
+B9A 111-112 B9B 113-114 B9C 115-116 B9D 117-118 B10_1 119 B10_2 120 B10_3 121 B10_4 122 B10_5 123
+B10_6 124 B10_7 125 B11_1 126 B11_2 127 B11_3 128 B11_4 129 B11_5 130 B11_6 131 B11_7 132 B11_8 133
+B12 134 B12A 135 B12B 136 B12C 137-138 B13_1 139 B13_2 140 B13_3 141 B13_4 142 B13_5 143 B14 144
+B14A_1 145 B14A_2 146 B14A_3 147 B14A_4 148 B14A_5 149 B14A_6 150 B14A_7 151 B14A_8 152 B14A_9 153
+B14A_10 154 B14A_11 155 B14A_12 156 B14A_13 157 B14A_14 158 B14A_15 159 B14A_16 160 B14A_17 161
+B14A_18 162 B14A_19 163 B14A_20 164 B14A_21 165 B14A_22 166 B15 167 B15A_1 168 B15A_2 169 B15A_3 170
+B15A_4 171 B15A_5 172 B15A_6 173 B15A_7 174 B15A_8 175 B15A_9 176 B15A_10 177 B15A_11 178 B15A_12 179
+B15A_13 180 B15A_14 181 B15A_15 182 B15A_16 183 B15A_17 184 B15A_18 185 B15A_19 186 B15A_20 187
+B15A_21 188 B15A_22 189 B16 190 B16A_1 191 B16A_2 192 B16A_3 193 B16A_4 194 B16A_5 195 B16A_6 196
+B16A_7 197 B16A_8 198 B16A_9 199 B16A_10 200 B16A_11 201 B16A_12 202 B16A_13 203 B16A_14 204
+B16A_15 205 B16A_16 206 B16A_17 207 B16A_18 208 B16A_19 209 B16A_20 210 B16A_21 211 B16A_22 212
+B17_1 213 B17_2 214 B17_3 215 B18 216 B18A 217 B18B 218 B19 219 B19A 220-221 B19B 222-223 B20 224
+B20A 225-226 B20B 227-228 B21 229 B21A01 230-231 B21A02 232-233 B22 234-235 B22A 236 B22B_1 237-238
+B22B_2 239-240 B22C 241 B22D 242-243 B22E_1 244-245 B22E_2 246-247 B22E_3 248-249 B23 250 B23A 251
+B23B_1 252-253 B23B_2 254-255 B23C 256-257 B23D 258-259 B24 260 B24A_1 261 B24A_2 262 B24A_3 263
+B24A_4 264 B24A_5 265 B24A_6 266 B24A_7 267 B24A_8 268 B25 269 B26 270 B26A 271 B27 272 B27A 273
+B28 274 B29_1 275-276 B29_2 277-278 B29_3 279-280 B29_4 281-282 B29_5 283-284 B29_6 285-286
+B29_7 287-288 B30 289 C1 290-291 C1A 292-293 C2 294-295 C3 296-297 C4_1 298-299 C4_2 300-301
+C4_3 302-303 C4_4 304-305 C4_5 306-307 C4_6 308-309 C4_7 310-311 C4_8 312-313 C4_9 314-315 C4_10 316-317
+C4_11 318-319 C4_12 320-321 C4_13 322-323 C4_14 324-325 C4_15 326-327 C4_16 328-329 C4_17 330-331
+C4_18 332-333 C4_19 334-335 C4_20 336-337 C5_1 338-339 C5_2 340-341 C5_3 342-343 C5_4 344-345
+C5_5 346-347 C5_6 348-349 C5_7 350-351 C6 352 C7 353 C7A 354-355 C8 356-357 C9 358 C10 359-360
+C11 361 C11A 362-363 C12 364 C12A 365 C13 366 C13A 367 C14 368 C15 369 C16 370-371 C17 372 C17A 373
+C18 374-375 C19 376-377 C20 378-379 C21 380-381 TELF 382 MEDITA 383 COMPRENS 384 TARJETAS 385
+LUGAR 386 ABANDONO_1 387 MOLESTIA_1 388 PRISA_1 389 LONGITUD_4 390 DESARROLLO 391 TERCERASPERSONAS 392
+INTERVENCION 393 FECHAINI 394-403(A) HORAINI 404-411(A) FECHAFIN 412-421(A) HORAFIN 422-429(A)
+DURACION 430-434 B9IMPRESA 435 B9DIGITAL 436 B9TV 437 B9RADIO 438 B21ACOM 439-442 B22R 443-444
+C1R 445-446 C1AR 447-448 VOTOSIMG 449-450 C7AR 451-452 RECUERDO 453-454 ESTUDIOS 455 RAMA09 456
+CLASESUB 457 PESO 458-464(5) .
+
+VARIABLE LABELS
+ESTU 'Código del estudio'
+/CUES 'Cuestionario'
+/CCAA 'Comunidad autónoma'
+/PROV 'Provincia'
+/MUN 'Municipio'
+/TAMUNI 'Tamaño de municipio'
+/CAPITAL 'Capital'
+/DISTR 'Distrito'
+/SECCION 'Sección'
+/ENTREV 'Entrevistador/a'
+/A0 'Nacionalidad de la persona entrevistada'
+/A1 'Valoración de la situación económica general de España'
+/A2 'Valoración retrospectiva de la situación económica de España (1 año)'
+/A3 'Valoración prospectiva de la situación económica de España (1 año)'
+/A4 'Valoración de la situación económica personal actual'
+/A5 'Valoración prospectiva de la situación económica personal (1 año)'
+/A6 'Valoración de la situación política general de España'
+/A7 'Valoración retrospectiva de la situación política de España (1 año)'
+/A8 'Valoración prospectiva de la situación política de España (1 año)'
+/A9_1 'Primer problema'
+/A9_2 'Segundo problema'
+/A9_3 'Tercer problema'
+/A10_1 'Primer problema'
+/A10_2 'Segundo problema'
+/A10_3 'Tercer problema'
+/A11 'Autodefinición de su ideología política'
+/A11A 'Autodefinición de su ideología política (2ª opción)'
+/A12_1 'PSOE'
+/A12_2 'PP'
+/A12_3 'VOX'
+/A12_4 'Podemos'
+/A12_5 'IU'
+/A12_6 'Ciudadanos'
+/A12_7 'Más País'
+/B1 'Grado de interés por la política'
+/B2 'Grado de interés por la campaña electoral de las elecciones generales de noviembre de 2019'
+/B3 'Régimen político preferido'
+/B4 'Valoración prospectiva de la situación económica de España (después de las elecciones)'
+/B5_1 'Asistir a alguna reunión vecinal'
+/B5_2 'Acudir a alguna manifestación o acto de protesta'
+/B5_3 'Acudir a alguna reunión de una asociación ciudadana'
+/B5_4 'Acudir a algún acto electoral'
+/B5_5 'Participar en una huelga'
+/B5_6 'Elaborar o firmar algún manifiesto público'
+/B5_7 'Escribir una carta, e-mail o mantener alguna reunión con un/a representante público/a'
+/B5_8 'Acudir a alguna reunión de un sindicato'
+/B5_9 'Acudir a alguna reunión de un partido político'
+/B5_10 'Presentarse candidato/a a algún puesto directivo en alguna asociación'
+/B5_11 'Contribuir con dinero a alguna campaña política'
+/B5_12 'Presentarse candidato/a a algún puesto de representación política'
+/B6 'Pertenencia a alguna asociación'
+/B6A_1 'Una asociación de vecinos/as'
+/B6A_2 'Una asociación o grupo juvenil'
+/B6A_3 'Un partido político'
+/B6A_4 'Un sindicato'
+/B6A_5 'Una asociación religiosa o parroquial'
+/B6A_6 'Una organización empresarial'
+/B6A_7 'Una asociación o colegio profesional'
+/B6A_8 'Una asociación cultural o artística'
+/B6A_9 'Una asociación o grupo ecologista'
+/B6A_10 'Una asociación o club deportivo'
+/B6A_11 'Una asociación de madres y padres'
+/B6A_12 'Una asociación de consumidores/as'
+/B6A_13 'Una ONG o asociación de solidaridad'
+/B6A_14 'Una asociación feminista'
+/B7 'Tema más debatido por los partidos políticos y candidatos/as durante la campaña electoral de las elecciones generales de noviembre de 2019'
+/B7A 'Partido político que insistió más en el tema debatido durante la campaña electoral de las elecciones generales de noviembre de 2019'
+/B7B 'Grado de importancia del tema debatido durante la campaña electoral de las elecciones generales de noviembre de 2019'
+/B8 'Comparación de la importancia de las elecciones generales de noviembre de 2019 respecto a otras anteriores'
+/B9_1 'Primer lugar'
+/B9_2 'Segundo lugar'
+/B9_3 'Tercer lugar'
+/B9A 'Periódico en formato impreso preferido para seguir la información política y electoral durante la campaña electoral de las elecciones generales de noviembre de 2019'
+/B9B 'Periódico en formato digital preferido para seguir la información política y electoral durante la campaña electoral de las elecciones generales de noviembre de 2019'
+/B9C 'Cadena de televisión preferida para seguir la información política y electoral durante la campaña electoral de las elecciones generales de noviembre de 2019'
+/B9D 'Emisora de radio preferida para seguir la información política y electoral durante la campaña electoral de las elecciones generales de noviembre de 2019'
+/B10_1 'Facebook'
+/B10_2 'Twitter'
+/B10_3 'LinkedIn'
+/B10_4 'Instagram'
+/B10_5 'Otras redes sociales (Hi5, Google+, etc.)'
+/B10_6 'Ninguna'
+/B10_7 'N.C.'
+/B11_1 'En páginas de medios de comunicación (periódicos, radios,...)'
+/B11_2 'En páginas de partidos o candidatos/as'
+/B11_3 'En páginas de organizaciones ciudadanas o movimientos cívicos'
+/B11_4 'En blogs y foros de debate'
+/B11_5 'En redes sociales (Facebook, Twitter, etc.)'
+/B11_6 'En otro tipo de páginas web'
+/B11_7 'En ninguno'
+/B11_8 'N.C.'
+/B12 'Seguimiento del debate en televisión entre los candidatos a las elecciones generales de noviembre de 2019'
+/B12A 'Candidato más convincente en el debate electoral televisado de las elecciones generales de noviembre de 2019'
+/B12B 'Cambio de la intención de voto tras los debates televisados de las elecciones generales de noviembre de 2019'
+/B12C 'Sentido en que se cambio el voto tras los debates televisados de las elecciones generales de noviembre 2019'
+/B13_1 'Vio por televisión o escuchó por la radio algún otro debate o entrevistas con candidatos/as'
+/B13_2 'Vio o escuchó algún espacio de propaganda electoral de algún partido o coalición política'
+/B13_3 'Leyó o echó un vistazo a cartas, folletos o programas de algún partido o coalición política'
+/B13_4 'Trabajó como voluntario/a en la campaña de algún partido o candidato/a'
+/B13_5 'Asistió a un mitin o reunión de algún partido'
+/B14 'Contacto de algún partido político para pedir el voto durante la campaña electoral de las elecciones generales de noviembre de 2019'
+/B14A_1 'PSOE'
+/B14A_2 'PP'
+/B14A_3 'VOX'
+/B14A_4 'Unidas Podemos'
+/B14A_5 'Ciudadanos'
+/B14A_6 'Más País'
+/B14A_7 'ERC'
+/B14A_8 'Junts'
+/B14A_9 'En Comú Podem'
+/B14A_10 'EAJ-PNV'
+/B14A_11 'EH Bildu'
+/B14A_12 'CCa-NC'
+/B14A_13 'Na+ (UPN)'
+/B14A_14 'CUP'
+/B14A_15 'En Común-Unidas Podemos'
+/B14A_16 'Més Compromís'
+/B14A_17 'PRC'
+/B14A_18 'BNG'
+/B14A_19 'Teruel Existe'
+/B14A_20 'Otro'
+/B14A_21 'N.S.'
+/B14A_22 'N.C.'
+/B15 'Envío personal de mensajes electrónicos en relación con algún partido político en las elecciones generales de noviembre de 2019'
+/B15A_1 'PSOE'
+/B15A_2 'PP'
+/B15A_3 'VOX'
+/B15A_4 'Unidas Podemos'
+/B15A_5 'Ciudadanos'
+/B15A_6 'Más País'
+/B15A_7 'ERC'
+/B15A_8 'Junts'
+/B15A_9 'En Comú Podem'
+/B15A_10 'EAJ-PNV'
+/B15A_11 'EH-Bildu'
+/B15A_12 'CCa-NC'
+/B15A_13 'Na+ (UPN)'
+/B15A_14 'CUP'
+/B15A_15 'En Común-Unidas Podemos'
+/B15A_16 'Més Compromís'
+/B15A_17 'PRC'
+/B15A_18 'BNG'
+/B15A_19 'Teruel Existe'
+/B15A_20 'Otro'
+/B15A_21 'N.S.'
+/B15A_22 'N.C.'
+/B16 'Recepción de mensajes electrónicos en relación con algún partido político en las elecciones generales de noviembre de 2019'
+/B16A_1 'PSOE'
+/B16A_2 'PP'
+/B16A_3 'VOX'
+/B16A_4 'Unidas Podemos'
+/B16A_5 'Ciudadanos'
+/B16A_6 'Más País'
+/B16A_7 'ERC'
+/B16A_8 'Junts'
+/B16A_9 'En Comú Podem'
+/B16A_10 'EAJ-PNV'
+/B16A_11 'EH-Bildu'
+/B16A_12 'CCa-NC'
+/B16A_13 'Na+ (UPN)'
+/B16A_14 'CUP'
+/B16A_15 'En Común-Unidas Podemos'
+/B16A_16 'Més Compromís'
+/B16A_17 'PRC'
+/B16A_18 'BNG'
+/B16A_19 'Teruel Existe'
+/B16A_20 'Otro'
+/B16A_21 'N.S.'
+/B16A_22 'N.C.'
+/B17_1 'En casa, con su familia'
+/B17_2 'Con sus amigos/as'
+/B17_3 'En su lugar de trabajo o centro de estudios'
+/B18 'Conocimiento de los resultados de sondeos electorales durante la campaña electoral de las elecciones generales de noviembre de 2019'
+/B18A 'Grado de influencia personal de los sondeos de las elecciones generales de noviembre de 2019'
+/B18B 'Sentido en que le influyeron los resultados de los sondeos de las elecciones generales de noviembre de 2019'
+/B19 'Influencia de la exhumación de Franco en la decisión de voto en las elecciones generales de noviembre de 2019'
+/B19A 'Efecto de la exhumación de Franco en la decisión de voto en las elecciones generales de noviembre de 2019'
+/B19B 'Partido político al que pensaba votar antes del efecto de la exhumación de Franco en las elecciones generales de noviembre de 2019'
+/B20 'Influencia de la situación en Cataluña en la decisión de voto en elecciones generales de noviembre de 2019'
+/B20A 'Tipo de influencia de la situación en Cataluña en la decisión de voto en las elecciones generales de 2019'
+/B20B 'Partido al que pensaba votar antes del efecto de lo ocurrido últimamente en Cataluña en las elecciones generales de noviembre de 2019'
+/B21 'Decisión respecto al voto en las elecciones generales de noviembre de 2019'
+/B21A01 'Partidos políticos entre los que se dudó el voto en las elecciones generales de noviembre de 2019 (2)'
+/B21A02 'Partidos políticos entre los que se dudó el voto en las elecciones generales de noviembre de 2019 (2)'
+/B22 'Recuerdo de voto en las elecciones generales de noviembre de 2019'
+/B22A 'Actitud con la que se votó al partido político votado en las elecciones generales de noviembre de 2019'
+/B22B_1 'Primer lugar'
+/B22B_2 'Segundo lugar'
+/B22C 'Reparto del voto al Senado en las elecciones generales de noviembre de 2019'
+/B22D 'Recuerdo de voto al Senado en las elecciones generales de noviembre de 2019 de los que votaron las candidaturas del mismo partido político'
+/B22E_1 'Primera respuesta'
+/B22E_2 'Segunda respuesta'
+/B22E_3 'Tercera respuesta'
+/B23 'Participación electoral en las elecciones generales de noviembre de 2019'
+/B23A 'Momento de la decisión de no votar en las elecciones generales de noviembre de 2019'
+/B23B_1 'Razón principal'
+/B23B_2 'Segundo lugar'
+/B23C 'Razones que impidieron votar en las elecciones generales de noviembre de 2019'
+/B23D 'Intención de voto en las elecciones generales de noviembre de 2019 de los que no pudieron votar'
+/B24 'Momento de la decisión de voto en las elecciones generales de noviembre de 2019'
+/B24A_1 'La disposición de las papeletas en la mesa del colegio electoral'
+/B24A_2 'El número de papeletas de cada partido en la mesa del colegio electoral'
+/B24A_3 'El aspecto de los/as interventores/as y/o apoderados/as de algún/os partidos'
+/B24A_4 'El porcentaje de participación electoral general hasta ese momento del día'
+/B24A_5 'El conocimiento de los resultados de encuestas electorales difundidas'
+/B24A_6 'La intuición del último momento'
+/B24A_7 'Otra razón'
+/B24A_8 'N.C.'
+/B25 'Hora de voto en las elecciones generales de noviembre de 2019'
+/B26 'Papeletas utilizadas el día de la votación en las elecciones generales de noviembre 2019'
+/B26A 'Uso de las cabinas dispuestas en el colegio electoral en las elecciones generales de noviembre de 2019'
+/B27 'Duda entre votar o abstenerse en campaña o precampaña electoral en las elecciones generales de noviembre de 2019'
+/B27A 'Razón principal para votar en las elecciones generales de noviembre de 2019'
+/B28 'Decisión respecto al voto en las elecciones generales de noviembre de 2019 de haber conocido antes los resultados'
+/B29_1 'Pedro Sánchez'
+/B29_2 'Pablo Casado'
+/B29_3 'Santiago Abascal'
+/B29_4 'Pablo Iglesias'
+/B29_5 'Alberto Garzón'
+/B29_6 'Inés Arrimadas'
+/B29_7 'Iñigo Errejón'
+/B30 'Sentimiento nacionalista'
+/C1 'Intención de voto en supuestas elecciones generales'
+/C1A 'Intención de voto alternativo en supuestas elecciones generales'
+/C2 'Partido político por el que se siente más simpatía en las elecciones generales (con filtro)'
+/C3 'Escala de autoubicación ideológica (1-10)'
+/C4_1 'PSOE'
+/C4_2 'PP'
+/C4_3 'VOX'
+/C4_4 'Podemos'
+/C4_5 'IU'
+/C4_6 'Ciudadanos'
+/C4_7 'Más País'
+/C4_8 'ERC (Sólo en Cataluña)'
+/C4_9 'Junts (Sólo en Cataluña)'
+/C4_10 'En Comú Podem (Sólo en Cataluña)'
+/C4_11 'CUP (Sólo en Cataluña)'
+/C4_12 'EAJ-PNV (Sólo en País Vasco)'
+/C4_13 'EH Bildu (Sólo en País Vasco y Navarra)'
+/C4_14 'UPN (Sólo en Navarra)'
+/C4_15 'CC (Sólo en Canarias)'
+/C4_16 'Nueva Canarias (Sólo en Canarias)'
+/C4_17 'BNG (Sólo en Galicia)'
+/C4_18 'Més Compromís (Sólo en Comunidad Valenciana)'
+/C4_19 'PRC (Sólo en Cantabria)'
+/C4_20 'Teruel Existe (Sólo en provincia de Teruel)'
+/C5_1 'Pedro Sánchez'
+/C5_2 'Pablo Casado'
+/C5_3 'Santiago Abascal'
+/C5_4 'Pablo Iglesias'
+/C5_5 'Alberto Garzón'
+/C5_6 'Inés Arrimadas'
+/C5_7 'Íñigo Errejón'
+/C6 'Fidelidad de voto en elecciones'
+/C7 'Participación electoral en las elecciones generales de abril de 2019'
+/C7A 'Recuerdo de voto en las elecciones generales de abril de 2019 de los votantes'
+/C8 'Partido político que considera más cercano a sus ideas en las elecciones generales'
+/C9 'Sexo de la persona entrevistada'
+/C10 'Edad de la persona entrevistada'
+/C11 'Escolarización de la persona entrevistada'
+/C11A 'Nivel de estudios alcanzado por la persona entrevistada'
+/C12 'Religiosidad de la persona entrevistada'
+/C12A 'Frecuencia de asistencia a oficios religiosos'
+/C13 'Estado civil de la persona entrevistada'
+/C13A 'Situación personal de convivencia en pareja de las personas no casadas'
+/C14 'Cabeza de familia'
+/C15 'Situación laboral de la persona entrevistada'
+/C16 'Ocupación de la persona entrevistada'
+/C17 'Situación profesional de la persona entrevistada'
+/C17A 'Tipo de empresa u organización de la persona entrevistada'
+/C18 'Rama de actividad de la persona entrevistada (CNAE09)'
+/C19 'Ingresos del hogar'
+/C20 'Ingresos personales'
+/C21 'Clase social subjetiva de la persona entrevistada'
+/TELF 'Número de teléfono'
+/MEDITA 'Dedica tiempo a meditar respuestas por parte persona entrevistada'
+/COMPRENS 'Comprensión de las preguntas'
+/TARJETAS 'Utilización de las tarjetas'
+/LUGAR 'Lugar de realización de la entrevista'
+/ABANDONO_1 '(La persona entrevistada) ha expresado deseo de abandonar la entrevista antes de finalizarla'
+/MOLESTIA_1 '(La persona entrevistada) se ha sentido incómoda o molesta por el tema de la encuesta'
+/PRISA_1 '(La persona entrevistada) ha tenido prisa por acabar la entrevista'
+/LONGITUD_4 '(La persona entrevistada) se ha quejado de la longitud/duración'
+/DESARROLLO 'Desarrollo de la entrevista'
+/TERCERASPERSONAS 'Presencia de terceras personas en el desarrollo de la entrevista'
+/INTERVENCION 'Intervención activa de terceras personas en el desarrollo de la entrevista'
+/FECHAINI 'Fecha de inicio de la entrevista'
+/HORAINI 'Hora de inicio de la entrevista'
+/FECHAFIN 'Fecha de fin de la entrevista'
+/HORAFIN 'Hora de fin de la entrevista'
+/DURACION 'Duración de la entrevista'
+/B9IMPRESA 'Lee la prensa impresa'
+/B9DIGITAL 'Lee la prensa digital'
+/B9TV 'Ve la televisión'
+/B9RADIO 'Escucha la radio'
+/B21ACOM 'Partidos políticos entre los que se dudó el voto en las elecciones generales de noviembre de 2019 (2)'
+/B22R 'Recuerdo de voto en las elecciones generales de noviembre de 2019 [recodificada]'
+/C1R 'Intención de voto en supuestas elecciones generales [recodificada]'
+/C1AR 'Intención de voto alternativo en supuestas elecciones generales [recodificada]'
+/VOTOSIMG 'Voto+simpatía en supuestas elecciones generales'
+/C7AR 'Recuerdo de voto en las elecciones generales de abril de 2019 de los votantes [recodificada]'
+/RECUERDO 'Recuerdo de voto en las elecciones generales de abril de 2019'
+/ESTUDIOS 'Estudios de la persona entrevistada'
+/RAMA09 'Rama de actividad de la persona entrevistada (CNAE09) [recodificada]'
+/CLASESUB 'Identificación subjetiva de clase'
+/PESO 'Ponderación Total'
+.
+
+VALUE LABELS
+ESTU
+/CCAA
+1 'Andalucía' 2 'Aragón' 3 'Asturias (Principado de)' 4 'Balears (Illes)' 5 'Canarias' 6 'Cantabria'
+7 'Castilla-La Mancha' 8 'Castilla y León' 9 'Cataluña' 10 'Comunitat Valenciana' 11 'Extremadura'
+12 'Galicia' 13 'Madrid (Comunidad de)' 14 'Murcia (Región de)' 15 'Navarra (Comunidad Foral de)'
+16 'País Vasco' 17 'Rioja (La)' 18 'Ceuta (Ciudad Autónoma de)' 19 'Melilla (Ciudad Autónoma de)'
+/PROV
+1 'Araba/Álava' 2 'Albacete' 3 'Alicante/Alacant' 4 'Almería' 5 'Ávila' 6 'Badajoz' 7 'Balears (Illes)'
+8 'Barcelona' 9 'Burgos' 10 'Cáceres' 11 'Cádiz' 12 'Castellón/Castelló' 13 'Ciudad Real' 14 'Córdoba'
+15 'Coruña (A)' 16 'Cuenca' 17 'Girona' 18 'Granada' 19 'Guadalajara' 20 'Gipuzkoa' 21 'Huelva'
+22 'Huesca' 23 'Jaén' 24 'León' 25 'Lleida' 26 'Rioja (La)' 27 'Lugo' 28 'Madrid' 29 'Málaga'
+30 'Murcia' 31 'Navarra' 32 'Ourense' 33 'Asturias' 34 'Palencia' 35 'Palmas (Las)' 36 'Pontevedra'
+37 'Salamanca' 38 'Santa Cruz de Tenerife' 39 'Cantabria' 40 'Segovia' 41 'Sevilla' 42 'Soria'
+43 'Tarragona' 44 'Teruel' 45 'Toledo' 46 'Valencia/València' 47 'Valladolid' 48 'Bizkaia' 49 'Zamora'
+50 'Zaragoza' 51 'Ceuta' 52 'Melilla'
+/MUN
+0 'Mun.<=100.000 hab. no capitales de CA o provincia' 1 'Ceuta / Melilla' 3 'Albacete' 4 'Algeciras'
+5 'Alcalá de Henares' 6 'Alcobendas' 7 'Alcorcón' 12 'Cádiz' 13 'Almería / Barakaldo' 14 'Alicante/Alacant'
+15 'Badalona / Badajoz' 16 'Cartagena / Palmas de Gran Canaria (Las)' 19 'Ávila / Barcelona'
+20 'Bilbao / Jerez de la Frontera' 21 'Córdoba' 23 'La Laguna' 24 'Gijón' 26 'Telde' 28 'Lugo'
+30 'Coruña (A) / Murcia' 34 'Ciudad Real' 37 'Cáceres' 38 'Pontevedra / Santa Cruz de Tenerife / Dos Hermanas'
+40 'Castellón de la Plana/Castelló de la Plana / Palma de Mallorca' 41 'Huelva' 44 'Oviedo'
+50 'Jaén' 54 'Ourense' 57 'Vigo' 58 'Fuenlabrada' 59 'Burgos / Vitoria-Gasteiz' 65 'Elche/Elx / Getafe'
+67 'Málaga' 69 'Donostia/San Sebastián / Marbella' 74 'Leganés' 75 'Santander' 78 'Cuenca / Santiago de Compostela'
+79 'Girona / Madrid' 83 'Mérida' 87 'Granada' 89 'León / Logroño' 91 'Sevilla' 92 'Móstoles'
+101 'Hospitalet de Llobregat' 106 'Parla' 120 'Lleida / Palencia' 121 'Mataró' 123 'Reus' 125 'Huesca'
+130 'Guadalajara' 148 'Tarragona / Torrejón de Ardoz' 168 'Toledo' 173 'Soria' 186 'Valladolid'
+187 'Sabadell' 194 'Segovia' 201 'Pamplona/Iruña' 216 'Teruel' 245 'Santa Coloma de Gramenet'
+250 'València' 274 'Salamanca' 275 'Zamora' 279 'Terrassa' 297 'Zaragoza'
+/TAMUNI
+1 'Menos o igual a 2.000 habitantes' 2 '2.001 a 10.000 habitantes' 3 '10.001 a 50.000 habitantes'
+4 '50.001 a 100.000 habitantes' 5 '100.001 a 400.000 habitantes' 6 '400.001 a 1.000.000 habitantes'
+7 'Más de 1.000.000 habitantes'
+/CAPITAL
+1 'Capital de CC.AA.' 2 'Capital de provincia' 3 'Otros municipios'
+/DISTR
+0 'Anonimizado'
+/SECCION
+0 'Anonimizado'
+/ENTREV
+0 'Anonimizado'
+/A0
+1 'Española' 2 'Española y otra' 3 'Otra nacionalidad' 9 'N.C.'
+/A1
+1 'Muy buena' 2 'Buena' 3 'Regular' 4 'Mala' 5 'Muy mala' 8 'N.S.' 9 'N.C.'
+/A2
+1 'Mejor' 2 'Igual' 3 'Peor' 8 'N.S.' 9 'N.C.'
+/A3
+1 'Mejor' 2 'Igual' 3 'Peor' 8 'N.S.' 9 'N.C.'
+/A4
+1 'Muy buena' 2 'Buena' 3 'Regular' 4 'Mala' 5 'Muy mala' 8 'N.S.' 9 'N.C.'
+/A5
+1 'Mejor' 2 'Igual' 3 'Peor' 8 'N.S.' 9 'N.C.'
+/A6
+1 'Muy buena' 2 'Buena' 3 'Regular' 4 'Mala' 5 'Muy mala' 8 'N.S.' 9 'N.C.'
+/A7
+1 'Mejor' 2 'Igual' 3 'Peor' 8 'N.S.' 9 'N.C.'
+/A8
+1 'Mejor' 2 'Igual' 3 'Peor' 8 'N.S.' 9 'N.C.'
+/A9_1
+1 'El paro' 2 'Las drogas' 3 'La inseguridad ciudadana' 4 'El terrorismo, ETA' 5 'Las infraestructuras'
+6 'La sanidad' 7 'La vivienda' 8 'Los problemas de índole económica' 9 'Los problemas relacionados con la calidad del empleo'
+10 'Los problemas de la agricultura, ganadería y pesca' 11 'La corrupción y el fraude' 12 'Las pensiones'
+13 'Los/as políticos/as en general, los partidos y la política' 14 'Las guerras en general'
+15 'La Administración de Justicia' 16 'Los problemas de índole social' 17 'El racismo' 18 'La inmigración'
+19 'La violencia de género' 20 'Los problemas relacionados con la juventud' 21 'La crisis de valores'
+22 'La educación' 23 'Los problemas medioambientales' 24 'El Gobierno y partidos o políticos/as concretos/as'
+25 'El funcionamiento de los servicios públicos' 26 'Los nacionalismos' 27 'Los problemas relacionados con la mujer'
+28 'El terrorismo internacional' 29 'Las preocupaciones y situaciones personales' 30 'Los estatutos de autonomía'
+31 'Las negociaciones con ETA' 32 'La Reforma Laboral' 33 '''Los recortes''' 34 'Los bancos'
+35 'La subida del IVA' 36 'Los desahucios' 37 'El fraude fiscal' 38 'Las hipotecas' 39 'La Monarquía'
+40 'Las excarcelaciones' 41 'La Ley del aborto' 42 'La subida de tarifas energéticas' 43 'Ébola'
+44 'Los refugiados/as' 45 'La independencia de Cataluña' 46 'La falta de acuerdos. Situación política. Inestabilidad política'
+47 'La emigración' 48 'Los problemas relacionados con autónomos/as' 49 'La falta de inversión en industrias e I+D'
+96 'Otras respuestas' 95 'Todos' 97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/A9_2
+1 'El paro' 2 'Las drogas' 3 'La inseguridad ciudadana' 4 'El terrorismo, ETA' 5 'Las infraestructuras'
+6 'La sanidad' 7 'La vivienda' 8 'Los problemas de índole económica' 9 'Los problemas relacionados con la calidad del empleo'
+10 'Los problemas de la agricultura, ganadería y pesca' 11 'La corrupción y el fraude' 12 'Las pensiones'
+13 'Los/as políticos/as en general, los partidos y la política' 14 'Las guerras en general'
+15 'La Administración de Justicia' 16 'Los problemas de índole social' 17 'El racismo' 18 'La inmigración'
+19 'La violencia de género' 20 'Los problemas relacionados con la juventud' 21 'La crisis de valores'
+22 'La educación' 23 'Los problemas medioambientales' 24 'El Gobierno y partidos o políticos/as concretos/as'
+25 'El funcionamiento de los servicios públicos' 26 'Los nacionalismos' 27 'Los problemas relacionados con la mujer'
+28 'El terrorismo internacional' 29 'Las preocupaciones y situaciones personales' 30 'Los estatutos de autonomía'
+31 'Las negociaciones con ETA' 32 'La Reforma Laboral' 33 '''Los recortes''' 34 'Los bancos'
+35 'La subida del IVA' 36 'Los desahucios' 37 'El fraude fiscal' 38 'Las hipotecas' 39 'La Monarquía'
+40 'Las excarcelaciones' 41 'La Ley del aborto' 42 'La subida de tarifas energéticas' 43 'Ébola'
+44 'Los refugiados/as' 45 'La independencia de Cataluña' 46 'La falta de acuerdos. Situación política. Inestabilidad política'
+47 'La emigración' 48 'Los problemas relacionados con autónomos/as' 49 'La falta de inversión en industrias e I+D'
+96 'Otras respuestas' 95 'Todos' 97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/A9_3
+1 'El paro' 2 'Las drogas' 3 'La inseguridad ciudadana' 4 'El terrorismo, ETA' 5 'Las infraestructuras'
+6 'La sanidad' 7 'La vivienda' 8 'Los problemas de índole económica' 9 'Los problemas relacionados con la calidad del empleo'
+10 'Los problemas de la agricultura, ganadería y pesca' 11 'La corrupción y el fraude' 12 'Las pensiones'
+13 'Los/as políticos/as en general, los partidos y la política' 14 'Las guerras en general'
+15 'La Administración de Justicia' 16 'Los problemas de índole social' 17 'El racismo' 18 'La inmigración'
+19 'La violencia de género' 20 'Los problemas relacionados con la juventud' 21 'La crisis de valores'
+22 'La educación' 23 'Los problemas medioambientales' 24 'El Gobierno y partidos o políticos/as concretos/as'
+25 'El funcionamiento de los servicios públicos' 26 'Los nacionalismos' 27 'Los problemas relacionados con la mujer'
+28 'El terrorismo internacional' 29 'Las preocupaciones y situaciones personales' 30 'Los estatutos de autonomía'
+31 'Las negociaciones con ETA' 32 'La Reforma Laboral' 33 '''Los recortes''' 34 'Los bancos'
+35 'La subida del IVA' 36 'Los desahucios' 37 'El fraude fiscal' 38 'Las hipotecas' 39 'La Monarquía'
+40 'Las excarcelaciones' 41 'La Ley del aborto' 42 'La subida de tarifas energéticas' 43 'Ébola'
+44 'Los refugiados/as' 45 'La independencia de Cataluña' 46 'La falta de acuerdos. Situación política. Inestabilidad política'
+47 'La emigración' 48 'Los problemas relacionados con autónomos/as' 49 'La falta de inversión en industrias e I+D'
+96 'Otras respuestas' 95 'Todos' 97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/A10_1
+1 'El paro' 2 'Las drogas' 3 'La inseguridad ciudadana' 4 'El terrorismo, ETA' 5 'Las infraestructuras'
+6 'La sanidad' 7 'La vivienda' 8 'Los problemas de índole económica' 9 'Los problemas relacionados con la calidad del empleo'
+10 'Los problemas de la agricultura, ganadería y pesca' 11 'La corrupción y el fraude' 12 'Las pensiones'
+13 'Los/as políticos/as en general, los partidos y la política' 14 'Las guerras en general'
+15 'La Administración de Justicia' 16 'Los problemas de índole social' 17 'El racismo' 18 'La inmigración'
+19 'La violencia de género' 20 'Los problemas relacionados con la juventud' 21 'La crisis de valores'
+22 'La educación' 23 'Los problemas medioambientales' 24 'El Gobierno y partidos o políticos/as concretos/as'
+25 'El funcionamiento de los servicios públicos' 26 'Los nacionalismos' 27 'Los problemas relacionados con la mujer'
+28 'El terrorismo internacional' 29 'Las preocupaciones y situaciones personales' 30 'Los estatutos de autonomía'
+31 'Las negociaciones con ETA' 32 'La Reforma Laboral' 33 '''Los recortes''' 34 'Los bancos'
+35 'La subida del IVA' 36 'Los desahucios' 37 'El fraude fiscal' 38 'Las hipotecas' 39 'La Monarquía'
+40 'Las excarcelaciones' 41 'La Ley del aborto' 42 'La subida de tarifas energéticas' 43 'Ébola'
+44 'Los refugiados/as' 45 'La independencia de Cataluña' 46 'La falta de acuerdos. Situación política. Inestabilidad política'
+47 'La emigración' 48 'Los problemas relacionados con autónomos/as' 49 'La falta de inversión en industrias e I+D'
+96 'Otras respuestas' 95 'Todos' 97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/A10_2
+1 'El paro' 2 'Las drogas' 3 'La inseguridad ciudadana' 4 'El terrorismo, ETA' 5 'Las infraestructuras'
+6 'La sanidad' 7 'La vivienda' 8 'Los problemas de índole económica' 9 'Los problemas relacionados con la calidad del empleo'
+10 'Los problemas de la agricultura, ganadería y pesca' 11 'La corrupción y el fraude' 12 'Las pensiones'
+13 'Los/as políticos/as en general, los partidos y la política' 14 'Las guerras en general'
+15 'La Administración de Justicia' 16 'Los problemas de índole social' 17 'El racismo' 18 'La inmigración'
+19 'La violencia de género' 20 'Los problemas relacionados con la juventud' 21 'La crisis de valores'
+22 'La educación' 23 'Los problemas medioambientales' 24 'El Gobierno y partidos o políticos/as concretos/as'
+25 'El funcionamiento de los servicios públicos' 26 'Los nacionalismos' 27 'Los problemas relacionados con la mujer'
+28 'El terrorismo internacional' 29 'Las preocupaciones y situaciones personales' 30 'Los estatutos de autonomía'
+31 'Las negociaciones con ETA' 32 'La Reforma Laboral' 33 '''Los recortes''' 34 'Los bancos'
+35 'La subida del IVA' 36 'Los desahucios' 37 'El fraude fiscal' 38 'Las hipotecas' 39 'La Monarquía'
+40 'Las excarcelaciones' 41 'La Ley del aborto' 42 'La subida de tarifas energéticas' 43 'Ébola'
+44 'Los refugiados/as' 45 'La independencia de Cataluña' 46 'La falta de acuerdos. Situación política. Inestabilidad política'
+47 'La emigración' 48 'Los problemas relacionados con autónomos/as' 49 'La falta de inversión en industrias e I+D'
+96 'Otras respuestas' 95 'Todos' 97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/A10_3
+1 'El paro' 2 'Las drogas' 3 'La inseguridad ciudadana' 4 'El terrorismo, ETA' 5 'Las infraestructuras'
+6 'La sanidad' 7 'La vivienda' 8 'Los problemas de índole económica' 9 'Los problemas relacionados con la calidad del empleo'
+10 'Los problemas de la agricultura, ganadería y pesca' 11 'La corrupción y el fraude' 12 'Las pensiones'
+13 'Los/as políticos/as en general, los partidos y la política' 14 'Las guerras en general'
+15 'La Administración de Justicia' 16 'Los problemas de índole social' 17 'El racismo' 18 'La inmigración'
+19 'La violencia de género' 20 'Los problemas relacionados con la juventud' 21 'La crisis de valores'
+22 'La educación' 23 'Los problemas medioambientales' 24 'El Gobierno y partidos o políticos/as concretos/as'
+25 'El funcionamiento de los servicios públicos' 26 'Los nacionalismos' 27 'Los problemas relacionados con la mujer'
+28 'El terrorismo internacional' 29 'Las preocupaciones y situaciones personales' 30 'Los estatutos de autonomía'
+31 'Las negociaciones con ETA' 32 'La Reforma Laboral' 33 '''Los recortes''' 34 'Los bancos'
+35 'La subida del IVA' 36 'Los desahucios' 37 'El fraude fiscal' 38 'Las hipotecas' 39 'La Monarquía'
+40 'Las excarcelaciones' 41 'La Ley del aborto' 42 'La subida de tarifas energéticas' 43 'Ébola'
+44 'Los refugiados/as' 45 'La independencia de Cataluña' 46 'La falta de acuerdos. Situación política. Inestabilidad política'
+47 'La emigración' 48 'Los problemas relacionados con autónomos/as' 49 'La falta de inversión en industrias e I+D'
+96 'Otras respuestas' 95 'Todos' 97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/A11
+1 'Conservador/a' 2 'Demócrata cristiano/a' 3 'Liberal' 4 'Progresista' 5 'Socialdemócrata'
+6 'Socialista' 7 'Comunista' 8 'Nacionalista' 9 'Feminista' 10 'Ecologista' 96 'Otras respuestas '
+97 '(NO LEER) Apolítico/a ' 98 'N.S.' 99 'N.C.'
+/A11A
+1 'Conservador/a' 2 'Demócrata cristiano/a' 3 'Liberal' 4 'Progresista' 5 'Socialdemócrata'
+6 'Socialista' 7 'Comunista' 8 'Nacionalista' 9 'Feminista' 10 'Ecologista' 96 'Otras respuestas '
+97 '(NO LEER) Apolítico/a ' 98 'N.S.' 99 'N.C.'
+/A12_1
+1 'Conservador' 2 'Demócrata cristiano' 3 'Liberal' 4 'Progresista' 5 'Socialdemócrata' 6 'Socialista'
+7 'Comunista' 8 'Nacionalista' 9 'Feminista' 10 'Ecologista' 11 'Otras respuestas ' 98 'N.S.'
+99 'N.C.'
+/A12_2
+1 'Conservador' 2 'Demócrata cristiano' 3 'Liberal' 4 'Progresista' 5 'Socialdemócrata' 6 'Socialista'
+7 'Comunista' 8 'Nacionalista' 9 'Feminista' 10 'Ecologista' 11 'Otras respuestas ' 98 'N.S.'
+99 'N.C.'
+/A12_3
+1 'Conservador' 2 'Demócrata cristiano' 3 'Liberal' 4 'Progresista' 5 'Socialdemócrata' 6 'Socialista'
+7 'Comunista' 8 'Nacionalista' 9 'Feminista' 10 'Ecologista' 11 'Otras respuestas ' 98 'N.S.'
+99 'N.C.'
+/A12_4
+1 'Conservador' 2 'Demócrata cristiano' 3 'Liberal' 4 'Progresista' 5 'Socialdemócrata' 6 'Socialista'
+7 'Comunista' 8 'Nacionalista' 9 'Feminista' 10 'Ecologista' 11 'Otras respuestas ' 98 'N.S.'
+99 'N.C.'
+/A12_5
+1 'Conservador' 2 'Demócrata cristiano' 3 'Liberal' 4 'Progresista' 5 'Socialdemócrata' 6 'Socialista'
+7 'Comunista' 8 'Nacionalista' 9 'Feminista' 10 'Ecologista' 11 'Otras respuestas ' 98 'N.S.'
+99 'N.C.'
+/A12_6
+1 'Conservador' 2 'Demócrata cristiano' 3 'Liberal' 4 'Progresista' 5 'Socialdemócrata' 6 'Socialista'
+7 'Comunista' 8 'Nacionalista' 9 'Feminista' 10 'Ecologista' 11 'Otras respuestas ' 98 'N.S.'
+99 'N.C.'
+/A12_7
+1 'Conservador' 2 'Demócrata cristiano' 3 'Liberal' 4 'Progresista' 5 'Socialdemócrata' 6 'Socialista'
+7 'Comunista' 8 'Nacionalista' 9 'Feminista' 10 'Ecologista' 11 'Otras respuestas ' 98 'N.S.'
+99 'N.C.'
+/B1
+1 'Mucho' 2 'Bastante' 3 'Poco' 4 'Nada' 9 'N.C.'
+/B2
+1 'Con mucho interés' 2 'Con bastante interés' 3 'Con poco interés' 4 'Con ningún interés' 8 'N.S.'
+9 'N.C.'
+/B3
+1 'La democracia es preferible a cualquier otra forma de gobierno' 2 'En algunas circunstancias, un Gobierno autoritario es preferible a un sistema democrático'
+3 'Para personas como Ud., da igual un Gobierno que otro' 8 'N.S.' 9 'N.C.'
+/B4
+1 'Mucho mejor' 2 'Mejor' 3 'Igual' 4 'Peor' 5 'Mucho peor' 8 'N.S.' 9 'N.C.'
+/B5_1
+1 'Sí' 2 'No' 9 'N.C.'
+/B5_2
+1 'Sí' 2 'No' 9 'N.C.'
+/B5_3
+1 'Sí' 2 'No' 9 'N.C.'
+/B5_4
+1 'Sí' 2 'No' 9 'N.C.'
+/B5_5
+1 'Sí' 2 'No' 9 'N.C.'
+/B5_6
+1 'Sí' 2 'No' 9 'N.C.'
+/B5_7
+1 'Sí' 2 'No' 9 'N.C.'
+/B5_8
+1 'Sí' 2 'No' 9 'N.C.'
+/B5_9
+1 'Sí' 2 'No' 9 'N.C.'
+/B5_10
+1 'Sí' 2 'No' 9 'N.C.'
+/B5_11
+1 'Sí' 2 'No' 9 'N.C.'
+/B5_12
+1 'Sí' 2 'No' 9 'N.C.'
+/B6
+1 'Sí' 2 'No' 9 'N.C.'
+/B6A_1
+1 'Sí' 2 'No' 9 'N.C.' 0 'N.P.'
+/B6A_2
+1 'Sí' 2 'No' 9 'N.C.' 0 'N.P.'
+/B6A_3
+1 'Sí' 2 'No' 9 'N.C.' 0 'N.P.'
+/B6A_4
+1 'Sí' 2 'No' 9 'N.C.' 0 'N.P.'
+/B6A_5
+1 'Sí' 2 'No' 9 'N.C.' 0 'N.P.'
+/B6A_6
+1 'Sí' 2 'No' 9 'N.C.' 0 'N.P.'
+/B6A_7
+1 'Sí' 2 'No' 9 'N.C.' 0 'N.P.'
+/B6A_8
+1 'Sí' 2 'No' 9 'N.C.' 0 'N.P.'
+/B6A_9
+1 'Sí' 2 'No' 9 'N.C.' 0 'N.P.'
+/B6A_10
+1 'Sí' 2 'No' 9 'N.C.' 0 'N.P.'
+/B6A_11
+1 'Sí' 2 'No' 9 'N.C.' 0 'N.P.'
+/B6A_12
+1 'Sí' 2 'No' 9 'N.C.' 0 'N.P.'
+/B6A_13
+1 'Sí' 2 'No' 9 'N.C.' 0 'N.P.'
+/B6A_14
+1 'Sí' 2 'No' 9 'N.C.' 0 'N.P.'
+/B7
+1 'El paro' 2 'El terrorismo (internacional)' 3 'La corrupción' 4 'La inseguridad ciudadana'
+5 'El estado de las autonomías/La cuestión territorial' 6 'La vivienda' 7 'La economía' 8 'La inmigración'
+9 'La sanidad' 10 'La educación' 11 'El medio ambiente' 19 'Las pensiones' 22 'La violencia contra la mujer'
+56 'Las disputas entre los partidos' 57 'Las acusaciones personales' 58 'Los errores de los partidos y los/as políticos/as'
+94 'Cataluña' 96 'Otra cuestión' 95 'Todos los temas' 97 'Ningún tema' 98 'N.S.' 99 'N.C.'
+/B7A
+2 'PSOE' 1 'PP' 18 'VOX' 21 'Unidas Podemos' 4 'Ciudadanos' 50 'Más País' 8 'ERC' 9 'Junts'
+6 'En Comú Podem' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CCa-NC' 14 'Na+ (UPN)' 19 'CUP' 67 'En Común-Unidas Podemos'
+7 'Més Compromís' 43 'PRC (Partido Regionalista de Cantabria)' 24 'BNG' 68 'Teruel Existe' 95 'Otro'
+97 'Ninguno' 98 'N.S.' 99 'N.C.' 0 'N.P.'
+/B7B
+1 'Muy importante' 2 'Bastante importante' 3 'Poco importante' 4 'Nada importante' 8 'N.S.'
+9 'N.C.' 0 'N.P.'
+/B8
+1 'Más importantes' 2 'Igual de importantes' 3 'Menos importantes' 8 'N.S.' 9 'N.C.'
+/B9_1
+1 'Prensa, en formato impreso' 2 'Prensa, en formato digital' 3 'Televisión' 4 'Radio' 5 'Redes sociales'
+6 'Contactos personales, reuniones, mítines, etc.' 7 '(NO LEER) Otros medios' 97 '(NO LEER) No se informó, no le interesa la política'
+98 'N.S.' 99 'N.C.'
+/B9_2
+1 'Prensa, en formato impreso' 2 'Prensa, en formato digital' 3 'Televisión' 4 'Radio' 5 'Redes sociales'
+6 'Contactos personales, reuniones, mítines, etc.' 7 '(NO LEER) Otros medios' 97 '(NO LEER) No se informó, no le interesa la política'
+98 'N.S.' 99 'N.C.'
+/B9_3
+1 'Prensa, en formato impreso' 2 'Prensa, en formato digital' 3 'Televisión' 4 'Radio' 5 'Redes sociales'
+6 'Contactos personales, reuniones, mítines, etc.' 7 '(NO LEER) Otros medios' 97 '(NO LEER) No se informó, no le interesa la política'
+98 'N.S.' 99 'N.C.'
+/B9A
+1 'El País' 2 'El Mundo' 3 'ABC' 4 'La Razón' 5 'La Gaceta' 6 'Ideal (Granada, Jaén, Almería)'
+7 'Diario Sur (Málaga)' 8 'Diario de Cádiz' 9 'Diario de Sevilla' 10 'Córdoba' 11 'El Correo de Andalucía'
+12 'La Voz de Cádiz' 13 'La Voz de Almería' 14 'Diario de Jerez' 15 'La Opinión de Málaga' 16 'Diario de Jaén'
+17 'Huelva Información' 18 'Granada Hoy' 19 'El Día de Córdoba' 20 'Heraldo de Aragón' 21 'El Periódico de Aragón'
+22 'Diario del Alto Aragón' 23 'La Nueva España' 24 'El Comercio' 25 'La Voz de Asturias' 26 'Diario de Mallorca'
+27 'Última Hora' 28 'Diario Baleares' 29 'El Día de Canarias' 30 'Canarias 7' 31 'La Provincia'
+32 'El Diario Montañés' 33 'Alerta (Cantabria)' 34 'El Norte de Castilla' 35 'Diario de León'
+36 'La Gaceta Regional de Salamanca' 37 'Diario de Burgos' 38 'La Opinión-El Correo de Zamora'
+39 'El Adelanto de Salamanca' 40 'Diario Palentino' 41 'Diario de Ávila' 42 'El Adelantado de Segovia'
+43 'Heraldo de Soria' 44 'La Tribuna de Ciudad Real, Toledo y Talavera' 45 'El Día (de Castilla-La Mancha)'
+46 'La Tribuna de Albacete' 47 'El Día de Cuenca' 48 'La Región (Orense)' 49 'ARA' 50 'El Punt-Avui'
+51 'La Vanguardia' 52 'El Periódico de Catalunya' 53 'Diari de Tarragona' 54 'Diari de Girona'
+55 'Diari de Terrassa' 56 'Diari de Sabadell' 57 'Hoy-Diario de Extremadura' 58 'Periódico de Extremadura'
+59 'Levante' 60 'Las Provincias' 61 'Información de Alicante' 62 'Mediterráneo' 63 'La Voz de Galicia'
+64 'Faro de Vigo' 65 'El Correo Gallego' 66 'Faro de Ourense' 67 'Diario de Pontevedra' 68 'El Progreso (Lugo)'
+69 'Diario de Navarra' 70 'La Verdad' 71 'La Opinión de Murcia' 72 'Berria' 73 'El Correo' 74 'El Diario Vasco'
+76 'Gara' 77 'Deia' 78 'Diario de Noticias (Álava, Navarra)' 79 'La Rioja' 80 'El Pueblo de Ceuta'
+81 'El Faro- Ceuta Y Melilla' 82 'El Diario Avisos' 89 'Expansión' 90 'Cinco Días' 91 '20 Minutos'
+94 'Otros Locales' 95 'Cualquiera' 96 'Otro' 99 'N.C.' 0 'N.P.'
+/B9B
+1 'El País' 2 'El Mundo' 3 'ABC' 4 'La Razón' 6 'Ideal (Granada, Jaén, Almería)' 9 'Diario de Sevilla'
+11 'El Correo de Andalucía' 18 'Granada Hoy' 20 'Heraldo de Aragón' 22 'Diario del Alto Aragón'
+23 'La Nueva España' 24 'El Comercio' 26 'Diario de Mallorca' 27 'Última Hora' 30 'Canarias 7'
+31 'La Provincia' 32 'El Diario Montañés' 34 'El Norte de Castilla' 37 'Diario de Burgos' 42 'El Adelantado de Segovia'
+45 'El Día (de Castilla La Mancha)' 46 'La Tribuna de Albacete' 48 'La Región (Orense)' 49 'ARA'
+51 'La Vanguardia' 52 'El Periódico de Catalunya' 53 'Diari de Tarragona' 57 'Hoy-Diario de Extremadura'
+58 'Periódico de Extremadura' 59 'Levante' 60 'Las Provincias' 61 'Información de Alicante'
+62 'Mediterráneo' 63 'La Voz de Galicia' 64 'Faro de Vigo' 68 'El Progreso (Lugo)' 69 'Diario de Navarra'
+70 'La Verdad' 72 'Berria' 73 'El Correo' 74 'El Diario Vasco' 75 'El imparcial.es' 76 'Gara'
+77 'Deia' 78 'Diario de Noticias (Álava, Navarra)' 79 'La Rioja' 82 'El Diario Avisos' 83 'El Nacional.cat'
+84 'Publico.es' 85 'Eldiario.es' 86 'OK Diario.es' 88 'Infolibre.es' 91 '20 Minutos' 92 'El Confidencial.com'
+93 'El Español.com' 94 'El Independiente.com' 95 'Cualquiera' 96 'Otro' 99 'N.C.' 0 'N.P.'
+/B9C
+1 'TVE1' 2 'La 2' 3 'Antena 3' 4 'La Cuatro' 5 'Telecinco' 6 'La Sexta' 7 'Canal 24 horas' 8 'TVE (sin especificar)'
+9 'Canal Sur' 10 'TV3' 11 '8TV' 12 '3/24' 13 'Barcelona TV (BTV)' 14 'TeleMadrid' 15 '13TV'
+16 'Canala 33' 17 'TVG' 18 'ETB1' 19 'ETB2' 20 'ETB' 21 'Televisión de Castilla-La Mancha (TVCM)'
+22 'TVC (Canarias)' 23 'Aragón TV' 24 'IB3 (Baleares)' 25 '7 Televisión Región Murcia' 26 'Canal Extremadura'
+27 'TPA (Asturias)' 28 'TVCYL (Castilla y León)' 29 'Intereconomia TV' 30 'Nafar Telebista (NTB)'
+31 'Á Punt' 60 'Otras televisiones autonómicas' 61 'Televisiones insulares' 62 'Televisiones locales'
+95 'Cualquiera sin especificar' 96 'Otra' 99 'N.C.' 0 'N.P.'
+/B9D
+1 'Cadena Ser' 2 'Cadena COPE' 3 'Onda Cero' 4 'RNE (Sin especificar)' 5 'RNE-RADIO 1' 6 'RNE-RÀDIO 4'
+7 'RNE-RADIO 5-Todo Noticias' 8 'Es Radio' 9 'RAC 1' 10 'Catalunya Radio' 11 'Catalunya Informació'
+12 'Canal Sur Radio' 13 'Radio Euskadi, Euskadi Irratia' 14 'Radio Euskadi Gaztea' 15 'Onda Vasca'
+16 'Radio 7' 17 'À Punt Radio (Radio de Valencia)' 18 'Radio Castilla-La Mancha' 19 'Radio Voz'
+20 'RPA (Radio Principado de Asturias)' 21 'Radio Galega' 22 'IB3' 23 'Onda Regional de Murcia'
+24 'Aragón Radio' 25 'Radio Teletaxi' 26 'Radio Intereconomía' 92 'Radios autonómicas o locales'
+94 'Otras radios musicales' 95 'Cualquiera sin especificar' 96 'Otras respuestas' 98 'N.S.'
+99 'N.C.' 0 'N.P.'
+/B10_1
+1 'Menciona'
+/B10_2
+1 'Menciona'
+/B10_3
+1 'Menciona'
+/B10_4
+1 'Menciona'
+/B10_5
+1 'Menciona'
+/B10_6
+1 'Menciona'
+/B10_7
+1 'Menciona'
+/B11_1
+1 'Menciona'
+/B11_2
+1 'Menciona'
+/B11_3
+1 'Menciona'
+/B11_4
+1 'Menciona'
+/B11_5
+1 'Menciona'
+/B11_6
+1 'Menciona'
+/B11_7
+1 'Menciona'
+/B11_8
+1 'Menciona'
+/B12
+1 'Lo vio entero o casi entero' 2 'Lo vio en parte' 3 'No lo vio, pero tuvo referencias de él'
+4 'Ni lo vio ni tuvo referencias de él' 8 'N.S.' 9 'N.C.'
+/B12A
+1 'Pedro Sánchez' 2 'Pablo Casado' 3 'Albert Rivera' 4 'Pablo Iglesias' 5 'Santiago Abascal'
+6 'Todos por igual' 7 '(NO LEER) Ninguno' 8 'N.S.' 9 'N.C.' 0 'N.P.'
+/B12B
+1 'Sí' 2 'No' 9 'N.C.' 0 'N.P.'
+/B12C
+1 'No pensaba votar y al final votó' 2 'Pensaba votar y no votó' 3 'Pensaba votar por un partido/candidato/a y cambió su voto'
+4 'Se reafirmó en votar por el partido/candidato/a por el/la que pensaba' 5 'Le entraron muchas dudas sobre si ir a votar o no hacerlo'
+96 'Otra respuesta' 98 'N.S.' 99 'N.C.' 0 'N.P.'
+/B13_1
+1 'Sí' 2 'No' 9 'N.C.'
+/B13_2
+1 'Sí' 2 'No' 9 'N.C.'
+/B13_3
+1 'Sí' 2 'No' 9 'N.C.'
+/B13_4
+1 'Sí' 2 'No' 9 'N.C.'
+/B13_5
+1 'Sí' 2 'No' 9 'N.C.'
+/B14
+1 'Sí' 2 'No' 9 'N.C.'
+/B14A_1
+1 'Menciona' 0 'N.P.'
+/B14A_2
+1 'Menciona' 0 'N.P.'
+/B14A_3
+1 'Menciona' 0 'N.P.'
+/B14A_4
+1 'Menciona' 0 'N.P.'
+/B14A_5
+1 'Menciona' 0 'N.P.'
+/B14A_6
+1 'Menciona' 0 'N.P.'
+/B14A_7
+1 'Menciona' 0 'N.P.'
+/B14A_8
+1 'Menciona' 0 'N.P.'
+/B14A_9
+1 'Menciona' 0 'N.P.'
+/B14A_10
+1 'Menciona' 0 'N.P.'
+/B14A_11
+1 'Menciona' 0 'N.P.'
+/B14A_12
+1 'Menciona' 0 'N.P.'
+/B14A_13
+1 'Menciona' 0 'N.P.'
+/B14A_14
+1 'Menciona' 0 'N.P.'
+/B14A_15
+1 'Menciona' 0 'N.P.'
+/B14A_16
+1 'Menciona' 0 'N.P.'
+/B14A_17
+1 'Menciona' 0 'N.P.'
+/B14A_18
+1 'Menciona' 0 'N.P.'
+/B14A_19
+1 'Menciona' 0 'N.P.'
+/B14A_20
+1 'Menciona' 0 'N.P.'
+/B14A_21
+1 'Menciona' 0 'N.P.'
+/B14A_22
+1 'Menciona' 0 'N.P.'
+/B15
+1 'Sí' 2 'No' 9 'N.C.'
+/B15A_1
+1 'Menciona' 0 'N.P.'
+/B15A_2
+1 'Menciona' 0 'N.P.'
+/B15A_3
+1 'Menciona' 0 'N.P.'
+/B15A_4
+1 'Menciona' 0 'N.P.'
+/B15A_5
+1 'Menciona' 0 'N.P.'
+/B15A_6
+1 'Menciona' 0 'N.P.'
+/B15A_7
+1 'Menciona' 0 'N.P.'
+/B15A_8
+1 'Menciona' 0 'N.P.'
+/B15A_9
+1 'Menciona' 0 'N.P.'
+/B15A_10
+1 'Menciona' 0 'N.P.'
+/B15A_11
+1 'Menciona' 0 'N.P.'
+/B15A_12
+1 'Menciona' 0 'N.P.'
+/B15A_13
+1 'Menciona' 0 'N.P.'
+/B15A_14
+1 'Menciona' 0 'N.P.'
+/B15A_15
+1 'Menciona' 0 'N.P.'
+/B15A_16
+1 'Menciona' 0 'N.P.'
+/B15A_17
+1 'Menciona' 0 'N.P.'
+/B15A_18
+1 'Menciona' 0 'N.P.'
+/B15A_19
+1 'Menciona' 0 'N.P.'
+/B15A_20
+1 'Menciona' 0 'N.P.'
+/B15A_21
+1 'Menciona' 0 'N.P.'
+/B15A_22
+1 'Menciona' 0 'N.P.'
+/B16
+1 'Sí' 2 'No' 9 'N.C.'
+/B16A_1
+1 'Menciona' 0 'N.P.'
+/B16A_2
+1 'Menciona' 0 'N.P.'
+/B16A_3
+1 'Menciona' 0 'N.P.'
+/B16A_4
+1 'Menciona' 0 'N.P.'
+/B16A_5
+1 'Menciona' 0 'N.P.'
+/B16A_6
+1 'Menciona' 0 'N.P.'
+/B16A_7
+1 'Menciona' 0 'N.P.'
+/B16A_8
+1 'Menciona' 0 'N.P.'
+/B16A_9
+1 'Menciona' 0 'N.P.'
+/B16A_10
+1 'Menciona' 0 'N.P.'
+/B16A_11
+1 'Menciona' 0 'N.P.'
+/B16A_12
+1 'Menciona' 0 'N.P.'
+/B16A_13
+1 'Menciona' 0 'N.P.'
+/B16A_14
+1 'Menciona' 0 'N.P.'
+/B16A_15
+1 'Menciona' 0 'N.P.'
+/B16A_16
+1 'Menciona' 0 'N.P.'
+/B16A_17
+1 'Menciona' 0 'N.P.'
+/B16A_18
+1 'Menciona' 0 'N.P.'
+/B16A_19
+1 'Menciona' 0 'N.P.'
+/B16A_20
+1 'Menciona' 0 'N.P.'
+/B16A_21
+1 'Menciona' 0 'N.P.'
+/B16A_22
+1 'Menciona' 0 'N.P.'
+/B17_1
+1 'Habitualmente' 2 'De vez en cuando' 3 'Rara vez' 4 'Nunca o casi nunca' 7 '(NO LEER) No procede'
+9 'N.C.'
+/B17_2
+1 'Habitualmente' 2 'De vez en cuando' 3 'Rara vez' 4 'Nunca o casi nunca' 7 '(NO LEER) No procede'
+9 'N.C.'
+/B17_3
+1 'Habitualmente' 2 'De vez en cuando' 3 'Rara vez' 4 'Nunca o casi nunca' 7 '(NO LEER) No procede'
+9 'N.C.'
+/B18
+1 'Sí' 2 'No' 9 'N.C.'
+/B18A
+1 'Mucho' 2 'Bastante' 3 'Poco' 4 'Nada' 8 'N.S.' 9 'N.C.' 0 'N.P.'
+/B18B
+1 'Le animaron a votar' 2 'Le animaron a abstenerse' 3 'Le ayudaron a decidir el partido por el que iba a votar'
+4 'Reforzaron su decisión de votar por el partido que pensaba' 5 'Le animaron a votar a otro partido distinto al que tenía pensado'
+6 'Otra respuesta' 8 'N.S.' 9 'N.C.' 0 'N.P.'
+/B19
+1 'Sí' 2 'No' 9 'N.C.'
+/B19A
+1 'Ha reafirmado su voluntad de votar por el partido por el que pensaba votar' 2 'Le ha llevado a cambiar el partido por el que pensaba votar'
+3 'No pensaba votar pero ha votado' 4 'Le ha llevado a abstenerse' 96 'Otra respuesta' 98 'N.S.'
+99 'N.C.' 0 'N.P.'
+/B19B
+2 'PSOE' 1 'PP' 18 'VOX' 3 'Podemos' 21 'Unidas Podemos' 4 'Ciudadanos' 5 'IU' 50 'Más País'
+8 'ERC' 9 'Junts' 6 'En Comú Podem' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CCa-NC' 14 'Na+ (UPN)' 19 'CUP'
+67 'En Común-Unidas Podemos' 7 'Més Compromís' 43 'PRC' 24 'BNG' 68 'Teruel Existe' 10 'En Marea'
+15 'FAC (Foro Asturias)' 16 'Nueva Canarias' 17 'PACMA' 20 'Los Verdes' 22 'EQUO' 23 'PAR' 25 'MÉS (PSM-Entesa)'
+26 'Falange Española de las JONS' 27 'Escaños en Blanco' 28 'España 2000' 29 'Partido Libertario'
+30 'CHA' 31 'Recortes Cero' 32 'Directe 68' 33 'Partido Feminista de España' 34 'Geroa Bai'
+35 'Bloc' 36 'Convergència' 38 'UPyD' 39 'PCPE' 40 'PI (Proposta per les Illes)' 41 'PAYJ' 42 'IGRE'
+44 'UPL' 45 'Recortes Cero-Grupo Verde' 46 'Coalición Caballas' 47 'MDyC (Mov. por la Dignidad y la Ciudadaní­a)'
+48 'Coalición por Melilla' 49 'PPL (Populares en Libertad)' 51 'PR+' 52 'Actúa' 53 'Anova-Irmandade Nacionalista'
+54 'Compromiso por Galicia' 55 'Barcelona pel Canvi' 56 'Zaragoza en Común' 57 'Santiago Aberta'
+60 'CNxR' 61 'Democracia Nacional' 62 'Poble Lliure' 63 'Partido Humanista' 64 'Som Valencians'
+65 'Converxencia Galega' 66 'Terra Galega' 69 'Extremadura Unida' 90 'Adelante Sevilla' 95 'Otro partido'
+96 'En blanco' 77 'Voto nulo' 97 'Abstención' 98 'No recuerda' 99 'N.C.' 0 'N.P.'
+/B20
+1 'Sí' 2 'No' 9 'N.C.'
+/B20A
+1 'Le ha llevado a votar por un partido que defiende la independencia de Cataluña' 2 'Le ha llevado a votar por el partido que mejor podía parar a los/as partidarios/as de la independencia de Cataluña'
+3 'Ha reafirmado su voluntad de votar por el partido por el que pensaba votar' 4 'Le ha animado a votar y no abstenerse'
+5 'Ha cambiado su voto a favor de un partido que defiende más la unidad de España' 6 'Ha cambiado su voto a favor de un partido que defiende el diálogo y el entendimiento en Cataluña'
+96 'Otra respuesta' 98 'N.S.' 99 'N.C.' 0 'N.P.'
+/B20B
+2 'PSOE' 1 'PP' 18 'VOX' 21 'Unidas Podemos' 4 'Ciudadanos' 50 'Más País' 8 'ERC' 9 'Junts'
+6 'En Comú Podem' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CCa-NC' 14 'Na+ (UPN)' 19 'CUP' 67 'En Común-Unidas Podemos'
+7 'Més Compromís' 43 'PRC' 24 'BNG' 68 'Teruel Existe' 10 'En Marea' 15 'FAC (Foro Asturias)'
+17 'PACMA' 20 'Los Verdes' 22 'EQUO' 23 'PAR' 25 'MÉS (PSM-Entesa)' 26 'Falange Española de las JONS'
+27 'Escaños en Blanco' 28 'España 2000' 29 'Partido Libertario' 30 'CHA' 31 'Recortes Cero'
+32 'Directe 68' 33 'Partido Feminista de España' 34 'Geroa Bai' 35 'Bloc' 36 'Convergència'
+38 'UPyD' 39 'PCPE' 40 'PI (Proposta per les Illes)' 41 'PAYJ' 42 'IGRE' 44 'UPL' 45 'Recortes Cero-Grupo Verde'
+46 'Coalición Caballas' 47 'MDyC (Mov. por la Dignidad y la Ciudadaní­a)' 48 'Coalición por Melilla'
+49 'PPL (Populares en Libertad)' 51 'PR+' 52 'Actúa' 53 'Anova-Irmandade Nacionalista' 54 'Compromiso por Galicia'
+55 'Barcelona pel Canvi' 56 'Zaragoza en Común' 57 'Santiago Aberta' 60 'CNxR' 61 'Democracia Nacional'
+62 'Poble Lliure' 63 'Partido Humanista' 64 'Som Valencians' 65 'Converxencia Galega' 66 'Terra Galega'
+69 'Extremadura Unida' 90 'Adelante Sevilla' 95 'Otros partidos' 96 'En blanco' 77 'Voto nulo'
+97 'Abstención' 98 'No recuerda' 99 'N.C.' 0 'N.P.'
+/B21
+1 'Dudó entre varios partidos o coaliciones' 2 'Dudó entre un partido o coalición y la abstención'
+3 'Dudó entre un partido o coalición y votar en blanco o nulo' 4 'Dudó entre votar en blanco y abstenerse'
+5 'Tenía decidido votar por un partido o coalición' 6 'Tenía decidido votar en blanco o nulo'
+7 'Tenía decidido abstenerse' 9 'N.C.'
+/B21A01
+2 'PSOE' 1 'PP' 18 'VOX' 21 'Unidas Podemos' 4 'Ciudadanos' 50 'Más País' 8 'ERC' 9 'Junts'
+6 'En Comú Podem' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CCa-NC' 14 'Na+ (UPN)' 19 'CUP' 67 'En Común-Unidas Podemos'
+7 'Més Compromís' 43 'PRC' 24 'BNG' 68 'Teruel Existe' 10 'En Marea' 15 'FAC (Foro Asturias)'
+17 'PACMA' 20 'Los Verdes' 22 'EQUO' 23 'PAR' 25 'MÉS (PSM-Entesa)' 26 'Falange Española de las JONS'
+27 'Escaños en Blanco' 28 'España 2000' 29 'Partido Libertario' 30 'CHA' 31 'Recortes Cero'
+32 'Directe 68' 33 'Partido Feminista de España' 34 'Geroa Bai' 35 'Bloc' 36 'Convergència'
+38 'UPyD' 39 'PCPE' 40 'PI (Proposta per les Illes)' 41 'PAYJ' 42 'IGRE' 44 'UPL' 45 'Recortes Cero-Grupo Verde'
+46 'Coalición Caballas' 47 'MDyC (Mov. por la Dignidad y la Ciudadaní­a)' 48 'Coalición por Melilla'
+49 'PPL (Populares en Libertad)' 51 'PR+' 52 'Actúa' 53 'Anova-Irmandade Nacionalista' 54 'Compromiso por Galicia'
+55 'Barcelona pel Canvi' 56 'Zaragoza en Común' 57 'Santiago Aberta' 60 'CNxR' 61 'Democracia Nacional'
+62 'Poble Lliure' 63 'Partido Humanista' 64 'Som Valencians' 65 'Converxencia Galega' 66 'Terra Galega'
+69 'Extremadura Unida' 90 'Adelante Sevilla' 95 'Otros partidos' 96 'En blanco' 77 'Voto nulo'
+97 'Abstención' 98 'No recuerda' 99 'N.C.' 0 'N.P.'
+/B21A02
+2 'PSOE' 1 'PP' 18 'VOX' 21 'Unidas Podemos' 4 'Ciudadanos' 50 'Más País' 8 'ERC' 9 'Junts'
+6 'En Comú Podem' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CCa-NC' 14 'Na+ (UPN)' 19 'CUP' 67 'En Común-Unidas Podemos'
+7 'Més Compromís' 43 'PRC' 24 'BNG' 68 'Teruel Existe' 10 'En Marea' 15 'FAC (Foro Asturias)'
+17 'PACMA' 20 'Los Verdes' 22 'EQUO' 23 'PAR' 25 'MÉS (PSM-Entesa)' 26 'Falange Española de las JONS'
+27 'Escaños en Blanco' 28 'España 2000' 29 'Partido Libertario' 30 'CHA' 31 'Recortes Cero'
+32 'Directe 68' 33 'Partido Feminista de España' 34 'Geroa Bai' 35 'Bloc' 36 'Convergència'
+38 'UPyD' 39 'PCPE' 40 'PI (Proposta per les Illes)' 41 'PAYJ' 42 'IGRE' 44 'UPL' 45 'Recortes Cero-Grupo Verde'
+46 'Coalición Caballas' 47 'MDyC (Mov. por la Dignidad y la Ciudadaní­a)' 48 'Coalición por Melilla'
+49 'PPL (Populares en Libertad)' 51 'PR+' 52 'Actúa' 53 'Anova-Irmandade Nacionalista' 54 'Compromiso por Galicia'
+55 'Barcelona pel Canvi' 56 'Zaragoza en Común' 57 'Santiago Aberta' 60 'CNxR' 61 'Democracia Nacional'
+62 'Poble Lliure' 63 'Partido Humanista' 64 'Som Valencians' 65 'Converxencia Galega' 66 'Terra Galega'
+69 'Extremadura Unida' 90 'Adelante Sevilla' 95 'Otros partidos' 96 'En blanco' 77 'Voto nulo'
+97 'Abstención' 98 'No recuerda' 99 'N.C.' 0 'N.P.'
+/B22
+2 'PSOE' 1 'PP' 18 'VOX' 21 'Unidas Podemos' 4 'Ciudadanos' 5 'IU' 50 'Más País' 8 'ERC' 9 'Junts'
+6 'En Comú Podem' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CCa-NC' 14 'Na+ (UPN)' 19 'CUP' 67 'En Común-Unidas Podemos'
+7 'Més Compromís' 43 'PRC' 24 'BNG' 68 'Teruel Existe' 10 'En Marea' 15 'FAC (Foro Asturias)'
+17 'PACMA' 20 'Los Verdes' 22 'EQUO' 23 'PAR' 25 'MÉS (PSM-Entesa)' 26 'Falange Española de las JONS'
+27 'Escaños en Blanco' 28 'España 2000' 29 'Partido Libertario' 30 'CHA' 31 'Recortes Cero'
+32 'Directe 68' 33 'Partido Feminista de España' 34 'Geroa Bai' 35 'Bloc' 36 'Convergència'
+38 'UPyD' 39 'PCPE' 40 'PI (Proposta per les Illes)' 41 'PAYJ' 42 'IGRE' 44 'UPL' 45 'Recortes Cero-Grupo Verde'
+46 'Coalición Caballas' 47 'MDyC (Mov. por la Dignidad y la Ciudadaní­a)' 48 'Coalición por Melilla'
+49 'PPL (Populares en Libertad)' 51 'PR+' 52 'Actúa' 53 'Anova-Irmandade Nacionalista' 54 'Compromiso por Galicia'
+55 'Barcelona pel Canvi' 56 'Zaragoza en Común' 57 'Santiago Aberta' 60 'CNxR' 61 'Democracia Nacional'
+62 'Poble Lliure' 63 'Partido Humanista' 64 'Som Valencians' 65 'Converxencia Galega' 66 'Terra Galega'
+69 'Extremadura Unida' 90 'Adelante Sevilla' 95 'Otros partidos' 96 'En blanco' 77 'Voto nulo'
+97 'Abstención' 98 'No recuerda' 99 'N.C.'
+/B22A
+1 'Con convicción' 2 'Con ciertas dudas' 3 'Porque se trataba del mal menor' 4 'Para evitar que pudiera ganar otro partido'
+8 'N.S.' 9 'N.C.' 0 'N.P.'
+/B22B_1
+1 'Por el candidato que presentaba a la Presidencia del Gobierno' 2 'Porque siempre suele votar a este partido/coalición'
+3 'Porque es el que está más capacitado para gobernar España' 4 'Porque es el que mejor representa las ideas de la gente como Ud.'
+5 'Por su actuación en los últimos meses' 6 'Por su actuación en la legislatura anterior' 7 'Para evitar que ganase otro partido/coalición'
+96 'Otras respuestas' 98 'N.S.' 99 'N.C.' 0 'N.P.'
+/B22B_2
+1 'Por el candidato que presentaba a la Presidencia del Gobierno' 2 'Porque siempre suele votar a este partido/coalición'
+3 'Porque es el que está más capacitado para gobernar España' 4 'Porque es el que mejor representa las ideas de la gente como Ud.'
+5 'Por su actuación en los últimos meses' 6 'Por su actuación en la legislatura anterior' 7 'Para evitar que ganase otro partido/coalición'
+96 'Otras respuestas' 98 'N.S.' 99 'N.C.' 0 'N.P.'
+/B22C
+1 'Votó a los/as tres del mismo partido' 2 'Votó por varios/as de diferentes partidos' 3 'Votó en blanco'
+4 'Votó nulo' 5 'No votó al Senado' 9 'N.C.' 0 'N.P.'
+/B22D
+2 'PSOE' 1 'PP' 18 'VOX' 21 'Unidas Podemos' 4 'Ciudadanos' 50 'Más País' 8 'ERC' 9 'Junts'
+6 'En Comú Podem' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CCa-NC' 14 'Na+ (UPN)' 19 'CUP' 67 'En Común-Unidas Podemos'
+7 'Més Compromís' 43 'PRC' 24 'BNG' 68 'Teruel Existe' 10 'En Marea' 15 'FAC (Foro Asturias)'
+17 'PACMA' 20 'Los Verdes' 22 'EQUO' 23 'PAR' 25 'MÉS (PSM-Entesa)' 26 'Falange Española de las JONS'
+27 'Escaños en Blanco' 28 'España 2000' 29 'Partido Libertario' 30 'CHA' 31 'Recortes Cero'
+32 'Directe 68' 33 'Partido Feminista de España' 34 'Geroa Bai' 35 'Bloc' 36 'Convergència'
+38 'UPyD' 39 'PCPE' 40 'PI (Proposta per les Illes)' 41 'PAYJ' 42 'IGRE' 44 'UPL' 45 'Recortes Cero-Grupo Verde'
+46 'Coalición Caballas' 47 'MDyC (Mov. por la Dignidad y la Ciudadaní­a)' 48 'Coalición por Melilla'
+49 'PPL (Populares en Libertad)' 51 'PR+' 52 'Actúa' 53 'Anova-Irmandade Nacionalista' 54 'Compromiso por Galicia'
+55 'Barcelona pel Canvi' 56 'Zaragoza en Común' 57 'Santiago Aberta' 60 'CNxR' 61 'Democracia Nacional'
+62 'Poble Lliure' 63 'Partido Humanista' 64 'Som Valencians' 65 'Converxencia Galega' 66 'Terra Galega'
+69 'Extremadura Unida' 90 'Adelante Sevilla' 95 'Otros partidos' 99 'N.C.' 0 'N.P.'
+/B22E_1
+2 'PSOE' 1 'PP' 18 'VOX' 21 'Unidas Podemos' 4 'Ciudadanos' 50 'Más País' 8 'ERC' 9 'Junts'
+6 'En Comú Podem' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CCa-NC' 14 'Na+ (UPN)' 19 'CUP' 67 'En Común-Unidas Podemos'
+7 'Més Compromís' 43 'PRC' 24 'BNG' 68 'Teruel Existe' 10 'En Marea' 15 'FAC (Foro Asturias)'
+17 'PACMA' 20 'Los Verdes' 22 'EQUO' 23 'PAR' 25 'MÉS (PSM-Entesa)' 26 'Falange Española de las JONS'
+27 'Escaños en Blanco' 28 'España 2000' 29 'Partido Libertario' 30 'CHA' 31 'Recortes Cero'
+32 'Directe 68' 33 'Partido Feminista de España' 34 'Geroa Bai' 35 'Bloc' 36 'Convergència'
+38 'UPyD' 39 'PCPE' 40 'PI (Proposta per les Illes)' 41 'PAYJ' 42 'IGRE' 44 'UPL' 45 'Recortes Cero-Grupo Verde'
+46 'Coalición Caballas' 47 'MDyC (Mov. por la Dignidad y la Ciudadaní­a)' 48 'Coalición por Melilla'
+49 'PPL (Populares en Libertad)' 51 'PR+' 52 'Actúa' 53 'Anova-Irmandade Nacionalista' 54 'Compromiso por Galicia'
+55 'Barcelona pel Canvi' 56 'Zaragoza en Común' 57 'Santiago Aberta' 60 'CNxR' 61 'Democracia Nacional'
+62 'Poble Lliure' 63 'Partido Humanista' 64 'Som Valencians' 65 'Converxencia Galega' 66 'Terra Galega'
+69 'Extremadura Unida' 90 'Adelante Sevilla' 95 'Otros partidos' 99 'N.C.' 0 'N.P.'
+/B22E_2
+2 'PSOE' 1 'PP' 18 'VOX' 21 'Unidas Podemos' 4 'Ciudadanos' 50 'Más País' 8 'ERC' 9 'Junts'
+6 'En Comú Podem' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CCa-NC' 14 'Na+ (UPN)' 19 'CUP' 67 'En Común-Unidas Podemos'
+7 'Més Compromís' 43 'PRC' 24 'BNG' 68 'Teruel Existe' 10 'En Marea' 15 'FAC (Foro Asturias)'
+17 'PACMA' 20 'Los Verdes' 22 'EQUO' 23 'PAR' 25 'MÉS (PSM-Entesa)' 26 'Falange Española de las JONS'
+27 'Escaños en Blanco' 28 'España 2000' 29 'Partido Libertario' 30 'CHA' 31 'Recortes Cero'
+32 'Directe 68' 33 'Partido Feminista de España' 34 'Geroa Bai' 35 'Bloc' 36 'Convergència'
+38 'UPyD' 39 'PCPE' 40 'PI (Proposta per les Illes)' 41 'PAYJ' 42 'IGRE' 44 'UPL' 45 'Recortes Cero-Grupo Verde'
+46 'Coalición Caballas' 47 'MDyC (Mov. por la Dignidad y la Ciudadaní­a)' 48 'Coalición por Melilla'
+49 'PPL (Populares en Libertad)' 51 'PR+' 52 'Actúa' 53 'Anova-Irmandade Nacionalista' 54 'Compromiso por Galicia'
+55 'Barcelona pel Canvi' 56 'Zaragoza en Común' 57 'Santiago Aberta' 60 'CNxR' 61 'Democracia Nacional'
+62 'Poble Lliure' 63 'Partido Humanista' 64 'Som Valencians' 65 'Converxencia Galega' 66 'Terra Galega'
+69 'Extremadura Unida' 90 'Adelante Sevilla' 95 'Otros partidos' 96 'En blanco' 99 'N.C.' 0 'N.P.'
+/B22E_3
+2 'PSOE' 1 'PP' 18 'VOX' 21 'Unidas Podemos' 4 'Ciudadanos' 50 'Más País' 8 'ERC' 9 'Junts'
+6 'En Comú Podem' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CCa-NC' 14 'Na+ (UPN)' 19 'CUP' 67 'En Común-Unidas Podemos'
+7 'Més Compromís' 43 'PRC' 24 'BNG' 68 'Teruel Existe' 10 'En Marea' 15 'FAC (Foro Asturias)'
+17 'PACMA' 20 'Los Verdes' 22 'EQUO' 23 'PAR' 25 'MÉS (PSM-Entesa)' 26 'Falange Española de las JONS'
+27 'Escaños en Blanco' 28 'España 2000' 29 'Partido Libertario' 30 'CHA' 31 'Recortes Cero'
+32 'Directe 68' 33 'Partido Feminista de España' 34 'Geroa Bai' 35 'Bloc' 36 'Convergència'
+38 'UPyD' 39 'PCPE' 40 'PI (Proposta per les Illes)' 41 'PAYJ' 42 'IGRE' 44 'UPL' 45 'Recortes Cero-Grupo Verde'
+46 'Coalición Caballas' 47 'MDyC (Mov. por la Dignidad y la Ciudadaní­a)' 48 'Coalición por Melilla'
+49 'PPL (Populares en Libertad)' 51 'PR+' 52 'Actúa' 53 'Anova-Irmandade Nacionalista' 54 'Compromiso por Galicia'
+55 'Barcelona pel Canvi' 56 'Zaragoza en Común' 57 'Santiago Aberta' 60 'CNxR' 61 'Democracia Nacional'
+62 'Poble Lliure' 63 'Partido Humanista' 64 'Som Valencians' 65 'Converxencia Galega' 66 'Terra Galega'
+69 'Extremadura Unida' 90 'Adelante Sevilla' 95 'Otros partidos' 96 'En blanco' 99 'N.C.' 0 'N.P.'
+/B23
+1 'No pudo votar' 2 'No quiso ir a votar' 3 'Normalmente vota, pero esta vez no quiso hacerlo'
+4 'Normalmente vota, pero esta vez no pudo hacerlo' 9 'N.C.' 0 'N.P.'
+/B23A
+1 'Nunca vota' 2 'Lo tenía decidido hace bastante tiempo (antes del inicio de la campaña electoral)'
+3 'Lo decidió al comienzo de la campaña electoral' 4 'Lo decidió durante la última semana de la campaña electoral, unos días antes de las elecciones'
+5 'Dudó hasta el último momento' 9 'N.C.' 0 'N.P.'
+/B23B_1
+1 'No había ninguna alternativa que le satisficiera' 2 'Está harto/a de política y elecciones'
+3 'Da lo mismo votar que no votar, no sirve para nada' 4 'Estaba desorientado/a, no sabía a quien votar'
+5 'No le inspiraba confianza ningún partido ni ningún/a político/a' 6 'Para mostrar su descontento'
+7 'Por la influencia de los debates de los principales candidatos en televisión' 8 'Otras respuestas'
+98 'N.S.' 99 'N.C.' 0 'N.P.'
+/B23B_2
+1 'No había ninguna alternativa que le satisficiera' 2 'Está harto/a de política y elecciones'
+3 'Da lo mismo votar que no votar, no sirve para nada' 4 'Estaba desorientado/a, no sabía a quien votar'
+5 'No le inspiraba confianza ningún partido ni ningún/a político/a' 6 'Para mostrar su descontento'
+7 'Por la influencia de los debates de los principales candidatos en televisión' 8 'Otras respuestas'
+98 'N.S.' 99 'N.C.' 0 'N.P.'
+/B23C
+1 'No estaba inscrito/a en el censo electoral' 2 'No tenía su DNI o pasaporte' 3 'No sabía donde tenía que ir a votar'
+4 'Por motivos familiares' 5 'Por motivos de salud' 6 'Por motivos de trabajo' 7 'Estaba ausente'
+8 'No tenía edad para votar' 9 'Otras respuestas' 99 'N.C.' 0 'N.P.'
+/B23D
+2 'PSOE' 1 'PP' 18 'VOX' 21 'Unidas Podemos' 4 'Ciudadanos' 50 'Más País' 8 'ERC' 9 'Junts'
+6 'En Comú Podem' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CCa-NC' 14 'Na+ (UPN)' 19 'CUP' 67 'En Común-Unidas Podemos'
+7 'Més Compromís' 43 'PRC' 24 'BNG' 68 'Teruel Existe' 10 'En Marea' 15 'FAC (Foro Asturias)'
+17 'PACMA' 20 'Los Verdes' 22 'EQUO' 23 'PAR' 25 'MÉS (PSM-Entesa)' 26 'Falange Española de las JONS'
+27 'Escaños en Blanco' 28 'España 2000' 29 'Partido Libertario' 30 'CHA' 31 'Recortes Cero'
+32 'Directe 68' 33 'Partido Feminista de España' 34 'Geroa Bai' 35 'Bloc' 36 'Convergència'
+38 'UPyD' 39 'PCPE' 40 'PI (Proposta per les Illes)' 41 'PAYJ' 42 'IGRE' 44 'UPL' 45 'Recortes Cero-Grupo Verde'
+46 'Coalición Caballas' 47 'MDyC (Mov. por la Dignidad y la Ciudadaní­a)' 48 'Coalición por Melilla'
+49 'PPL (Populares en Libertad)' 51 'PR+' 52 'Actúa' 53 'Anova-Irmandade Nacionalista' 54 'Compromiso por Galicia'
+55 'Barcelona pel Canvi' 56 'Zaragoza en Común' 57 'Santiago Aberta' 60 'CNxR' 61 'Democracia Nacional'
+62 'Poble Lliure' 63 'Partido Humanista' 64 'Som Valencians' 65 'Converxencia Galega' 66 'Terra Galega'
+69 'Extremadura Unida' 90 'Adelante Sevilla' 95 'Otros partidos' 96 'En blanco' 77 'Voto nulo'
+97 'Abstención' 98 'No recuerda' 99 'N.C.' 0 'N.P.'
+/B24
+1 'Lo tenía decidido desde hace bastante tiempo (antes del inicio de la campaña electoral)'
+2 'Lo decidió al comienzo de la campaña electoral' 3 'Lo decidió durante la última semana de la campaña electoral, unos días antes de las elecciones'
+4 'Lo decidió el mismo día de las elecciones' 9 'N.C.' 0 'N.P.'
+/B24A_1
+1 'Menciona' 0 'N.P.'
+/B24A_2
+1 'Menciona' 0 'N.P.'
+/B24A_3
+1 'Menciona' 0 'N.P.'
+/B24A_4
+1 'Menciona' 0 'N.P.'
+/B24A_5
+1 'Menciona' 0 'N.P.'
+/B24A_6
+1 'Menciona' 0 'N.P.'
+/B24A_7
+1 'Menciona' 0 'N.P.'
+/B24A_8
+1 'Menciona' 0 'N.P.'
+/B25
+1 'Antes de las 2 del mediodía' 2 'Entre las 2 y las 6 de la tarde' 3 'Después de las 6 de la tarde'
+4 'Votó por correo' 9 'N.C.' 0 'N.P.'
+/B26
+1 'Las llevaba preparadas de casa' 2 'Las cogió en el colegio electoral' 9 'N.C.' 0 'N.P.'
+/B26A
+1 'Sí utilizó la cabina' 2 'No utilizó la cabina' 8 'N.S.' 9 'N.C.' 0 'N.P.'
+/B27
+1 'Sí' 2 'No' 9 'N.C.' 0 'N.P.'
+/B27A
+1 'Los argumentos y propuestas programáticas que dieron durante la campaña los partidos y candidatos/as'
+2 'Intentar evitar que pudieran ganar partidos de derechas' 3 'Intentar evitar que pudieran ganar partidos de izquierdas'
+4 'Intentar evitar que pudieran ganar partidos que permitieran la independencia de Cataluña'
+5 'Otra razón' 8 'N.S.' 9 'N.C.' 0 'N.P.'
+/B28
+1 'Habría votado por el mismo partido o coalición por el que lo hizo' 2 'Se habría abstenido o habría votado en blanco'
+3 'Habría votado por un partido o coalición distinto al que votó' 4 'Habría votado por un partido o coalición en vez de votar en blanco o nulo'
+5 'Habría votado por un partido o coalición en vez de abstenerse' 8 'N.S.' 9 'N.C.'
+/B29_1
+1 '1 Muy mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/B29_2
+1 '1 Muy mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/B29_3
+1 '1 Muy mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/B29_4
+1 '1 Muy mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/B29_5
+1 '1 Muy mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/B29_6
+1 '1 Muy mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/B29_7
+1 '1 Muy mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/B30
+1 'Me siento únicamente español/a' 2 'Me siento más español/a que (gentilicio C. A.)' 3 'Me siento tan español/a como (gentilicio C. A.)'
+4 'Me siento más (gentilicio C. A.) que español/a' 5 'Me siento únicamente (gentilicio C. A.)'
+7 '(NO LEER) Ninguna de estas respuestas' 8 'N.S.' 9 'N.C.'
+/C1
+2 'PSOE' 1 'PP' 18 'VOX' 3 'Podemos' 21 'Unidas Podemos' 4 'Ciudadanos' 5 'IU' 50 'Más País'
+8 'ERC' 9 'Junts' 6 'En Comú Podem' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CC-PNC' 14 'UPN (NA+)' 19 'CUP'
+67 'En Común-Unidas Podemos' 7 'Més Compromís' 43 'PRC' 24 'BNG' 68 'Teruel Existe' 10 'En Marea'
+15 'FAC (Foro Asturias)' 16 'Nueva Canarias' 17 'PACMA' 20 'Los Verdes' 22 'EQUO' 23 'PAR' 25 'MÉS (PSM-Entesa)'
+26 'Falange Española de las JONS' 27 'Escaños en Blanco' 28 'España 2000' 29 'Partido Libertario'
+30 'CHA' 31 'Recortes Cero' 32 'Directe 68' 33 'Partido Feminista de España' 34 'Geroa Bai'
+35 'Bloc' 36 'Convergència' 38 'UPyD' 39 'PCPE' 40 'PI (Proposta per les Illes Balears)' 41 'PAYJ'
+42 'IGRE' 44 'UPL' 45 'Recortes Cero-Grupo Verde' 46 'Coalición Caballas' 47 'MDyC (Movimiento por la Dignidad y la Ciudadaní­a)'
+48 'Coalición por Melilla' 49 'PPL (Populares en Libertad)' 51 'PR+' 52 'Actúa' 53 'Anova-Irmandade Nacionalista'
+54 'Compromiso por Galicia' 55 'Barcelona pel Canvi' 56 'Zaragoza en Común' 57 'Santiago Aberta'
+60 'CNxR' 61 'Democracia Nacional' 62 'Poble Lliure' 63 'Partido Humanista' 64 'Som Valencians'
+65 'Converxencia Galega' 66 'Terra Galega' 69 'Extremadura Unida' 90 'Adelante Sevilla' 95 'Otro partido'
+96 'Voto blanco' 77 'Voto nulo' 97 'No votaría' 98 'No sabe todavía' 99 'N.C.'
+/C1A
+0 'No procede' 2 'PSOE' 1 'PP' 18 'VOX' 3 'Podemos' 21 'Unidas Podemos' 4 'Ciudadanos' 5 'IU'
+50 'Más País' 8 'ERC' 9 'Junts' 6 'En Comú Podem' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CC-PNC' 14 'NA+ (UPN)'
+16 'Nueva Canarias' 19 'CUP' 67 'En Común-Unidas Podemos' 7 'Més Compromís' 43 'PRC' 24 'BNG'
+68 'Teruel Existe' 10 'En Marea' 15 'FAC (Foro Asturias)' 17 'PACMA' 20 'Los Verdes' 22 'EQUO'
+23 'PAR' 25 'MÉS (PSM-Entesa)' 26 'Falange Española de las JONS' 27 'Escaños en Blanco' 28 'España 2000'
+29 'Partido Libertario' 30 'CHA' 31 'Recortes Cero' 32 'Directe 68' 33 'Partido Feminista de España'
+34 'Geroa Bai' 35 'Bloc' 36 'Convergència' 38 'UPyD' 39 'PCPE' 40 'PI (Proposta per les Illes Balears)'
+41 'PAYJ' 42 'IGRE' 44 'UPL' 45 'Recortes Cero-Grupo Verde' 46 'Coalición Caballas' 47 'MDyC (Movimiento por la Dignidad y la Ciudadaní­a)'
+48 'Coalición por Melilla' 49 'PPL (Populares en Libertad)' 51 'PR+' 52 'Actúa' 53 'Anova-Irmandade Nacionalista'
+54 'Compromiso por Galicia' 55 'Barcelona pel Canvi' 56 'Zaragoza en Común' 57 'Santiago Aberta'
+60 'CNxR' 61 'Democracia Nacional' 62 'Poble Lliure' 63 'Partido Humanista' 64 'Som Valencians'
+65 'Converxencia Galega' 66 'Terra Galega' 69 'Extremadura Unida' 90 'Adelante Sevilla' 95 'Otro partido'
+77 'Voto nulo' 96 'Voto blanco' 97 'No votaría' 98 'N.S.' 99 'N.C.'
+/C2
+0 'No Procede' 2 'PSOE' 1 'PP' 18 'VOX' 3 'Podemos' 21 'Unidas Podemos' 4 'Ciudadanos' 5 'IU'
+50 'Más País' 8 'ERC' 9 'Junts' 6 'En Comú Podem' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CC-PNC' 14 'NA+ (UPN)'
+19 'CUP' 67 'En Común-Unidas Podemos' 7 'Més Compromís' 43 'PRC' 24 'BNG' 68 'Teruel Existe'
+10 'En Marea' 15 'FAC (Foro Asturias)' 17 'PACMA' 20 'Los Verdes' 22 'EQUO' 23 'PAR' 25 'MÉS (PSM-Entesa)'
+26 'Falange Española de las JONS' 27 'Escaños en Blanco' 28 'España 2000' 29 'Partido Libertario'
+30 'CHA' 31 'Recortes Cero' 32 'Directe 68' 33 'Partido Feminista de España' 34 'Geroa Bai'
+35 'Bloc' 36 'Convergència' 38 'UPyD' 39 'PCPE' 40 'PI (Proposta per les Illes Balears)' 41 'PAYJ'
+42 'IGRE' 44 'UPL' 45 'Recortes Cero-Grupo Verde' 46 'Coalición Caballas' 47 'MDyC (Movimiento por la Dignidad y la Ciudadaní­a)'
+48 'Coalición por Melilla' 49 'PPL (Populares en Libertad)' 51 'PR+' 52 'Actúa' 53 'Anova-Irmandade Nacionalista'
+54 'Compromiso por Galicia' 55 'Barcelona pel Canvi' 56 'Zaragoza en Común' 57 'Santiago Aberta'
+60 'CNxR' 61 'Democracia Nacional' 62 'Poble Lliure' 63 'Partido Humanista' 64 'Som Valencians'
+65 'Converxencia Galega' 66 'Terra Galega' 69 'Extremadura Unida' 90 'Adelante Sevilla' 95 'Otro partido'
+97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/C3
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/C4_1
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/C4_2
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/C4_3
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/C4_4
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/C4_5
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/C4_6
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/C4_7
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/C4_8
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.' 0 'No procede'
+/C4_9
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.' 0 'No procede'
+/C4_10
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.' 0 'No procede'
+/C4_11
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.' 0 'No procede'
+/C4_12
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.' 0 'No procede'
+/C4_13
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.' 0 'No procede'
+/C4_14
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.' 0 'No procede'
+/C4_15
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.' 0 'No procede'
+/C4_16
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.' 0 'No procede'
+/C4_17
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.' 0 'No procede'
+/C4_18
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.' 0 'No procede'
+/C4_19
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.' 0 'No procede'
+/C4_20
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.' 0 'No procede'
+/C5_1
+1 '1 Izquierda' 10 '10 Derecha' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/C5_2
+1 '1 Izquierda' 10 '10 Derecha' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/C5_3
+1 '1 Izquierda' 10 '10 Derecha' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/C5_4
+1 '1 Izquierda' 10 '10 Derecha' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/C5_5
+1 '1 Izquierda' 10 '10 Derecha' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/C5_6
+1 '1 Izquierda' 10 '10 Derecha' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/C5_7
+1 '1 Izquierda' 10 '10 Derecha' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/C6
+1 'Votan siempre por el mismo partido' 2 'Por lo general suelen votar por el mismo partido'
+3 'Según lo que más les convenza en ese momento, votan por un partido u otro, o no votan' 4 '(NO LEER) No suelen votar'
+5 '(NO LEER) Es la primera vez que votan' 9 'N.C.'
+/C7
+1 'Fue a votar y votó ' 2 'No tenía edad para votar ' 3 'Fue a votar pero no pudo hacerlo '
+4 'No fue a votar porque no pudo ' 5 'Prefirió no votar ' 6 'No tenía derecho a voto ' 8 'No recuerda '
+9 'N.C.'
+/C7A
+2 'PSOE' 1 'PP' 4 'Ciudadanos' 21 'Unidas Podemos' 18 'VOX' 8 'ERC' 6 'En Comú Podem' 9 'JxCat'
+11 'EAJ-PNV' 12 'EH Bildu' 13 'CC-PNC' 14 'NA+' 7 'Compromís' 43 'PRC' 24 'BNG' 95 'Otros partidos'
+96 'En blanco' 77 'Voto nulo' 98 'No recuerda' 99 'N.C.' 0 'No Procede'
+/C8
+2 'PSOE' 1 'PP' 18 'VOX' 3 'Podemos' 5 'IU' 4 'Ciudadanos' 50 'Más País' 8 'ERC' 9 'JxCat' 6 'En Comú Podem'
+19 'CUP' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CC-PNC' 14 'UPN' 7 'Compromís' 43 'PRC' 17 'PACMA' 16 'Nueva Canarias'
+24 'BNG' 21 'Unidas Podemos' 15 'FAC' 68 'Teruel Existe' 67 'En Común-Unidas Podemos' 10 'En Marea'
+20 'Los Verdes' 22 'EQUO' 23 'PAR' 25 'MÉS (PSM-Entesa)' 26 'Falange Española de las JONS' 27 'Escaños en Blanco'
+28 'España 2000' 29 'Partido Libertario' 30 'CHA' 31 'Recortes Cero' 32 'Directe 68' 33 'Partido Feminista de España'
+34 'Geroa Bai' 35 'Bloc' 36 'Convergència' 38 'UPyD' 39 'PCPE' 40 'PI (Proposta per les Illes)'
+41 'PAYJ' 42 'IGRE' 44 'UPL' 45 'Recortes Cero-Grupo Verde' 46 'Coalición Caballas' 47 'MDyC (Mov. por la Dignidad y la Ciudadaní­a)'
+48 'Coalición por Melilla' 49 'PPL (Populares en Libertad)' 51 'PR+' 52 'Actúa' 53 'Anova-Irmandade Nacionalista'
+54 'Compromiso por Galicia' 55 'Barcelona pel Canvi' 56 'Zaragoza en Común' 57 'Santiago Aberta'
+60 'CNxR' 61 'Democracia Nacional' 62 'Poble Lliure' 63 'Partido Humanista' 64 'Som Valencians'
+65 'Converxencia Galega' 66 'Terra Galega' 69 'Extremadura Unida' 90 'Adelante Sevilla' 95 'Otro partido'
+97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/C9
+1 'Hombre' 2 'Mujer'
+/C10
+99 'N.C.'
+/C11
+1 'No, es analfabeto/a' 2 'No, pero sabe leer y escribir' 3 'Sí, ha ido a la escuela' 9 'N.C.'
+/C11A
+1 'Menos de 5 años de escolarización' 2 'Educación primaria (Educación primaria de LOGSE, 5º Curso de EGB, Enseñanza primaria antigua)'
+3 'Cualificación profesional grado inicial (FP grado inicial). PCPI (Programas de Cualificación Profesional Inicial, que no'+' precisan de titulación académica de la primera etapa de secundaria para su realización). Programas de garantía social'
+4 'Educación secundaria (ESO, EGB. Graduado Escolar. Certificado de Escolaridad, Bachillerato Elemental)'
+5 'FP de grado medio (Ciclo/módulo formativo de FP (grado medio), de Artes Plásticas y Diseño, Música y danza, Enseñanzas d'+'eportivas, FP I, Bachiller laboral elemental. Oficialía Industrial; Bachillerato Comercial)'
+6 'Bachillerato (Bachillerato LOGSE, BUP, Bachillerato superior (6º), Bachillerato universitario (7º), incluidos COU y PREU'+')'
+7 'FP de grado superior (Ciclo/módulo formativo de FP (grado superior) de Artes Plásticas, Diseño, Música y danza, Deporte,'+' FP II, Bach. Laboral Sup., Maestría industrial, Perito Mercantil; Secretariado de 2º grado; Grado Medio conservatorio)'
+8 'Arquitectura-ingeniería técnica (Arquitectura/ingeniería técnica, Aparejador; Peritos)' 9 'Diplomatura (ATENCIÓN: solo Diplomaturas oficiales, no codificar aquí los tres primeros años de una licenciatura o grado'+' con mayor duración)'
+10 'Grado (Estudios de grado, Enseñanzas Artísticas equivalentes (desde 2006))' 11 'Licenciatura (Titulaciones con equivalencia oficial: 2º ciclo INEF; Danza y arte dramático (desde 1992); Grado superior '+'de música)'
+12 'Arquitectura/ingeniería' 13 'Máster oficial universitario (Especialidades médicas o equivalente)'
+14 'Doctorado' 15 'Títulos propios de posgrado (máster no oficial, etc.)' 16 'Otros estudios'
+98 'N.S./No recuerda' 99 'N.C.' 0 'No procede'
+/C12
+1 'Católico/a practicante' 2 'Católico/a no practicante' 3 'Creyente de otra religión' 4 'Agnóstico/a'
+5 'Indiferente, no creyente' 6 'Ateo/a' 9 'N.C.'
+/C12A
+0 'N.P.' 1 'Nunca' 2 'Casi nunca' 3 'Varias veces al año' 4 'Dos o tres veces al mes' 5 'Todos los domingos y festivos'
+6 'Varias veces a la semana' 9 'N.C.'
+/C13
+1 'Casado/a' 2 'Soltero/a' 3 'Viudo/a' 4 'Separado/a' 5 'Divorciado/a' 9 'N.C.'
+/C13A
+0 'N.P.' 1 'No tiene pareja' 2 'Tiene pareja pero no comparten la misma vivienda' 3 'Tiene pareja y comparten la misma vivienda'
+9 'N.C.'
+/C14
+1 'La persona entrevistada' 2 'Otra persona' 3 '(NO LEER) La persona entrevistada y otra casi a partes iguales '
+9 'N.C.'
+/C15
+1 'Trabaja' 2 'Jubilado/a o pensionista (anteriormente ha trabajado) ' 3 'Pensionista (anteriormente no ha trabajado) '
+4 'Parado/a y ha trabajado antes ' 5 'Parado/a y busca su primer empleo ' 6 'Estudiante' 7 'Trabajo doméstico no remunerado '
+8 'Otra situación' 9 'N.C.'
+/C16
+1 'Directores/as y gerentes' 2 'Profesionales científicos/as e intelectuales' 3 'Técnicos/as y profesionales de nivel medio'
+4 'Personal de apoyo administrativo' 5 'Trabajadores/as de los servicios y vendedores/as de comercios y mercados'
+6 'Agricultores/as y trabajadores/as cualificados/as agropecuarios/as, forestales y pesqueros/as'
+7 'Oficiales/as, operarios/as y artesanos/as de artes mecánicas y de otros oficios' 8 'Operadores/as de instalaciones y máquinas y ensambladores/as'
+9 'Ocupaciones elementales' 10 'Ocupaciones militares y cuerpos policiales' 11 'Otra/o' 99 'N.C.'
+/C17
+1 'Asalariado/a fijo/a (a sueldo, comisión, jornal, etc. con carácter fijo) ' 2 'Asalariado/a eventual o interino/a (a sueldo, comisión, jornal, etc. con carácter temporal o interino) '
+3 'Empresario/a o profesional con asalariados/as  ' 4 'Profesional o trabajador/a autónomo/a (sin asalariados/as) '
+5 'Ayuda familiar (sin remuneración reglamentada en la empresa o negocio de un/a familiar) '
+6 'Miembro de una cooperativa ' 7 'Otra situación' 9 'N.C.'
+/C17A
+1 'Administración Pública ' 2 'Empresa pública' 3 'Empresa privada' 4 'Organización sin fines de lucro'
+5 'Servicio doméstico' 6 'Otros' 9 'N.C.' -99 'N.P.' 0 'No procede'
+/C18
+1 'Grupo A: Agricultura, ganadería, silvicultura y pesca ' 2 'Grupo B: Industrias extractivas '
+3 'Grupo C: Industria manufacturera ' 4 'Grupo D: Suministro de energía eléctrica, gas, vapor y aire acondicionado '
+5 'Grupo E: Suministro de agua, actividades de saneamiento, gestión de residuos y descontaminación '
+6 'Grupo F: Construcción ' 7 'Grupo G: Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas '
+8 'Grupo H: Transporte y almacenamiento ' 9 'Grupo I: Hostelería ' 10 'Grupo J: Información y comunicaciones '
+11 'Grupo K: Actividades financieras y de seguros ' 12 'Grupo L: Actividades inmobiliarias '
+13 'Grupo M: Actividades profesionales, científicas y técnicas ' 14 'Grupo N: Actividades administrativas y servicios auxiliares '
+15 'Grupo O: Administración Pública y Defensa; seguridad social obligatoria ' 16 'Grupo P: Educación '
+17 'Grupo Q: Actividades sanitarias y de servicios sociales ' 18 'Grupo R: Actividades artísticas, recreativas y de entretenimiento '
+19 'Grupo S: Otros servicios ' 20 'Grupo T: Actividades de los hogares como empleadores de personal doméstico; actividades de los hogares como productores '+'de bienes y servicios para uso propio '
+21 'Grupo U: Actividades de organizaciones y organismos extraterritoriales ' 99 'N.C.'
+/C19
+1 'No tienen ingresos de ningún tipo ' 2 'Menos o igual a 300 € ' 3 'De 301 a 600 € ' 4 'De 601 a 900 € '
+5 'De 901 a 1.200 € ' 6 'De 1.201 a 1.800 € ' 7 'De 1.801 a 2.400 € ' 8 'De 2.401 a 3.000 € '
+9 'De 3.001 a 4.500 € ' 10 'De 4.501 a 6.000 € ' 11 'Más de 6.000 € ' 98 'N.S.' 99 'N.C.'
+/C20
+1 'No tiene ingresos de ningún tipo ' 2 'Menos o igual a 300 € ' 3 'De 301 a 600 € ' 4 'De 601 a 900 € '
+5 'De 901 a 1.200 € ' 6 'De 1.201 a 1.800 € ' 7 'De 1.801 a 2.400 € ' 8 'De 2.401 a 3.000 € '
+9 'De 3.001 a 4.500 € ' 10 'De 4.501 a 6.000 € ' 11 'Más de 6.000 € ' 99 'N.C.'
+/C21
+1 'Clase alta' 2 'Clase media-alta' 3 'Clase media-media' 4 'Clase media-baja' 5 'Clase trabajadora/obrera'
+6 'Clase pobre' 7 'Infraclase' 8 'Proletariado' 9 'A los/as de abajo' 10 'Excluidos/as' 11 'A la gente común'
+12 'Clase baja' 96 'Otras' 97 'No cree en las clases' 98 'No sabe/duda ' 99 'N.C.'
+/TELF
+1 'Tiene teléfono y da número' 2 'No tiene teléfono' 3 'Tiene teléfono y no da número' 9 'N.C.'
+/MEDITA
+1 'Todas' 2 'La mayoría' 3 'Algunas' 4 'Ninguna' 9 'N.C.'
+/COMPRENS
+1 'Todas' 2 'La mayoría' 3 'Algunas' 4 'Ninguna' 9 'N.C.'
+/TARJETAS
+1 'Las ha utilizado todas en la tablet' 2 'Las ha utilizado todas con el tarjetero' 3 'Sólo ha utilizado algunas, en la tablet'
+4 'Sólo ha utilizado algunas, del tarjetero' 5 'En los dos formatos, algunas de la tablet y algunas del tarjetero'
+6 'No ha utilizado las tarjetas, las he leído yo' 9 'N.C.'
+/LUGAR
+1 'En el portal' 2 'En la puerta de la vivienda' 3 'En el interior de la vivienda' 4 'En otro lugar'
+9 'N.C.'
+/ABANDONO_1
+1 'Menciona'
+/MOLESTIA_1
+1 'Menciona'
+/PRISA_1
+1 'Menciona'
+/LONGITUD_4
+1 'Menciona'
+/DESARROLLO
+1 'Muy buena' 2 'Buena' 3 'Regular' 4 'Mala' 5 'Muy mala' 9 'N.C.'
+/TERCERASPERSONAS
+1 'Sí' 2 'No' 9 'N.C.'
+/INTERVENCION
+1 'Sí' 2 'No' 9 'N.C.' 0 'No procede'
+/FECHAINI
+'01/12/2019' '01/12/2019' '02/12/2019' '02/12/2019' '03/12/2019' '03/12/2019' '04/12/2019' '04/12/2019'
+'05/12/2019' '05/12/2019' '06/12/2019' '06/12/2019' '07/12/2019' '07/12/2019' '08/12/2019' '08/12/2019'
+'09/12/2019' '09/12/2019' '10/12/2019' '10/12/2019' '11/12/2019' '11/12/2019' '12/12/2019' '12/12/2019'
+'13/12/2019' '13/12/2019' '14/12/2019' '14/12/2019' '15/12/2019' '15/12/2019' '16/12/2019' '16/12/2019'
+'17/12/2019' '17/12/2019' '18/12/2019' '18/12/2019' '19/12/2019' '19/12/2019' '29/11/2019' '29/11/2019'
+'30/11/2019' '30/11/2019' 'DD/MM/AAAA' 'DD/MM/AAAA'
+/HORAINI
+/FECHAFIN
+'01/12/2019' '01/12/2019' '02/12/2019' '02/12/2019' '03/12/2019' '03/12/2019' '04/12/2019' '04/12/2019'
+'05/12/2019' '05/12/2019' '06/12/2019' '06/12/2019' '07/12/2019' '07/12/2019' '08/12/2019' '08/12/2019'
+'09/12/2019' '09/12/2019' '10/12/2019' '10/12/2019' '11/12/2019' '11/12/2019' '12/12/2019' '12/12/2019'
+'13/12/2019' '13/12/2019' '14/12/2019' '14/12/2019' '15/12/2019' '15/12/2019' '16/12/2019' '16/12/2019'
+'17/12/2019' '17/12/2019' '18/12/2019' '18/12/2019' '19/12/2019' '19/12/2019' '29/11/2019' '29/11/2019'
+'30/11/2019' '30/11/2019' 'DD/MM/AAAA' 'DD/MM/AAAA'
+/HORAFIN
+/DURACION
+/B9IMPRESA
+1 'Menciona'
+/B9DIGITAL
+1 'Menciona'
+/B9TV
+1 'Menciona'
+/B9RADIO
+1 'Menciona'
+/B21ACOM
+102 'PP/PSOE' 104 'PP/Ciudadanos' 108 'PP/ERC' 111 'PP/EAJ-PNV' 113 'PP/CC-PNC' 118 'PP/VOX'
+121 'PP/Unidas Podemos' 124 'PP/BNG' 143 'PP/PRC' 150 'PP/Más País' 196 'PP/En blanco' 197 'PP/Abstención'
+204 'PSOE/Ciudadanos' 206 'PSOE/En Comú Podem' 208 'PSOE/ERC' 211 'PSOE/EAJ-PNV' 212 'PSOE/EH Bildu'
+213 'PSOE/CC-PNC' 217 'PSOE/PACMA' 218 'PSOE/VOX' 220 'PSOE/Los Verdes' 221 'PSOE/Unidas Podemos'
+224 'PSOE/BNG' 225 'PSOE/MÉS (PSM-Entesa)' 234 'PSOE/Geroa Bai' 243 'PSOE/PRC' 250 'PSOE/Más País'
+267 'PSOE/En Común-Unidas Podemos' 295 'PSOE/Otros' 277 'PSOE/Voto nulo' 296 'PSOE/En blanco'
+297 'PSOE/Abstención' 413 'Ciudadanos/CC-PNC' 417 'Ciudadanos/PACMA' 418 'Ciudadanos/VOX' 421 'Ciudadanos/Unidas Podemos'
+424 'Ciudadanos/BNG' 427 'Ciudadanos/Escaños en Blanco' 444 'Ciudadanos/UPL' 450 'Ciudadanos/Más País'
+477 'Ciudadanos/Voto nulo' 496 'Ciudadanos/En blanco' 497 'Ciudadanos/Abstención' 608 'En Comú Podem/ERC'
+619 'En Comú Podem/CUP' 650 'En Comú Podem/Más País' 708 'Compromís/ERC' 721 'Compromís/Unidas Podemos'
+809 'ERC/JxCat' 819 'ERC/CUP' 821 'ERC/Unidas Podemos' 867 'ERC/En Común-Unidas Podemos' 897 'ERC/Abstención'
+919 'JxCat/CUP' 996 'JxCat/En blanco' 1112 'EAJ-PNV/EH Bildu' 1121 'EAJ-PNV/Unidas Podemos'
+1221 'EH Bildu/Unidas Podemos' 1297 'EH Bildu/Abstención' 1321 'CC-PNC/Unidas Podemos' 1396 'CC-PNC/En blanco'
+1721 'PACMA/Unidas Podemos' 1767 'PACMA/En Común-Unidas Podemos' 1797 'PACMA/Abstención' 1819 'VOX/CUP'
+1821 'VOX/Unidas Podemos' 1896 'VOX/En blanco' 1897 'VOX/Abstención' 1967 'CUP/En Común-Unidas Podemos'
+1996 'CUP/En blanco' 2124 'Unidas Podemos/BNG' 2125 'Unidas Podemos/MÉS (PSM-Entesa)' 2127 'Unidas Podemos/Escaños en Blanco'
+2143 'Unidas Podemos/PRC' 2150 'Unidas Podemos/Más País' 2177 'Unidas Podemos/Voto nulo' 2196 'Unidas Podemos/En blanco'
+2197 'Unidas Podemos/Abstención' 4397 'PRC/Abstención' 5096 'Más País/En blanco' 5097 'Más País/Abstención'
+7796 'Voto nulo/En blanco' 7797 'Voto nulo/Abstención' 9596 'Otros/En blanco' 9697 'En blanco/Abstención'
+9994 'Otras respuestas' 9998 'N.S.' 9999 'N.C.' 0 'N.P.'
+/B22R
+2 'PSOE' 1 'PP' 18 'VOX' 21 'Unidas Podemos' 4 'Ciudadanos' 5 'IU' 50 'Más País' 8 'ERC' 9 'Junts'
+6 'En Comú Podem' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CCa-NC' 14 'Na+ (UPN)' 19 'CUP' 67 'En Común-Unidas Podemos'
+7 'Més Compromís' 43 'PRC' 24 'BNG' 68 'Teruel Existe' 17 'PACMA' 95 'Otros partidos' 96 'En blanco'
+77 'Voto nulo' 97 'Abstención' 98 'No recuerda' 99 'N.C.'
+/C1R
+2 'PSOE' 1 'PP' 18 'VOX' 21 'Unidas Podemos' 3 'Podemos' 5 'IU' 8 'ERC' 4 'Ciudadanos' 9 'JxCat'
+6 'En Comú Podem' 11 'EAJ-PNV' 12 'EH Bildu' 50 'Más País' 19 'CUP' 67 'En Común-Unidas Podemos'
+13 'CCa-NC' 14 'NA+' 7 'Més Compromís' 24 'BNG' 43 'PRC' 68 'Teruel Existe' 17 'PACMA' 95 'Otro partido'
+96 'Voto blanco' 77 'Voto nulo' 97 'No votaría' 98 'No sabe todavía' 99 'N.C.'
+/C1AR
+0 'No procede' 2 'PSOE' 1 'PP' 18 'VOX' 21 'Unidas Podemos' 3 'Podemos' 5 'IU' 8 'ERC' 4 'Ciudadanos'
+9 'JxCat' 6 'En Comú Podem' 11 'EAJ-PNV' 12 'EH Bildu' 50 'Más País' 19 'CUP' 67 'En Común-Unidas Podemos'
+13 'CCa-NC' 14 'NA+' 7 'Més Compromís' 24 'BNG' 43 'PRC' 68 'Teruel Existe' 17 'PACMA' 95 'Otro partido'
+96 'Voto blanco' 77 'Voto nulo' 97 'No votaría' 98 'N.S.' 99 'N.C.'
+/VOTOSIMG
+2 'PSOE' 1 'PP' 18 'VOX' 21 'Unidas Podemos' 3 'Podemos' 5 'IU' 8 'ERC' 4 'Ciudadanos' 9 'JxCat'
+6 'En Comú Podem' 11 'EAJ-PNV' 12 'EH Bildu' 50 'Más País' 19 'CUP' 67 'En Común-Unidas Podemos'
+13 'CCa-NC' 14 'NA+' 7 'Més Compromís' 24 'BNG' 43 'PRC' 68 'Teruel Existe' 17 'PACMA' 95 'Otro partido'
+96 'En blanco' 77 'Voto nulo' 97 'No votaría' 98 'No sabe todavía' 99 'N.C.'
+/C7AR
+2 'PSOE' 1 'PP' 4 'Ciudadanos' 21 'Unidas Podemos' 18 'VOX' 8 'ERC' 6 'En Comú Podem' 9 'JxCat'
+11 'EAJ-PNV' 12 'EH Bildu' 13 'CC-PNC' 14 'NA+' 7 'Compromís' 43 'PRC' 24 'BNG' 95 'Otros partidos'
+96 'En blanco' 77 'Voto nulo' 98 'No recuerda' 99 'N.C.' 0 'No procede'
+/RECUERDO
+2 'PSOE' 1 'PP' 4 'C''s' 21 'Unidas Podemos' 18 'VOX' 8 'ERC' 6 'En Comú Podem' 9 'JxCat' 11 'EAJ-PNV'
+12 'EH Bildu' 13 'CC-PNC' 14 'NA+' 7 'Compromís' 43 'PRC' 24 'BNG' 95 'Otros partidos' 96 'En blanco'
+77 'Nulo' 94 'No tenía edad' 97 'No votó' 93 'No tenía derecho a voto' 98 'No recuerda' 99 'N.C.'
+/ESTUDIOS
+1 'Sin estudios' 2 'Primaria' 3 'Secundaria 1ª etapa' 4 'Secundaria 2ª etapa' 5 'F.P.' 6 'Superiores'
+7 'Otros' 9 'N.C.'
+/RAMA09
+1 'Agricultura' 2 'Industria' 3 'Construcción' 4 'Servicios' 9 'N.C.'
+/CLASESUB
+1 'Clase alta y media alta' 2 'Clase media-media' 3 'Clase media-baja' 4 'Clase trabajadora/obrera/proletariado'
+5 'Clase baja/pobre' 6 'Otras' 8 'N.S.' 9 'N.C.'
+/PESO
+.
+EXECUTE.
+
+MISSING VALUES
+ B6A_1 (0) B6A_2 (0) B6A_3 (0) B6A_4 (0) B6A_5 (0) B6A_6 (0) B6A_7 (0) B6A_8 (0) B6A_9 (0) B6A_10 (0)
+ B6A_11 (0) B6A_12 (0) B6A_13 (0) B6A_14 (0) B7A (0) B7B (0) B9A (0) B9B (0) B9C (0) B9D (0)
+ B12A (0) B12B (0) B12C (0) B14A_1 (0) B14A_2 (0) B14A_3 (0) B14A_4 (0) B14A_5 (0) B14A_6 (0)
+ B14A_7 (0) B14A_8 (0) B14A_9 (0) B14A_10 (0) B14A_11 (0) B14A_12 (0) B14A_13 (0) B14A_14 (0)
+ B14A_15 (0) B14A_16 (0) B14A_17 (0) B14A_18 (0) B14A_19 (0) B14A_20 (0) B14A_21 (0) B14A_22 (0)
+ B15A_1 (0) B15A_2 (0) B15A_3 (0) B15A_4 (0) B15A_5 (0) B15A_6 (0) B15A_7 (0) B15A_8 (0) B15A_9 (0)
+ B15A_10 (0) B15A_11 (0) B15A_12 (0) B15A_13 (0) B15A_14 (0) B15A_15 (0) B15A_16 (0) B15A_17 (0)
+ B15A_18 (0) B15A_19 (0) B15A_20 (0) B15A_21 (0) B15A_22 (0) B16A_1 (0) B16A_2 (0) B16A_3 (0)
+ B16A_4 (0) B16A_5 (0) B16A_6 (0) B16A_7 (0) B16A_8 (0) B16A_9 (0) B16A_10 (0) B16A_11 (0) B16A_12 (0)
+ B16A_13 (0) B16A_14 (0) B16A_15 (0) B16A_16 (0) B16A_17 (0) B16A_18 (0) B16A_19 (0) B16A_20 (0)
+ B16A_21 (0) B16A_22 (0) B18A (0) B18B (0) B19A (0) B19B (0) B20A (0) B20B (0) B21A01 (0) B21A02 (0)
+ B22A (0) B22B_1 (0) B22B_2 (0) B22C (0) B22D (0) B22E_1 (0) B22E_2 (0) B22E_3 (0) B23 (0) B23A (0)
+ B23B_1 (0) B23B_2 (0) B23C (0) B23D (0) B24 (0) B24A_1 (0) B24A_2 (0) B24A_3 (0) B24A_4 (0)
+ B24A_5 (0) B24A_6 (0) B24A_7 (0) B24A_8 (0) B25 (0) B26 (0) B26A (0) B27 (0) B27A (0) C1A (0)
+ C2 (0) C4_8 (0) C4_9 (0) C4_10 (0) C4_11 (0) C4_12 (0) C4_13 (0) C4_14 (0) C4_15 (0) C4_16 (0)
+ C4_17 (0) C4_18 (0) C4_19 (0) C4_20 (0) C7A (0) C11A (0) C12A (0) C13A (0) C17A (0) INTERVENCION (0)
+ B21ACOM (0) C1AR (0) C7AR (0).
+EXECUTE.
+WEIGHT BY PESO.
+FREQUENCIES VARIABLES ALL.

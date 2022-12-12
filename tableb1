@@ -1,0 +1,101 @@
+
+Estimation models for the effect of the entry of Vox in Andaluc?a's regional parliament on citizens' attitudes towards immigration
+---------------------------------------------------------------------------------------------------------------------
+                                                                                       issue                         
+                                                                         Model 1                    Model 2          
+---------------------------------------------------------------------------------------------------------------------
+andalucia                                                                 0.005                      0.002           
+                                                                         (0.014)                    (0.018)          
+relevel(as.factor(date), ref = "nov. 2018")ene. 2018                    -0.057***                  -0.058***         
+                                                                         (0.009)                    (0.011)          
+relevel(as.factor(date), ref = "nov. 2018")feb. 2018                    -0.061***                  -0.062***         
+                                                                         (0.009)                    (0.011)          
+relevel(as.factor(date), ref = "nov. 2018")mar. 2018                    -0.064***                  -0.068***         
+                                                                         (0.009)                    (0.011)          
+relevel(as.factor(date), ref = "nov. 2018")abr. 2018                    -0.058***                  -0.057***         
+                                                                         (0.009)                    (0.011)          
+relevel(as.factor(date), ref = "nov. 2018")may. 2018                    -0.056***                  -0.061***         
+                                                                         (0.009)                    (0.011)          
+relevel(as.factor(date), ref = "nov. 2018")jun. 2018                    -0.055***                  -0.058***         
+                                                                         (0.009)                    (0.011)          
+relevel(as.factor(date), ref = "nov. 2018")jul. 2018                    0.025***                    0.026**          
+                                                                         (0.009)                    (0.011)          
+relevel(as.factor(date), ref = "nov. 2018")sep. 2018                    0.062***                    0.068***         
+                                                                         (0.009)                    (0.010)          
+relevel(as.factor(date), ref = "nov. 2018")oct. 2018                      0.001                      0.005           
+                                                                         (0.009)                    (0.010)          
+relevel(as.factor(date), ref = "nov. 2018")dic. 2018                    0.029***                    0.033***         
+                                                                         (0.009)                    (0.010)          
+relevel(as.factor(date), ref = "nov. 2018")ene. 2019                      0.013                      0.016           
+                                                                         (0.009)                    (0.010)          
+relevel(as.factor(date), ref = "nov. 2018")feb. 2019                     -0.004                      0.0004          
+                                                                         (0.009)                    (0.010)          
+relevel(as.factor(date), ref = "nov. 2018")mar. 2019                      0.006                                      
+                                                                         (0.007)                                     
+relevel(as.factor(date), ref = "nov. 2018")abr. 2019                      0.002                                      
+                                                                         (0.007)                                     
+relevel(as.factor(date), ref = "nov. 2018")may. 2019                     0.016*                     0.029***         
+                                                                         (0.009)                    (0.010)          
+relevel(as.factor(date), ref = "nov. 2018")jun. 2019                    0.028***                    0.041***         
+                                                                         (0.009)                    (0.010)          
+relevel(as.factor(date), ref = "nov. 2018")jul. 2019                    0.027***                    0.037***         
+                                                                         (0.009)                    (0.010)          
+relevel(as.factor(date), ref = "nov. 2018")sep. 2019                    0.067***                    0.067***         
+                                                                         (0.007)                    (0.009)          
+relevel(as.factor(date), ref = "nov. 2018")oct. 2019                    0.020***                                     
+                                                                         (0.007)                                     
+relevel(as.factor(date), ref = "nov. 2018")nov. 2019                    0.029***                    0.032***         
+                                                                         (0.008)                    (0.009)          
+relevel(as.factor(date), ref = "nov. 2018")dic. 2019                    0.029***                    0.032***         
+                                                                         (0.008)                    (0.009)          
+andalucia:relevel(as.factor(date), ref = "nov. 2018")ene. 2018           -0.010                      -0.012          
+                                                                         (0.021)                    (0.026)          
+andalucia:relevel(as.factor(date), ref = "nov. 2018")feb. 2018           -0.004                      -0.011          
+                                                                         (0.021)                    (0.026)          
+andalucia:relevel(as.factor(date), ref = "nov. 2018")mar. 2018           -0.008                      0.002           
+                                                                         (0.021)                    (0.027)          
+andalucia:relevel(as.factor(date), ref = "nov. 2018")abr. 2018            0.006                      0.002           
+                                                                         (0.021)                    (0.026)          
+andalucia:relevel(as.factor(date), ref = "nov. 2018")may. 2018           -0.014                      -0.008          
+                                                                         (0.021)                    (0.027)          
+andalucia:relevel(as.factor(date), ref = "nov. 2018")jun. 2018            0.004                      0.008           
+                                                                         (0.021)                    (0.027)          
+andalucia:relevel(as.factor(date), ref = "nov. 2018")jul. 2018           -0.027                      -0.025          
+                                                                         (0.021)                    (0.026)          
+andalucia:relevel(as.factor(date), ref = "nov. 2018")sep. 2018            0.018                      0.007           
+                                                                         (0.020)                    (0.025)          
+andalucia:relevel(as.factor(date), ref = "nov. 2018")oct. 2018            0.013                      -0.005          
+                                                                         (0.020)                    (0.025)          
+andalucia:relevel(as.factor(date), ref = "nov. 2018")dic. 2018            0.027                      0.025           
+                                                                         (0.020)                    (0.025)          
+andalucia:relevel(as.factor(date), ref = "nov. 2018")ene. 2019           0.045**                    0.066***         
+                                                                         (0.020)                    (0.025)          
+andalucia:relevel(as.factor(date), ref = "nov. 2018")feb. 2019            0.009                      0.017           
+                                                                         (0.020)                    (0.025)          
+andalucia:relevel(as.factor(date), ref = "nov. 2018")mar. 2019           -0.006                                      
+                                                                         (0.016)                                     
+andalucia:relevel(as.factor(date), ref = "nov. 2018")abr. 2019            0.010                                      
+                                                                         (0.016)                                     
+andalucia:relevel(as.factor(date), ref = "nov. 2018")may. 2019            0.019                      0.014           
+                                                                         (0.020)                    (0.025)          
+andalucia:relevel(as.factor(date), ref = "nov. 2018")jun. 2019           -0.021                      -0.041          
+                                                                         (0.020)                    (0.025)          
+andalucia:relevel(as.factor(date), ref = "nov. 2018")jul. 2019            0.004                      0.030           
+                                                                         (0.020)                    (0.025)          
+andalucia:relevel(as.factor(date), ref = "nov. 2018")sep. 2019           -0.006                      0.008           
+                                                                         (0.017)                    (0.021)          
+andalucia:relevel(as.factor(date), ref = "nov. 2018")oct. 2019            0.004                                      
+                                                                         (0.015)                                     
+andalucia:relevel(as.factor(date), ref = "nov. 2018")nov. 2019           -0.011                      -0.008          
+                                                                         (0.019)                    (0.024)          
+andalucia:relevel(as.factor(date), ref = "nov. 2018")dic. 2019           -0.011                      -0.008          
+                                                                         (0.019)                    (0.024)          
+Constant                                                                0.090***                   -0.103***         
+                                                                         (0.006)                    (0.018)          
+N                                                                        108956                      39261           
+R-squared                                                                 0.011                      0.045           
+Adj. R-squared                                                            0.011                      0.044           
+Residual Std. Error                                                0.296 (df = 108912)         0.293 (df = 39212)    
+F Statistic                                                    29.405*** (df = 43; 108912) 38.780*** (df = 48; 39212)
+---------------------------------------------------------------------------------------------------------------------
+***p < .01; **p < .05; *p < .1                                                                                       

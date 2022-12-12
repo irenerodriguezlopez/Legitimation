@@ -1,0 +1,15 @@
+@article{10.2307/2111240,
+ ISSN = {00925853, 15405907},
+ URL = {http://www.jstor.org/stable/2111240},
+ abstract = {This paper presents a simple, but theoretically appropriate, model for the influence of party identification on issue attitudes. Most studies simply relate partisanship directly to issues. However, that approach does not explain how one variable affects the other. Here, party identification is modeled as a manifestation of reference group phenomena. As such, a person's issue positions are taken to be a function of perceptions about his or her party's stands on the same issues. In addition, the degree of consistency between partisan perceptions and attitudes should increase with stronger party attachments. The analysis also examines the alternative possibility that a person's beliefs about his or her own party are largely rationalized from the individual's own feelings. The model is tested using data from the 1980 Center for Political Studies (CPS) American National Election Study. The empirical results show that partisanship does provide cues for guiding personal political orientations. At the same time, perceptions of the parties' issue stands are not merely derived from the citizens' own attitudes. Thus, the analysis supports the conventional view of party identification as an example of reference group influence on individual behavior.},
+ author = {William G. Jacoby},
+ journal = {American Journal of Political Science},
+ number = {3},
+ pages = {643--661},
+ publisher = {[Midwest Political Science Association, Wiley]},
+ title = {The Impact of Party Identification on Issue Attitudes},
+ urldate = {2022-06-20},
+ volume = {32},
+ year = {1988}
+}
+

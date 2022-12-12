@@ -1,0 +1,1 @@
+@article{sides_citrin_2007, title={European Opinion About Immigration: The Role of Identities, Interests and Information}, volume={37}, DOI={10.1017/S0007123407000257}, number={3}, journal={British Journal of Political Science}, publisher={Cambridge University Press}, author={SIDES, JOHN and CITRIN, JACK}, year={2007}, pages={477–504}}

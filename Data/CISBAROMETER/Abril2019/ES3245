@@ -1,0 +1,700 @@
+DATA LIST FILE= 'DA3245'
+/ESTU 1-4 CUES 5-9 CCAA 10-11 PROV 12-13 MUN 14-16 TAMUNI 17 CAPITAL 18 DISTR 19-20 SECCION 21-23
+ENTREV 24-27 P0 28 P1 29 P2 30 P3 31 P401 32 P402 33 P403 34 P501 35-36 P502 37-38 P503 39-40
+P601 41-42 P602 43-44 P603 45-46 P7 47 P8 48-49 P8A 50-51 P9 52-53 P10 54-55 P11 56-57 P12 58-59
+P13 60-61 P14 62 P14A 63-64 P15 65 P16 66 P17 67 P18 68 P1901 69-70 P1902 71-72 P1903 73-74
+P1904 75-76 P1905 77-78 P1906 79-80 P20 81 P21 82-83 P21A 84-85 P22 86 P22A 87 P23 88-89 P23A 90-91
+P24 92 P24A 93-94 P25 95 P25A 96 P26 97-98 P26A 99-100 P27 101-102 P28 103 P28A 104-105 P29 106-107
+P30 108 P31 109-110 P32 111 P32A 112-113 P33 114 P33A 115-116 P34 117 P35 118 P36 119 P37 120
+P38 121 P38A 122 P39 123 E101 124-125 E102 126-127 E103 128-129 E2 130-132 E3 133 C1 134 C1A 135-136
+P8R 137-138 P8AR 139-140 VOTOSIMG 141-142 P10R 143-144 P11R 145-146 P12R 147-148 P14AR 149-150
+RECUERDO 151-152 P21R 153-154 P21AR 155-156 VOTOSIME 157-158 P23R 159-160 P23AR 161-162 VOTOSIMM 163-164
+VOTOSIMMS 165-166 VOTOSIMMZ 167-168 VOTOSIMMB 169-170 VOTOSIMMVL 171-172 VOTOSIMMVI 173-174
+VOTOSIMMMD 175-176 VOTOSIMMST 177-178 VOTOSIMMC 179-180 VOTOSIMMMLL 181-182 P24AR 183-184 RVMUNI15 185-186
+P26R 187-188 P26AR 189-190 VOTOSIMA 191-192 P28AR 193-194 RVAUTO15 195-196 ESTUDIOS 197 CIRCUN 198-199
+GENERALES 200 EUROPEAS 201 MUNICIPALES 202 AUTONOMICAS 203 PESO 204-210(5) PESOCCAA 211-217(5)
+PESOPROV 218-224(5) .
+
+VARIABLE LABELS
+ESTU 'Nº de estudio'
+/CCAA 'Comunidad autónoma'
+/PROV 'Provincia'
+/MUN 'Municipio'
+/TAMUNI 'Tamaño de municipio'
+/CAPITAL 'Capital'
+/SECCION 'Sección'
+/ENTREV 'Nº entrevistador'
+/P0 'Empadronamiento en el municipio con derecho a votar en las elecciones generales, europeas, municipales y autonómicas de 2019'
+/P1 'Grado de interés por la política'
+/P2 'Valoración de la situación política general de España'
+/P3 'Valoración de la situación económica general de España'
+/P401 'Primer lugar'
+/P402 'Segundo lugar'
+/P403 'Tercer lugar'
+/P501 'Primer problema'
+/P502 'Segundo problema'
+/P503 'Tercer problema'
+/P601 'Primer problema'
+/P602 'Segundo problema'
+/P603 'Tercer problema'
+/P7 'Intención de ir a votar en las elecciones generales de 2019'
+/P8 'Intención de voto en las elecciones generales de 2019'
+/P8A 'Partido político por el que se siente más simpatía en las elecciones generales de 2019 (con filtro)'
+/P9 'Escala de probabilidad (0-10) de votar en las elecciones generales de 2019'
+/P10 'Partido político que considera más cercano a sus ideas'
+/P11 'Partido político que se cree va a tener más votos en las elecciones generales de 2019'
+/P12 'Partido político que gustaría que tuviera más votos en las elecciones generales de 2019'
+/P13 'Preferencia personal como presidente del Gobierno'
+/P14 'Participación electoral en las elecciones generales de 2016'
+/P14A 'Recuerdo de voto en las elecciones generales de 2016 de los votantes'
+/P15 'Grado de interés por las noticias relacionadas con la Unión Europea'
+/P16 'Grado en que las decisiones de la Unión Europea afectan a la vida de los españoles'
+/P17 'Grado de interés por las noticias sobre las elecciones al Parlamento Europeo de 2019'
+/P18 'Ámbito geográfico que influirá más en la decisión del voto en las elecciones al Parlamento Europeo de 2019'
+/P1901 'Josep Borrell'
+/P1902 'María Eugenia Rodríguez Palop'
+/P1903 'Luis Garicano'
+/P1904 'Oriol Junqueras'
+/P1905 'Dolors Montserrat'
+/P1906 'Jorge Buxadé Villalba'
+/P20 'Intención de ir a votar en las elecciones al Parlamento Europeo de 2019'
+/P21 'Intención de voto en las elecciones al Parlamento Europeo de 2019'
+/P21A 'Partido político por el que se siente más simpatía en las elecciones al Parlamento Europeo de 2019 (con filtro)'
+/P22 'Intención de ir a votar en las elecciones municipales de 2019'
+/P22A 'Decisión de votar a un partido en las elecciones municipales de 2019'
+/P23 'Intención de voto en las elecciones municipales de 2019'
+/P23A 'Partido político por el que se siente más simpatía en las elecciones municipales de 2019 (con filtro)'
+/P24 'Participación electoral en las elecciones municipales de 2015'
+/P24A 'Recuerdo de voto en las elecciones municipales de 2015 de los votantes'
+/P25 'Intención de ir a votar en las elecciones autonómicas de 2019'
+/P25A 'Decisión de votar a un partido en las elecciones autonómicas de 2019'
+/P26 'Intención de voto en las elecciones autonómicas de 2019'
+/P26A 'Partido político por el que se siente más simpatía en las elecciones autonómicas de 2019 (con filtro)'
+/P27 'Escala de probabilidad (0-10) de votar en las elecciones autonómicas de 2019'
+/P28 'Participación electoral en las elecciones autonómicas de 2015'
+/P28A 'Recuerdo de voto en las elecciones autonómicas de 2015 de los votantes'
+/P29 'Escala de autoubicación ideológica (1-10)'
+/P30 'Sexo de la persona entrevistada'
+/P31 'Edad de la persona entrevistada'
+/P32 'Escolarización de la persona entrevistada'
+/P32A 'Nivel de estudios alcanzado por la persona entrevistada'
+/P33 'Situación laboral de la persona entrevistada'
+/P33A 'Ocupación de la persona entrevistada'
+/P34 'Religiosidad de la persona entrevistada'
+/P35 'Tenencia de teléfono fijo en el hogar'
+/P36 'Tenencia de teléfono móvil'
+/P37 'Número de teléfono'
+/P38 'Realización de la entrevista en presencia de terceras personas'
+/P38A 'Intervención activa de terceras personas en el desarrollo de la entrevista'
+/P39 'Utilización de las tarjetas'
+/E101 'Fecha de realización (día)'
+/E102 'Fecha de realización (mes)'
+/E103 'Fecha de realización (año)'
+/E2 'Duración de la entrevista (en minutos)'
+/E3 'Hora de realización'
+/C1 'Resultado de la inspección'
+/C1A 'Motivo de la entrevista incorrecta'
+/P8R 'Intención de voto en las elecciones generales de 2019'
+/P8AR 'Partido político por el que se siente más simpatía en las elecciones generales de 2019 (con filtro)'
+/VOTOSIMG 'Voto+simpatía en las elecciones generales de 2019'
+/P10R 'Partido político que considera más cercano a sus ideas'
+/P11R 'Partido político que se cree va a tener más votos en las elecciones generales de 2019'
+/P12R 'Partido político que gustaría que tuviera más votos en las elecciones generales de 2019'
+/P14AR 'Recuerdo de voto en las elecciones generales de 2016 de los votantes'
+/RECUERDO 'Recuerdo de voto en las elecciones generales de 2016'
+/P21R 'Intención de voto en las elecciones al Parlamento Europeo de 2019'
+/P21AR 'Partido político por el que se siente más simpatía en las elecciones al Parlamento Europeo de 2019 (con filtro)'
+/VOTOSIME 'Voto+simpatía en las elecciones al Parlamento Europeo de 2019'
+/P23R 'Intención de voto en las elecciones municipales de 2019 [recodificada]'
+/P23AR 'Partido político por el que se siente más simpatía en las elecciones municipales de 2019 (con filtro)'
+/VOTOSIMM 'Voto+simpatía en las elecciones municipales de 2019'
+/VOTOSIMMS 'Voto+simpatía en las elecciones municipales de 2019 de Sevilla [recodificada]'
+/VOTOSIMMZ 'Voto+simpatía en las elecciones municipales de 2019 de Zaragoza [recodificada]'
+/VOTOSIMMB 'Voto+simpatía en las elecciones municipales de 2019 de Barcelona [recodificada]'
+/VOTOSIMMVL 'Voto+simpatía en las elecciones municipales de 2019 de València [recodificada]'
+/VOTOSIMMVI 'Voto+simpatía en las elecciones municipales de 2019 de Vitoria-Gasteiz [recodificada]'
+/VOTOSIMMMD 'Voto+simpatía en las elecciones municipales de 2019 de Madrid [recodificada]'
+/VOTOSIMMST 'Voto+simpatía en las elecciones municipales de 2019 de Santiago de Compostela [recodificada]'
+/VOTOSIMMC 'Voto+simpatía en las elecciones municipales de 2019 de la Ciudad Autónoma de Ceuta [recodificada]'
+/VOTOSIMMMLL 'Voto+simpatía en las elecciones municipales de 2019 de la Ciudad Autónoma de Melilla [recodificada]'
+/P24AR 'Recuerdo de voto en las elecciones municipales de 2015 de los votantes'
+/RVMUNI15 'Recuerdo de voto en las elecciones municipales de 2015'
+/P26R 'Intención de voto en las elecciones autonómicas de 2019'
+/P26AR 'Partido político por el que se siente más simpatía en las elecciones autonómicas de 2019 (con filtro) [recodificada]'
+/VOTOSIMA 'Voto+simpatía en las elecciones autonómicas de 2019'
+/P28AR 'Recuerdo de voto en las elecciones autonómicas de 2015 de los votantes'
+/RVAUTO15 'Recuerdo de voto en las elecciones autonómicas de 2015'
+/ESTUDIOS 'Estudios de la persona entrevistada'
+/CIRCUN 'Circunscripción islas y Asturias'
+/GENERALES 'Participa en elecciones generales'
+/EUROPEAS 'Participa en elecciones europeas'
+/MUNICIPALES 'Participa en elecciones municipales'
+/AUTONOMICAS 'Participa en elecciones autonómicas'
+/PESO 'Ponderación'
+/PESOCCAA 'Ponderación para CCAA'
+/PESOPROV 'Ponderación para provincia'
+.
+
+VALUE LABELS
+ESTU
+/CUES
+/CCAA
+1 'Andalucía' 2 'Aragón' 3 'Asturias (Principado de)' 4 'Balears (Illes)' 5 'Canarias' 6 'Cantabria'
+7 'Castilla-La Mancha' 8 'Castilla y León' 9 'Cataluña' 10 'Comunitat Valenciana' 11 'Extremadura'
+12 'Galicia' 13 'Madrid (Comunidad de)' 14 'Murcia (Región de)' 15 'Navarra (Comunidad Foral de)'
+16 'País Vasco' 17 'Rioja (La)' 18 'Ceuta (Ciudad Autónoma de)' 19 'Melilla (Ciudad Autónoma de)'
+/PROV
+1 'Araba/Álava' 2 'Albacete' 3 'Alicante/Alacant' 4 'Almería' 5 'Ávila' 6 'Badajoz' 7 'Balears (Illes)'
+8 'Barcelona' 9 'Burgos' 10 'Cáceres' 11 'Cádiz' 12 'Castellón/Castelló' 13 'Ciudad Real' 14 'Córdoba'
+15 'Coruña (A)' 16 'Cuenca' 17 'Girona' 18 'Granada' 19 'Guadalajara' 20 'Gipuzkoa' 21 'Huelva'
+22 'Huesca' 23 'Jaén' 24 'León' 25 'Lleida' 26 'Rioja (La)' 27 'Lugo' 28 'Madrid' 29 'Málaga'
+30 'Murcia' 31 'Navarra' 32 'Ourense' 33 'Asturias' 34 'Palencia' 35 'Palmas (Las)' 36 'Pontevedra'
+37 'Salamanca' 38 'Santa Cruz de Tenerife' 39 'Cantabria' 40 'Segovia' 41 'Sevilla' 42 'Soria'
+43 'Tarragona' 44 'Teruel' 45 'Toledo' 46 'Valencia/València' 47 'Valladolid' 48 'Bizkaia' 49 'Zamora'
+50 'Zaragoza' 51 'Ceuta' 52 'Melilla'
+/MUN
+0 'Mun.<=100.000 hab. no capitales de CA o provincia' 1 'Ceuta / Melilla' 3 'Albacete' 4 'Algeciras'
+5 'Alcalá de Henares' 6 'Alcobendas' 7 'Alcorcón' 12 'Cádiz' 13 'Almería / Barakaldo' 14 'Alicante/Alacant'
+15 'Badalona / Badajoz' 16 'Cartagena / Palmas de Gran Canaria (Las)' 19 'Ávila / Barcelona'
+20 'Bilbao / Jerez de la Frontera' 21 'Córdoba' 23 'La Laguna' 24 'Gijón' 26 'Telde' 28 'Lugo'
+30 'Coruña (A) / Murcia' 34 'Ciudad Real' 37 'Cáceres' 38 'Pontevedra / Santa Cruz de Tenerife / Dos Hermanas'
+40 'Castellón de la Plana/Castelló de la Plana / Palma de Mallorca' 41 'Huelva' 44 'Oviedo'
+50 'Jaén' 54 'Ourense' 57 'Vigo' 58 'Fuenlabrada' 59 'Burgos / Vitoria-Gasteiz' 65 'Elche/Elx / Getafe'
+67 'Málaga' 69 'Donostia/San Sebastián / Marbella' 74 'Leganés' 75 'Santander' 78 'Cuenca / Santiago de Compostela'
+79 'Girona / Madrid' 83 'Mérida' 87 'Granada' 89 'León / Logroño' 91 'Sevilla' 92 'Móstoles'
+101 'Hospitalet de Llobregat' 106 'Parla' 120 'Lleida / Palencia' 121 'Mataró' 123 'Reus' 125 'Huesca'
+130 'Guadalajara' 148 'Tarragona / Torrejón de Ardoz' 168 'Toledo' 173 'Soria' 186 'Valladolid'
+187 'Sabadell' 194 'Segovia' 201 'Pamplona/Iruña' 216 'Teruel' 245 'Santa Coloma de Gramenet'
+250 'València' 274 'Salamanca' 275 'Zamora' 279 'Terrassa' 297 'Zaragoza'
+/TAMUNI
+1 'Menos o igual a 2.000 habitantes' 2 '2.001 a 10.000 habitantes' 3 '10.001 a 50.000 habitantes'
+4 '50.001 a 100.000 habitantes' 5 '100.001 a 400.000 habitantes' 6 '400.001 a 1.000.000 habitantes'
+7 'Más de 1.000.000 habitantes'
+/CAPITAL
+1 'Capital de CC.AA.' 2 'Capital de provincia' 3 'Otros municipios'
+/DISTR
+0 'Anonimizado'
+/SECCION
+0 'Anonimizado'
+/ENTREV
+0 'Anonimizado'
+/P0
+1 'Elecciones generales, europeas, municipales y autonómicas (en aquellas CC. AA. donde se han convocado elecciones) '
+2 'Sólo europeas y municipales' 3 'No tiene derecho de voto en ninguna' 9 'N.C.'
+/P1
+1 'Mucho' 2 'Bastante' 3 'Poco' 4 'Nada' 9 'N.C.' -99 'Sin derecho a voto en generales'
+/P2
+1 'Muy buena' 2 'Buena' 3 'Regular' 4 'Mala' 5 'Muy mala' 8 'N.S.' 9 'N.C.' -99 'Sin derecho a voto en generales'
+/P3
+1 'Muy buena' 2 'Buena' 3 'Regular' 4 'Mala' 5 'Muy mala' 8 'N.S.' 9 'N.C.' -99 'Sin derecho a voto en generales'
+/P401
+1 'Las televisiones ' 2 'Las radios ' 3 'La prensa ' 4 'Las redes sociales (Internet) ' 5 'A través de contactos personales y reuniones, mítines, etc. '
+6 'Otros medios' 7 'No se informa, no le interesa la polí­tica' 8 'N.S.' 9 'N.C.' -99 'Sin derecho a voto en generales'
+/P402
+1 'Las televisiones ' 2 'Las radios ' 3 'La prensa ' 4 'Las redes sociales (Internet) ' 5 'A través de contactos personales y reuniones, mítines, etc. '
+6 'Otros medios' 7 'No se informa, no le interesa la polí­tica' 8 'N.S.' 9 'N.C.' -99 'Sin derecho a voto en generales'
+/P403
+1 'Las televisiones ' 2 'Las radios ' 3 'La prensa ' 4 'Las redes sociales (Internet) ' 5 'A través de contactos personales y reuniones, mítines, etc. '
+6 'Otros medios' 7 'No se informa, no le interesa la polí­tica' 8 'N.S.' 9 'N.C.' -99 'Sin derecho a voto en generales'
+/P501
+1 'El paro' 2 'Las drogas' 3 'La inseguridad ciudadana' 4 'El terrorismo, ETA' 5 'Las infraestructuras'
+6 'La sanidad' 7 'La vivienda' 8 'Los problemas de índole económica' 9 'Los problemas relacionados con la calidad del empleo'
+10 'Los problemas de la agricultura, ganadería y pesca' 11 'La corrupción y el fraude' 12 'Las pensiones'
+13 'Los/as políticos/as en general, los partidos y la política' 14 'Las guerras en general'
+15 'La Administración de Justicia' 16 'Los problemas de índole social' 17 'El racismo' 18 'La inmigración'
+19 'La violencia de género' 20 'Los problemas relacionados con la juventud' 21 'La crisis de valores'
+22 'La educación' 23 'Los problemas medioambientales' 24 'El Gobierno y partidos o políticos/as concretos/as'
+25 'El funcionamiento de los servicios públicos' 26 'Los nacionalismos' 27 'Los problemas relacionados con la mujer'
+28 'El terrorismo internacional' 29 'Las preocupaciones y situaciones personales' 30 'Estatutos de autonomía'
+31 'Las negociaciones con ETA' 32 'Reforma Laboral' 33 '"Los recortes"' 34 'Los bancos' 35 'La subida del IVA'
+36 'Los desahucios' 37 'El fraude fiscal' 38 'Las hipotecas' 39 'La Monarquía' 40 'Las excarcelaciones'
+41 'La Ley del aborto' 42 'Subida de tarifas energéticas' 43 'Ébola' 44 'Refugiados/as' 45 'La independencia de Cataluña'
+46 'La falta de acuerdos, la situación política, la inestabilidad política' 47 'Emigración'
+48 'Problemas relacionados con autónomos/as' 49 'Falta de inversión en industrias e I+D' 96 'Otros'
+97 'Ninguno' 98 'N.S.' 99 'N.C.' -99 'Sin derecho a voto en generales'
+/P502
+1 'El paro' 2 'Las drogas' 3 'La inseguridad ciudadana' 4 'El terrorismo, ETA' 5 'Las infraestructuras'
+6 'La sanidad' 7 'La vivienda' 8 'Los problemas de índole económica' 9 'Los problemas relacionados con la calidad del empleo'
+10 'Los problemas de la agricultura, ganadería y pesca' 11 'La corrupción y el fraude' 12 'Las pensiones'
+13 'Los/as políticos/as en general, los partidos y la política' 14 'Las guerras en general'
+15 'La Administración de Justicia' 16 'Los problemas de índole social' 17 'El racismo' 18 'La inmigración'
+19 'La violencia de género' 20 'Los problemas relacionados con la juventud' 21 'La crisis de valores'
+22 'La educación' 23 'Los problemas medioambientales' 24 'El Gobierno y partidos o políticos/as concretos/as'
+25 'El funcionamiento de los servicios públicos' 26 'Los nacionalismos' 27 'Los problemas relacionados con la mujer'
+28 'El terrorismo internacional' 29 'Las preocupaciones y situaciones personales' 30 'Estatutos de autonomía'
+31 'Las negociaciones con ETA' 32 'Reforma Laboral' 33 '"Los recortes"' 34 'Los bancos' 35 'La subida del IVA'
+36 'Los desahucios' 37 'El fraude fiscal' 38 'Las hipotecas' 39 'La Monarquía' 40 'Las excarcelaciones'
+41 'La Ley del aborto' 42 'Subida de tarifas energéticas' 43 'Ébola' 44 'Refugiados/as' 45 'La independencia de Cataluña'
+46 'La falta de acuerdos, la situación política, la inestabilidad política' 47 'Emigración'
+48 'Problemas relacionados con autónomos/as' 49 'Falta de inversión en industrias e I+D' 96 'Otros'
+97 'Ninguno' 98 'N.S.' 99 'N.C.' -99 'Sin derecho a voto en generales'
+/P503
+1 'El paro' 2 'Las drogas' 3 'La inseguridad ciudadana' 4 'El terrorismo, ETA' 5 'Las infraestructuras'
+6 'La sanidad' 7 'La vivienda' 8 'Los problemas de índole económica' 9 'Los problemas relacionados con la calidad del empleo'
+10 'Los problemas de la agricultura, ganadería y pesca' 11 'La corrupción y el fraude' 12 'Las pensiones'
+13 'Los/as políticos/as en general, los partidos y la política' 14 'Las guerras en general'
+15 'La Administración de Justicia' 16 'Los problemas de índole social' 17 'El racismo' 18 'La inmigración'
+19 'La violencia de género' 20 'Los problemas relacionados con la juventud' 21 'La crisis de valores'
+22 'La educación' 23 'Los problemas medioambientales' 24 'El Gobierno y partidos o políticos/as concretos/as'
+25 'El funcionamiento de los servicios públicos' 26 'Los nacionalismos' 27 'Los problemas relacionados con la mujer'
+28 'El terrorismo internacional' 29 'Las preocupaciones y situaciones personales' 30 'Estatutos de autonomía'
+31 'Las negociaciones con ETA' 32 'Reforma Laboral' 33 '"Los recortes"' 34 'Los bancos' 35 'La subida del IVA'
+36 'Los desahucios' 37 'El fraude fiscal' 38 'Las hipotecas' 39 'La Monarquía' 40 'Las excarcelaciones'
+41 'La Ley del aborto' 42 'Subida de tarifas energéticas' 43 'Ébola' 44 'Refugiados/as' 45 'La independencia de Cataluña'
+46 'La falta de acuerdos, la situación política, la inestabilidad política' 47 'Emigración'
+48 'Problemas relacionados con autónomos/as' 49 'Falta de inversión en industrias e I+D' 96 'Otros'
+97 'Ninguno' 98 'N.S.' 99 'N.C.' -99 'Sin derecho a voto en generales'
+/P601
+1 'El paro' 2 'Las drogas' 3 'La inseguridad ciudadana' 4 'El terrorismo, ETA' 5 'Las infraestructuras'
+6 'La sanidad' 7 'La vivienda' 8 'Los problemas de índole económica' 9 'Los problemas relacionados con la calidad del empleo'
+10 'Los problemas de la agricultura, ganadería y pesca' 11 'La corrupción y el fraude' 12 'Las pensiones'
+13 'Los/as políticos/as en general, los partidos y la política' 14 'Las guerras en general'
+15 'La Administración de Justicia' 16 'Los problemas de índole social' 17 'El racismo' 18 'La inmigración'
+19 'La violencia de género' 20 'Los problemas relacionados con la juventud' 21 'La crisis de valores'
+22 'La educación' 23 'Los problemas medioambientales' 24 'El Gobierno y partidos o políticos/as concretos/as'
+25 'El funcionamiento de los servicios públicos' 26 'Los nacionalismos' 27 'Los problemas relacionados con la mujer'
+28 'El terrorismo internacional' 29 'Las preocupaciones y situaciones personales' 30 'Estatutos de autonomía'
+31 'Las negociaciones con ETA' 32 'Reforma Laboral' 33 '"Los recortes"' 34 'Los bancos' 35 'La subida del IVA'
+36 'Los desahucios' 37 'El fraude fiscal' 38 'Las hipotecas' 39 'La Monarquía' 40 'Las excarcelaciones'
+41 'La Ley del aborto' 42 'Subida de tarifas energéticas' 43 'Ébola' 44 'Refugiados/as' 45 'La independencia de Cataluña'
+46 'La falta de acuerdos, la situación política, la inestabilidad política' 47 'Emigración'
+48 'Problemas relacionados con autónomos/as' 49 'Falta de inversión en industrias e I+D' 96 'Otro/s'
+97 'Ninguno' 98 'N.S.' 99 'N.C.' -99 'Sin derecho a voto en generales'
+/P602
+1 'El paro' 2 'Las drogas' 3 'La inseguridad ciudadana' 4 'El terrorismo, ETA' 5 'Las infraestructuras'
+6 'La sanidad' 7 'La vivienda' 8 'Los problemas de índole económica' 9 'Los problemas relacionados con la calidad del empleo'
+10 'Los problemas de la agricultura, ganadería y pesca' 11 'La corrupción y el fraude' 12 'Las pensiones'
+13 'Los/as políticos/as en general, los partidos y la política' 14 'Las guerras en general'
+15 'La Administración de Justicia' 16 'Los problemas de índole social' 17 'El racismo' 18 'La inmigración'
+19 'La violencia de género' 20 'Los problemas relacionados con la juventud' 21 'La crisis de valores'
+22 'La educación' 23 'Los problemas medioambientales' 24 'El Gobierno y partidos o políticos/as concretos/as'
+25 'El funcionamiento de los servicios públicos' 26 'Los nacionalismos' 27 'Los problemas relacionados con la mujer'
+28 'El terrorismo internacional' 29 'Las preocupaciones y situaciones personales' 30 'Estatutos de autonomía'
+31 'Las negociaciones con ETA' 32 'Reforma Laboral' 33 '"Los recortes"' 34 'Los bancos' 35 'La subida del IVA'
+36 'Los desahucios' 37 'El fraude fiscal' 38 'Las hipotecas' 39 'La Monarquía' 40 'Las excarcelaciones'
+41 'La Ley del aborto' 42 'Subida de tarifas energéticas' 43 'Ébola' 44 'Refugiados/as' 45 'La independencia de Cataluña'
+46 'La falta de acuerdos, la situación política, la inestabilidad política' 47 'Emigración'
+48 'Problemas relacionados con autónomos/as' 49 'Falta de inversión en industrias e I+D' 96 'Otro/s'
+97 'Ninguno' 98 'N.S.' 99 'N.C.' -99 'Sin derecho a voto en generales'
+/P603
+1 'El paro' 2 'Las drogas' 3 'La inseguridad ciudadana' 4 'El terrorismo, ETA' 5 'Las infraestructuras'
+6 'La sanidad' 7 'La vivienda' 8 'Los problemas de índole económica' 9 'Los problemas relacionados con la calidad del empleo'
+10 'Los problemas de la agricultura, ganadería y pesca' 11 'La corrupción y el fraude' 12 'Las pensiones'
+13 'Los/as políticos/as en general, los partidos y la política' 14 'Las guerras en general'
+15 'La Administración de Justicia' 16 'Los problemas de índole social' 17 'El racismo' 18 'La inmigración'
+19 'La violencia de género' 20 'Los problemas relacionados con la juventud' 21 'La crisis de valores'
+22 'La educación' 23 'Los problemas medioambientales' 24 'El Gobierno y partidos o políticos/as concretos/as'
+25 'El funcionamiento de los servicios públicos' 26 'Los nacionalismos' 27 'Los problemas relacionados con la mujer'
+28 'El terrorismo internacional' 29 'Las preocupaciones y situaciones personales' 30 'Estatutos de autonomía'
+31 'Las negociaciones con ETA' 32 'Reforma Laboral' 33 '"Los recortes"' 34 'Los bancos' 35 'La subida del IVA'
+36 'Los desahucios' 37 'El fraude fiscal' 38 'Las hipotecas' 39 'La Monarquía' 40 'Las excarcelaciones'
+41 'La Ley del aborto' 42 'Subida de tarifas energéticas' 43 'Ébola' 44 'Refugiados/as' 45 'La independencia de Cataluña'
+46 'La falta de acuerdos, la situación política, la inestabilidad política' 47 'Emigración'
+48 'Problemas relacionados con autónomos/as' 49 'Falta de inversión en industrias e I+D' 96 'Otro/s'
+97 'Ninguno' 98 'N.S.' 99 'N.C.' -99 'Sin derecho a voto en generales'
+/P7
+1 'Sí, con toda seguridad' 2 'Probablemente sí' 3 'Probablemente no' 4 'No, con toda seguridad'
+8 '(NO LEER) Aún no lo tiene decidido' 9 'N.C.' -99 'Sin derecho a voto en generales'
+/P8
+1 'PP' 2 'PSOE' 3 'Podemos' 4 'Ciudadanos' 5 'IU' 21 'Unidas Podemos' 18 'VOX' 17 'PACMA' 6 'En Comú Podem'
+7 'Compromís' 8 'ERC' 9 'PDeCAT (JxCat)' 10 'En Marea' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CC' 14 'UPN'
+16 'Nueva Canarias' 22 'EQUO' 34 'Geroa Bai' 23 'Partido Aragonés (PAR)' 24 'BNG (Bloque Nacionalista Galego)'
+30 'CHA (Chunta Aragonesista)' 25 'MÉS (PSM-Entesa)' 40 'PI (Proposta per les Illes Balears)'
+43 'PRC (Partido Regionalista de Cantabria)' 44 'UPL (Unión del Pueblo Leonés)' 51 'Partido Riojano (PR+)'
+19 'CUP' 20 'Los Verdes' 26 'Falange Española de las JONS' 29 'Partido Libertario' 38 'UPyD'
+39 'PCPE' 62 'Poble Lliure' 64 'Som Valencians' 95 'Otro partido' 96 'Voto blanco' 77 'Voto nulo'
+97 'No votará' 94 'No lo tiene decidido aún' 98 'N.S.' 99 'N.C.' -99 'Sin derecho a voto en generales'
+/P8A
+0 'N.P.' 1 'PP' 2 'PSOE' 3 'Podemos' 4 'Ciudadanos' 5 'IU' 18 'VOX' 17 'PACMA' 6 'En Comú Podem'
+7 'Compromí­s' 8 'ERC' 9 'PDeCAT (JxCat)' 10 'En Marea' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CC' 14 'UPN'
+16 'Nueva Canarias' 22 'EQUO' 34 'Geroa Bai' 24 'BNG (Bloque Nacionalista Galego)' 30 'CHA (Chunta Aragonesista)'
+25 'MÉS (PSM-Entesa)' 43 'PRC (Partido Regionalista de Cantabria)' 44 'UPL (Unión del Pueblo Leonés)'
+48 'Coalición por Melilla' 49 'PPL (Populares en Libertad)' 95 'Otro partido' 97 'Ninguno' 98 'N.S.'
+99 'N.C.' -99 'Sin derecho a voto en generales'
+/P9
+0 '0 Con toda seguridad, no irá a votar' 10 '10 Con toda seguridad, irá a votar' 98 'N.S.' 99 'N.C.'
+-99 'Sin derecho a voto en generales'
+/P10
+1 'PP' 2 'PSOE' 3 'Podemos' 4 'Ciudadanos' 5 'IU' 21 'Unidas Podemos' 18 'VOX' 17 'PACMA' 6 'En Comú Podem'
+7 'Compromí­s' 8 'ERC' 9 'PDeCAT (JxCat)' 10 'En Marea' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CC' 14 'UPN'
+15 'FAC (Foro Asturias)' 16 'Nueva Canarias' 22 'EQUO' 34 'Geroa Bai' 23 'Partido Aragonés (PAR)'
+24 'BNG (Bloque Nacionalista Galego)' 30 'CHA (Chunta Aragonesista)' 25 'MÉS (PSM-Entesa)' 40 'PI (Proposta per les Illes Balears)'
+43 'PRC (Partido Regionalista de Cantabria)' 44 'UPL (Unión del Pueblo Leonés)' 51 'Partido Riojano (PR+)'
+46 'Coalición Caballas' 49 'PPL (Populares en Libertad)' 95 'Otro partido' 97 'Ninguno' 98 'N.S.'
+99 'N.C.' -99 'Sin derecho a voto en generales'
+/P11
+1 'PP' 2 'PSOE' 3 'Podemos' 4 'Ciudadanos' 5 'IU' 21 'Unidas Podemos' 18 'VOX' 17 'PACMA' 6 'En Comú Podem'
+7 'Compromí­s' 8 'ERC' 9 'PDeCAT (JxCat)' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CC' 14 'UPN' 16 'Nueva Canarias'
+34 'Geroa Bai' 95 'Otro partido' 97 'Ninguno' 98 'N.S.' 99 'N.C.' -99 'Sin derecho a voto en generales'
+/P12
+1 'PP' 2 'PSOE' 3 'Podemos' 4 'Ciudadanos' 5 'IU' 21 'Unidas Podemos' 18 'VOX' 17 'PACMA' 6 'En Comú Podem'
+7 'Compromís' 8 'ERC' 9 'PDeCAT (JxCat)' 10 'En Marea' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CC' 14 'UPN'
+16 'Nueva Canarias' 22 'EQUO' 34 'Geroa Bai' 23 'Partido Aragonés (PAR)' 24 'BNG (Bloque Nacionalista Galego)'
+30 'CHA (Chunta Aragonesista)' 40 'PI (Proposta per les Illes)' 43 'PRC (Partido Regionalista de Cantabria)'
+44 'UPL (Unión del Pueblo Leonés)' 46 'Coalición Caballas' 49 'PPL (Populares en Libertad)'
+95 'Otro partido' 97 'Ninguno' 98 'N.S.' 99 'N.C.' -99 'Sin derecho a voto en generales'
+/P13
+1 'Santiago Abascal' 2 'Pablo Casado' 3 'Alberto Garzón' 4 'Pablo Iglesias' 5 'Albert Rivera'
+6 'Pedro Sánchez' 7 '(NO LEER) Ninguno de ellos' 8 '(NO LEER) Otro/a' 98 'N.S.' 99 'N.C.' -99 'Sin derecho a voto en generales'
+/P14
+1 'Fue a votar y votó' 7 'Votó por correo' 2 'No tenía edad para votar' 3 'Fue a votar pero no pudo hacerlo'
+4 'No fue a votar porque no pudo' 5 'Prefirió no votar' 6 'No tenía derecho a voto' 8 'No recuerda'
+9 'N.C.' -99 'Sin derecho a voto en generales'
+/P14A
+0 'N.P.' 1 'PP' 2 'PSOE' 21 'Unidos Podemos' 4 'Ciudadanos' 6 'En Comú Podem' 37 'Compromís-Podemos-EUPV'
+8 'ERC' 36 'Convergència (CDC)' 10 'En Marea' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CC-PNC' 18 'VOX'
+95 'Otros partidos' 96 'En blanco' 77 'Voto nulo' 98 'No recuerda' 99 'N.C.' -99 'Sin derecho a voto en generales'
+/P15
+1 'Mucho' 2 'Bastante' 3 'Poco' 4 'Nada' 9 'N.C.' -99 'Sin derecho a voto en europeas'
+/P16
+1 'Mucho' 2 'Bastante' 3 'Poco' 4 'Nada' 8 'N.S.' 9 'N.C.' -99 'Sin derecho a voto en europeas'
+/P17
+1 'Con mucho interés' 2 'Con bastante interés' 3 'Con poco interés' 4 'Con ningún interés' 9 'N.C.'
+-99 'Sin derecho a voto en europeas'
+/P18
+1 'Los temas relacionados con la Unión Europea y el Parlamento Europeo' 2 'Los temas relacionados con la situación política actual de España'
+3 '(NO LEER) Ambos temas por igual' 8 'N.S.' 9 'N.C.' -99 'Sin derecho a voto en europeas'
+/P1901
+1 '1 Muy mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.' -99 'Sin derecho a voto en europeas'
+/P1902
+1 '1 Muy mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.' -99 'Sin derecho a voto en europeas'
+/P1903
+1 '1 Muy mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.' -99 'Sin derecho a voto en europeas'
+/P1904
+1 '1 Muy mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.' -99 'Sin derecho a voto en europeas'
+/P1905
+1 '1 Muy mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.' -99 'Sin derecho a voto en europeas'
+/P1906
+1 '1 Muy mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.' -99 'Sin derecho a voto en europeas'
+/P20
+1 'Sí, con toda seguridad' 2 'Probablemente sí' 3 'Probablemente no' 4 'No, con toda seguridad'
+8 '(NO LEER) Aún no lo tiene decidido' 9 'N.C.' -99 'Sin derecho a voto en europeas'
+/P21
+1 'PP' 2 'PSOE' 3 'Podemos' 4 'Ciudadanos' 5 'IU' 21 'Unidas Podemos' 18 'VOX' 17 'PACMA' 6 'En Comú Podem'
+7 'Compromís' 8 'ERC' 9 'PDeCAT (JxCat)' 10 'En Marea' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CC' 14 'UPN'
+16 'Nueva Canarias' 22 'EQUO' 34 'Geroa Bai' 23 'Partido Aragonés (PAR)' 24 'BNG (Bloque Nacionalista Galego)'
+30 'CHA (Chunta Aragonesista)' 25 'MÉS (PSM-Entesa)' 40 'PI (Proposta per les Illes Balears)'
+43 'PRC (Partido Regionalista de Cantabria)' 44 'UPL (Unión del Pueblo Leonés)' 51 'Partido Riojano (PR+)'
+47 'MDyC (Movimiento por la Dignidad y la Ciudadaní­a)' 48 'Coalición por Melilla' 19 'CUP'
+20 'Los Verdes' 26 'Falange Española de las JONS' 38 'UPyD' 39 'PCPE' 52 'Actúa' 60 'CNxR' 62 'Poble Lliure'
+64 'Som Valencians' 95 'Otro partido' 77 'Voto nulo' 96 'Voto blanco' 97 'No votará' 94 'No lo tiene decidido aún'
+98 'N.S.' 99 'N.C.' -99 'Sin derecho a voto en europeas'
+/P21A
+0 'N.P.' 1 'PP' 2 'PSOE' 3 'Podemos' 4 'Ciudadanos' 5 'IU' 18 'VOX' 17 'PACMA' 6 'En Comú Podem'
+7 'Compromí­s' 8 'ERC' 9 'PDeCAT (JxCat)' 10 'En Marea' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CC' 14 'UPN'
+22 'EQUO' 34 'Geroa Bai' 23 'Partido Aragonés (PAR)' 24 'BNG (Bloque Nacionalista Galego)' 30 'CHA (Chunta Aragonesista)'
+25 'MÉS (PSM-Entesa)' 43 'PRC (Partido Regionalista de Cantabria)' 46 'Coalición Caballas' 49 'PPL (Populares en Libertad)'
+95 'Otro partido' 97 'Ninguno' 98 'N.S.' 99 'N.C.' -99 'Sin derecho a voto en europeas'
+/P22
+1 'Sí, con toda seguridad' 2 'Probablemente sí' 3 'Probablemente no' 4 'No, con toda seguridad'
+8 '(NO LEER) Aún no lo tiene decidido' 9 'N.C.' -99 'Sin derecho a voto en municipales'
+/P22A
+0 'N.P.' 1 'Sí' 2 'No' 8 'N.S.' 9 'N.C.' -99 'Sin derecho a voto en municipales'
+/P23
+1 'PP' 2 'PSOE' 3 'Podemos' 4 'Ciudadanos' 5 'IU' 21 'Unidas Podemos' 50 'Más Madrid' 18 'VOX'
+17 'PACMA' 6 'En Comú Podem' 7 'Compromís' 8 'ERC' 9 'PDeCAT (JxCat)' 10 'En Marea' 11 'EAJ-PNV'
+12 'EH Bildu' 13 'CC' 14 'UPN' 15 'FAC (Foro Asturias)' 16 'Nueva Canarias' 19 'CUP' 22 'EQUO'
+34 'Geroa Bai' 23 'Partido Aragonés (PAR)' 24 'BNG (Bloque Nacionalista Galego)' 30 'CHA (Chunta Aragonesista)'
+25 'MÉS (PSM-Entesa)' 40 'PI (Proposta per les Illes Balears)' 43 'PRC (Partido Regionalista de Cantabria)'
+44 'UPL (Unión del Pueblo Leonés)' 51 'Partido Riojano (PR+)' 46 'Coalición Caballas' 47 'MDyC (Movimiento por la Dignidad y la Ciudadaní­a)'
+48 'Coalición por Melilla' 20 'Los Verdes' 35 'Bloc' 38 'UPyD' 39 'PCPE' 52 'Actúa' 54 'Compromiso por Galicia'
+55 'Plataforma Manuel Valls' 56 'Zaragoza en Común' 57 'Compostela Aberta' 62 'Poble Lliure'
+64 'Som Valencians' 65 'Converxencia Galega' 66 'Terra Galega' 90 'Adelante Sevilla' 95 'Otro partido'
+77 'Voto nulo' 96 'Voto blanco' 97 'No votará' 94 'No lo tiene decidido aún' 98 'N.S.' 99 'N.C.'
+-99 'Sin derecho a voto en municipales'
+/P23A
+0 'N.P.' 1 'PP' 2 'PSOE' 3 'Podemos' 4 'Ciudadanos' 5 'IU' 21 'Unidas Podemos' 50 'Más Madrid'
+18 'VOX' 17 'PACMA' 6 'En Comú Podem' 7 'Compromís' 8 'ERC' 9 'PDeCAT (JxCat)' 10 'En Marea'
+11 'EAJ-PNV' 12 'EH Bildu' 13 'CC' 14 'UPN' 15 'FAC (Foro Asturias)' 16 'Nueva Canarias' 19 'CUP'
+22 'EQUO' 23 'Partido Aragonés (PAR)' 24 'BNG (Bloque Nacionalista Galego)' 30 'CHA (Chunta Aragonesista)'
+25 'MÉS (PSM-Entesa)' 43 'PRC (Partido Regionalista de Cantabria)' 44 'UPL (Unión del Pueblo Leonés)'
+51 'Partido Riojano (PR+)' 49 'PPL (Populares en Libertad)' 56 'Zaragoza en Común' 57 'Santiago Aberta'
+95 'Otro partido' 97 'Ninguno' 98 'N.S.' 99 'N.C.' -99 'Sin derecho a voto en municipales'
+/P24
+1 'Fue a votar y votó' 7 'Votó por correo' 2 'No tenía edad para votar' 3 'Fue a votar pero no pudo hacerlo'
+4 'No fue a votar porque no pudo' 5 'Prefirió no votar' 6 'No tenía derecho a voto' 8 'No recuerda'
+9 'N.C.' -99 'Sin derecho a voto en municipales'
+/P24A
+0 'N.P.' 1 'PP' 2 'PSOE' 3 'Podemos' 4 'Ciudadanos' 5 'IU' 21 'Unidas Podemos' 18 'VOX' 17 'PACMA'
+6 'En Comú Podem' 7 'Compromís' 8 'ERC' 9 'PDeCAT (JxCat)' 10 'En Marea' 11 'EAJ-PNV' 12 'EH Bildu'
+13 'CCa-PNC' 14 'UPN' 15 'FAC' 16 'Nueva Canarias' 19 'CUP' 22 'EQUO' 34 'Geroa Bai' 23 'PAR'
+24 'BNG' 30 'CHA' 25 'MÉS' 40 'PI' 43 'PRC' 44 'UPL' 51 'PR+' 46 'Coalición Caballas' 47 'MDyC'
+48 'Coalición por Melilla' 20 'Los Verdes' 28 'España 2000' 35 'Bloc' 38 'UPyD' 39 'PCPE' 50 'Ahora Madrid'
+52 'Actúa' 53 'Anova-Irmandade Nacionalista' 54 'Compromiso por Galicia' 56 'Zaragoza en Común'
+57 'Compostela Aberta' 64 'Som Valencians' 66 'Terra Galega' 81 'Ganemos Sevilla' 82 'València en Comú'
+83 'Sumando-Hemen Gaude' 84 'IRABAZI-Ganar Gasteiz' 95 'Otro partido' 96 'En blanco' 77 'Voto nulo'
+98 'No recuerda' 99 'N.C.' -99 'Sin derecho a voto en municipales'
+/P25
+1 'Sí, con toda seguridad' 2 'Probablemente sí' 3 'Probablemente no' 4 'No, con toda seguridad'
+8 '(NO LEER) Aún no lo tiene decidido' 9 'N.C.' -99 'Sin derecho a voto en autonómicas'
+/P25A
+0 'N.P.' 1 'Sí' 2 'No' 8 'N.S.' 9 'N.C.' -99 'Sin derecho a voto en autonómicas'
+/P26
+1 'PP' 2 'PSOE' 3 'Podemos' 4 'Ciudadanos' 5 'IU' 21 'Unidas Podemos' 50 'Más Madrid' 18 'VOX'
+17 'PACMA' 6 'En Comú Podem' 7 'Compromís' 8 'ERC' 9 'PDeCAT (JxCat)' 10 'En Marea' 12 'EH Bildu'
+13 'CC' 14 'UPN' 15 'FAC (Foro Asturias)' 16 'Nueva Canarias' 22 'EQUO' 34 'Geroa Bai' 23 'Partido Aragonés (PAR)'
+30 'CHA (Chunta Aragonesista)' 25 'MÉS (PSM-Entesa)' 40 'PI (Proposta per les Illes Balears)'
+43 'PRC (Partido Regionalista de Cantabria)' 44 'UPL (Unión del Pueblo Leonés)' 51 'Partido Riojano (PR+)'
+20 'Los Verdes' 26 'Falange Española de las JONS' 29 'Partido Libertario' 39 'PCPE' 95 'Otro partido'
+77 'Voto nulo' 96 'Voto blanco' 97 'No votará' 98 'N.S.' 99 'N.C.' -99 'Sin derecho a voto en autonómicas'
+/P26A
+0 'N.P.' 1 'PP' 2 'PSOE' 3 'Podemos' 4 'Ciudadanos' 5 'IU' 21 'Unidas Podemos' 50 'Más Madrid'
+18 'VOX' 17 'PACMA' 6 'En Comú Podem' 7 'Compromís' 8 'ERC' 9 'PDeCAT (JxCat)' 10 'En Marea'
+11 'EAJ-PNV' 12 'EH Bildu' 13 'CC' 14 'UPN' 15 'FAC (Foro Asturias)' 16 'Nueva Canarias' 22 'EQUO'
+34 'Geroa Bai' 23 'Partido Aragonés (PAR)' 24 'BNG (Bloque Nacionalista Galego)' 30 'CHA (Chunta Aragonesista)'
+25 'MÉS (PSM-Entesa)' 40 'PI (Proposta per les Illes Balears)' 43 'PRC (Partido Regionalista de Cantabria)'
+44 'UPL (Unión del Pueblo Leonés)' 51 'Partido Riojano (PR+)' 46 'Coalición Caballas' 47 'MDyC (Movimiento por la Dignidad y la Ciudadanía)'
+48 'Coalición por Melilla' 49 'PPL (Populares en Libertad)' 95 'Otro partido' 97 'Ninguno' 98 'N.S.'
+99 'N.C.' -99 'Sin derecho a voto en autonómicas'
+/P27
+0 '0 Con toda seguridad, no irá a votar' 10 '10 Con toda seguridad, irá a votar' 98 'N.S.' 99 'N.C.'
+-99 'N.P.'
+/P28
+1 'Fue a votar y votó' 7 'Votó por correo' 2 'No tenía edad para votar' 3 'Fue a votar pero no pudo hacerlo'
+4 'No fue a votar porque no pudo' 5 'Prefirió no votar' 6 'No tenía derecho a voto' 8 'No recuerda'
+9 'N.C.' -99 'Sin derecho a voto en autonómicas'
+/P28A
+0 'N.P.' 1 'PP' 2 'PSOE' 3 'Podemos' 4 'Ciudadanos' 5 'IU' 18 'VOX' 17 'PACMA' 12 'EH Bildu'
+13 'CC' 14 'UPN' 15 'FAC (Foro Asturias)' 16 'Nueva Canarias' 34 'Geroa Bai' 23 'Partido Aragonés (PAR)'
+25 'MÈS (PSM-Entesa)' 30 'CHA (Chunta Aragonesista)' 40 'PI (Proposta per les Illes Balears)'
+43 'PRC (Partido Regionalista de Cantabria)' 44 'UPL (Unión del Pueblo Leonés)' 51 'Partido Riojano (PR+)'
+20 'Los Verdes' 26 'Falange Española de las JONS' 29 'Partido Libertario' 38 'UPyD' 50 'Más Madrid'
+85 'Canarias Decide' 86 'Ganemos-LV-IU' 95 'Otro partido' 77 'Voto nulo' 96 'Voto blanco' 98 'No recuerda'
+99 'N.C.' -99 'Sin derecho a voto en autonómicas'
+/P29
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/P30
+1 'Hombre' 2 'Mujer'
+/P31
+99 'N.C.'
+/P32
+1 'No, es analfabeto/a' 2 'No, pero sabe leer y escribir' 3 'Sí, ha ido a la escuela' 9 'N.C.'
+/P32A
+0 'N.P.' 1 'Menos de cinco años de escolarización' 2 'Primaria (enseñanza primaria o hasta 5º de EGB)'
+3 'Formación Profesional inicial' 4 'Secundaria (Bachillerato Elemental, EGB completa, ESO completa)'
+5 'Formación Profesional de grado medio (FP I)' 6 'Bachillerato/COU/PREU (Bachillerato Superior, BUP, bachillerato)'
+7 'Formación Profesional de grado superior (FP II)' 8 'Universitarios medios (diplomatura, Arquitectura técnica o Ingeniería técnica)'
+9 'Universitarios superiores (licenciatura, grado, máster oficial, doctorado)' 10 'Otros estudios no reglados'
+99 'N.C.'
+/P33
+1 'Trabaja' 2 'Jubilado/a o pensionista (anteriormente ha trabajado)' 3 'Pensionista (anteriormente no ha trabajado, sus labores, etc.)'
+4 'Parado/a y ha trabajado antes' 5 'Parado/a y busca su primer empleo' 6 'Estudiante' 7 'Trabajo doméstico no remunerado'
+8 'Otra situación' 9 'N.C.'
+/P33A
+0 'N.P.' 1 'Directores/as y gerentes' 2 'Profesionales científicos/as e intelectuales' 3 'Técnicos/as y profesionales de nivel medio'
+4 'Personal de apoyo administrativo' 5 'Trabajadores/as de los servicios y vendedores/as de comercios y mercados'
+6 'Agricultores/as y trabajadores/as cualificados/as agropecuarios/as, forestales y pesqueros/as'
+7 'Oficiales/as, operarios/as y artesanos/as de artes mecánicas y de otros oficios' 8 'Operadores/as de instalaciones y máquinas y ensambladores/as'
+9 'Ocupaciones elementales' 10 'Ocupaciones militares y cuerpos policiales' 11 'Otra ocupación'
+99 'N.C.'
+/P34
+1 'Católico/a practicante' 2 'Católico/a no practicante' 3 'Creyente de otra religión' 4 'Agnóstico/a'
+5 'Ateo/a' 6 'Otra respuesta' 8 'N.S.' 9 'N.C.'
+/P35
+1 'Sí' 2 'No' 9 'N.C.'
+/P36
+1 'Sí, una línea' 2 'Sí, más de una línea' 3 'No' 9 'N.C.'
+/P37
+1 'Da sólo número fijo' 2 'Da sólo número móvil' 3 'Da número fijo y móvil' 4 'No da número ni fijo ni móvil'
+9 'N.C.'
+/P38
+1 'Sí' 2 'No' 9 'N.C.'
+/P38A
+0 'N.P.' 1 'Sí' 2 'No' 9 'N.C.'
+/P39
+1 'La persona entrevistada las ha usado todas' 2 'Sólo ha usado algunas' 3 'Las he leído yo'
+9 'N.C.'
+/E101
+/E102
+1 'Enero  ' 2 'Febrero  ' 3 'Marzo  ' 4 'Abril  ' 5 'Mayo  ' 6 'Junio  ' 7 'Julio  ' 8 'Agosto  '
+9 'Septiembre  ' 10 'Octubre  ' 11 'Noviembre    ' 12 'Diciembre  '
+/E103
+19 '2019'
+/E2
+999 'N.C.'
+/E3
+1 'Entre las 9-12 horas' 2 'Entre las 12''05 y las 14 horas' 3 'Entre las 14''05 y las 16 horas'
+4 'Entre las 16''05 y las 18 horas' 5 'Entre las 18''05 y las 21 horas' 6 'Después de las 21 horas'
+9 'N.C.'
+/C1
+1 'Entrevista correcta' 2 'Entrevista incorrecta' 3 'No se ha establecido contacto' 9 'No consta'
+/C1A
+0 'N.P.' 1 'Dirección inexistente (no existe número en la calle, piso, etc.)' 2 'Dirección ilocalizable (faltan datos: número, piso, letra, etc.)'
+3 'Negativa. No coinciden datos personales y no ha sido realizada en la dirección que se hace constar (causa de anulación)'
+4 'Negativa que ofrece dudas. Coinciden datos personales, pero niegan haber realizado la entrevista (causa de anulación)'
+5 'Realizada a una persona, recogiendo los datos de otra (causa de anulación)' 6 'Realizada cambiando el género de la persona entrevistada (causa de anulación)'
+7 'Cambio de edad por otra de un tramo contiguo' 8 'Cambio de edad por otra de un tramo no contiguo'
+9 'Realizada fuera de la vivienda, pero vive en la sección electoral' 10 'Realizada fuera de la vivienda, y no vive en la sección electoral'
+11 'Realizada en dirección que no corresponde a la sección electoral' 12 'Realizada, pero no respeta las normas de ruta'
+13 'Se detecta que no ha hecho todas las preguntas' 14 'Negativa que ofrece dudas: no coincide la dirección ni datos personales. Posibilidad de error en el teléfono'
+99 'No consta'
+/P8R
+1 'PP' 2 'PSOE' 3 'Unidas Podemos' 4 'Ciudadanos' 18 'VOX' 17 'PACMA' 6 'En Comú Podem' 8 'ERC'
+9 'PDeCAT (JxCat)' 11 'EAJ-PNV' 12 'EH Bildu' 95 'Otro partido' 96 'Voto blanco' 77 'Voto nulo'
+97 'No votará' 94 'No lo tiene decidido aún' 98 'N.S.' 99 'N.C.' -99 'Sin derecho a voto en generales'
+/P8AR
+0 'N.P.' 1 'PP' 2 'PSOE' 3 'Podemos' 4 'Ciudadanos' 5 'IU' 18 'VOX' 8 'ERC' 95 'Otro partido'
+97 'Ninguno' 98 'N.S.' 99 'N.C.' -99 'Sin derecho a voto en generales'
+/VOTOSIMG
+1 'PP' 2 'PSOE' 3 'Unidas Podemos' 4 'Ciudadanos' 18 'VOX' 17 'PACMA' 6 'En Comú Podem' 8 'ERC'
+9 'PDeCAT (JxCat)' 11 'EAJ-PNV' 12 'EH Bildu' 95 'Otro partido' 96 'En blanco' 77 'Voto nulo'
+97 'No votará' 98 'No sabe todavía' 99 'N.C.' -99 'Sin derecho a voto en generales'
+/P10R
+1 'PP' 2 'PSOE' 3 'Podemos' 4 'Ciudadanos' 5 'IU' 21 'Unidas Podemos' 18 'VOX' 17 'PACMA' 7 'Compromí­s'
+8 'ERC' 9 'PDeCAT (JxCat)' 11 'EAJ-PNV' 12 'EH Bildu' 95 'Otro partido' 97 'Ninguno' 98 'N.S.'
+99 'N.C.' -99 'Sin derecho a voto en generales'
+/P11R
+1 'PP' 2 'PSOE' 4 'Ciudadanos' 18 'VOX' 95 'Otro partido' 97 'Ninguno' 98 'N.S.' 99 'N.C.' -99 'Sin derecho a voto en generales'
+/P12R
+1 'PP' 2 'PSOE' 3 'Podemos' 4 'Ciudadanos' 5 'IU' 21 'Unidas Podemos' 18 'VOX' 17 'PACMA' 8 'ERC'
+95 'Otro partido' 97 'Ninguno' 98 'N.S.' 99 'N.C.' -99 'Sin derecho a voto en generales'
+/P14AR
+0 'N.P.' 1 'PP' 2 'PSOE' 21 'Unidos Podemos' 4 'Ciudadanos' 6 'En Comú Podem' 37 'Compromís-Podemos-EUPV'
+8 'ERC' 36 'Convergència (CDC)' 10 'En Marea' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CC-PNC' 95 'Otros partidos'
+96 'En blanco' 77 'Voto nulo' 98 'No recuerda' 99 'N.C.' -99 'Sin derecho a voto en generales'
+/RECUERDO
+1 'PP' 2 'PSOE' 21 'Unidos Podemos' 4 'C''s' 6 'En Comú Podem' 37 'Compromís-Podemos-EUPV' 8 'ERC'
+36 'CDC' 10 'En Marea' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CC-PNC' 95 'Otros' 96 'En blanco' 77 'Voto nulo'
+94 'No tenía edad' 97 'No votó' 93 'No tenía derecho a voto' 98 'No recuerda' 99 'N.C.' -99 'Sin derecho a voto en generales'
+/P21R
+1 'PP' 2 'PSOE' 3 'Unidas Podemos Cambiar Europa (Podemos-IU)' 4 'Ciudadanos' 18 'VOX' 17 'PACMA'
+9 'Junts' 87 'Coalición por una Europa Solidaria (CEUS)' 89 'Ahora Repúblicas' 95 'Otro partido'
+77 'Voto nulo' 96 'Voto blanco' 97 'No votará' 94 'No lo tiene decidido aún' 98 'N.S.' 99 'N.C.'
+-99 'Sin derecho a voto en europeas'
+/P21AR
+0 'N.P.' 1 'PP' 2 'PSOE' 3 'Podemos' 4 'Ciudadanos' 5 'IU' 18 'VOX' 17 'PACMA' 15 'FAC' 27 'Escaños en Blanco'
+8 'ERC' 95 'Otro partido' 97 'Ninguno' 98 'N.S.' 99 'N.C.' -99 'Sin derecho a voto en europeas'
+/VOTOSIME
+1 'PP' 2 'PSOE' 3 'Unidas Podemos Cambiar Europa (Podemos-IU)' 4 'Ciudadanos' 18 'VOX' 17 'PACMA'
+9 'Junts' 87 'Coalición por una Europa Solidaria' 89 'Ahora Repúblicas' 95 'Otro partido' 96 'En blanco'
+77 'Voto nulo' 97 'No votará' 98 'No sabe todavía' 99 'N.C.' -99 'Sin derecho a voto en europeas'
+/P23R
+1 'PP' 2 'PSOE (PSC en Cataluña)' 3 'Podemos (ver tabla)' 21 'Unidas Podemos' 4 'Ciudadanos'
+5 'IU (ver tabla)' 50 'Más Madrid' 18 'VOX' 17 'PACMA' 6 'Barcelona En Comú-En Comú Guanyem'
+7 'Compromís' 8 'ERC' 9 'PDeCAT (JxCat)' 10 'En Marea' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CCa-PNC'
+14 'UPN' 15 'FAC' 16 'Nueva Canarias' 19 'CUP' 22 'EQUO' 34 'Geroa Bai' 23 'PAR' 24 'BNG' 30 'CHA'
+25 'MÉS' 40 'PI' 43 'PRC' 44 'UPL' 51 'PR+' 46 'Coalición Caballas' 47 'MDyC' 48 'Coalición por Melilla'
+20 'Los Verdes' 35 'Bloc' 38 'UPyD' 39 'PCPE' 52 'Actúa' 54 'Compromiso por Galicia' 55 'Barcelona pel Canvi-C''s'
+56 'Zaragoza en Común' 57 'Compostela Aberta' 66 'Terra Galega' 90 'Adelante Sevilla' 95 'Otro partido'
+77 'Voto nulo' 96 'Voto blanco' 97 'No votará' 94 'No lo tiene decidido aún' 98 'N.S.' 99 'N.C.'
+-99 'Sin derecho a voto en municipales' 0 'No procede'
+/P23AR
+0 'N.P.' 1 'PP' 2 'PSOE' 3 'Podemos' 4 'Ciudadanos' 5 'IU' 50 'Más Madrid' 18 'VOX' 17 'PACMA'
+6 'En Comú Podem' 7 'Compromís' 8 'ERC' 9 'PDeCAT (JxCat)' 10 'En Marea' 11 'EAJ-PNV' 12 'EH Bildu'
+23 'Partido Aragonés (PAR)' 24 'BNG (Bloque Nacionalista Galego)' 30 'CHA (Chunta Aragonesista)'
+56 'Zaragoza en Común' 95 'Otro partido' 97 'Ninguno' 98 'N.S.' 99 'N.C.' -99 'Sin derecho a voto en municipales'
+/VOTOSIMM
+1 'PP' 2 'PSOE' 3 'Podemos (ver tabla)' 21 'Unidas Podemos' 4 'Ciudadanos' 5 'IU (ver tabla)'
+18 'VOX' 17 'PACMA' 6 'En Comú Podem' 7 'Compromís' 8 'ERC' 9 'PDeCAT (JxCat)' 10 'En Marea'
+11 'EAJ-PNV' 12 'EH Bildu' 20 'Los Verdes' 23 'PAR' 24 'BNG' 30 'CHA' 46 'Coalición Caballas'
+47 'MDyC' 48 'Coalición por Melilla' 19 'CUP' 50 'Más Madrid' 54 'Compromiso por Galicia' 55 'Barcelona pel Canvi-C''s'
+56 'Zaragoza en Común' 57 'Santiago Aberta' 90 'Adelante Sevilla' 95 'Otro partido' 96 'En blanco'
+77 'Voto nulo' 97 'No votará' 98 'No sabe todavía' 99 'N.C.' -99 'Sin derecho a voto en municipales'
+/VOTOSIMMS
+0 'N.P.' 1 'PP' 2 'PSOE-A' 4 'Ciudadanos' 18 'VOX' 17 'PACMA' 90 'Adelante Sevilla' 95 'Otro partido'
+96 'En blanco' 77 'Voto nulo' 97 'No votará' 98 'No sabe todavía' 99 'N.C.' -99 'Sin derecho a voto en municipales'
+/VOTOSIMMZ
+0 'N.P.' 1 'PP' 2 'PSOE' 3 'Podemos-EQUO' 4 'Ciudadanos' 18 'VOX' 17 'PACMA' 23 'PAR' 30 'CHA'
+56 'Zaragoza en Común' 95 'Otro partido' 96 'En blanco' 97 'No votará' 98 'No sabe todavía'
+99 'N.C.' -99 'Sin derecho a voto en municipales'
+/VOTOSIMMB
+0 'N.P.' 1 'PP' 2 'PSC' 18 'VOX' 17 'PACMA' 6 'Barcelona En Comú-En Comú Guanyem' 8 'ERC' 9 'JxCat'
+19 'CUP' 55 'Barcelona pel Canvi-C''s' 95 'Otro partido' 96 'En blanco' 77 'Voto nulo' 97 'No votará'
+98 'No sabe todavía' 99 'N.C.' -99 'Sin derecho a voto en municipales'
+/VOTOSIMMVL
+0 'N.P.' 1 'PP' 2 'PSPV-PSOE' 3 'Unides Podem-Esquerra Unida' 4 'Ciudadanos' 18 'VOX' 17 'PACMA'
+7 'Compromís' 95 'Otro partido' 96 'En blanco' 97 'No votará' 98 'No sabe todavía' 99 'N.C.'
+-99 'Sin derecho a voto en municipales'
+/VOTOSIMMVI
+0 'N.P.' 1 'PP' 2 'PSE-EE PSOE' 3 'Elkarrekin Podemos' 4 'Ciudadanos' 11 'EAJ-PNV' 12 'EH Bildu'
+95 'Otro partido' 96 'En blanco' 77 'Voto nulo' 97 'No votará' 98 'No sabe todavía' 99 'N.C.'
+-99 'Sin derecho a voto en municipales'
+/VOTOSIMMMD
+0 'N.P.' 1 'PP' 2 'PSOE' 4 'Ciudadanos' 5 'IU-Madrid en Pie Municipalista' 18 'VOX' 50 'Más Madrid'
+95 'Otro partido' 96 'En blanco' 77 'Voto nulo' 97 'No votará' 98 'No sabe todavía' 99 'N.C.'
+-99 'Sin derecho a voto en municipales'
+/VOTOSIMMST
+0 'N.P.' 1 'PP' 2 'PSdeG-PSOE' 4 'Ciudadanos' 24 'BNG' 57 'Compostela Aberta' 95 'Otro partido'
+96 'En blanco' 97 'No votará' 98 'No sabe todavía' 99 'N.C.' -99 'Sin derecho a voto en municipales'
+/VOTOSIMMC
+0 'N.P.' 1 'PP' 2 'PSOE' 3 'Podemos (ver tabla)' 4 'Ciudadanos' 18 'VOX' 17 'PACMA' 46 'Coalición Caballas'
+47 'MDyC' 97 'No votará' 99 'N.C.' -99 'Sin derecho a voto en municipales'
+/VOTOSIMMMLL
+0 'N.P.' 1 'PP' 2 'PSOE' 4 'Ciudadanos' 18 'VOX' 17 'PACMA' 48 'Coalición por Melilla' 96 'En blanco'
+97 'No votará' -99 'Sin derecho a voto en municipales'
+/P24AR
+0 'N.P.' 1 'PP' 2 'PSOE' 3 'Podemos' 4 'Ciudadanos' 5 'IU' 18 'VOX' 17 'PACMA' 6 'En Comú Podem'
+7 'Compromís' 8 'ERC' 9 'PDeCAT (JxCat)' 10 'En Marea' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CCa-PNC'
+14 'UPN' 15 'FAC' 16 'Nueva Canarias' 19 'CUP' 34 'Geroa Bai' 23 'PAR' 24 'BNG' 30 'CHA' 43 'PRC'
+46 'Coalición Caballas' 47 'MDyC' 50 'Ahora Madrid' 54 'Compromiso por Galicia' 56 'Zaragoza en Común'
+57 'Compostela Aberta' 81 'Ganemos Sevilla' 82 'València en Comú' 83 'Sumando-Hemen Gaude' 84 'IRABAZI-Ganar Gasteiz'
+95 'Otro partido' 96 'En blanco' 77 'Voto nulo' 98 'No recuerda' 99 'N.C.' -99 'Sin derecho a voto en municipales'
+/RVMUNI15
+1 'PP' 2 'PSOE' 3 'Podemos' 4 'Ciudadanos' 5 'IU' 18 'VOX' 17 'PACMA' 6 'En Comú Podem' 7 'Compromís'
+8 'ERC' 9 'PDeCAT (JxCat)' 10 'En Marea' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CCa-PNC' 14 'UPN' 15 'FAC'
+16 'Nueva Canarias' 19 'CUP' 34 'Geroa Bai' 23 'PAR' 24 'BNG' 30 'CHA' 43 'PRC' 46 'Coalición Caballas'
+47 'MDyC' 50 'Ahora Madrid' 54 'Compromiso por Galicia' 56 'Zaragoza en Común' 57 'Compostela Aberta'
+81 'Ganemos Sevilla' 82 'València en Comú' 83 'Sumando-Hemen Gaude' 84 'IRABAZI-Ganar Gasteiz'
+95 'Otro partido' 96 'En blanco' 77 'Voto nulo' 94 'No tenía edad' 97 'No votó' 93 'No tenía derecho a voto'
+98 'No recuerda' 99 'N.C.' -99 'Sin derecho a voto en municipales' 0 'No procede'
+/P26R
+1 'PP' 2 'PSOE' 3 'Podemos (ver tabla)' 4 'Ciudadanos' 5 'IU (ver tabla)' 18 'VOX' 17 'PACMA'
+12 'EH Bildu' 13 'CC' 14 'Navarra Suma' 15 'FAC (Foro Asturias)' 16 'Nueva Canarias' 34 'Geroa Bai'
+23 'Partido Aragonés (PAR)' 30 'CHA (Chunta Aragonesista)' 25 'MÉS (PSM-Entesa)' 40 'PI (Proposta per les Illes Balears)'
+43 'PRC (Partido Regionalista de Cantabria)' 51 'Partido Riojano (PR+)' 50 'Más Madrid' 95 'Otro partido'
+77 'Voto nulo' 96 'Voto blanco' 97 'No votará' 98 'N.S.' 99 'N.C.' -99 'Sin derecho a voto en autonómicas'
+/P26AR
+0 'N.P.' 1 'PP' 2 'PSOE' 3 'Podemos' 4 'Ciudadanos' 5 'IU' 21 'Unidas Podemos' 50 'Más Madrid'
+18 'VOX' 17 'PACMA' 12 'EH Bildu' 13 'CC' 14 'UPN' 15 'FAC (Foro Asturias)' 16 'Nueva Canarias'
+22 'EQUO' 23 'Partido Aragonés (PAR)' 30 'CHA (Chunta Aragonesista)' 25 'MÉS (PSM-Entesa)' 40 'PI (Proposta per les Illes Balears)'
+43 'PRC (Partido Regionalista de Cantabria)' 95 'Otro partido' 97 'Ninguno' 98 'N.S.' 99 'N.C.'
+-99 'Sin derecho a voto en autonómicas'
+/VOTOSIMA
+1 'PP' 2 'PSOE' 3 'Podemos (ver tabla)' 4 'Ciudadanos' 5 'IU (ver tabla)' 18 'VOX' 17 'PACMA'
+12 'EH Bildu' 13 'CCa-PNC' 14 'Navarra Suma' 15 'FAC' 16 'Nueva Canarias' 34 'Geroa Bai' 23 'PAR'
+30 'CHA' 25 'MÉS' 40 'PI' 43 'PRC' 51 'PR+' 50 'Más Madrid' 95 'Otro partido' 96 'En blanco'
+77 'Voto nulo' 97 'No votará' 98 'No sabe todavía' 99 'N.C.' -99 'Sin derecho a voto en autonómicas'
+/P28AR
+0 'N.P.' 1 'PP' 2 'PSOE' 3 'Podemos' 4 'Ciudadanos' 5 'IU' 18 'VOX' 17 'PACMA' 12 'EH Bildu'
+13 'CC-PNC' 14 'UPN' 15 'FAC' 16 'Nueva Canarias' 34 'Geroa Bai' 23 'Partido Aragonés (PAR)'
+25 'MÈS' 30 'CHA' 40 'PI' 43 'PRC' 44 'UPL' 51 'Partido Riojano' 20 'Los Verdes' 26 'Falange Española de las JONS'
+29 'Partido Libertario' 38 'UPyD' 85 'Canarias Decide' 86 'Ganemos-LV-IU' 95 'Otro partido'
+77 'Voto nulo' 96 'Voto blanco' 98 'No recuerda' 99 'N.C.' -99 'Sin derecho a voto en autonómicas'
+/RVAUTO15
+1 'PP' 2 'PSOE' 3 'Podemos' 4 'Ciudadanos' 5 'IU' 17 'PACMA' 12 'EH Bildu' 13 'CCa-PNC' 14 'UPN'
+15 'FAC' 16 'Nueva Canarias' 34 'Geroa Bai' 23 'PAR' 30 'CHA' 40 'PI' 43 'PRC' 44 'UPL' 51 'PR+'
+50 'Ahora Madrid' 85 'Canarias Decide' 86 'Ganemos-LV-IU' 95 'Otro partido' 96 'En blanco' 77 'Voto nulo'
+94 'No tenía edad' 97 'No votó' 93 'No tenía derecho a voto' 98 'No recuerda' 99 'N.C.' -99 'Sin derecho a voto en autonómicas'
+/ESTUDIOS
+1 'Sin estudios' 2 'Primaria' 3 'Secundaria 1ª etapa' 4 'Secundaria 2ª etapa' 5 'F.P.' 6 'Superiores'
+7 'Otros' 9 'N.C.'
+/CIRCUN
+0 'No procede' 61 'Mallorca' 62 'Menorca' 63 'Ibiza' 64 'Formentera' 65 'Gran Canaria' 66 'Fuerteventura'
+67 'Lanzarote' 68 'Tenerife' 69 'El Hierro' 70 'La Gomera' 71 'La Palma' 72 'Oriental' 73 'Central'
+74 'Occidental'
+/GENERALES
+0 'No tiene derecho a voto en las elecciones generales' 1 'Tiene derecho a voto en las elecciones generales'
+/EUROPEAS
+0 'No tiene derecho a voto en las elecciones europeas' 1 'Tiene derecho a voto en las elecciones europeas'
+/MUNICIPALES
+0 'No tiene derecho a voto en las elecciones municipales' 1 'Tiene derecho a voto en las elecciones municipales'
+/AUTONOMICAS
+0 'No tiene derecho a voto en las elecciones autonómicas' 1 'Tiene derecho a voto en las elecciones autonómicas'
+/PESO
+/PESOCCAA
+/PESOPROV
+.
+EXECUTE.
+
+MISSING VALUES
+ P8A (0) P14A (0) P21A (0) P22A (0) P23A (0) P24A (0) P25A (0) P26A (0) P28A (0) P32A (0) P33A (0)
+ P38A (0) C1A (0) P8AR (0) P14AR (0) P21AR (0) P23R (0) P23AR (0) VOTOSIMMS (0) VOTOSIMMZ (0)
+ VOTOSIMMB (0) VOTOSIMMVL (0) VOTOSIMMVI (0) VOTOSIMMMD (0) VOTOSIMMST (0) VOTOSIMMC (0) VOTOSIMMMLL (0)
+ P24AR (0) RVMUNI15 (0) P26AR (0) P28AR (0).
+EXECUTE.
+WEIGHT BY PESO.
+* WEIGHT BY PESOCCAA.
+
+* WEIGHT BY PESOPROV.
+
+FREQUENCIES VARIABLES ALL.

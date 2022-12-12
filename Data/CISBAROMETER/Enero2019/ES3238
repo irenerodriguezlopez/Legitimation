@@ -1,0 +1,1026 @@
+DATA LIST FILE= 'DA3238'
+/ESTU 1-4 CUES 5-9 CCAA 10-11 PROV 12-13 MUN 14-16 TAMUNI 17 CAPITAL 18 DISTR 19-20 SECCION 21-23
+ENTREV 24-27 P0 28 P0A 29-31 P1 32 P2 33 P3 34 P4 35 P5 36 P6 37 P7 38 P8 39 P901 40-41 P902 42-43
+P903 44-45 P1001 46-47 P1002 48-49 P1003 50-51 P11 52 P11A 53 P11B 54 P11C 55 P12 56 P1301 57-58
+P1302 59-60 P1303 61-62 P1304 63-64 P1305 65-66 P1306 67-68 P14 69-70 P14A 71-72 P1501 73-74
+P1502 75-76 P1503 77-78 P1504 79-80 P1505 81-82 P1506 83-84 P1507 85-86 P1508 87-88 P1509 89-90
+P1510 91-92 P1511 93-94 P1512 95-96 P1513 97-98 P1514 99-100 P1515 101-102 P1516 103-104 P1601 105-106
+P1602 107-108 P1603 109-110 P1604 111-112 P1605 113-114 P1606 115-116 P1607 117-118 P1608 119-120
+P1609 121-122 P1610 123-124 P1611 125-126 P1612 127-128 P1613 129-130 P1614 131-132 P1615 133-134
+P1616 135-136 P1617 137-138 P17 139 P18 140 P19 141-142 P20 143 P20A 144 P21 145 P22 146 P23 147
+P24 148 P25 149 P26 150 P2701 151-152 P2702 153-154 P28 155-156 P28A 157-158 P29 159-160 P30 161
+P31 162 P32 163-164 P3301 165-166 P3302 167-168 P3303 169-170 P3304 171-172 P3305 173-174 P3306 175-176
+P3307 177-178 P3308 179-180 P3309 181-182 P3310 183-184 P3311 185-186 P3312 187-188 P3313 189-190
+P3314 191-192 P3315 193-194 P3316 195-196 P3317 197-198 P34 199 P35 200 P35A 201-202 P36 203-204
+P3701 205 P3702 206 P3801 207 P3802 208 P3901 209-210 P3902 211-212 P40 213 P4101 214-215 P4102 216-217
+P4103 218-219 P4201 220-221 P4202 222-223 P43 224 P44 225-226 P45 227 P45A 228-229 P46 230 P46A 231
+P47 232 P47A 233 P48 234 P49 235 P49A 236 P49B 237 P50 238-240 P51 241 P51A 242 P52 243-245
+P53 246-247 P54 248-249 P55 250 P5601 251 P5602 252 P57 253 P58 254 P59 255 P60 256 P6101 257
+P6102 258 P6103 259 P6104 260 P6105 261 P6201 262-264(A) P6202 265-267(A) P6203 268-270(A) P6204 271-273(A)
+P6205 274-276(A) P6301 277-279(A) P6302 280-282(A) P6303 283-285(A) P6304 286-288(A) P6305 289-291(A)
+P64 292 P65 293 P66 294 P67 295 I1 296-298 I2 299-301 I3 302-304 I4 305-307 I5 308-310 I6 311-313
+I7 314-316 I8 317-319 I9 320-322 E101 323-324 E102 325-326 E103 327-328 E2 329 E3 330-332 E4 333
+C1 334 C1A 335-336 C2 337 C2A 338 C2B 339-340 C3 341 C4 342-343 P19R 344-345 P28R 346-347 P28AR 348-349
+P29R 350-351 VOTOSIMG 352-353 P35AR 354-355 RECUERDO 356-357 P36R 358-359 ESTUDIOS 360 OCUMAR11 361-362
+RAMA09 363 CONDICION11 364-365 ESTATUS 366 .
+
+VARIABLE LABELS
+CCAA 'Comunidad autónoma'
+/PROV 'Provincia'
+/MUN 'Municipio'
+/TAMUNI 'Tamaño de municipio'
+/CAPITAL 'Capital'
+/P0 'Nacionalidad de la persona entrevistada'
+/P0A 'Nacionalidad de la persona entrevistada (extranjeros)'
+/P1 'Valoración de la situación económica general de España'
+/P2 'Valoración retrospectiva de la situación económica de España (1 año)'
+/P3 'Valoración prospectiva de la situación económica de España (1 año)'
+/P4 'Valoración de la situación económica personal actual'
+/P5 'Valoración prospectiva de la situación económica personal (1 año)'
+/P6 'Valoración de la situación política general de España'
+/P7 'Valoración retrospectiva de la situación política de España (1 año)'
+/P8 'Valoración prospectiva de la situación política de España (1 año)'
+/P901 'Primer problema'
+/P902 'Segundo problema'
+/P903 'Tercer problema'
+/P1001 'Primer problema'
+/P1002 'Segundo problema'
+/P1003 'Tercer problema'
+/P11 'Valoración de la gestión del Gobierno central del PSOE'
+/P11A 'Valoración de una posible gestión del Gobierno central si gobernase el PP'
+/P11B 'Valoración de una posible gestión del Gobierno central si gobernase Ciudadanos'
+/P11C 'Valoración de una posible gestión del Gobierno central si gobernase Podemos'
+/P12 'Grado de acuerdo con que a través del voto la gente puede influir en lo que pasa en política'
+/P1301 'PP'
+/P1302 'PSOE'
+/P1303 'Podemos'
+/P1304 'Ciudadanos'
+/P1305 'IU'
+/P1306 'VOX'
+/P14 'Autodefinición de su ideología política'
+/P14A 'Autodefinición de su ideología política (2ª opción)'
+/P1501 'Íñigo Alli'
+/P1502 'Joan Baldoví Roda'
+/P1503 'Marian Beitialarrangoitia'
+/P1504 'Carles Campuzano'
+/P1505 'Pablo Casado'
+/P1506 'Aitor Esteban'
+/P1507 'Miguel Anxo Fernández Bello'
+/P1508 'Alberto Garzón'
+/P1509 'Pablo Iglesias'
+/P1510 'Lucía Martín González'
+/P1511 'Isidro Martínez Oblanca'
+/P1512 'Ana María Oramas'
+/P1513 'Pedro Quevedo'
+/P1514 'Albert Rivera'
+/P1515 'Pedro Sánchez'
+/P1516 'Joan Tardà'
+/P1601 'José Luis Ábalos'
+/P1602 'Meritxell Batet'
+/P1603 'Josep Borrell'
+/P1604 'Nadia Calviño'
+/P1605 'Carmen Calvo'
+/P1606 'María Luisa Carcedo'
+/P1607 'Isabel Celaá'
+/P1608 'Dolores Delgado'
+/P1609 'Pedro Duque'
+/P1610 'Fernando Grande-Marlaska'
+/P1611 'José Guirao'
+/P1612 'Reyes Maroto'
+/P1613 'María Jesús Montero'
+/P1614 'Luis Planas'
+/P1615 'Teresa Ribera'
+/P1616 'Margarita Robles'
+/P1617 'Magdalena Valerio'
+/P17 'Grado de confianza en el presidente del Gobierno: Pedro Sánchez'
+/P18 'Grado de confianza en el líder del principal partido de la oposición (PP): Pablo Casado'
+/P19 'Preferencia personal como presidente del Gobierno'
+/P20 'Grado de influencia en el voto en próximas elecciones de la situación de Cataluña'
+/P20A 'Sentido de la influencia de la situación de Cataluña en el voto de la persona entrevistada'
+/P21 'Tipo de política necesaria en la situación de Cataluña'
+/P22 'Facilidad o dificultad en recordar el voto en las últimas elecciones'
+/P23 'Intención de participar en las próximas elecciones locales, europeas y autonómicas'
+/P24 'Intención de ir a votar en supuestas elecciones generales'
+/P25 'Decisión de voto en supuestas elecciones generales'
+/P26 'Razón para votar en supuestas elecciones'
+/P2701 'Primer lugar'
+/P2702 'Segundo lugar'
+/P28 'Intención de voto en supuestas elecciones generales'
+/P28A 'Intención de voto alternativo en supuestas elecciones generales'
+/P29 'Partido político por el que se siente más simpatía en las elecciones generales (con filtro)'
+/P30 'Preferencia entre diferentes alternativas de organización territorial del Estado en España'
+/P31 'Sentimiento nacionalista'
+/P32 'Escala de autoubicación ideológica (1-10)'
+/P3301 'PP'
+/P3302 'PSOE'
+/P3303 'Podemos'
+/P3304 'Ciudadanos'
+/P3305 'IU'
+/P3306 'VOX'
+/P3307 'En Comú Podem (Sólo en Cataluña)'
+/P3308 'ERC (Sólo en Cataluña)'
+/P3309 'PDeCAT (Sólo en Cataluña)'
+/P3310 'EAJ-PNV (Sólo en País Vasco)'
+/P3311 'EH Bildu (Sólo en País Vasco y Navarra)'
+/P3312 'En Marea (Sólo en Galicia)'
+/P3313 'CC (Sólo en Canarias)'
+/P3314 'Nueva Canarias (Sólo en Canarias)'
+/P3315 'Compromís (Sólo en Comunidad Valenciana)'
+/P3316 'FAC (Sólo en Asturias)'
+/P3317 'UPN (Sólo en Navarra)'
+/P34 'Fidelidad de voto en elecciones generales'
+/P35 'Participación electoral en las elecciones generales de 2016'
+/P35A 'Recuerdo de voto en las elecciones generales de 2016 de los votantes'
+/P36 'Partido político que considera más cercano a sus ideas'
+/P3701 'Primera respuesta'
+/P3702 'Segunda respuesta'
+/P3801 'Primera respuesta'
+/P3802 'Segunda respuesta'
+/P3901 'Primera respuesta'
+/P3902 'Segunda respuesta'
+/P40 'Conocimiento de la Agenda Horizonte 2030'
+/P4101 'Primer lugar'
+/P4102 'Segundo lugar'
+/P4103 'Objetivos prioritarios de la Agenda Horizonte 2030 (2) (ordinal)'
+/P4201 'Principal'
+/P4202 'Segundo lugar'
+/P43 'Sexo de la persona entrevistada'
+/P44 'Edad de la persona entrevistada'
+/P45 'Escolarización de la persona entrevistada'
+/P45A 'Nivel de estudios alcanzado por la persona entrevistada'
+/P46 'Religiosidad de la persona entrevistada'
+/P46A 'Frecuencia de asistencia a oficios religiosos'
+/P47 'Estado civil de la persona entrevistada'
+/P47A 'Situación personal de convivencia en pareja de las personas no casadas'
+/P48 'Cabeza de familia'
+/P49 'Situación laboral de la persona entrevistada'
+/P49A 'Probabilidad de perder el empleo actual en los próximos 12 meses'
+/P49B 'Probabilidad de encontrar empleo en los próximos 12 meses'
+/P50 'Ocupación de la persona entrevistada (CNO11)'
+/P51 'Situación profesional de la persona entrevistada'
+/P51A 'Tipo de empresa u organización de la persona entrevistada'
+/P52 'Rama de actividad de la persona entrevistada (CNAE09)'
+/P53 'Ingresos del hogar'
+/P54 'Ingresos de la persona entrevistada'
+/P55 'Momento de la adquisición de la nacionalidad española'
+/P5601 'Teléfono fijo'
+/P5602 'Acceso a Internet'
+/P57 'Tenencia de teléfono móvil'
+/P58 'Uso de Internet (últimos 3 meses)'
+/P59 'Número de teléfono'
+/P60 'Actitud personal frente a ser contactado/a para futuras encuestas'
+/P6101 'Se ha realizado la entrevista en presencia de terceras personas'
+/P6102 '(La persona entrevistada) ha expresado deseo de abandonar la entrevista antes de finalizarla'
+/P6103 '(La persona entrevistada) se ha sentido incómoda o molesta por el tema de la encuesta'
+/P6104 '(La persona entrevistada) ha tenido prisa por acabar la entrevista'
+/P6105 '(La persona entrevistada) se ha quejado de la longitud/duración'
+/P6201 'Pregunta que ha provocado incomodidad 1ª'
+/P6202 'Pregunta que ha provocado incomodidad 2ª'
+/P6203 'Pregunta que ha provocado incomodidad 3ª'
+/P6204 'Pregunta que ha provocado incomodidad 4ª'
+/P6205 'Pregunta que ha provocado incomodidad 5ª'
+/P6301 'Pregunta no comprendida 1ª'
+/P6302 'Pregunta no comprendida 2ª'
+/P6303 'Pregunta no comprendida 3ª'
+/P6304 'Pregunta no comprendida 4ª'
+/P6305 'Pregunta no comprendida 5ª'
+/P64 'Intervención activa de terceras personas en el desarrollo de la entrevista'
+/P65 'Utilización de las tarjetas'
+/P66 'Desarrollo de la entrevista'
+/P67 'Sinceridad de la persona entrevistada'
+/I1 'Número de orden de entrevista (por muestra)'
+/I2 'Dificultad de acceso al edificio, casa, urbanización, etc.'
+/I3 'Viviendas en las que no hay nadie'
+/I4 'Viviendas en las que se niegan a recibir ninguna explicación'
+/I5 'Negativas de hombres a realizar la entrevista'
+/I6 'Negativa de mujeres a realizar la entrevista'
+/I7 'Contactos fallidos por no cumplir cuotas'
+/I8 'Contactos fallidos por no ser una vivienda'
+/I9 'Viviendas de población extranjera'
+/E101 'Fecha de realización (día)'
+/E102 'Fecha de realización (mes)'
+/E103 'Fecha de realización (año)'
+/E2 'Día de la semana que se realiza la entrevista'
+/E3 'Duración de la entrevista (en minutos)'
+/E4 'Hora de realización'
+/C1 'Cuestionario cumplimentado'
+/C1A 'Motivo del cuestionario incorrecto'
+/C2 'Valoración de la inspección'
+/C2A 'Resultado de la inspección'
+/C2B 'Motivo de la entrevista incorrecta'
+/C3 'Resultado final de la entrevista'
+/C4 'Codificador/a nº'
+/P19R 'Preferencia personal como presidente del Gobierno'
+/P28R 'Intención de voto en supuestas elecciones generales'
+/P28AR 'Intención de voto alternativo en supuestas elecciones generales'
+/P29R 'Partido político por el que se siente más simpatía en las elecciones generales (con filtro)'
+/VOTOSIMG 'Voto+simpatía en supuestas elecciones generales'
+/P35AR 'Recuerdo de voto en las elecciones generales de 2016 de los votantes'
+/RECUERDO 'Recuerdo de voto en las elecciones generales de 2016'
+/P36R 'Partido político que considera más cercano a sus ideas [recodificada]'
+/ESTUDIOS 'Estudios de la persona entrevistada'
+/OCUMAR11 'Ocupación de la persona entrevistada (CNO11)'
+/RAMA09 'Rama de actividad de la persona entrevistada (CNAE09) [recodificada]'
+/CONDICION11 'Condición socioeconómica de la persona entrevistada'
+/ESTATUS 'Estatus socioeconómico de la persona entrevistada'
+.
+
+VALUE LABELS
+ESTU
+/CUES
+/CCAA
+1 'Andalucía' 2 'Aragón' 3 'Asturias (Principado de)' 4 'Balears (Illes)' 5 'Canarias' 6 'Cantabria'
+7 'Castilla-La Mancha' 8 'Castilla y León' 9 'Cataluña' 10 'Comunitat Valenciana' 11 'Extremadura'
+12 'Galicia' 13 'Madrid (Comunidad de)' 14 'Murcia (Región de)' 15 'Navarra (Comunidad Foral de)'
+16 'País Vasco' 17 'Rioja (La)' 18 'Ceuta (Ciudad Autónoma de)' 19 'Melilla (Ciudad Autónoma de)'
+/PROV
+1 'Araba/Álava' 2 'Albacete' 3 'Alicante/Alacant' 4 'Almería' 5 'Ávila' 6 'Badajoz' 7 'Balears (Illes)'
+8 'Barcelona' 9 'Burgos' 10 'Cáceres' 11 'Cádiz' 12 'Castellón/Castelló' 13 'Ciudad Real' 14 'Córdoba'
+15 'Coruña (A)' 16 'Cuenca' 17 'Girona' 18 'Granada' 19 'Guadalajara' 20 'Gipuzkoa' 21 'Huelva'
+22 'Huesca' 23 'Jaén' 24 'León' 25 'Lleida' 26 'Rioja (La)' 27 'Lugo' 28 'Madrid' 29 'Málaga'
+30 'Murcia' 31 'Navarra' 32 'Ourense' 33 'Asturias' 34 'Palencia' 35 'Palmas (Las)' 36 'Pontevedra'
+37 'Salamanca' 38 'Santa Cruz de Tenerife' 39 'Cantabria' 40 'Segovia' 41 'Sevilla' 42 'Soria'
+43 'Tarragona' 44 'Teruel' 45 'Toledo' 46 'Valencia/València' 47 'Valladolid' 48 'Bizkaia' 49 'Zamora'
+50 'Zaragoza' 51 'Ceuta' 52 'Melilla'
+/MUN
+0 'Mun.<=100.000 hab. no capitales de CA o provincia' 1 'Ceuta / Melilla' 3 'Albacete' 4 'Algeciras'
+5 'Alcalá de Henares' 6 'Alcobendas' 7 'Alcorcón' 12 'Cádiz' 13 'Almería / Barakaldo' 14 'Alicante/Alacant'
+15 'Badalona / Badajoz' 16 'Cartagena / Palmas de Gran Canaria (Las)' 19 'Ávila / Barcelona'
+20 'Bilbao / Jerez de la Frontera' 21 'Córdoba' 23 'La Laguna' 24 'Gijón' 26 'Telde' 28 'Lugo'
+30 'Coruña (A) / Murcia' 34 'Ciudad Real' 37 'Cáceres' 38 'Pontevedra / Santa Cruz de Tenerife / Dos Hermanas'
+40 'Castellón de la Plana/Castelló de la Plana / Palma de Mallorca' 41 'Huelva' 44 'Oviedo'
+50 'Jaén' 54 'Ourense' 57 'Vigo' 58 'Fuenlabrada' 59 'Burgos / Vitoria-Gasteiz' 65 'Elche/Elx / Getafe'
+67 'Málaga' 69 'Donostia/San Sebastián / Marbella' 74 'Leganés' 75 'Santander' 78 'Cuenca / Santiago de Compostela'
+79 'Girona / Madrid' 83 'Mérida' 87 'Granada' 89 'León / Logroño' 91 'Sevilla' 92 'Móstoles'
+101 'Hospitalet de Llobregat' 106 'Parla' 120 'Lleida / Palencia' 121 'Mataró' 123 'Reus' 125 'Huesca'
+130 'Guadalajara' 148 'Tarragona / Torrejón de Ardoz' 168 'Toledo' 173 'Soria' 186 'Valladolid'
+187 'Sabadell' 194 'Segovia' 201 'Pamplona/Iruña' 216 'Teruel' 245 'Santa Coloma de Gramenet'
+250 'Valencia' 274 'Salamanca' 275 'Zamora' 279 'Terrassa' 297 'Zaragoza'
+/TAMUNI
+1 'Menos o igual a 2.000 habitantes' 2 '2.001 a 10.000 habitantes' 3 '10.001 a 50.000 habitantes'
+4 '50.001 a 100.000 habitantes' 5 '100.001 a 400.000 habitantes' 6 '400.001 a 1.000.000 habitantes'
+7 'Más de 1.000.000 habitantes'
+/CAPITAL
+1 'Capital de CC.AA.' 2 'Capital de provincia' 3 'Otros municipios'
+/DISTR
+0 'Anonimizado'
+/SECCION
+0 'Anonimizado'
+/ENTREV
+0 'Anonimizado'
+/P0
+1 'Española' 2 'Española y otra' 3 'Otra nacionalidad'
+/P0A
+0 'N.P.' 101 'Albanesa' 102 'Austriaca' 103 'Belga' 104 'Búlgara' 106 'Chipriota' 107 'Danesa'
+108 'Española' 109 'Finlandesa' 110 'Francesa' 111 'Griega' 112 'Húngara' 113 'Irlandesa' 114 'Islandesa'
+115 'Italiana' 116 'Liechtensteiniana' 117 'Luxemburguesa' 118 'Maltesa' 119 'Monegasca' 120 'Noruega'
+121 'Neerlandesa' 122 'Polaca' 123 'Portuguesa' 124 'Andorrana' 125 'Británica' 126 'Alemana'
+128 'Rumana' 129 'Sanmarinense' 130 'De la Santa Sede' 131 'Sueca' 132 'Suiza' 135 'Ucraniana'
+136 'Letona' 137 'Moldava' 138 'Bielorrusa' 139 'Georgiana' 141 'Estonia' 142 'Lituana' 143 'Checa'
+144 'Eslovaca' 145 'Bosnia' 146 'Croata' 147 'Eslovena' 148 'Armenia' 154 'Rusa' 156 'Macedonia'
+157 'Serbia' 158 'Montenegrina' 199 'De otros territorios de Europa' 201 'Burkinesa' 202 'Angoleña'
+203 'Argelina' 204 'Beninesa' 205 'Botsuana' 206 'Burundesa' 207 'Caboverdiana' 208 'Camerunesa'
+209 'Comorense' 210 'Congoleña' 211 'Marfileña' 212 'Yibutiana' 213 'Egipcia' 214 'Etíope' 215 'Gabonesa'
+216 'Gambiana' 217 'Ghanesa' 218 'Guineana' 219 'Guineana (Guinea-Bissau)' 220 'Ecuatoguineana'
+221 'Keniata' 222 'Lesotense' 223 'Liberiana' 224 'Libia' 225 'Malgache' 226 'Malauí' 227 'Maliense'
+228 'Marroquí' 229 'Mauriciana' 230 'Mauritana' 231 'Mozambiqueña' 232 'Namibia' 233 'Nigerina'
+234 'Nigeriana' 235 'Centroafricana' 236 'Sudafricana' 237 'Ruandesa' 238 'Santotomense' 239 'Senegalesa'
+240 'Seychellense' 241 'Sierraleonesa' 242 'Somalí' 243 'Sudanesa' 244 'Suazi' 245 'Tanzana'
+246 'Chadiana' 247 'Togolesa' 248 'Tunecina' 249 'Ugandesa' 250 'Congoleña' 251 'Zambiana' 252 'Zimbabuense'
+253 'Eritrea' 299 'De otros territorios de África' 301 'Canadiense' 302 'Estadounidense' 303 'Mexicana'
+310 'Antiguana' 311 'Bahameña' 312 'Barbadense' 313 'Beliceña' 314 'Costarricense' 315 'Cubana'
+316 'Dominiquesa' 317 'Salvadoreña' 318 'Granadina' 319 'Guatemalteca' 320 'Haitiana' 321 'Hondureña'
+322 'Jamaicana' 323 'Nicaragüense' 324 'Panameña' 325 'Sanvicentina' 326 'Dominicana' 327 'Trinitense'
+328 'Santalucense' 329 'Sancristobaleña' 340 'Argentina' 341 'Boliviana' 342 'Brasileña' 343 'Colombiana'
+344 'Chilena' 345 'Ecuatoriana' 346 'Guyanesa' 347 'Paraguaya' 348 'Peruana' 349 'Surinamesa'
+350 'Uruguaya' 351 'Venezolana' 399 'De otros territorios de América' 401 'Afgana' 402 'Saudita'
+403 'Bahreiní' 404 'Bangladesí' 405 'Birmana' 407 'China' 408 'Emiratense' 409 'Filipina' 410 'India'
+411 'Indonesia' 412 'Iraquí' 413 'Iraní' 414 'Israelí' 415 'Japonesa' 416 'Jordana' 417 'Camboyana'
+418 'Kuwaití' 419 'Laosiana' 420 'Libanesa' 421 'Malasia' 422 'Maldiva' 423 'Mongola' 424 'Nepalí'
+425 'Omaní' 426 'Pakistaní' 427 'Qatarí' 430 'Surcoreana' 431 'Norcoreana' 432 'Singapurense'
+433 'Siria' 434 'Esrilanquesa' 435 'Tailandesa' 436 'Turca' 437 'Vietnamita' 439 'Bruneana'
+440 'Marshalesa' 441 'Yemení' 442 'Azerbaiyana' 443 'Kazaja' 444 'Kirguisa' 445 'Tayika' 446 'Turcomana'
+447 'Uzbeka' 499 'De otros territorios de Asia' 501 'Australiana' 502 'Fiyiana' 504 'Neozelandesa'
+505 'Papú' 506 'Salomonense' 507 'Samoana' 508 'Tongana' 509 'Vanuatuense' 511 'Micronesia'
+512 'Tuvaluana' 513 'De las Islas Cook' 515 'Nauruana' 516 'Paluana' 517 'Timorense' 555 'Apátrida'
+599 'De otros territorios de Oceanía' 999 'N.C.'
+/P1
+1 'Muy buena' 2 'Buena' 3 'Regular' 4 'Mala' 5 'Muy mala' 8 'N.S.' 9 'N.C.'
+/P2
+1 'Mejor' 2 'Igual' 3 'Peor' 8 'N.S.' 9 'N.C.'
+/P3
+1 'Mejor' 2 'Igual' 3 'Peor' 8 'N.S.' 9 'N.C.'
+/P4
+1 'Muy buena' 2 'Buena' 3 'Regular' 4 'Mala' 5 'Muy mala' 8 'N.S.' 9 'N.C.'
+/P5
+1 'Mejor' 2 'Igual' 3 'Peor' 8 'N.S.' 9 'N.C.'
+/P6
+1 'Muy buena' 2 'Buena' 3 'Regular' 4 'Mala' 5 'Muy mala' 8 'N.S.' 9 'N.C.'
+/P7
+1 'Mejor' 2 'Igual' 3 'Peor' 8 'N.S.' 9 'N.C.'
+/P8
+1 'Mejor' 2 'Igual' 3 'Peor' 8 'N.S.' 9 'N.C.'
+/P901
+1 'El paro' 2 'Las drogas' 3 'La inseguridad ciudadana' 4 'El terrorismo, ETA' 5 'Las infraestructuras'
+6 'La sanidad' 7 'La vivienda' 8 'Los problemas de índole económica' 9 'Los problemas relacionados con la calidad del empleo'
+10 'Los problemas de la agricultura, ganadería y pesca' 11 'La corrupción y el fraude' 12 'Las pensiones'
+13 'Los/as políticos/as en general, los partidos y la política' 14 'Las guerras en general'
+15 'La Administración de Justicia' 16 'Los problemas de índole social' 17 'El racismo' 18 'La inmigración'
+19 'La violencia contra la mujer' 20 'Los problemas relacionados con la juventud' 21 'La crisis de valores'
+22 'La educación' 23 'Los problemas medioambientales' 24 'El Gobierno y partidos o políticos/as concretos/as'
+25 'El funcionamiento de los servicios públicos' 26 'Los nacionalismos' 27 'Los problemas relacionados con la mujer'
+28 'El terrorismo internacional' 29 'Las preocupaciones y situaciones personales' 30 'Estatutos de autonomía'
+31 'Las negociaciones con ETA' 32 'Reforma Laboral' 33 '"Los recortes"' 34 'Los bancos' 35 'La subida del IVA'
+36 'Los desahucios' 37 'El fraude fiscal' 38 'Las hipotecas' 39 'La Monarquía' 40 'Las excarcelaciones'
+41 'La Ley del aborto' 42 'Subida de tarifas energéticas' 43 'Ébola' 44 'Refugiados/as' 45 'Independencia de Cataluña'
+46 'La falta de acuerdos. Situación política. Inestabilidad política' 47 'Emigración' 48 'Problemas relacionados con autónomos/as'
+49 'Falta de inversión en industrias e I+D' 96 'Otras respuestas' 97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/P902
+1 'El paro' 2 'Las drogas' 3 'La inseguridad ciudadana' 4 'El terrorismo, ETA' 5 'Las infraestructuras'
+6 'La sanidad' 7 'La vivienda' 8 'Los problemas de índole económica' 9 'Los problemas relacionados con la calidad del empleo'
+10 'Los problemas de la agricultura, ganadería y pesca' 11 'La corrupción y el fraude' 12 'Las pensiones'
+13 'Los/as políticos/as en general, los partidos y la política' 14 'Las guerras en general'
+15 'La Administración de Justicia' 16 'Los problemas de índole social' 17 'El racismo' 18 'La inmigración'
+19 'La violencia contra la mujer' 20 'Los problemas relacionados con la juventud' 21 'La crisis de valores'
+22 'La educación' 23 'Los problemas medioambientales' 24 'El Gobierno y partidos o políticos/as concretos/as'
+25 'El funcionamiento de los servicios públicos' 26 'Los nacionalismos' 27 'Los problemas relacionados con la mujer'
+28 'El terrorismo internacional' 29 'Las preocupaciones y situaciones personales' 30 'Estatutos de autonomía'
+31 'Las negociaciones con ETA' 32 'Reforma Laboral' 33 '"Los recortes"' 34 'Los bancos' 35 'La subida del IVA'
+36 'Los desahucios' 37 'El fraude fiscal' 38 'Las hipotecas' 39 'La Monarquía' 40 'Las excarcelaciones'
+41 'La Ley del aborto' 42 'Subida de tarifas energéticas' 43 'Ébola' 44 'Refugiados/as' 45 'Independencia de Cataluña'
+46 'La falta de acuerdos. Situación política. Inestabilidad política' 47 'Emigración' 48 'Problemas relacionados con autónomos/as'
+49 'Falta de inversión en industrias e I+D' 96 'Otras respuestas' 97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/P903
+1 'El paro' 2 'Las drogas' 3 'La inseguridad ciudadana' 4 'El terrorismo, ETA' 5 'Las infraestructuras'
+6 'La sanidad' 7 'La vivienda' 8 'Los problemas de índole económica' 9 'Los problemas relacionados con la calidad del empleo'
+10 'Los problemas de la agricultura, ganadería y pesca' 11 'La corrupción y el fraude' 12 'Las pensiones'
+13 'Los/as políticos/as en general, los partidos y la política' 14 'Las guerras en general'
+15 'La Administración de Justicia' 16 'Los problemas de índole social' 17 'El racismo' 18 'La inmigración'
+19 'La violencia contra la mujer' 20 'Los problemas relacionados con la juventud' 21 'La crisis de valores'
+22 'La educación' 23 'Los problemas medioambientales' 24 'El Gobierno y partidos o políticos/as concretos/as'
+25 'El funcionamiento de los servicios públicos' 26 'Los nacionalismos' 27 'Los problemas relacionados con la mujer'
+28 'El terrorismo internacional' 29 'Las preocupaciones y situaciones personales' 30 'Estatutos de autonomía'
+31 'Las negociaciones con ETA' 32 'Reforma Laboral' 33 '"Los recortes"' 34 'Los bancos' 35 'La subida del IVA'
+36 'Los desahucios' 37 'El fraude fiscal' 38 'Las hipotecas' 39 'La Monarquía' 40 'Las excarcelaciones'
+41 'La Ley del aborto' 42 'Subida de tarifas energéticas' 43 'Ébola' 44 'Refugiados/as' 45 'Independencia de Cataluña'
+46 'La falta de acuerdos. Situación política. Inestabilidad política' 47 'Emigración' 48 'Problemas relacionados con autónomos/as'
+49 'Falta de inversión en industrias e I+D' 96 'Otras respuestas' 97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/P1001
+1 'El paro' 2 'Las drogas' 3 'La inseguridad ciudadana' 4 'El terrorismo, ETA' 5 'Las infraestructuras'
+6 'La sanidad' 7 'La vivienda' 8 'Los problemas de índole económica' 9 'Los problemas relacionados con la calidad del empleo'
+10 'Los problemas de la agricultura, ganadería y pesca' 11 'La corrupción y el fraude' 12 'Las pensiones'
+13 'Los/as políticos/as en general, los partidos y la política' 14 'Las guerras en general'
+15 'La Administración de Justicia' 16 'Los problemas de índole social' 17 'El racismo' 18 'La inmigración'
+19 'La violencia contra la mujer' 20 'Los problemas relacionados con la juventud' 21 'La crisis de valores'
+22 'La educación' 23 'Los problemas medioambientales' 24 'El Gobierno y partidos o políticos/as concretos/as'
+25 'El funcionamiento de los servicios públicos' 26 'Los nacionalismos' 27 'Los problemas relacionados con la mujer'
+28 'El terrorismo internacional' 29 'Las preocupaciones y situaciones personales' 30 'Estatutos de autonomía'
+31 'Las negociaciones con ETA' 32 'Reforma Laboral' 33 '"Los recortes"' 34 'Los bancos' 35 'La subida del IVA'
+36 'Los desahucios' 37 'El fraude fiscal' 38 'Las hipotecas' 39 'La Monarquía' 40 'Las excarcelaciones'
+41 'La Ley del aborto' 42 'Subida de tarifas energéticas' 43 'Ébola' 44 'Refugiados/as' 45 'Independencia de Cataluña'
+46 'La falta de acuerdos. Situación política. Inestabilidad política' 47 'Emigración' 48 'Problemas relacionados con autónomos/as'
+49 'Falta de inversión en industrias e I+D' 96 'Otras respuestas' 97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/P1002
+1 'El paro' 2 'Las drogas' 3 'La inseguridad ciudadana' 4 'El terrorismo, ETA' 5 'Las infraestructuras'
+6 'La sanidad' 7 'La vivienda' 8 'Los problemas de índole económica' 9 'Los problemas relacionados con la calidad del empleo'
+10 'Los problemas de la agricultura, ganadería y pesca' 11 'La corrupción y el fraude' 12 'Las pensiones'
+13 'Los/as políticos/as en general, los partidos y la política' 14 'Las guerras en general'
+15 'La Administración de Justicia' 16 'Los problemas de índole social' 17 'El racismo' 18 'La inmigración'
+19 'La violencia contra la mujer' 20 'Los problemas relacionados con la juventud' 21 'La crisis de valores'
+22 'La educación' 23 'Los problemas medioambientales' 24 'El Gobierno y partidos o políticos/as concretos/as'
+25 'El funcionamiento de los servicios públicos' 26 'Los nacionalismos' 27 'Los problemas relacionados con la mujer'
+28 'El terrorismo internacional' 29 'Las preocupaciones y situaciones personales' 30 'Estatutos de autonomía'
+31 'Las negociaciones con ETA' 32 'Reforma Laboral' 33 '"Los recortes"' 34 'Los bancos' 35 'La subida del IVA'
+36 'Los desahucios' 37 'El fraude fiscal' 38 'Las hipotecas' 39 'La Monarquía' 40 'Las excarcelaciones'
+41 'La Ley del aborto' 42 'Subida de tarifas energéticas' 43 'Ébola' 44 'Refugiados/as' 45 'Independencia de Cataluña'
+46 'La falta de acuerdos. Situación política. Inestabilidad política' 47 'Emigración' 48 'Problemas relacionados con autónomos/as'
+49 'Falta de inversión en industrias e I+D' 96 'Otras respuestas' 97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/P1003
+1 'El paro' 2 'Las drogas' 3 'La inseguridad ciudadana' 4 'El terrorismo, ETA' 5 'Las infraestructuras'
+6 'La sanidad' 7 'La vivienda' 8 'Los problemas de índole económica' 9 'Los problemas relacionados con la calidad del empleo'
+10 'Los problemas de la agricultura, ganadería y pesca' 11 'La corrupción y el fraude' 12 'Las pensiones'
+13 'Los/as políticos/as en general, los partidos y la política' 14 'Las guerras en general'
+15 'La Administración de Justicia' 16 'Los problemas de índole social' 17 'El racismo' 18 'La inmigración'
+19 'La violencia contra la mujer' 20 'Los problemas relacionados con la juventud' 21 'La crisis de valores'
+22 'La educación' 23 'Los problemas medioambientales' 24 'El Gobierno y partidos o políticos/as concretos/as'
+25 'El funcionamiento de los servicios públicos' 26 'Los nacionalismos' 27 'Los problemas relacionados con la mujer'
+28 'El terrorismo internacional' 29 'Las preocupaciones y situaciones personales' 30 'Estatutos de autonomía'
+31 'Las negociaciones con ETA' 32 'Reforma Laboral' 33 '"Los recortes"' 34 'Los bancos' 35 'La subida del IVA'
+36 'Los desahucios' 37 'El fraude fiscal' 38 'Las hipotecas' 39 'La Monarquía' 40 'Las excarcelaciones'
+41 'La Ley del aborto' 42 'Subida de tarifas energéticas' 43 'Ébola' 44 'Refugiados/as' 45 'Independencia de Cataluña'
+46 'La falta de acuerdos. Situación política. Inestabilidad política' 47 'Emigración' 48 'Problemas relacionados con autónomos/as'
+49 'Falta de inversión en industrias e I+D' 96 'Otras respuestas' 97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/P11
+1 'Muy buena' 2 'Buena' 3 'Regular' 4 'Mala' 5 'Muy mala' 8 'N.S.' 9 'N.C.'
+/P11A
+1 'Mejor' 2 'Igual' 3 'Peor' 8 'N.S.' 9 'N.C.'
+/P11B
+1 'Mejor' 2 'Igual' 3 'Peor' 8 'N.S.' 9 'N.C.'
+/P11C
+1 'Mejor' 2 'Igual' 3 'Peor' 8 'N.S.' 9 'N.C.'
+/P12
+1 'Muy de acuerdo' 2 'De acuerdo' 3 'En desacuerdo' 4 'Muy en desacuerdo' 8 'N.S.' 9 'N.C.'
+/P1301
+0 '0 Con toda seguridad, no lo votaría nunca' 10 '10 Con toda seguridad, lo votaría siempre'
+98 'N.S.' 99 'N.C.'
+/P1302
+0 '0 Con toda seguridad, no lo votaría nunca' 10 '10 Con toda seguridad, lo votaría siempre'
+98 'N.S.' 99 'N.C.'
+/P1303
+0 '0 Con toda seguridad, no lo votaría nunca' 10 '10 Con toda seguridad, lo votaría siempre'
+98 'N.S.' 99 'N.C.'
+/P1304
+0 '0 Con toda seguridad, no lo votaría nunca' 10 '10 Con toda seguridad, lo votaría siempre'
+98 'N.S.' 99 'N.C.'
+/P1305
+0 '0 Con toda seguridad, no lo votaría nunca' 10 '10 Con toda seguridad, lo votaría siempre'
+98 'N.S.' 99 'N.C.'
+/P1306
+0 '0 Con toda seguridad, no lo votaría nunca' 10 '10 Con toda seguridad, lo votaría siempre'
+98 'N.S.' 99 'N.C.'
+/P14
+1 'Conservador/a' 2 'Demócrata cristiano/a' 3 'Liberal' 4 'Progresista' 5 'Socialdemócrata'
+6 'Socialista' 7 'Comunista' 8 'Nacionalista' 9 'Feminista' 10 'Ecologista' 11 'Otras respuestas'
+97 'Apolítico/a' 98 'N.S.' 99 'N.C.'
+/P14A
+1 'Conservador/a' 2 'Demócrata cristiano/a' 3 'Liberal' 4 'Progresista' 5 'Socialdemócrata'
+6 'Socialista' 7 'Comunista' 8 'Nacionalista' 9 'Feminista' 10 'Ecologista' 11 'Otras respuestas'
+97 'Apolítico/a' 98 'N.S.' 99 'N.C.'
+/P1501
+0 '0 Muy Mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1502
+0 '0 Muy Mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1503
+0 '0 Muy Mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1504
+0 '0 Muy Mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1505
+0 '0 Muy Mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1506
+0 '0 Muy Mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1507
+0 '0 Muy Mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1508
+0 '0 Muy Mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1509
+0 '0 Muy Mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1510
+0 '0 Muy Mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1511
+0 '0 Muy Mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1512
+0 '0 Muy Mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1513
+0 '0 Muy Mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1514
+0 '0 Muy Mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1515
+0 '0 Muy Mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1516
+0 '0 Muy Mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1601
+0 '0 Muy Mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1602
+0 '0 Muy Mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1603
+0 '0 Muy Mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1604
+0 '0 Muy Mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1605
+0 '0 Muy Mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1606
+0 '0 Muy Mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1607
+0 '0 Muy Mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1608
+0 '0 Muy Mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1609
+0 '0 Muy Mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1610
+0 '0 Muy Mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1611
+0 '0 Muy Mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1612
+0 '0 Muy Mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1613
+0 '0 Muy Mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1614
+0 '0 Muy Mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1615
+0 '0 Muy Mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1616
+0 '0 Muy Mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P1617
+0 '0 Muy Mal' 10 '10 Muy bien' 97 'No conoce' 98 'N.S.' 99 'N.C.'
+/P17
+1 'Mucha confianza' 2 'Bastante confianza' 3 'Poca confianza' 4 'Ninguna confianza' 8 'N.S.'
+9 'N.C.'
+/P18
+1 'Mucha confianza' 2 'Bastante confianza' 3 'Poca confianza' 4 'Ninguna confianza' 8 'N.S.'
+9 'N.C.'
+/P19
+1 'Pablo Casado' 2 'Pablo Iglesias' 3 'Albert Rivera' 4 'Pedro Sánchez' 6 'Alberto Garzón' 7 'Santiago Abascal'
+8 'Manuela Carmena' 9 'Julio Anguita' 10 'Mariano Rajoy' 11 'Eduardo Madina' 12 'Felipe González'
+13 'Nicolás Fernández' 14 'Susana Díaz' 15 'Mónica Oltra' 16 'Soraya Sáez de Santamaría' 17 'Miguel Ángel Revilla'
+18 'Joan Tardà' 19 'Íñigo Errejón' 20 'Oriol Junqueras' 21 'Ana María Oramas' 22 'Josep Borrell'
+23 'Joan Baldoví Roda' 24 'Gabriel Rufián' 25 'Carles Puigdemont' 26 'Iñigo Urkullu' 27 'Inés Arrimadas'
+28 'Pedro Duque' 29 'José Manuel García Margallo' 30 'Joan Coscubiela' 96 '(NO LEER) Otro/a'
+5 '(NO LEER) Ninguno/a de ellos/as' 98 'N.S.' 99 'N.C.'
+/P20
+1 'Mucho' 2 'Bastante' 3 'Poco' 4 'Nada' 5 '(NO LEER) Depende de la comunidad autónoma' 8 'N.S.'
+9 'N.C.'
+/P20A
+0 'N.P.' 1 'Votando a partidos que plantean opciones de diálogo y negociación' 2 'Votando a partidos que plantean opciones más radicales y duras'
+3 'Provocando mayor abstención y desconfianza de la política' 8 'N.S.' 9 'N.C.'
+/P21
+1 'Una política de diálogo y negociación' 2 'Una política de mano dura' 3 'Una política que combine el diálogo con el cumplimiento de la ley'
+8 'N.S.' 9 'N.C.'
+/P22
+1 'Es fácil recordar lo que se votó' 2 'Con tantas elecciones pasadas no es fácil recordar qué se votó'
+3 '(NO LEER) Depende de la importancia que tuviese esa elección' 8 'N.S.' 9 'N.C.'
+/P23
+1 'Al mismo partido para la comunidad autónoma, el Ayuntamiento y la Unión Europea' 2 'Votaría a distintos partidos, dependiendo de cada elección'
+3 'En unas elecciones votaría y en otras me abstendría' 8 'N.S.' 9 'N.C.'
+/P24
+1 'Sí, con toda seguridad' 2 'Probablemente sí' 3 'Probablemente no' 4 'No, con toda seguridad'
+8 '(NO LEER) Aún no lo tiene decidido' 9 'N.C.'
+/P25
+1 'Sí, lo tiene decidido' 2 'Duda entre varios' 3 'No, lo decidirá cuando estén más próximas las elecciones'
+8 'N.S.' 9 'N.C.'
+/P26
+1 'Es un derecho que tengo como ciudadano/a' 2 'Es un deber de ciudadano/a' 3 'La posibilidad de elegir quién gobierna'
+4 'Para poder protestar después' 5 'Para apoyar a la democracia' 6 'Otra razón' 8 'N.S.' 9 'N.C.'
+/P2701
+1 'Para apoyar a un partido político' 2 'Para apoyar a un/a líder' 3 'Para apoyar un programa político'
+4 'Por afinidad ideológica' 5 'Para criticar la gestión del Gobierno' 6 'Para apoyar la gestión del Gobierno'
+7 'Para apoyar al que mejor lo puede hacer' 8 'Por descarte político' 96 'Otro/s motivo/s' 97 'No vota nunca'
+98 'N.S.' 99 'N.C.'
+/P2702
+1 'Para apoyar a un partido político' 2 'Para apoyar a un/a líder' 3 'Para apoyar un programa político'
+4 'Por afinidad ideológica' 5 'Para criticar la gestión del Gobierno' 6 'Para apoyar la gestión del Gobierno'
+7 'Para apoyar al que mejor lo puede hacer' 8 'Por descarte político' 96 'Otro/s motivo/s' 97 'No vota nunca'
+98 'N.S.' 99 'N.C.'
+/P28
+1 'PP' 2 'PSOE' 3 'Podemos' 4 'Ciudadanos' 5 'IU' 6 'En Comú Podem' 7 'Compromís' 8 'ERC' 9 'PDeCAT'
+10 'En Marea' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CC-PNC' 14 'UPN' 15 'Foro Asturias' 16 'Nueva Canarias'
+17 'PACMA' 18 'VOX' 19 'CUP' 20 'Los Verdes' 22 'EQUO' 24 'BNG' 30 'CHA' 34 'Geroa Bai' 77 '(NO LEER) Voto nulo'
+95 'Otro partido' 96 'En blanco' 97 'No votaría' 98 'No sabe todavía' 99 'N.C.'
+/P28A
+0 'N.P.' 1 'PP' 2 'PSOE' 3 'Podemos' 4 'Ciudadanos' 5 'IU' 6 'En Comú Podem' 7 'Compromís' 8 'ERC'
+9 'PDeCAT' 10 'En Marea' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CC-PNC' 14 'UPN' 15 'Foro Asturias'
+16 'Nueva Canarias' 17 'PACMA' 18 'VOX' 19 'CUP' 20 'Los Verdes' 22 'EQUO' 24 'BNG' 26 'Falange Española de las JONS'
+77 'Voto nulo' 95 'Otro partido' 96 'En blanco' 97 'No votaría' 98 'N.S.' 99 'N.C.'
+/P29
+0 'N.P.' 1 'PP' 2 'PSOE' 3 'Podemos' 4 'Ciudadanos' 5 'IU' 6 'En Comú Podem' 7 'Compromís' 8 'ERC'
+9 'PDeCAT' 10 'En Marea' 11 'EAJ-PNV' 12 'EH Bildu' 14 'UPN' 17 'PACMA' 18 'VOX' 19 'CUP' 20 'Los Verdes'
+22 'EQUO' 95 'Otro partido' 97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/P30
+1 'Un Estado con un único Gobierno central sin autonomías ' 2 'Un Estado en el que las comunidades autónomas tengan menor autonomía que en la actualidad '
+3 'Un Estado con comunidades autónomas como en la actualidad ' 4 'Un Estado en el que las comunidades autónomas tengan mayor autonomía que en la actualidad '
+5 'Un Estado en el que se reconociese a las comunidades autónomas la posibilidad de convertirse en Estados independientes '
+8 'N.S.' 9 'N.C.'
+/P31
+1 'Se siente únicamente español/a ' 2 'Se siente más español/a que (gentilicio C. A.) ' 3 'Se siente tan español/a como (gentilicio C. A.) '
+4 'Se siente más (gentilicio C. A.) que español/a ' 5 'Se siente únicamente (gentilicio C. A.) '
+7 '(NO LEER) Ninguna de la anteriores  ' 8 'N.S.' 9 'N.C.'
+/P32
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/P3301
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/P3302
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/P3303
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/P3304
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/P3305
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/P3306
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/P3307
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.' 0 'No procede'
+/P3308
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.' 0 'No procede'
+/P3309
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.' 0 'No procede'
+/P3310
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.' 0 'No procede'
+/P3311
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.' 0 'No procede'
+/P3312
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.' 0 'No procede'
+/P3313
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.' 0 'No procede'
+/P3314
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.' 0 'No procede'
+/P3315
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.' 0 'No procede'
+/P3316
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.' 0 'No procede'
+/P3317
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.' 0 'No procede'
+/P34
+1 'Votan siempre por el mismo partido' 2 'Por lo general suelen votar por el mismo partido'
+3 'Según lo que más les convenza en ese momento, votan por un partido u otro, o no votan' 4 '(NO LEER) Votan en blanco o nulo'
+5 '(NO LEER) No suelen votar' 6 '(NO LEER) Es la primera vez que vota' 8 'No recuerda/N.S.'
+9 'N.C.'
+/P35
+1 'Fue a votar y votó ' 2 'No tenía edad para votar ' 3 'Fue a votar pero no pudo hacerlo '
+4 'No fue a votar porque no pudo ' 5 'Prefirió no votar ' 6 'No tenía derecho a voto ' 8 'No recuerda '
+9 'N.C.'
+/P35A
+0 'N.P.' 1 'PP' 2 'PSOE' 21 'Unidos Podemos' 4 'Ciudadanos' 6 'En Comú Podem' 37 'Compromís-Podemos-EUPV'
+8 'ERC' 36 'Convergència (CDC)' 10 'En Marea' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CC-PNC' 95 'Otros partidos'
+96 'En blanco' 77 'Voto nulo' 98 'No recuerda' 99 'N.C.'
+/P36
+1 'PP' 2 'PSOE' 3 'Podemos' 4 'Ciudadanos' 5 'IU' 6 'En Comú Podem' 7 'Compromís' 8 'ERC' 9 'PDeCAT'
+10 'En Marea' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CC-PNC' 14 'UPN' 17 'PACMA' 18 'VOX' 19 'CUP' 20 'Los Verdes'
+21 'Unidos Podemos' 22 'EQUO' 24 'BNG' 30 'CHA' 34 'Geroa Bai' 36 'Convergència (CDC)' 37 'Compromís-Podemos-EUPV'
+95 'Otro partido' 96 'En blanco' 97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/P3701
+1 'La reinserción social de los/as delincuentes' 2 'Castigar a los/as delincuentes' 3 'Proteger a la sociedad de los/as delincuentes'
+4 'Disuadir a quienes estén tentados/as de cometer un delito' 5 'Otra/s respuesta/s' 7 'Ninguna'
+8 'N.S.' 9 'N.C.'
+/P3702
+1 'La reinserción social de los/as delincuentes' 2 'Castigar a los/as delincuentes' 3 'Proteger a la sociedad de los/as delincuentes'
+4 'Disuadir a quienes estén tentados/as de cometer un delito' 5 'Otra/s respuesta/s' 7 'Ninguna'
+8 'N.S.' 9 'N.C.'
+/P3801
+1 'La reinserción social de los/as delincuentes' 2 'Castigar a los/as delincuentes' 3 'Proteger a la sociedad de los/as delincuentes'
+4 'Disuadir a quienes estén tentados/as de cometer un delito' 5 'Otra/s respuesta/s' 7 'Ninguna'
+8 'N.S.' 9 'N.C.'
+/P3802
+1 'La reinserción social de los/as delincuentes' 2 'Castigar a los/as delincuentes' 3 'Proteger a la sociedad de los/as delincuentes'
+4 'Disuadir a quienes estén tentados/as de cometer un delito' 5 'Otra/s respuesta/s' 7 'Ninguna'
+8 'N.S.' 9 'N.C.'
+/P3901
+1 'Desarrollo con limitaciones' 2 'Desarrollo que tiene en cuenta a las generaciones futuras'
+3 'Desarrollo que tiene en cuenta a todas las personas independientemente de su etnia, género, origen social, etc.'
+4 'Desarrollo sin dañar el medio ambiente' 5 'Desarrollo que tiene en cuenta el cambio climático'
+6 'Desarrollo ordenado' 7 'Desarrollo equitativo' 8 'Otro/s' 98 'N.S.' 99 'N.C.'
+/P3902
+1 'Desarrollo con limitaciones' 2 'Desarrollo que tiene en cuenta a las generaciones futuras'
+3 'Desarrollo que tiene en cuenta a todas las personas independientemente de su etnia, género, origen social, etc.'
+4 'Desarrollo sin dañar el medio ambiente' 5 'Desarrollo que tiene en cuenta el cambio climático'
+6 'Desarrollo ordenado' 7 'Desarrollo equitativo' 8 'Otro/s' 98 'N.S.' 99 'N.C.'
+/P40
+1 'Sí, conoce o ha oído hablar' 2 'No, es la primera vez que oye hablar de ella' 9 'N.C.'
+/P4101
+1 'Erradicar la pobreza y acabar con el hambre y la desnutrición' 2 'Garantizar la salud y el bienestar'
+3 'Garantizar la educación de calidad para todos/as' 4 'Lograr la igualdad entre géneros' 5 'Garantizar la disponibilidad de agua, saneamiento y energía sostenible'
+6 'Fomentar de forma sostenible el crecimiento económico y el empleo digno' 7 'Desarrollar las infraestructuras y la industrialización sostenible'
+8 'Reducir las desigualdades entre países y dentro de ellos, promover la paz y el acceso a la justicia para todos/as'
+9 'Garantizar el consumo y la producción sostenible, y conseguir ciudades seguras y sostenibles'
+10 'Conservar y proteger los ecosistemas marinos y terrestres, y tomar medidas urgentes para combatir el cambio climático'
+98 'N.S.' 99 'N.C.'
+/P4102
+1 'Erradicar la pobreza y acabar con el hambre y la desnutrición' 2 'Garantizar la salud y el bienestar'
+3 'Garantizar la educación de calidad para todos/as' 4 'Lograr la igualdad entre géneros' 5 'Garantizar la disponibilidad de agua, saneamiento y energía sostenible'
+6 'Fomentar de forma sostenible el crecimiento económico y el empleo digno' 7 'Desarrollar las infraestructuras y la industrialización sostenible'
+8 'Reducir las desigualdades entre países y dentro de ellos, promover la paz y el acceso a la justicia para todos/as'
+9 'Garantizar el consumo y la producción sostenible, y conseguir ciudades seguras y sostenibles'
+10 'Conservar y proteger los ecosistemas marinos y terrestres, y tomar medidas urgentes para combatir el cambio climático'
+98 'N.S.' 99 'N.C.'
+/P4103
+99 'N.C.'
+/P4201
+1 'La falta de voluntad política' 2 'La falta de medios para su aplicación' 3 'La corrupción política e institucional'
+4 'Los hábitos de consumo insostenibles' 5 'La falta de conciencia social en personas, empresas e instituciones'
+6 'La utilización insostenible de la energía y los recursos naturales' 7 'El apego a ciertas tradiciones culturales y religiosas'
+8 'Las carencias en educación' 96 'Otro/s' 98 'N.S.' 99 'N.C.'
+/P4202
+1 'La falta de voluntad política' 2 'La falta de medios para su aplicación' 3 'La corrupción política e institucional'
+4 'Los hábitos de consumo insostenibles' 5 'La falta de conciencia social en personas, empresas e instituciones'
+6 'La utilización insostenible de la energía y los recursos naturales' 7 'El apego a ciertas tradiciones culturales y religiosas'
+8 'Las carencias en educación' 96 'Otro/s' 98 'N.S.' 99 'N.C.'
+/P43
+1 'Hombre' 2 'Mujer'
+/P44
+99 'N.C.'
+/P45
+1 'No, es analfabeto/a' 2 'No, pero sabe leer y escribir' 3 'Sí, ha ido a la escuela' 9 'N.C.'
+/P45A
+0 'N.P.' 1 'Menos de 5 años de escolarización' 2 'Educación primaria' 3 'FP grado inicial' 4 'Educación secundaria'
+5 'FP de grado medio' 6 'Bachillerato' 7 'FP de grado superior' 8 'Arquitectura o ingeniería técnicas'
+9 'Diplomatura' 10 'Estudios de grado' 11 'Estudios de licenciatura' 12 'Arquitectura o ingeniería superiores'
+13 'Máster oficial universitario' 14 'Doctorado' 15 'Títulos propios de posgrado' 16 'Otros'
+98 'N.S.' 99 'N.C.'
+/P46
+1 'Católico/a' 2 'Creyente de otra religión' 3 'No creyente' 4 'Ateo/a' 9 'N.C.'
+/P46A
+0 'N.P.' 1 'Casi nunca' 2 'Varias veces al año ' 3 'Alguna vez al mes ' 4 'Casi todos los domingos y festivos '
+5 'Varias veces a la semana ' 9 'N.C.'
+/P47
+1 'Casado/a' 2 'Soltero/a' 3 'Viudo/a' 4 'Separado/a' 5 'Divorciado/a' 9 'N.C.'
+/P47A
+0 'N.P.' 1 'No tiene pareja' 2 'Tiene pareja pero no comparten la misma vivienda' 3 'Tiene pareja y comparten la misma vivienda'
+9 'N.C.'
+/P48
+1 'La persona entrevistada' 2 'Otra persona' 3 '(NO LEER) La persona entrevistada y otra casi a partes iguales '
+9 'N.C.'
+/P49
+1 'Trabaja' 2 'Jubilado/a o pensionista (anteriormente ha trabajado) ' 3 'Pensionista (anteriormente no ha trabajado) '
+4 'Parado/a y ha trabajado antes ' 5 'Parado/a y busca su primer empleo ' 6 'Estudiante' 7 'Trabajo doméstico no remunerado '
+8 'Otra situación' 9 'N.C.'
+/P49A
+0 'N.P.' 1 'Muy probable' 2 'Bastante probable' 3 'Poco probable' 4 'Nada probable' 8 'N.S.'
+9 'N.C.'
+/P49B
+0 'N.P.' 1 'Muy probable' 2 'Bastante probable' 3 'Poco probable' 4 'Nada probable' 8 'N.S.'
+9 'N.C.'
+/P50
+1 'Oficiales y suboficiales de las fuerzas armadas' 2 'Tropa y marinería de las fuerzas armadas'
+111 'Miembros poder ejecutivo y cuerpos legislativos; directivos Administración Pública y organizaciones de interés social'
+112 'Directores generales y presidentes ejecutivos' 121 'Directores de departamentos administrativos'
+122 'Directores comerciales, de publicidad, relaciones públicas y de investigación y desarrollo'
+131 'Directores producción explotación agropec., forestal, pesquera, ind. manufacturera, minería, construcción, distribución'
+132 'Directores servicios de tecnologías de la información y las comunicaciones (TIC) y empresas de servicios profesionales'
+141 'Directores y gerentes de empresas de alojamiento' 142 'Directores y gerentes de empresas de restauración'
+143 'Directores y gerentes de empresas de comercio al por mayor y al por menor' 150 'Directores y gerentes de otras empresas de servicios no clasificados bajo otros epígrafes'
+211 'Médicos' 212 'Profesionales de enfermería y partería' 213 'Veterinarios' 214 'Farmacéuticos'
+215 'Otros profesionales de la salud' 221 'Profesores de universidades y otra enseñanza superior (excepto formación profesional)'
+222 'Profesores de formación profesional (materias específicas)' 223 'Profesores de enseñanza secundaria (excepto materias específicas de formación profesional)'
+224 'Profesores de enseñanza primaria' 225 'Maestros y educadores de enseñanza infantil' 231 'Profesores y técnicos de educación especial'
+232 'Otros profesores y profesionales de la enseñanza' 241 'Físicos, químicos, matemáticos y afines'
+242 'Profesionales en ciencias naturales' 243 'Ingenieros (excepto ingenieros agrónomos, de montes, eléctricos, electrónicos y TIC)'
+244 'Ingenieros eléctricos, electrónicos y de telecomunicaciones' 245 'Arquitectos, urbanistas e ingenieros geógrafos'
+246 'Ingenieros técnicos (excepto agrícolas, forestales, eléctricos, electrónicos y TIC)' 247 'Ingenieros técnicos en electricidad, electrónica y telecomunicaciones'
+248 'Arquitectos técnicos, topógrafos y diseñadores' 251 'Jueces, magistrados, abogados y fiscales'
+259 'Otros profesionales del derecho' 261 'Especialistas en finanzas' 262 'Especialistas en organización y administración'
+263 'Técnicos de empresas y actividades turísticas' 264 'Profesionales de ventas técnicas y médicas (excepto las TIC)'
+265 'Otros profesionales de las ventas, la comercialización, la publicidad y las relaciones públicas'
+271 'Analistas y diseñadores de software y multimedia' 272 'Especialistas en bases de datos y en redes informáticas'
+281 'Economistas' 282 'Sociólogos, historiadores, psicólogos y otros profesionales en ciencias sociales'
+283 'Sacerdotes de las distintas religiones' 291 'Archivistas, bibliotecarios, conservadores y afines'
+292 'Escritores, periodistas y lingüistas' 293 'Artistas creativos e interpretativos' 311 'Delineantes y dibujantes técnicos'
+312 'Técnicos de las ciencias físicas, químicas, medioambientales y de las ingenierías' 313 'Técnicos en control de procesos'
+314 'Técnicos de las ciencias naturales y profesionales auxiliares afines' 315 'Profesionales en navegación marítima y aeronáutica'
+316 'Técnicos de control de calidad de las ciencias físicas, químicas y de las ingenierías'
+320 'Supervisores en ingeniería de minas, de industrias manufactureras y de la construcción'
+331 'Técnicos sanitarios de laboratorio, pruebas diagnósticas y prótesis' 332 'Otros técnicos sanitarios'
+333 'Profesionales de las terapias alternativas' 340 'Profesionales de apoyo en finanzas y matemáticas'
+351 'Agentes y representantes comerciales' 352 'Otros agentes comerciales' 353 'Agentes inmobiliarios y otros agentes'
+361 'Asistentes administrativos y especializados' 362 'Agentes de aduanas, tributos y afines que trabajan en tareas propias de la Administración Pública'
+363 'Técnicos de las fuerzas y cuerpos de seguridad' 371 'Profesionales de apoyo de servicios jurídicos y sociales'
+372 'Deportistas, entrenadores, instructores de actividades deportivas; monitores de actividades recreativas'
+373 'Técnicos y profesionales de apoyo de actividades culturales, artísticas y culinarias' 381 'Técnicos en operaciones de tecnologías de la información y asistencia al usuario'
+382 'Programadores informáticos' 383 'Técnicos en grabación audiovisual, radiodifusión y telecomunicaciones'
+411 'Empleados contables y financieros' 412 'Empleados de registro de materiales, de servicios de apoyo a la producción y al transporte'
+421 'Empleados de bibliotecas y archivos' 422 'Empleados de servicios de correos, codificadores, correctores y servicios de personal'
+430 'Otros empleados administrativos sin tareas de atención al público' 441 'Empleados de información y recepcionistas (excepto de hoteles)'
+442 'Empleados de agencias de viajes, recepcionistas de hoteles y telefonistas' 443 'Agentes de encuestas'
+444 'Empleados de ventanilla y afines (excepto taquilleros)' 450 'Empleados administrativos con tareas de atención al público no clasificados bajo otros epígrafes'
+500 'Camareros y cocineros propietarios' 511 'Cocineros asalariados' 512 'Camareros asalariados'
+521 'Jefes de sección de tiendas y almacenes' 522 'Vendedores en tiendas y almacenes' 530 'Comerciantes propietarios de tiendas'
+541 'Vendedores en quioscos o en mercadillos' 542 'Operadores de telemarketing' 543 'Expendedores de gasolineras'
+549 'Otros vendedores' 550 'Cajeros y taquilleros (excepto bancos)' 561 'Auxiliares de enfermería'
+562 'Técnicos auxiliares farmacia y emergencias sanitarias y otros trabajadores de cuidados a personas en servicios de salud'
+571 'Trabajadores de los cuidados personales a domicilio (excepto cuidadores de niños)' 572 'Cuidadores de niños'
+581 'Peluqueros y especialistas en tratamientos de estética, bienestar y afines' 582 'Trabajadores que atienden a viajeros, guías turísticos y afines'
+583 'Supervisores de mantenimiento y limpieza de edificios, conserjes y mayordomos domésticos'
+584 'Trabajadores propietarios de pequeños alojamientos' 589 'Otros trabajadores de servicios personales'
+591 'Guardias civiles' 592 'Policías' 593 'Bomberos' 594 'Personal de seguridad privado' 599 'Otros trabajadores de los servicios de protección y seguridad'
+611 'Trabajadores cualificados en actividades agrícolas (excepto en huertas, invernaderos, viveros y jardines)'
+612 'Trabajadores cualificados en huertas, invernaderos, viveros y jardines' 620 'Trabajadores cualificados en actividades ganaderas (incluidas avícolas, apícolas y similares)'
+630 'Trabajadores cualificados en actividades agropecuarias mixtas' 641 'Trabajadores cualificados en actividades forestales y del medio natural'
+642 'Trabajadores cualificados en actividades pesqueras y acuicultura' 643 'Trabajadores cualificados en actividades cinegéticas'
+711 'Trabajadores en hormigón, encofradores, ferrallistas y afines' 712 'Albañiles, canteros, tronzadores, labrantes y grabadores de piedras'
+713 'Carpinteros (excepto ebanistas y montadores de estructuras metálicas)' 719 'Otros trabajadores de las obras estructurales de construcción'
+721 'Escayolistas y aplicadores de revestimientos de pasta y mortero' 722 'Fontaneros e instaladores de tuberías'
+723 'Pintores, empapeladores y afines' 724 'Soladores, colocadores de parquet y afines' 725 'Mecánicos-instaladores de refrigeración y climatización'
+729 'Otros trabajadores de acabado en la construcción, instalaciones (excepto electricistas) y afines'
+731 'Moldeadores, soldadores, chapistas, montadores de estructuras metálicas y trabajadores afines'
+732 'Herreros y trabajadores de la fabricación de herramientas y afines' 740 'Mecánicos y ajustadores de maquinaria'
+751 'Electricistas de la construcción y afines' 752 'Otros instaladores y reparadores de equipos eléctricos'
+753 'Instaladores y reparadores de equipos electrónicos y de telecomunicaciones' 761 'Mecánicos de precisión en metales, ceramistas, vidrieros y artesanos'
+762 'Oficiales y operarios de las artes gráficas' 770 'Trabajadores de la industria de la alimentación, bebidas y tabaco'
+781 'Trabajadores que tratan la madera y afines' 782 'Ebanistas y trabajadores afines' 783 'Trabajadores del textil, confección, piel, cuero y calzado'
+789 'Pegadores, buceadores, probadores de productos y otros operarios y artesanos diversos'
+811 'Operadores en instalaciones de la extracción y explotación de minerales' 812 'Operadores en instalaciones para el tratamiento de metales'
+813 'Operadores de instalaciones y máquinas de productos químicos, farmacéuticos y materiales fotosensibles'
+814 'Operadores en instalac. para la transfor. de la madera, fabric. de papel, productos de papel, caucho, materias plásticas'
+815 'Operadores de máquinas para fabricar productos textiles y artículos de piel y de cuero'
+816 'Operadores de máquinas para elaborar productos alimenticios, bebidas y tabaco' 817 'Operadores de máquinas de lavandería y tintorería'
+819 'Otros operadores de instalaciones y maquinaria fijas' 820 'Montadores y ensambladores en fábricas'
+831 'Maquinistas de locomotoras y afines' 832 'Operadores de maquinaria agrícola y forestal móvil'
+833 'Operadores de otras máquinas móviles' 834 'Marineros de puente, marineros de máquinas y afines'
+841 'Conductores de automóviles, taxis y furgonetas' 842 'Conductores de autobuses y tranvías'
+843 'Conductores de camiones' 844 'Conductores de motocicletas y ciclomotores' 910 'Empleados domésticos'
+921 'Personal de limpieza de oficinas, hoteles y otros establecimientos similares' 922 'Limpiadores de vehículos, ventanas y personal de limpieza a mano'
+931 'Ayudantes de cocina' 932 'Preparadores de comidas rápidas' 941 'Vendedores callejeros'
+942 'Repartidores de publicidad, limpiabotas y otros trabajadores de oficios callejeros' 943 'Ordenanzas, mozos de equipaje, repartidores a pie y afines'
+944 'Recogedores de residuos, clasificadores de desechos, barrenderos y afines' 949 'Otras ocupaciones elementales'
+951 'Peones agrícolas' 952 'Peones ganaderos' 953 'Peones agropecuarios' 954 'Peones de la pesca, la acuicultura, forestales y de la caza'
+960 'Peones de la construcción y de la minería' 970 'Peones de las industrias manufactureras'
+981 'Peones del transporte, descargadores y afines' 982 'Reponedores' 994 'Sin ocupación, vive (o vivía) de las rentas'
+998 'NS/No recuerda/Ocupación mal especificada' 999 'N.C.'
+/P51
+1 'Asalariado/a fijo/a (a sueldo, comisión, jornal, etc. con carácter fijo) ' 2 'Asalariado/a eventual o interino/a (a sueldo, comisión, jornal, etc. con carácter temporal o interino) '
+3 'Empresario/a o profesional con asalariados/as  ' 4 'Profesional o trabajador/a autónomo/a (sin asalariados/as) '
+5 'Ayuda familiar (sin remuneración reglamentada en la empresa o negocio de un/a familiar) '
+6 'Miembro de una cooperativa ' 7 'Otra situación' 9 'N.C.'
+/P51A
+0 'N.P.' 1 'Administración Pública ' 2 'Empresa pública' 3 'Empresa privada' 4 'Organización sin fines de lucro'
+5 'Servicio doméstico' 6 'Otros' 9 'N.C.'
+/P52
+1 'Agricultura, ganadería, caza y servicios relacionados' 2 'Silvicultura y explotación forestal'
+3 'Pesca y acuicultura' 5 'Extracción de antracita, hulla y lignito' 6 'Extracción de crudo de petróleo y gas natural'
+7 'Extracción de minerales metálicos' 8 'Otras industrias extractivas' 9 'Actividades de apoyo a las industrias extractivas'
+10 'Industria de la alimentación' 11 'Fabricación de bebidas' 12 'Industria del tabaco' 13 'Industria textil y de la confección'
+14 'Confección de prendas de vestir' 15 'Industria del cuero y del calzado' 16 'Industria de la madera y del corcho, excepto muebles. Cestería y espartería'
+17 'Industria del papel' 18 'Artes gráficas y reproducción de soportes grabados' 19 'Coquerías y refino de petróleo'
+20 'Industria química' 21 'Fabricación productos farmacéuticos' 22 'Fabricación de productos de caucho y plásticos'
+23 'Fabricación de otros productos minerales no metálicos' 24 'Metalurgia; fabricación de productos de hierro, acero y ferroaleaciones'
+25 'Fabricación de productos metálicos, excepto maquinaria y equipos' 26 'Fabricación productos informáticos, electrónicos y ópticos'
+27 'Fabricación de material y equipo eléctrico' 28 'Fabricación de maquinaria y equipo n.c.o.p.'
+29 'Fabricación de vehículos de motor, remolques y semiremolques' 30 'Fabricación de otro tipo de material de transporte'
+31 'Fabricación de muebles' 32 'Otras industrias manufactureras' 33 'Reparación e instalación de maquinaria y equipo'
+35 'Suministro de energía eléctrica, gas, vapor y aire acondicionado' 36 'Captación, depuración y distribución de agua'
+37 'Recogida y tratamiento de aguas residuales' 38 'Recogida tratamiento y eliminación de residuos; valorización'
+39 'Actividades de descontaminación y otros servicios de gestión de residuos' 41 'Construcción de edificios'
+42 'Ingeniería civil' 43 'Actividades de construcción especializada' 45 'Venta y reparación de vehículos de motor y motocicletas'
+46 'Comercio al por mayor e intermediarios del comercio, excepto vehículos de motor y motocicletas'
+47 'Comercio al por menor, farmacias' 49 'Transporte terrestre y por tubería' 50 'Transporte marítimo y por vías navegables interiores'
+51 'Transporte aéreo' 52 'Almacenamiento y actividades anexas al transporte' 53 'Actividades postales y de correos'
+55 'Servicios de alojamiento' 56 'Servicios de comidas y bebidas' 58 'Edición' 59 'Actividades cinematográficas, de vídeo y de programas de Tv, grabación de sonido y edición musical'
+60 'Actividades de emisión y programación de radio y televisión' 61 'Telecomunicaciones' 62 'Programación, consultoría y otras actividades relacionadas con la informática'
+63 'Servicios de información' 64 'Servicios financieros, excepto seguros y fondos de pensiones'
+65 'Seguros, reaseguros y planes de pensiones, excepto seguridad social obligatoria' 66 'Actividades auxiliares a los servicios financieros y a los seguros'
+68 'Actividades inmobiliarias' 69 'Actividades jurídicas y de contabilidad' 70 'Actividades de las sedes centrales; consultoría de gestión empresarial'
+71 'Servicios técnicos de arquitectura e ingeniería' 72 'Investigación y desarrollo' 73 'Publicidad y estudios de mercado'
+74 'Otras actividades profesionales, científicas y técnicas' 75 'Actividades veterinarias' 77 'Actividades de alquiler'
+78 'Actividades relacionadas con el empleo' 79 'Agencias de viajes, operadores turísticos, reservas y actividades afines'
+80 'Actividades de seguridad e investigación' 81 'Servicios a edificios y actividades de jardinería'
+82 'Actividades administrativas de oficina y auxiliares a las empresas, org. de convenciones y ferias, agencias de cobros'
+84 'Administración pública y defensa; seguridad social obligatoria' 85 'Educación' 86 'Actividades sanitarias y de servicios sociales'
+87 'Asistencia en establecimientos residenciales' 88 'Actividades de servicios sociales sin alojamiento'
+90 'Creación artística y espectáculos, gestión de salas' 91 'Bibliotecas, archivos, museos y demás actividades culturales'
+92 'Actividades de juegos de azar y apuestas' 93 'Actividades deportivas, recreativas y de entretenimiento, gimnasios'
+94 'Actividades asociativas' 95 'Reparación de ordenadores, de efectos personales y artículos de uso doméstico'
+96 'Otros servicios personales' 97 'Hogares como empleadores de personal doméstico' 98 'Hogares como productores de bienes y servicios para uso propio'
+99 'Actividades de organizaciones y organismos extraterritoriales' 998 'N.S./No recuerda/Actividad económica mal especificada'
+999 'N.C.'
+/P53
+1 'No tienen ingresos de ningún tipo ' 2 'Menos o igual a 300 € ' 3 'De 301 a 600 € ' 4 'De 601 a 900 € '
+5 'De 901 a 1.200 € ' 6 'De 1.201 a 1.800 € ' 7 'De 1.801 a 2.400 € ' 8 'De 2.401 a 3.000 € '
+9 'De 3.001 a 4.500 € ' 10 'De 4.501 a 6.000 € ' 11 'Más de 6.000 € ' 98 'N.S.' 99 'N.C.'
+/P54
+1 'No tiene ingresos de ningún tipo ' 2 'Menos o igual a 300 € ' 3 'De 301 a 600 € ' 4 'De 601 a 900 € '
+5 'De 901 a 1.200 € ' 6 'De 1.201 a 1.800 € ' 7 'De 1.801 a 2.400 € ' 8 'De 2.401 a 3.000 € '
+9 'De 3.001 a 4.500 € ' 10 'De 4.501 a 6.000 € ' 11 'Más de 6.000 € ' 99 'N.C.'
+/P55
+1 'Desde que nació' 2 'La ha adquirido con posterioridad' 9 'N.C.'
+/P5601
+1 'Sí' 2 'No' 9 'N.C.'
+/P5602
+1 'Sí' 2 'No' 9 'N.C.'
+/P57
+1 'Sí, una línea' 2 'Sí, más de una línea' 3 'No' 9 'N.C.'
+/P58
+1 'Sí' 2 'No' 9 'N.C.'
+/P59
+1 'Da sólo número fijo' 2 'Da sólo número móvil' 3 'Da número fijo y móvil' 4 'No da número ni fijo ni móvil'
+9 'N.C.'
+/P60
+1 'Casi seguro aceptaría contestar ' 2 'Probablemente aceptaría contestar ' 3 'Probablemente no aceptaría contestar '
+4 'Casi seguro no aceptaría contestar ' 5 '(NO LEER) Depende del tema' 6 '(NO LEER) Depende del momento'
+7 '(NO LEER) Depende de quién la realice' 8 'N.S.' 9 'N.C.'
+/P6101
+1 'Menciona'
+/P6102
+1 'Menciona'
+/P6103
+1 'Menciona'
+/P6104
+1 'Menciona'
+/P6105
+1 'Menciona'
+/P64
+1 'Sí' 2 'No' 9 'N.C.'
+/P65
+1 'La persona entrevistada las ha usado todas' 2 'Sólo ha usado algunas' 3 'Las he leído yo'
+9 'N.C.'
+/P66
+1 'Muy buena' 2 'Buena' 3 'Regular' 4 'Mala' 5 'Muy mala' 9 'N.C.'
+/P67
+1 'Mucha' 2 'Bastante' 3 'Poca' 4 'Ninguna' 9 'N.C.'
+/I1
+999 'N.C.'
+/I2
+999 'N.C.'
+/I3
+999 'N.C.'
+/I4
+999 'N.C.'
+/I5
+999 'N.C.'
+/I6
+999 'N.C.'
+/I7
+999 'N.C.'
+/I8
+999 'N.C.'
+/I9
+999 'N.C.'
+/E101
+/E102
+1 'Enero  ' 2 'Febrero  ' 3 'Marzo  ' 4 'Abril  ' 5 'Mayo  ' 6 'Junio  ' 7 'Julio  ' 8 'Agosto  '
+9 'Septiembre  ' 10 'Octubre  ' 11 'Noviembre    ' 12 'Diciembre  '
+/E103
+19 '2019'
+/E2
+1 'Lunes' 2 'Martes' 3 'Miércoles' 4 'Jueves' 5 'Viernes' 6 'Sábado' 7 'Domingo' 9 'N.C.'
+/E3
+999 'N.C.'
+/E4
+1 'La mañana (9-12)' 2 'Mediodía (12-4)' 3 'Tarde (4-8)' 4 'Noche (8-10)' 9 'N.C.'
+/C1
+1 'Correcto' 2 'Incorrecto' 9 'No consta'
+/C1A
+0 'N.P.' 1 'Alteración de edad (especificada)' 2 'Cabeceras incompletas' 3 'Letra ilegible'
+4 'No respeta filtros' 5 'Estudios, mal codificado' 6 'Profesión, poco especificada' 7 'Pregunta en blanco'
+8 'Preguntas en blanco' 9 'No pone nº de entrevistador' 10 'No recoge duración' 11 'No recoge fecha completa'
+12 'No recoge hora' 13 'No rellena notas' 14 'Dirección incompleta o ilegible' 15 'Contestación incorrecta de la pregunta'
+16 'Varios motivos' 17 'Cambio de edad sin especificar' 99 'No consta'
+/C2
+1 'Entrevista no inspeccionada' 2 'Inspección telefónica' 3 'Inspección personal' 4 'Inspección telefónica y personal'
+9 'No consta'
+/C2A
+0 'N.P.' 1 'Entrevista correcta' 2 'Entrevista incorrecta' 3 'No se ha establecido contacto'
+9 'No consta'
+/C2B
+0 'N.P.' 1 'Dirección inexistente (no existe número en la calle, piso, etc.)' 2 'Dirección ilocalizable (faltan datos: número, piso, letra, etc.)'
+3 'Negativa. No coinciden datos personales y no ha sido realizada en la dirección que se hace constar (causa de anulación)'
+4 'Negativa que ofrece dudas. Coinciden datos personales, pero niegan haber realizado la entrevista (causa de anulación)'
+5 'Realizada a una persona, recogiendo los datos de otra (causa de anulación)' 6 'Realizada cambiando el género de la persona entrevistada (causa de anulación)'
+7 'Cambio de edad por otra de un tramo contiguo' 8 'Cambio de edad por otra de un tramo no contiguo'
+9 'Realizada fuera de la vivienda, pero vive en la sección electoral' 10 'Realizada fuera de la vivienda, y no vive en la sección electoral'
+11 'Realizada en dirección que no corresponde a la sección electoral' 12 'Realizada, pero no respeta las normas de ruta'
+13 'Se detecta que no ha hecho todas las preguntas' 14 'Negativa que ofrece dudas: no coincide la dirección ni datos personales. Posibilidad de error en el teléfono'
+99 'No consta'
+/C3
+1 'Entrevista válida' 2 'Entrevista anulada' 9 'No consta'
+/C4
+0 'Anonimizado'
+/P19R
+1 'Pablo Casado' 2 'Pablo Iglesias' 3 'Albert Rivera' 4 'Pedro Sánchez' 7 'Santiago Abascal'
+96 '(NO LEER) Otro/a' 5 '(NO LEER) Ninguno de ellos' 98 'N.S.' 99 'N.C.'
+/P28R
+1 'PP' 2 'PSOE' 3 'Unidos Podemos' 4 'Ciudadanos' 6 'En Comú Podem' 7 'Compromís-Podemos' 8 'ERC'
+9 'PDeCAT' 10 'En Marea' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CC-PNC' 17 'PACMA' 18 'VOX' 77 '(NO LEER) Voto nulo'
+95 'Otro partido' 96 'En blanco' 97 'No votaría' 98 'No sabe todavía' 99 'N.C.'
+/P28AR
+0 'N.P.' 1 'PP' 2 'PSOE' 3 'Unidos Podemos' 4 'Ciudadanos' 6 'En Comú Podem' 7 'Compromís-Podemos'
+8 'ERC' 9 'PDeCAT' 10 'En Marea' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CC-PNC' 17 'PACMA' 18 'VOX'
+20 'Los Verdes' 77 'Voto nulo' 95 'Otro partido' 96 'En blanco' 97 'No votaría' 98 'N.S.' 99 'N.C.'
+/P29R
+0 'N.P.' 1 'PP' 2 'PSOE' 3 'Podemos' 4 'Ciudadanos' 5 'IU' 6 'En Comú Podem' 7 'Compromís' 8 'ERC'
+9 'PDeCAT' 10 'En Marea' 11 'EAJ-PNV' 12 'EH Bildu' 14 'UPN' 17 'PACMA' 18 'VOX' 95 'Otro partido'
+97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/VOTOSIMG
+1 'PP' 2 'PSOE' 3 'Unidos Podemos' 4 'Ciudadanos' 6 'En Comú Podem' 7 'Compromís-Podemos' 8 'ERC'
+9 'PDeCAT' 10 'En Marea' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CC-PNC' 17 'PACMA' 18 'VOX' 95 'Otro partido'
+96 'En blanco' 77 'Voto nulo' 97 'No votaría' 98 'No sabe todavía' 99 'N.C.'
+/P35AR
+0 'N.P.' 1 'PP' 2 'PSOE' 21 'Unidos Podemos' 4 'Ciudadanos' 6 'En Comú Podem' 37 'Compromís-Podemos-EUPV'
+8 'ERC' 36 'Convergència (CDC)' 10 'En Marea' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CC-PNC' 95 'Otros partidos'
+96 'En blanco' 77 'Voto nulo' 98 'No recuerda' 99 'N.C.'
+/RECUERDO
+1 'PP' 2 'PSOE' 21 'Unidos Podemos' 4 'C''s' 6 'En Comú Podem' 37 'Compromís-Podemos-EUPV' 8 'ERC'
+36 'CDC' 10 'En Marea' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CC-PNC' 95 'Otros' 96 'En blanco' 77 'Voto nulo'
+94 'No tenía edad' 97 'No votó' 93 'No tenía derecho a voto' 98 'No recuerda' 99 'N.C.'
+/P36R
+1 'PP' 2 'PSOE' 3 'Podemos' 4 'Ciudadanos' 5 'IU' 6 'En Comú Podem' 7 'Compromís' 8 'ERC' 9 'PDeCAT'
+10 'En Marea' 11 'EAJ-PNV' 12 'EH Bildu' 13 'CC-PNC' 14 'UPN' 17 'PACMA' 18 'VOX' 21 'Unidos Podemos'
+95 'Otro partido' 96 'En blanco' 97 'Ninguno' 98 'N.S.' 99 'N.C.'
+/ESTUDIOS
+1 'Sin estudios' 2 'Primaria' 3 'Secundaria 1ª etapa' 4 'Secundaria 2ª etapa' 5 'F.P.' 6 'Superiores'
+7 'Otros' 9 'N.C.'
+/OCUMAR11
+1 'Directores/as y gerentes' 2 'Técnicos/as y profesionales científicos/as e intelectuales'
+3 'Técnicos/as; profesionales de apoyo' 4 'Empleados/as contables, administrativos/as y otros empleados/as de oficina'
+5 'Trabajadores/as de los servicios de restauración, personales, protección y vendedores/as'
+6 'Trabajadores/as cualificados/as en el sector agrícola, ganadero, forestal y pesquero' 7 'Artesanos/as y trabajadores/as cuali. de ind. manufactureras y construcción, no operadores/as instalaciones y maquinaria'
+8 'Operadores/as de instalaciones y maquinaria, y montadores/as' 9 'Ocupaciones elementales'
+10 'Ocupaciones militares' 94 'Sin ocupación/vive de las rentas' 98 'N.S./Ocupación mal especificada o insuficiente'
+99 'N.C.'
+/RAMA09
+1 'Agricultura' 2 'Industria' 3 'Construcción' 4 'Servicios' 8 'N.S./No recuerda/Actividad económica mal especificada'
+9 'N.C.'
+/CONDICION11
+1 'Directores/as y profesionales' 2 'Técnicos/as y cuadros medios' 3 'Pequeños/as empresarios/as'
+4 'Agricultores/as' 5 'Empleados/as de oficinas y servicios' 6 'Obreros/as cualificados/as'
+7 'Obreros/as no cualificados/as' 8 'Jubilados/as y pensionistas' 9 'Parados/as' 10 'Estudiantes'
+11 'Trabajo doméstico no remunerado' 12 'No clasificables'
+/ESTATUS
+1 'Clase alta/media-alta' 2 'Nuevas clases medias' 3 'Viejas clases medias' 4 'Obreros/as cualificados/as'
+5 'Obreros/as no cualificados/as' 9 'No consta'
+.
+EXECUTE.
+
+MISSING VALUES
+ P0A (0) P20A (0) P28A (0) P29 (0) P3307 (0) P3308 (0) P3309 (0) P3310 (0) P3311 (0) P3312 (0)
+ P3313 (0) P3314 (0) P3315 (0) P3316 (0) P3317 (0) P35A (0) P45A (0) P46A (0) P47A (0) P49A (0)
+ P49B (0) P51A (0) C1A (0) C2A (0) C2B (0) P28AR (0) P29R (0) P35AR (0).
+EXECUTE.
+FREQUENCIES VARIABLES ALL.

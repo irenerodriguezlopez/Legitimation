@@ -1,0 +1,2670 @@
+---
+title: "The dangers of legitimation:"
+subtitle: "The entry of a radical right party in parliament and its effect on citizens' attitudes towards immigration"
+author: 
+  - name: Irene Rodríguez López
+    email: irene.rodriguez@upf.edu
+date: "`r Sys.Date()`"
+output: 
+  bookdown::pdf_book:
+    citation_package: biblatex
+    use-biblatex: true
+    toc: false
+    number_sections: false
+abstract: |
+  Presence of radical right parties (RRPs) in national parliaments and governments is becoming a reality in more and more countries, and questions are being raised about their effect on various aspects of the political and social context in which they are introduced. The entry of a nativist and nationalist party can help normalize certain attitudes considered taboo among the population. This paper hypothesizes that the entry of an RRP in parliament has a legitimation effect that allows citizens to admit to antiimmigration attitudes. To test this argument, the methodology empoys a difference-in-differences quasi-experimental design to assess the impact of the entry of Vox in the Andalusian parliament on Andalusian citizens' attitudes towards immigration, compared to other regions of Spain. On the whole, results show how RRP institutional entry produces a short-term legitimation effect on attitudes towards immigration of native citizens. **ADD LONG-TERM NULL EFFECTS AND WHY THIS IS IMPORTANT** \par \textbf{Keywords:} Attitudes towards immigration, legitimation, persuasion, radical right parties, social norms, Vox. \par \textbf{Wordcount:} XXXX. \newpage
+header-includes:
+  - \usepackage{titling}
+  - \usepackage{setspace}
+  - \doublespacing
+  - \usepackage[nottoc, numbib]{tocbibind}
+  - \usepackage{wrapfig}
+  - \usepackage{float}
+  - \floatplacement{figure}{H}
+  - \usepackage{booktabs}
+  - \usepackage{longtable}
+  - \usepackage{array}
+  - \usepackage{multirow}
+bibliography: ["Literature/bibliography.bib"]
+link-citations: true
+biblio-style: apa
+colorlinks: citecolor
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, error = FALSE, fig.pos = 'H')
+```
+
+```{r library}
+library(expss) #import SPSS data sets
+library(naniar) #turn into NA
+library(tidyverse)
+library(zoo) #manage Dates
+library(sjlabelled) #label values in variables
+library(stargazer) #build regression tables
+library(ggeffects) #build plots of predicted values
+library(ggthemes) #change plot themes (not default ggplot themes)
+library(gmodels) #crosstables
+```
+
+\newpage
+
+# Needs to be done
+
+- Recode ideological position (esquerra-centre-dreta)
+- Interaction of time * ideological (esquerra-centre-dreta)
+- Re-do Figure 1
+
+\newpage
+
+# Introduction
+
+Vox entered Spanish politics in 2018 shaking the political board to its core, after hosting a massive event on October 8 in Madrid's Palacio Vistalegre, attended by more than 9,000 supporters. Soon after, they achieved their first electoral success by entering Andalucía's Regional Parliament on December 2, elections in which they gathered 10.96% of the total vote and 12 seats out of 109, later becoming the fifth biggest political force in the Andalusian Parliament. The following year they accomplished their goal of entering the national Parliament's lower chamber, Congreso de los Diputados, suddenly becoming the third biggest political force with a sum total of 52 seats and 15.09% of the electoral support. This series of events caused not only a political and institutional shock, but also a disturbance of the social norms that until then had reigned among Spanish society. It was the first time since the reinstating of democracy after Franco's dictatorship that a declared radical right party obtained institutional representation in Spain, breaking many of the consensuses thought to be established, starting with the questioning of the legitimacy of the Spanish government.
+
+The entry of a party such as Vox in a national or regional parliament is not, however, an isolated case. In recent years, many national party systems around the world have been shaken by the institutional entry of extreme right and radical right parties (RRPs; @ABOUCHADI_KRAUSE1_2018; @BISCHOF_WAGNER1_2019; @NORRIS1_2005; @OLIVAN1_2021). The recent access and consequential political presence of this type of parties has facilitated the resurgence of debates around issues long believed to be consolidated. Parties such as Vox in Spain, AfD in Germany or Front National in France, and Trump in the US, have brought to debate, with their radical stances, issues related to immigration, feminism or the maintenance of the welfare state [@FERREIRA1_2019].
+
+Due to the recent rise of this kind of parties, a great number of scientific investigations have emerged. They focus, for the most part, on exploring the reasons that have led to their appearance, treating them as a social or political symptom of something larger [@ABOUCHADI_KRAUSE1_2018; @ARZHEIMER_2009; @DENNISON_GEDDES1_2019; @EATWELL1_2000; @GOLDER1_2003; @MUDDE1_1999]. More recently, though, studies have begun to develop that consider the rise of populist radical right parties not as a symptom, but as an explanatory factor for other types of phenomena occurring in society and political systems, including, but not restricted to, the social norm breaking of this kind of parties.
+
+We find studies such as those of @SCHAIN1_2006 and @ABOUCHADI1_2016 on the effect that RRPs have on the policy-making process and the behavior of established mainstream parties [see also @ABOUCHADI_KRAUSE1_2018; @BALE_ETAL1_2010; @SCHUMACHER_VANKERSBERGEN1_2016; @VANSPANJE1_2010]; as well as research on their effects on the electorate, their opinions and attitudes towards different political issues and, specifically, towards immigrants and immigration [@BISCHOF_WAGNER1_2019; @DENNISON_GEDDES1_2019; @HELLWIG_KWEON1_2016; @VRANCEANU_LACHAT1_2021; @ZAPATA-BARRERO1_2009; @DUNAWAY_BRANTON_ABRAJANO1_2010].
+
+The fact that the scientific community has focused its attention on the relationship between RRPs and the issue of immigration is not, however, random. Many scholars have classified RRPs as niche parties, given that they compete, mostly, on the issue of immigration [@ABOUCHADI1_2016; @MUDDE1_1999; @WAGNER1_2012; @WAGNER_MEYER1_2017] and act as issue entrepreneurs once they have acquired political representation and occupied offices [@ABOUCHADI1_2016; @BISCHOF_WAGNER1_2019; @DEVRIES_HOBOLT1_2012].
+
+The main focus of this paper is exploring the effect caused by the representation in Parliament of RRPs on public attitudes. Specifically, on attitudes towards immigration, as immigration stands as one of the central topics of RRPs' ideology [@ABOUCHADI1_2016].
+
+Using an empirical strategy based on a difference-in-differences (DiD) methodology, this paper examines whether the population expresses more negative attitudes towards immigration after the entry of Vox, a Spanish RRP, in the Andalusian Regional Parliament in 2018. Results show a strong positive relationship between Vox's entry in Parliament on December 2, 2018 and the expression of negative attitudes towards immigration of the Andalusian population immediately after the election, compared to citizens from other regions of Spain.
+
+# The radical right
+
+Extreme right, radical right, extreme populist right, populist radical right. Many scholars use these terms interchangeably to refer to the same concept or phenomenon [@OLIVAN1_2021]. This study, conversely, takes the definition put forward by @MUDDE2_2007, which states that there is an essential difference between the terms "radical right" and "extreme right", and this difference stems from the argument that extreme right parties possess an antidemocratic component that radical right parties do not [@MUDDE2_2007; @NORRIS1_2005].
+
+According to @MUDDE2_2007, there are three central elements in a populist radical right party's ideology (with no specific hierarchical order): Nativism, authoritarianism and populism. Apart from these three characteristics, some others like neoliberalism, antiparliamentarism or defense of traditional values, can also be associated with their ideology.
+
+The first of these three elements, namely nativism, refers to a combination of nationalist and xenophobic attitudes [@MUDDE2_2007]. The meaning of this concept originates in the word "native", which is the center of the idea. Nativist parties maintain a declared preference toward the "real citizens", the "people from here" [@OLIVAN1_2021]. @MUDDE2_2007 himself defines this concept as "an ideology, which holds that states should be inhabited exclusively by members of the native group ("the nation") and that nonnative elements (persons and ideas) are fundamentally threatening to the homogenous nation-state" (p. 19).
+
+This conceptualization, then, translates as a calling for the internal homogenization of the country (in the sense of a possible existence of differentiated groups or nations inside the same country) as well as an external exclusivity [@OLIVAN1_2021: 37]. And, although it is not strictly necessary nor fundamental to them, most times it is related to racist attitudes.
+
+The second element intrinsic to a radical right ideology is authoritarianism. @MUDDE2_2007, applying the definition from @ADORNO_ETAL_1_1969 and @ALTEMEYER1_1981, describes authoritarianism as "the belief in a strictly ordered society, in which infringements of authority are to be punished severely" (p. 23).
+
+Lastly, populism is another one of the core RRP ideology features. Although there is little academic consensus on the specific definition of populism, there is a general agreement that populism involves the consideration of society as a dichotomous body, made up of two very different and counterposed groups: "the pure people" and "the corrupt elite". This "thin ideology", as classified by @MUDDE_ROVIRAKALTWASSER1_2017, argues that there is a profound gap between the people's and the elite's interests, and there is a need for someone to step up and bring the "general will" to the political institutions in an effective manner. The right person for the task, as it usually turns out, is an authoritarian and charismatic leader [Mudde, 2004, as cited in @OLIVAN1_2021].
+
+# Social norms
+
+The concept of social norms has been defined as "an expectation about appropriate behavior that occurs in a group context" [@MCDONALD2_2015: 147], and which helps form the identity of such group and serves as the standard for what is acceptable and done within that context [@SHERIF2_1953]. @CIALDINI2_1998 conceptualize them as "rules and standards that are understood by members of a group, and that guide and/or constrain social behavior without the force of laws" (p. 152).
+
+The theory about the process of development and formation of these norms is a contested field. Some argue that norms are arbitrary and only formed by the reinforcement of certain behaviors by the culture, and others that they are adopted because they are actions that help achieve the goals of the group [@CIALDINI2_1998]. Similarly, there are different types of social norms, according to the literature. On the one hand, descriptive norms, or popular norms, represent those norms that depict what is believed to be "normal" within a society, that is, what people *do*. On the other hand, injunctive norms, or prescriptive norms, are those that describe what is considered to be acceptable in that same society [@CIALDINI3_1991], and imply a value of judgement of that action or behavior [@SELVANATHAN2_2021]. Injunctive norms are those such as reciprocity or social responsibility, in which there is a social sanction if the norm is violated [@CIALDINI2_1998: 157-158].
+
+Descriptive norms can affect behaviors of the population through informing them about what their peers are doing, while injunctive norms have an effect through the sense of obligation and approval that individuals get from the group [@CIALDINI2_1998: 158].
+
+But, in order to be considered as norms, these behaviors have to be shared and transmitted among individuals in a group. A number of factors can influence the impact or transmission strength social norm: Importance of the source of the norm, physical, as well as ideological proximity to the source, or the number of people who abide by that norm.
+
+# Theory and hypothesis
+
+The first-time entry of an RRP into the political institutions of a country represents a shock for society, while at the same time provides the legitimation of their discourse and a public platform for its reproduction [@ABOUCHADI_KRAUSE1_2018; @BISCHOF_WAGNER1_2019; @VALENTIM1_2021]. And these phenomena can produce short- and long-term effects, respectively.
+
+On the one hand, visibility of the RRP's discourse will provide citizens that already shared their values, but did not see them reflected in an acceptable and legitimized political alternative, with the confidence to express them [@BISCHOF_WAGNER1_2019, p. 4]. This new "publicity" of their discourse that occurs as a result of the institutionalization of the RRP, can be what, in some way, authorizes citizens' most extremist positions [@TANKARD_PALUCK1_2016]. And this effect is not so much caused by a persuasion mechanism brought by the political party's discourse, but by a "liberation" of opinions that already existed within the citizens' minds [@BURSZTYN_EGOROV_FIORIN1_2020].
+
+According to @TANKARD_PALUCK1_2016, when a citizen's personal vision is suddenly reflected in new information that emerges in the social or political context, that is, there is a change in a descriptive norm -what people are doing-, a validation effect of their personal opinions occurs (p. 198). In accordance to this mechanism, the personal perception of the social acceptability of the norm also changes, that is, the injunctive norm also shifts. Therefore, citizens are given license to express their opinions, already perceived as legitimate or validated. As will be discussed further down this paper, political elections have the power to provoke the emergence of this new information about social norms [@BISCHOF_WAGNER1_2019], by providing information about consensus among the popoulation. As @CIALDINI2_1998 state, "the greater the number of people who respond to the same situation in the same way, the more correct we will perceive the behavior to be" (p. 155).
+
+@VALENTIM1_2021 examines this mechanism when analyzing the effect of RRP parliamentary representation on the normalization of radical right support. Using three different studies to test his argument, he finds support for the hypothesis that RRP entry in parliament provokes a shift in voters' perceptions of the legitimacy of its ideas (p. 2). His first study finds there is under-reporting of radical right support in the polls, which increases after RRP entry in parliament (p. 24); with the second study, based on individual-level data, he tests the perceived acceptability of social norms regarding radical right support when exploiting different interview-modes, after which he concludes that, in a more anonymous type of interview, subjects are more willing to express their support for RRPs (p. 29); and finally, study 3 tests the specific case of the success of the UKIP in the United Kingdom, which shows an increase in the citizens that were willing to report that they voted for the UKIP, after its entry in national parliament (p. 32). Of all three studies, the conclusion is that the entry of an RRP in parliament brings about social norm change or, at least, perception of it.
+
+These results go in line with @BISCHOF_WAGNER1_2019's study, who analyze the effect of RRP entry in parliament on voter and party polarization. Again, with resource to three different studies, they find support for their hypotheses of the existence of a legitimation effect and a backlash effect: When RRPs enter the political institutions, individuals present more radical positions; those who reportedly sup-ported right-wing parties moved further right, while those who reportedly supported left-wing parties did the same to the left.
+
+On the other hand, entry in the institutions after electoral success also provides RRPs with different kinds of resources to spread their political discourse. Parties with parliamentary representation enjoy greater media coverage, especially --as indicated by @BISCHOF_WAGNER1_2019 [5] -- in state-owned public media. This greater public presence and coverage by the media provides them with a platform through which to advertise and repeat their speech. As @SORAL3_2018 find, repeated exposure to messages of hate towards minorities -even if for a short time- can desensitize the population to its offensiveness (p. 6), who then normalize this type of attitudes [@SORAL3_2020]. @ZAJONC1_1968 introduces us to the operating mechanism that allows this greater message repetition to affect citizens attitudes: The mere exposure effect. According to this theory, the simple repetition of exposure to a stimulus, even without cognition, that is, without really processing it, is enough for an attitude enhancement towards it.
+
+@CACIOPPO_PETTY1_1979, following @ZAJONC1_1968's work, study the effect of message repetition on citizens' cognitive responses. They do it by carrying out two experiments, after which they gather that information and argument repetition affects the type and quantity of thoughts citizens have, which later translates into an attitudinal change or reaction (p. 105-7).
+
+@DUNN_SINGH1_2011 also base their investigation on this mechanism: When studying the relationship between RRP representation and social tolerance, they argue that the increased publicity of their discourse after entering parliament does not affect citizen attitudes. This reasoning is based on the argument that, to be a subject to real attitudinal change, it is necessary that the subject cognitively processes the information they are receiving [as put forward by @ZALLER1_1992]. And because the people that pay sufficient attention to political messages as to process it are those who are interested in politics and, therefore, already possess completely formed attitudes, it is unlikely that they will change or alter them based on mere exposure to the arguments (p. 318).
+
+Owing to the data we have available, this investigation's purpose is to test the first of these mechanisms: The legitimation effect. Based on the results obtained by @BISCHOF_WAGNER1_2019 on the effect of RRP institutional entry on party and voter polarization, and by @VALENTIM1_2021 on the effect of RRP parliamentary representation on the normalization of radical right support, we expect that the legitimation that comes with the entry in the political institutions will cause this effect of liberation among voters, and thus, they will be more open to manifest opinions that range along the lines of the RRPs, specifically regarding the immigration issue.
+
+Even though we have contradictory evidence of this increment of negative attitudes thanks to @DUNN_SINGH1_2011's discoveries, this paper's hypothesis is not necessarily contradictory to theirs. Their study is based on the second of the mechanisms discussed: Persuasion. Instead, the purpose here is not to prove that there has been a change in preferences due to the RRP's discourse, but that a visibility effect has occurred and citizens now merely express ideas and attitudes that they already possessed. It is from this reasoning that the main hypothesis of this research can be deduced:
+
+**Hypothesis:** *The entry of a radical right party in the political institutions will increase negative attitudes towards immigration.*
+
+# Research design
+
+## Case selection
+
+*'I am an advocate for discrimination.'*
+
+*'Who are the authors of female murders this year? What is their origin? Does it have anything to do with cultural problems of a portion of the immigrant population?'*
+
+*'They come here to rob Spanish citizens, assault Spanish citizens... I believe they should be expelled.'*
+
+```{=tex}
+\begin{flushright}
+Santiago Abascal, leader of Vox.
+\end{flushright}
+```
+These are some of the statements that Santiago Abascal, leader of the Spanish RRP Vox, currently the third political force in the Spanish Congress, has said over the past few years [@THEHUFFPOST1_2018]. They are proof of the social norm breaking of this new political formation that has shaken the political arena since their arrival in 2018. Before then, only a few marginal organizations had maintained this discourse, and none of them had been able to gather enough support as to enter national politics.
+
+To test the theoretical expectations and hypothesis, this study employs the first ever parliamentary entry of this party in Spain, which specifically was in Andalucía's regional parliament on December 2, 2018.
+
+The recent ascent of the RRP Vox has led to the emergence of several studies about its ideology and its categorization within the different party families that exist in Europe [@ANDUIZA1_2018; @ISSEL-DOMBERT1_2020; @OLIVAN1_2021; @ORTIZ_RUIZ_GONZALEZ1_2020; @RIBERAPAYA_DIAZMARTINEZ1_2021; @TURNBULL-DUGARTE1_2019; @VAMPA1_2020]. Thus, Vox is labeled as a party within the RRP family, which expresses an ideology characterized by the existence of nationalist, nativist, authoritarian components and a defense of traditional and family values. On the periphery of its ideology, we can find other components as well, such as neoliberalism or populism, to a lesser extent [@ANDUIZA1_2018; @OLIVAN1_2021]. @OLIVAN1_2021 defines Vox as one of the most nativist parties of the radical right in Europe (in second position, behind the Party for Freedom -PVV- in the Netherlands; p. 158), probably due to the centrality of anti-immigration and nationalist ideas present in their speech.
+
+Due to the salience of nativism or anti-immigration ideas in the discourse of Vox, and the taboo that these ideas meant, until now, in current liberal-democratic societies [@BISCHOF_WAGNER1_2019; @DINAS_MARTINEZ_VALENTIM1_2020; @VALENTIM1_2021], the expectations are that, wherever Vox succeeded electorally, and therefore gained representation in the political institutions, there will be an observable and significant increase of citizens that express negative attitudes towards immigration.
+
+To assess this prediction, this paper exploits the recent entry of Vox in Andalucía's regional parliament on December 2, 2018, as a moment which shocked Spanish society and therefore has the potential to be considered as a legitimizer of radical ideas, having those been implicitly accepted as democratic when entering parliament as representatives of 10% of Andalucía's electorate.
+
+Despite the fact that Vox as a party was created more than 8 years ago, its role in Spain's political landscape did not become noteworthy until the Andalusian regional elections of 2018, first elections ever in which they gained notable political representation. Until this point in time, Spain remained as the European exception to the presence of RRP representation, and many authors studied the factors that made Spain's political context different as to explain the absence of RRPs @GONZÁLEZ1_2018, months before this first electoral success of Vox, published a study of the elements that made Spain a not so favorable environment for the emergence of RRPs. According to her findings, '[...] the fact that Spanish citizens held relatively positive attitudes towards the EU, immigration and globalization, along with the weakness of a common Spanish identity to which to appeal, makes Spain inhospitable terrain for the populist far-right' (p. 35).
+
+If only that were true. Months after the publication of her article, Vox entered the Andalusian parliament and has not stopped growing ever since. After the Andalusian regional elections, the next success of the political formation came the following year, when they entered the Comunidad Valenciana's regional parliament and the state Congress on April 2019, in which they gained 24 seats. Later, after the electoral repetition, it would turn to 52. That result positioned Vox as the third state political force.
+
+The following charts (Figure \@ref(fig:fig1)) are a representation of Vox's growth in recent years. The left-hand panel on Figure 1 shows the percentage of people that report having voted for Vox in recent elections or having sympathy towards the party. Meanwhile, the right-hand panel contains a chart showing Vox's growth measured in the accumulated percentage of seats won in every election in which they have run, whether local, regional, general or European. The plot clearly denotates a rising trend, as the percentage of seats won by Vox grows with every election closer to the present.
+
+```{r data_barometers}
+
+# JANUARY 2018
+jan2018.raw <- read_spss("Data/CISBAROMETER/Enero2018/3203.sav")
+
+jan2018 <- jan2018.raw %>%
+  replace_with_na(replace = list(P701 = c(98, 99),
+                                 P702 = c(98, 99),
+                                 P703 = c(98, 99),
+                                 P32 = 9,
+                                 P18 = c(98, 99),
+                                 P1 = c(8, 9),
+                                 P3 = c(8, 9),
+                                 P29 = c(8, 9),
+                                 P26A = c(16, 98, 99))) %>%
+  mutate(issue1 = if_else(P701 == 18, 1, 0),
+         issue2 = if_else(P702 == 18, 1, 0),
+         issue3 = if_else(P703 == 18, 1, 0),
+         post = 0,
+         month = 1,
+         simpatiavox = if_else(P17 == 17 | P16 == 17, 1, 0),
+         date = "01/2018") %>%
+  select(CCAA, 
+         sit_esp = P1, 
+         prosp_esp = P3, 
+         prosp_pers = P29, 
+         ideology = P18, 
+         gender = P24, 
+         age = P25, 
+         education = P26A, 
+         unemployed = P32, 
+         issue1, 
+         issue2, 
+         issue3, 
+         post, 
+         month,
+         religiosity = P27,
+         date,
+         simpatiavox) %>%
+  mutate(issue = unlist(
+    jan2018.raw %>%
+      transmute(
+        inmi = case_when(
+          issue1==1 | issue2==1 | issue3==1 ~ 1,
+        TRUE ~ 0)))) %>%
+  mutate(andalucia = if_else(CCAA == 1, 1, 0),
+         gender = if_else(gender == 1, 1, 0),
+         unemployed = case_when(unemployed == 4 | unemployed == 5 ~ 1, 
+                                TRUE ~ 0),
+         education = case_when(education == 0 ~ 1,
+                               education == 1 | education == 2 ~ 2,
+                               education == 3 | education == 4 | education == 5 | education == 6 | education == 7 | education == 8 ~ 3,
+                               education == 9 | education == 10 | education == 11 | education == 12 | education == 13 | education == 14 | education == 15 ~ 4),
+         date = as.yearmon(date, "%m/%Y"))
+
+jan2018$issue[is.na(
+  jan2018$issue1 & jan2018$issue2 & jan2018$issue3
+) == TRUE] <- NA
+
+#FEBRUARY 2018
+feb2018.raw <- read_spss("Data/CISBAROMETER/Febrero2018/3205.sav")
+
+feb2018 <- feb2018.raw %>%
+  replace_with_na(replace = list(P701 = c(98, 99),
+                                 P702 = c(98, 99),
+                                 P703 = c(98, 99),
+                                 P41 = 9,
+                                 P31 = c(98, 99),
+                                 P1 = c(8, 9),
+                                 P3 = c(8, 9),
+                                 P34 = c(8, 9),
+                                 P35A = c(16, 98, 99))) %>%
+  mutate(issue1 = if_else(P701 == 18, 1, 0),
+         issue2 = if_else(P702 == 18, 1, 0),
+         issue3 = if_else(P703 == 18, 1, 0),
+         post = 0,
+         month = 2,
+         simpatiavox = NA,
+         date = "02/2018") %>%
+  select(CCAA, 
+         sit_esp = P1, 
+         prosp_esp = P3, 
+         prosp_pers = P38, 
+         ideology = P31, 
+         gender = P33, 
+         age = P34, 
+         education = P35A, 
+         unemployed = P41, 
+         issue1, 
+         issue2, 
+         issue3, 
+         post, 
+         month,
+         religiosity = P36,
+         date,
+         simpatiavox) %>%
+  mutate(issue = unlist(
+    feb2018.raw %>%
+      transmute(
+        inmi = case_when(
+          issue1==1 | issue2==1 | issue3==1 ~ 1,
+        TRUE ~ 0)))) %>%
+  mutate(andalucia = if_else(CCAA == 1, 1, 0), # 1 = andalucía
+         gender = if_else(gender == 1, 1, 0), # 1 = man
+         unemployed = case_when(unemployed == 4 | unemployed == 5 ~ 1, # 1 = unemployed
+                                TRUE ~ 0),
+         education = case_when(education == 0 ~ 1,
+                               education == 1 | education == 2 ~ 2,
+                               education == 3 | education == 4 | education == 5 | education == 6 | education == 7 | education == 8 ~ 3,
+                               education == 9 | education == 10 | education == 11 | education == 12 | education == 13 | education == 14 | education == 15 ~ 4),
+         date = as.yearmon(date, "%m/%Y"))
+
+feb2018$issue[is.na(
+  feb2018$issue1 & feb2018$issue2 & feb2018$issue3
+) == TRUE] <- NA
+
+
+# MARCH 2018
+
+mar2018.raw <- read_spss("Data/CISBAROMETER/Marzo2018/3207.sav")
+
+mar2018 <- mar2018.raw %>%
+  replace_with_na(replace = list(P701 = c(98, 99),
+                                 P702 = c(98, 99),
+                                 P703 = c(98, 99),
+                                 P44 = 9,
+                                 P32 = c(98, 99),
+                                 P1 = c(8, 9),
+                                 P3 = c(8, 9),
+                                 P39 = c(8, 9),
+                                 P36A = c(16, 98, 99))) %>%
+  mutate(issue1 = if_else(P701 == 18, 1, 0),
+         issue2 = if_else(P702 == 18, 1, 0),
+         issue3 = if_else(P703 == 18, 1, 0),
+         post = 0,
+         month = 3,
+         simpatiavox = NA,
+         date = "03/2018") %>%
+  select(CCAA, 
+         sit_esp = P1, 
+         prosp_esp = P3, 
+         prosp_pers = P39,
+         ideology = P32,
+         gender = P34,
+         age = P35,
+         education = P36A,
+         unemployed = P44,
+         issue1, 
+         issue2, 
+         issue3, 
+         post, 
+         month,
+         religiosity = P37,
+         date,
+         simpatiavox) %>%
+  mutate(issue = unlist(
+    mar2018.raw %>%
+      transmute(
+        inmi = case_when(
+          issue1==1 | issue2==1 | issue3==1 ~ 1,
+        TRUE ~ 0)))) %>%
+  mutate(andalucia = if_else(CCAA == 1, 1, 0),
+         gender = if_else(gender == 1, 1, 0),
+         unemployed = case_when(unemployed == 4 | unemployed == 5 ~ 1, 
+                                TRUE ~ 0),
+         education = case_when(education == 0 ~ 1,
+                               education == 1 | education == 2 ~ 2,
+                               education == 3 | education == 4 | education == 5 | education == 6 | education == 7 | education == 8 ~ 3,
+                               education == 9 | education == 10 | education == 11 | education == 12 | education == 13 | education == 14 | education == 15 ~ 4),
+         date = as.yearmon(date, "%m/%Y"))
+
+mar2018$issue[is.na(
+  mar2018$issue1 & mar2018$issue2 & mar2018$issue3
+) == TRUE] <- NA
+
+# APRIL 2018
+
+apr2018.raw <- read_spss("Data/CISBAROMETER/Abril2018/3210.sav")
+
+apr2018 <- apr2018.raw %>%
+  replace_with_na(replace = list(P701 = c(98, 99),
+                                 P702 = c(98, 99),
+                                 P703 = c(98, 99),
+                                 P36 = 9,
+                                 P21 = c(98, 99),
+                                 P1 = c(8, 9),
+                                 P3 = c(8, 9),
+                                 P33 = c(8, 9),
+                                 P30A = c(16, 98, 99))) %>%
+  mutate(issue1 = if_else(P701 == 18, 1, 0),
+         issue2 = if_else(P702 == 18, 1, 0),
+         issue3 = if_else(P703 == 18, 1, 0),
+         post = 0,
+         month = 4,
+         simpatiavox = if_else(P20 == 21 | P19 == 21, 1, 0),
+         date = "04/2018") %>%
+  select(CCAA, 
+         sit_esp = P1, 
+         prosp_esp = P3, 
+         prosp_pers = P33,
+         ideology = P21,
+         gender = P28,
+         age = P29,
+         education = P30A,
+         unemployed = P36,
+         issue1, 
+         issue2, 
+         issue3, 
+         post, 
+         month,
+         religiosity = P31,
+         date,
+         simpatiavox) %>%
+  mutate(issue = unlist(
+    apr2018.raw %>%
+      transmute(
+        inmi = case_when(
+          issue1==1 | issue2==1 | issue3==1 ~ 1,
+        TRUE ~ 0)))) %>%
+  mutate(andalucia = if_else(CCAA == 1, 1, 0),
+         gender = if_else(gender == 1, 1, 0),
+         unemployed = case_when(unemployed == 4 | unemployed == 5 ~ 1, 
+                                TRUE ~ 0),
+         education = case_when(education == 0 ~ 1,
+                               education == 1 | education == 2 ~ 2,
+                               education == 3 | education == 4 | education == 5 | education == 6 | education == 7 | education == 8 ~ 3,
+                               education == 9 | education == 10 | education == 11 | education == 12 | education == 13 | education == 14 | education == 15 ~ 4),
+         date = as.yearmon(date, "%m/%Y"))
+
+apr2018$issue[is.na(
+  apr2018$issue1 & apr2018$issue2 & apr2018$issue3
+) == TRUE] <- NA
+
+# MAY 2018
+
+may2018.raw <- read_spss("Data/CISBAROMETER/Mayo2018/3213.sav")
+
+may2018 <- may2018.raw %>%
+  replace_with_na(replace = list(P701 = c(98, 99),
+                                 P702 = c(98, 99),
+                                 P703 = c(98, 99),
+                                 P40 = 9,
+                                 P30 = c(98, 99),
+                                 P1 = c(8, 9),
+                                 P3 = c(8, 9),
+                                 P37 = c(8, 9),
+                                 P34A = c(16, 98, 99))) %>%
+  mutate(issue1 = if_else(P701 == 18, 1, 0),
+         issue2 = if_else(P702 == 18, 1, 0),
+         issue3 = if_else(P703 == 18, 1, 0),
+         post = 0,
+         month = 5,
+         simpatiavox = NA,
+         date = "05/2018") %>%
+  select(CCAA, 
+         sit_esp = P1, 
+         prosp_esp = P3, 
+         prosp_pers = P37,
+         ideology = P30,
+         gender = P32,
+         age = P33,
+         education = P34A,
+         unemployed = P40,
+         issue1, 
+         issue2, 
+         issue3, 
+         post, 
+         month,
+         religiosity = P35,
+         date,
+         simpatiavox) %>%
+  mutate(issue = unlist(
+    may2018.raw %>%
+      transmute(
+        inmi = case_when(
+          issue1==1 | issue2==1 | issue3==1 ~ 1,
+        TRUE ~ 0)))) %>%
+  mutate(andalucia = if_else(CCAA == 1, 1, 0),
+         gender = if_else(gender == 1, 1, 0),
+         unemployed = case_when(unemployed == 4 | unemployed == 5 ~ 1, 
+                                TRUE ~ 0),
+         education = case_when(education == 0 ~ 1,
+                               education == 1 | education == 2 ~ 2,
+                               education == 3 | education == 4 | education == 5 | education == 6 | education == 7 | education == 8 ~ 3,
+                               education == 9 | education == 10 | education == 11 | education == 12 | education == 13 | education == 14 | education == 15 ~ 4),
+         date = as.yearmon(date, "%m/%Y"))
+
+may2018$issue[is.na(
+  may2018$issue1 & may2018$issue2 & may2018$issue3
+) == TRUE] <- NA
+
+# JUNE 2018
+
+jun2018.raw <- read_spss("Data/CISBAROMETER/Junio2018/3217.sav")
+
+jun2018 <- jun2018.raw %>%
+  replace_with_na(replace = list(P701 = c(98, 99),
+                                 P702 = c(98, 99),
+                                 P703 = c(98, 99),
+                                 P44 = 9,
+                                 P32 = c(98, 99),
+                                 P1 = c(8, 9),
+                                 P3 = c(8, 9),
+                                 P39 = c(8, 9),
+                                 P36A = c(16, 98, 99))) %>%
+  mutate(issue1 = if_else(P701 == 18, 1, 0),
+         issue2 = if_else(P702 == 18, 1, 0),
+         issue3 = if_else(P703 == 18, 1, 0),
+         post = 0,
+         month = 6,
+         simpatiavox = NA,
+         date = "06/2018") %>%
+  select(CCAA, 
+         sit_esp = P1, 
+         prosp_esp = P3, 
+         prosp_pers = P39,
+         ideology = P32,
+         gender = P34,
+         age = P35,
+         education = P36A,
+         unemployed = P44,
+         issue1, 
+         issue2, 
+         issue3, 
+         post, 
+         month,
+         religiosity = P37,
+         date,
+         simpatiavox) %>%
+  mutate(issue = unlist(
+    jun2018.raw %>%
+      transmute(
+        inmi = case_when(
+          issue1==1 | issue2==1 | issue3==1 ~ 1,
+        TRUE ~ 0)))) %>%
+  mutate(andalucia = if_else(CCAA == 1, 1, 0),
+         gender = if_else(gender == 1, 1, 0),
+         unemployed = case_when(unemployed == 4 | unemployed == 5 ~ 1, 
+                                TRUE ~ 0),
+         education = case_when(education == 0 ~ 1,
+                               education == 1 | education == 2 ~ 2,
+                               education == 3 | education == 4 | education == 5 | education == 6 | education == 7 | education == 8 ~ 3,
+                               education == 9 | education == 10 | education == 11 | education == 12 | education == 13 | education == 14 | education == 15 ~ 4),
+         date = as.yearmon(date, "%m/%Y"))
+
+jun2018$issue[is.na(
+  jun2018$issue1 & jun2018$issue2 & jun2018$issue3
+) == TRUE] <- NA
+
+# JULY 2018
+
+jul2018.raw <- read_spss("Data/CISBAROMETER/Julio2018/3219.sav")
+
+jul2018 <- jul2018.raw %>%
+  replace_with_na(replace = list(P701 = c(98, 99),
+                                 P702 = c(98, 99),
+                                 P703 = c(98, 99),
+                                 P32 = 9,
+                                 P18 = c(98, 99),
+                                 P1 = c(8, 9),
+                                 P3 = c(8, 9),
+                                 P29 = c(8, 9),
+                                 P26A = c(16, 98, 99))) %>%
+  mutate(issue1 = if_else(P701 == 18, 1, 0),
+         issue2 = if_else(P702 == 18, 1, 0),
+         issue3 = if_else(P703 == 18, 1, 0),
+         post = 0,
+         month = 7,
+         simpatiavox = if_else(P17 == 21 | P16 == 21, 1, 0),
+         date = "07/2018") %>%
+  select(CCAA, 
+         sit_esp = P1, 
+         prosp_esp = P3, 
+         prosp_pers = P29,
+         ideology = P18,
+         gender = P24,
+         age = P25,
+         education = P26A,
+         unemployed = P32,
+         issue1, 
+         issue2, 
+         issue3, 
+         post, 
+         month,
+         religiosity = P27,
+         date,
+         simpatiavox) %>%
+  mutate(issue = unlist(
+    jul2018.raw %>%
+      transmute(
+        inmi = case_when(
+          issue1==1 | issue2==1 | issue3==1 ~ 1,
+        TRUE ~ 0)))) %>%
+  mutate(andalucia = if_else(CCAA == 1, 1, 0),
+         gender = if_else(gender == 1, 1, 0),
+         unemployed = case_when(unemployed == 4 | unemployed == 5 ~ 1, 
+                                TRUE ~ 0),
+         education = case_when(education == 0 ~ 1,
+                               education == 1 | education == 2 ~ 2,
+                               education == 3 | education == 4 | education == 5 | education == 6 | education == 7 | education == 8 ~ 3,
+                               education == 9 | education == 10 | education == 11 | education == 12 | education == 13 | education == 14 | education == 15 ~ 4),
+         date = as.yearmon(date, "%m/%Y"))
+
+jul2018$issue[is.na(
+  jul2018$issue1 & jul2018$issue2 & jul2018$issue3
+) == TRUE] <- NA
+
+# SEPTEMBER 2018
+
+sep2018.raw <- read_spss("Data/CISBAROMETER/Septiembre2018/3223.sav")
+
+sep2018 <- sep2018.raw %>%
+  replace_with_na(replace = list(P1101 = c(98, 99),
+                                 P1102 = c(98, 99),
+                                 P1103 = c(98, 99),
+                                 P36 = 9,
+                                 P23 = c(98, 99),
+                                 P1 = c(8, 9),
+                                 P3 = c(8, 9),
+                                 P5 = c(8, 9),
+                                 P32A = c(16, 98, 99))) %>%
+  mutate(issue1 = if_else(P1101 == 18, 1, 0),
+         issue2 = if_else(P1102 == 18, 1, 0),
+         issue3 = if_else(P1103 == 18, 1, 0),
+         post = 0,
+         month = 8,
+         simpatiavox = if_else(P26 == 18 | P25 == 18, 1, 0),
+         date = "09/2018") %>%
+  select(CCAA, 
+         sit_esp = P1, 
+         prosp_esp = P3, 
+         prosp_pers = P5,
+         ideology = P23,
+         gender = P30,
+         age = P31,
+         education = P32A,
+         unemployed = P36,
+         issue1, 
+         issue2, 
+         issue3, 
+         post, 
+         month,
+         religiosity = P33,
+         date,
+         simpatiavox) %>%
+  mutate(issue = unlist(
+    sep2018.raw %>%
+      transmute(
+        inmi = case_when(
+          issue1==1 | issue2==1 | issue3==1 ~ 1,
+        TRUE ~ 0)))) %>%
+  mutate(andalucia = if_else(CCAA == 1, 1, 0),
+         gender = if_else(gender == 1, 1, 0),
+         unemployed = case_when(unemployed == 4 | unemployed == 5 ~ 1, 
+                                TRUE ~ 0),
+         education = case_when(education == 0 ~ 1,
+                               education == 1 | education == 2 ~ 2,
+                               education == 3 | education == 4 | education == 5 | education == 6 | education == 7 | education == 8 ~ 3,
+                               education == 9 | education == 10 | education == 11 | education == 12 | education == 13 | education == 14 | education == 15 ~ 4),
+         date = as.yearmon(date, "%m/%Y"))
+
+sep2018$issue[is.na(
+  sep2018$issue1 & sep2018$issue2 & sep2018$issue3
+) == TRUE] <- NA
+
+# OCTOBER 2018
+
+oct2018.raw <- read_spss("Data/CISBAROMETER/Octubre2018/3226.sav")
+
+oct2018 <- oct2018.raw %>%
+  replace_with_na(replace = list(P901 = c(98, 99),
+                                 P902 = c(98, 99),
+                                 P903 = c(98, 99),
+                                 P38 = 9,
+                                 P28 = c(98, 99),
+                                 P1 = c(8, 9),
+                                 P3 = c(8, 9),
+                                 P5 = c(8, 9),
+                                 P34A = c(16, 98, 99))) %>%
+  mutate(issue1 = if_else(P901 == 18, 1, 0),
+         issue2 = if_else(P902 == 18, 1, 0),
+         issue3 = if_else(P903 == 18, 1, 0),
+         post = 0,
+         month = 9,
+         simpatiavox = if_else(P21 == 18 | P20 == 18, 1, 0),
+         date = "10/2018") %>%
+  select(CCAA, 
+         sit_esp = P1, 
+         prosp_esp = P3, 
+         prosp_pers = P5,
+         ideology = P28,
+         gender = P32,
+         age = P33,
+         education = P34A,
+         unemployed = P38,
+         issue1, 
+         issue2, 
+         issue3, 
+         post, 
+         month,
+         religiosity = P35,
+         date,
+         simpatiavox) %>%
+  mutate(issue = unlist(
+    oct2018.raw %>%
+      transmute(
+        inmi = case_when(
+          issue1==1 | issue2==1 | issue3==1 ~ 1,
+        TRUE ~ 0)))) %>%
+  mutate(andalucia = if_else(CCAA == 1, 1, 0),
+         gender = if_else(gender == 1, 1, 0),
+         unemployed = case_when(unemployed == 4 | unemployed == 5 ~ 1, 
+                                TRUE ~ 0),
+         education = case_when(education == 0 ~ 1,
+                               education == 1 | education == 2 ~ 2,
+                               education == 3 | education == 4 | education == 5 | education == 6 | education == 7 | education == 8 ~ 3,
+                               education == 9 | education == 10 | education == 11 | education == 12 | education == 13 | education == 14 | education == 15 ~ 4),
+         date = as.yearmon(date, "%m/%Y"))
+
+oct2018$issue[is.na(
+  oct2018$issue1 & oct2018$issue2 & oct2018$issue3
+) == TRUE] <- NA
+
+# NOVEMBER 2018
+
+nov2018.raw <- read_spss("Data/CISBAROMETER/Noviembre2018/3231.sav")
+
+nov2018 <- nov2018.raw %>%
+  replace_with_na(replace = list(P901 = c(98, 99),
+                                 P902 = c(98, 99),
+                                 P903 = c(98, 99),
+                                 P39 = 9,
+                                 P28 = c(98, 99),
+                                 P1 = c(8, 9),
+                                 P3 = c(8, 9),
+                                 P5 = c(8, 9),
+                                 P35A = c(16, 98, 99))) %>%
+  mutate(issue1 = if_else(P901 == 18, 1, 0),
+         issue2 = if_else(P902 == 18, 1, 0),
+         issue3 = if_else(P903 == 18, 1, 0),
+         post = 0,
+         month = 10,
+         simpatiavox = if_else(P21 == 18 | P20 == 18, 1, 0),
+         date = "11/2018") %>%
+  select(CCAA, 
+         sit_esp = P1, 
+         prosp_esp = P3, 
+         prosp_pers = P5,
+         ideology = P28,
+         gender = P33,
+         age = P34,
+         education = P35A,
+         unemployed = P39,
+         issue1, 
+         issue2, 
+         issue3, 
+         post, 
+         month,
+         religiosity = P36,
+         date,
+         simpatiavox) %>%
+  mutate(issue = unlist(
+    nov2018.raw %>%
+      transmute(
+        inmi = case_when(
+          issue1==1 | issue2==1 | issue3==1 ~ 1,
+        TRUE ~ 0)))) %>%
+  mutate(andalucia = if_else(CCAA == 1, 1, 0),
+         gender = if_else(gender == 1, 1, 0),
+         unemployed = case_when(unemployed == 4 | unemployed == 5 ~ 1, 
+                                TRUE ~ 0),
+         education = case_when(education == 0 ~ 1,
+                               education == 1 | education == 2 ~ 2,
+                               education == 3 | education == 4 | education == 5 | education == 6 | education == 7 | education == 8 ~ 3,
+                               education == 9 | education == 10 | education == 11 | education == 12 | education == 13 | education == 14 | education == 15 ~ 4),
+         date = as.yearmon(date, "%m/%Y"))
+
+nov2018$issue[is.na(
+  nov2018$issue1 & nov2018$issue2 & nov2018$issue3
+) == TRUE] <- NA
+
+# DECEMBER 2018
+
+dec2018.raw <- read_spss("Data/CISBAROMETER/Diciembre2018/3234.sav")
+
+dec2018 <- dec2018.raw %>%
+  replace_with_na(replace = list(P901 = c(98, 99),
+                                 P902 = c(98, 99),
+                                 P903 = c(98, 99),
+                                 P49 = 9,
+                                 P37 = c(98, 99),
+                                 P1 = c(8, 9),
+                                 P3 = c(8, 9),
+                                 P5 = c(8, 9),
+                                 P45A = c(16, 98, 99))) %>%
+  mutate(issue1 = if_else(P901 == 18, 1, 0),
+         issue2 = if_else(P902 == 18, 1, 0),
+         issue3 = if_else(P903 == 18, 1, 0),
+         post = if_else(E101 == 2 | E101 == 1, 0, 1),
+         month = 11,
+         simpatiavox = if_else(P33 == 18 | P34R == 18 | P34 == 18, 1, 0),
+         date = "12/2018") %>%
+  select(CCAA, 
+         sit_esp = P1, 
+         prosp_esp = P3, 
+         prosp_pers = P5,
+         ideology = P37,
+         gender = P43,
+         age = P44,
+         education = P45A,
+         unemployed = P49,
+         issue1, 
+         issue2, 
+         issue3, 
+         post, 
+         month,
+         religiosity = P46,
+         date,
+         simpatiavox) %>%
+  mutate(issue = unlist(
+    dec2018.raw %>%
+      transmute(
+        inmi = case_when(
+          issue1==1 | issue2==1 | issue3==1 ~ 1,
+        TRUE ~ 0)))) %>%
+  mutate(andalucia = if_else(CCAA == 1, 1, 0),
+         gender = if_else(gender == 1, 1, 0),
+         unemployed = case_when(unemployed == 4 | unemployed == 5 ~ 1, 
+                                TRUE ~ 0),
+         education = case_when(education == 0 ~ 1,
+                               education == 1 | education == 2 ~ 2,
+                               education == 3 | education == 4 | education == 5 | education == 6 | education == 7 | education == 8 ~ 3,
+                               education == 9 | education == 10 | education == 11 | education == 12 | education == 13 | education == 14 | education == 15 ~ 4),
+         date = as.yearmon(date, "%m/%Y"))
+
+dec2018$issue[is.na(
+  dec2018$issue1 & dec2018$issue2 & dec2018$issue3
+) == TRUE] <- NA
+
+# JANUARY 2018
+
+jan2019.raw <- read_spss("Data/CISBAROMETER/Enero2019/3238.sav")
+
+jan2019 <- jan2019.raw %>%
+  replace_with_na(replace = list(P901 = c(98, 99),
+                                 P902 = c(98, 99),
+                                 P903 = c(98, 99),
+                                 P49 = 9,
+                                 P32 = c(98, 99),
+                                 P1 = c(8, 9),
+                                 P3 = c(8, 9),
+                                 P5 = c(8, 9),
+                                 P45A = c(16, 98, 99))) %>%
+  mutate(issue1 = if_else(P901 == 18, 1, 0),
+         issue2 = if_else(P902 == 18, 1, 0),
+         issue3 = if_else(P903 == 18, 1, 0),
+         post = 1,
+         month = 12,
+         simpatiavox = if_else(P29 == 18 | P28 == 18, 1, 0),
+         date = "01/2019") %>%
+  select(CCAA, 
+         sit_esp = P1, 
+         prosp_esp = P3, 
+         prosp_pers = P5,
+         ideology = P32,
+         gender = P43,
+         age = P44,
+         education = P45A,
+         unemployed = P49,
+         issue1, 
+         issue2, 
+         issue3, 
+         post, 
+         month,
+         religiosity = P46,
+         date,
+         simpatiavox) %>%
+  mutate(issue = unlist(
+    jan2019.raw %>%
+      transmute(
+        inmi = case_when(
+          issue1==1 | issue2==1 | issue3==1 ~ 1,
+        TRUE ~ 0)))) %>%
+  mutate(andalucia = if_else(CCAA == 1, 1, 0),
+         gender = if_else(gender == 1, 1, 0),
+         unemployed = case_when(unemployed == 4 | unemployed == 5 ~ 1, 
+                                TRUE ~ 0),
+         education = case_when(education == 0 ~ 1,
+                               education == 1 | education == 2 ~ 2,
+                               education == 3 | education == 4 | education == 5 | education == 6 | education == 7 | education == 8 ~ 3,
+                               education == 9 | education == 10 | education == 11 | education == 12 | education == 13 | education == 14 | education == 15 ~ 4),
+         date = as.yearmon(date, "%m/%Y"))
+
+jan2019$issue[is.na(
+  jan2019$issue1 & jan2019$issue2 & jan2019$issue3
+) == TRUE] <- NA
+
+# FEBRUARY 2019
+
+feb2019.raw <- read_spss("Data/CISBAROMETER/Febrero2019/3240.sav")
+
+feb2019 <- feb2019.raw %>%
+  replace_with_na(replace = list(P901 = c(98, 99),
+                                 P902 = c(98, 99),
+                                 P903 = c(98, 99),
+                                 P47 = 9,
+                                 P36 = c(98, 99),
+                                 P1 = c(8, 9),
+                                 P3 = c(8, 9),
+                                 P5 = c(8, 9),
+                                 P43A = c(16, 98, 99))) %>%
+  mutate(issue1 = if_else(P901 == 18, 1, 0),
+         issue2 = if_else(P902 == 18, 1, 0),
+         issue3 = if_else(P903 == 18, 1, 0),
+         post = 1,
+         month = 13,
+         simpatiavox = if_else(P33 == 18 | P32 == 18, 1, 0),
+         date = "02/2019") %>%
+  select(CCAA, 
+         sit_esp = P1, 
+         prosp_esp = P3, 
+         prosp_pers = P5,
+         ideology = P36,
+         gender = P41,
+         age = P42,
+         education = P43A,
+         unemployed = P47,
+         issue1, 
+         issue2, 
+         issue3, 
+         post, 
+         month,
+         religiosity = P44,
+         date,
+         simpatiavox) %>%
+  mutate(issue = unlist(
+    feb2019.raw %>%
+      transmute(
+        inmi = case_when(
+          issue1==1 | issue2==1 | issue3==1 ~ 1,
+        TRUE ~ 0)))) %>%
+  mutate(andalucia = if_else(CCAA == 1, 1, 0),
+         gender = if_else(gender == 1, 1, 0),
+         unemployed = case_when(unemployed == 4 | unemployed == 5 ~ 1, 
+                                TRUE ~ 0),
+         education = case_when(education == 0 ~ 1,
+                               education == 1 | education == 2 ~ 2,
+                               education == 3 | education == 4 | education == 5 | education == 6 | education == 7 | education == 8 ~ 3,
+                               education == 9 | education == 10 | education == 11 | education == 12 | education == 13 | education == 14 | education == 15 ~ 4),
+         date = as.yearmon(date, "%m/%Y"))
+
+feb2019$issue[is.na(
+  feb2019$issue1 & feb2019$issue2 & feb2019$issue3
+) == TRUE] <- NA
+
+# MARCH 2019
+
+mar2019.raw <- read_spss("Data/CISBAROMETER/Marzo2019/3242.sav")
+
+mar2019 <- mar2019.raw %>%
+  replace_with_na(replace = list(P601 = c(98, 99),
+                                 P602 = c(98, 99),
+                                 P603 = c(98, 99),
+                                 P25 = 9,
+                                 P19 = c(98, 99),
+                                 P4 = c(8, 9),
+                                 P24A = c(10, 99))) %>%
+  mutate(issue1 = if_else(P601 == 18, 1, 0),
+         issue2 = if_else(P602 == 18, 1, 0),
+         issue3 = if_else(P603 == 18, 1, 0),
+         post = 1,
+         month = 14,
+         simpatiavox = NA,
+         date = "03/2019",
+         prosp_esp = NA,
+         prosp_pers = NA,
+         religiosity = case_when(P26 == 1 | P26 == 2 ~ 1,
+                                 P26 == 3 ~ 2,
+                                 P26 == 4 ~ 3,
+                                 P26 == 5 ~ 4,
+                                 TRUE ~ 0)) %>%
+  select(CCAA, 
+         sit_esp = P4, 
+         prosp_esp = prosp_esp, 
+         prosp_pers = prosp_pers,
+         ideology = P19,
+         gender = P22,
+         age = P23,
+         education = P24A,
+         unemployed = P25,
+         issue1, 
+         issue2, 
+         issue3, 
+         post, 
+         month,
+         religiosity = religiosity,
+         date,
+         simpatiavox) %>%
+  mutate(issue = unlist(
+    mar2019.raw %>%
+      transmute(
+        inmi = case_when(
+          issue1==1 | issue2==1 | issue3==1 ~ 1,
+        TRUE ~ 0)))) %>%
+  mutate(andalucia = if_else(CCAA == 1, 1, 0),
+         gender = if_else(gender == 1, 1, 0),
+         unemployed = case_when(unemployed == 4 | unemployed == 5 ~ 1, 
+                                TRUE ~ 0),
+         education = case_when(education == 0 ~ 1,
+                               education == 1 | education == 2 ~ 2,
+                               education == 3 | education == 4 | education == 5 | education == 6 | education == 7 ~ 3,
+                               education == 8 | education == 9 ~ 4),
+         date = as.yearmon(date, "%m/%Y"))
+
+mar2019$issue[is.na(
+  mar2019$issue1 & mar2019$issue2 & mar2019$issue3
+) == TRUE] <- NA
+
+# APRIL 2019
+
+apr2019.raw <- read_spss("Data/CISBAROMETER/Abril2019/3245.sav")
+
+apr2019 <- apr2019.raw %>%
+  replace_with_na(replace = list(P501 = c(98, 99),
+                                 P502 = c(98, 99),
+                                 P503 = c(98, 99),
+                                 P33 = 9,
+                                 P29 = c(98, 99),
+                                 P3 = c(8, 9),
+                                 P32A = c(10, 99))) %>%
+  mutate(issue1 = if_else(P501 == 18, 1, 0),
+         issue2 = if_else(P502 == 18, 1, 0),
+         issue3 = if_else(P503 == 18, 1, 0),
+         post = 1,
+         month = 15,
+         simpatiavox = NA,
+         date = "04/2019",
+         prosp_esp = NA,
+         prosp_pers = NA,
+         religiosity = case_when(P34 == 1 | P34 == 2 ~ 1,
+                                 P34 == 3 ~ 2,
+                                 P34 == 4 ~ 3,
+                                 P34 == 5 ~ 4,
+                                 TRUE ~ 0)) %>%
+  select(CCAA,
+         sit_esp = P3, 
+         prosp_esp = prosp_esp,
+         prosp_pers = prosp_pers,
+         ideology = P29,
+         gender = P30,
+         age = P31,
+         education = P32A,
+         unemployed = P33,
+         issue1, 
+         issue2, 
+         issue3, 
+         post, 
+         month,
+         religiosity = religiosity,
+         date,
+         simpatiavox) %>%
+  mutate(issue = unlist(
+    apr2019.raw %>%
+      transmute(
+        inmi = case_when(
+          issue1==1 | issue2==1 | issue3==1 ~ 1,
+          TRUE ~ 0)))) %>%
+  mutate(andalucia = if_else(CCAA == 1, 1, 0),
+         gender = if_else(gender == 1, 1, 0),
+         unemployed = case_when(unemployed == 4 | unemployed == 5 ~ 1, 
+                                TRUE ~ 0),
+         education = case_when(education == 0 ~ 1,
+                               education == 1 | education == 2 ~ 2,
+                               education == 3 | education == 4 | education == 5 | education == 6 | education == 7 ~ 3,
+                               education == 8 | education == 9 ~ 4),
+         date = as.yearmon(date, "%m/%Y"))
+
+apr2019$issue[is.na(
+  apr2019$issue1 & apr2019$issue2 & apr2019$issue3
+) == TRUE] <- NA
+
+# MAY 2019
+
+may2019.raw <- read_spss("Data/CISBAROMETER/Mayo2019/3247.sav")
+
+may2019 <- may2019.raw %>%
+  replace_with_na(replace = list(P901 = c(98, 99),
+                                 P902 = c(98, 99),
+                                 P903 = c(98, 99),
+                                 P36 = 9,
+                                 P24 = c(98, 99),
+                                 P3 = c(8, 9),
+                                 P1 = c(8, 9),
+                                 P5 = c(8, 9),
+                                 P32A = c(16, 99))) %>%
+  mutate(issue1 = if_else(P901 == 18, 1, 0),
+         issue2 = if_else(P902 == 18, 1, 0),
+         issue3 = if_else(P903 == 18, 1, 0),
+         post = 1,
+         month = 16,
+         simpatiavox = NA,
+         date = "05/2019",
+         religiosity = case_when(P33 == 1 | P33 == 2 ~ 1,
+                                 P33 == 3 ~ 2,
+                                 P33 == 4 ~ 3,
+                                 P33 == 5 ~ 4,
+                                 TRUE ~ 0)) %>%
+  select(CCAA,
+         sit_esp = P1, 
+         prosp_esp = P3, 
+         prosp_pers = P5,
+         ideology = P24,
+         gender = P30,
+         age = P31,
+         education = P32A,
+         unemployed = P36,
+         issue1, 
+         issue2, 
+         issue3, 
+         post, 
+         month,
+         religiosity = religiosity,
+         date,
+         simpatiavox) %>%
+  mutate(issue = unlist(
+    may2019.raw %>%
+      transmute(
+        inmi = case_when(
+          issue1==1 | issue2==1 | issue3==1 ~ 1,
+          TRUE ~ 0)))) %>%
+  mutate(andalucia = if_else(CCAA == 1, 1, 0),
+         gender = if_else(gender == 1, 1, 0),
+         unemployed = case_when(unemployed == 4 | unemployed == 5 ~ 1, 
+                                TRUE ~ 0),
+         education = case_when(education == 0 ~ 1,
+                               education == 1 | education == 2 ~ 2,
+                               education == 3 | education == 4 | education == 5 | education == 6 | education == 7 | education == 8 ~ 3,
+                               education == 9 | education == 10 | education == 11 | education == 12 | education == 13 | education == 14 | education == 15 ~ 4),
+         date = as.yearmon(date, "%m/%Y"))
+
+may2019$issue[is.na(
+  may2019$issue1 & may2019$issue2 & may2019$issue3
+) == TRUE] <- NA
+
+# JUNE 2019
+
+jun2019.raw <- read_spss("Data/CISBAROMETER/Junio2019/3252.sav")
+
+jun2019 <- jun2019.raw %>%
+  replace_with_na(replace = list(P901 = c(98, 99),
+                                 P902 = c(98, 99),
+                                 P903 = c(98, 99),
+                                 P45 = 9,
+                                 P33 = c(98, 99),
+                                 P3 = c(8, 9),
+                                 P1 = c(8, 9),
+                                 P5 = c(8, 9),
+                                 P41A = c(16, 99))) %>%
+  mutate(issue1 = if_else(P901 == 18, 1, 0),
+         issue2 = if_else(P902 == 18, 1, 0),
+         issue3 = if_else(P903 == 18, 1, 0),
+         post = 1,
+         month = 17,
+         simpatiavox = NA,
+         date = "06/2019",
+         religiosity = case_when(P42 == 1 | P42 == 2 ~ 1,
+                                 P42 == 3 ~ 2,
+                                 P42 == 4 ~ 3,
+                                 P42 == 5 ~ 4,
+                                 TRUE ~ 0)) %>%
+  select(CCAA,
+         sit_esp = P1, 
+         prosp_esp = P3, 
+         prosp_pers = P5,
+         ideology = P33,
+         gender = P39,
+         age = P40,
+         education = P41A,
+         unemployed = P45,
+         issue1, 
+         issue2, 
+         issue3, 
+         post, 
+         month,
+         religiosity = religiosity,
+         date,
+         simpatiavox) %>%
+  mutate(issue = unlist(
+    jun2019.raw %>%
+      transmute(
+        inmi = case_when(
+          issue1==1 | issue2==1 | issue3==1 ~ 1,
+          TRUE ~ 0)))) %>%
+  mutate(andalucia = if_else(CCAA == 1, 1, 0),
+         gender = if_else(gender == 1, 1, 0),
+         unemployed = case_when(unemployed == 4 | unemployed == 5 ~ 1, 
+                                TRUE ~ 0),
+         education = case_when(education == 0 ~ 1,
+                               education == 1 | education == 2 ~ 2,
+                               education == 3 | education == 4 | education == 5 | education == 6 | education == 7 | education == 8 ~ 3,
+                               education == 9 | education == 10 | education == 11 | education == 12 | education == 13 | education == 14 | education == 15 ~ 4),
+         date = as.yearmon(date, "%m/%Y"))
+
+jun2019$issue[is.na(
+  jun2019$issue1 & jun2019$issue2 & jun2019$issue3
+) == TRUE] <- NA
+
+# JULY 2019
+
+jul2019.raw <- read_spss("Data/CISBAROMETER/Julio2019/MD3257/3257.sav")
+
+jul2019 <- jul2019.raw %>%
+  replace_with_na(replace = list(P901 = c(98, 99),
+                                 P902 = c(98, 99),
+                                 P903 = c(98, 99),
+                                 P46 = 9,
+                                 P34 = c(98, 99),
+                                 P3 = c(8, 9),
+                                 P1 = c(8, 9),
+                                 P5 = c(8, 9),
+                                 P42A = c(16, 99))) %>%
+  mutate(issue1 = if_else(P901 == 18, 1, 0),
+         issue2 = if_else(P902 == 18, 1, 0),
+         issue3 = if_else(P903 == 18, 1, 0),
+         post = 1,
+         month = 18,
+         simpatiavox = NA,
+         date = "07/2019",
+         religiosity = case_when(P43 == 1 | P43 == 2 ~ 1,
+                                 P43 == 3 ~ 2,
+                                 P43 == 4 ~ 3,
+                                 P43 == 5 ~ 4,
+                                 TRUE ~ 0)) %>%
+  select(CCAA,
+         sit_esp = P1, 
+         prosp_esp = P3, 
+         prosp_pers = P5,
+         ideology = P34,
+         gender = P40,
+         age = P41,
+         education = P42A,
+         unemployed = P46,
+         issue1, 
+         issue2, 
+         issue3, 
+         post, 
+         month,
+         religiosity = religiosity,
+         date,
+         simpatiavox) %>%
+  mutate(issue = unlist(
+    jul2019.raw %>%
+      transmute(
+        inmi = case_when(
+          issue1==1 | issue2==1 | issue3==1 ~ 1,
+          TRUE ~ 0)))) %>%
+  mutate(andalucia = if_else(CCAA == 1, 1, 0),
+         gender = if_else(gender == 1, 1, 0),
+         unemployed = case_when(unemployed == 4 | unemployed == 5 ~ 1, 
+                                TRUE ~ 0),
+         education = case_when(education == 0 ~ 1,
+                               education == 1 | education == 2 ~ 2,
+                               education == 3 | education == 4 | education == 5 | education == 6 | education == 7 | education == 8 ~ 3,
+                               education == 9 | education == 10 | education == 11 | education == 12 | education == 13 | education == 14 | education == 15 ~ 4),
+         date = as.yearmon(date, "%m/%Y"))
+
+jul2019$issue[is.na(
+  jul2019$issue1 & jul2019$issue2 & jul2019$issue3
+) == TRUE] <- NA
+
+# SEPTEMBER 2019
+
+sep2019.raw <- read_spss("Data/CISBAROMETER/Septiembre2019/3261.sav")
+
+sep2019 <- sep2019.raw %>%
+  replace_with_na(replace = list(P901 = c(98, 99),
+                                 P902 = c(98, 99),
+                                 P903 = c(98, 99),
+                                 P39 = 9,
+                                 P27 = c(98, 99),
+                                 P3 = c(8, 9),
+                                 P1 = c(8, 9),
+                                 P5 = c(8, 9),
+                                 P35A = c(16, 99))) %>%
+  mutate(issue1 = if_else(P901 == 18, 1, 0),
+         issue2 = if_else(P902 == 18, 1, 0),
+         issue3 = if_else(P903 == 18, 1, 0),
+         post = 1,
+         month = 19,
+         simpatiavox = NA,
+         date = "09/2019",
+         religiosity = case_when(P36 == 1 | P36 == 2 ~ 1,
+                                 P36 == 3 ~ 2,
+                                 P36 == 4 ~ 3,
+                                 P36 == 5 ~ 4,
+                                 TRUE ~ 0)) %>%
+  select(CCAA,
+         sit_esp = P1, 
+         prosp_esp = P3, 
+         prosp_pers = P5,
+         ideology = P27,
+         gender = P33,
+         age = P34,
+         education = P35A,
+         unemployed = P39,
+         issue1, 
+         issue2, 
+         issue3, 
+         post, 
+         month,
+         religiosity = religiosity,
+         date,
+         simpatiavox) %>%
+  mutate(issue = unlist(
+    sep2019.raw %>%
+      transmute(
+        inmi = case_when(
+          issue1==1 | issue2==1 | issue3==1 ~ 1,
+          TRUE ~ 0)))) %>%
+  mutate(andalucia = if_else(CCAA == 1, 1, 0),
+         gender = if_else(gender == 1, 1, 0),
+         unemployed = case_when(unemployed == 4 | unemployed == 5 ~ 1, 
+                                TRUE ~ 0),
+         education = case_when(education == 0 ~ 1,
+                               education == 1 | education == 2 ~ 2,
+                               education == 3 | education == 4 | education == 5 | education == 6 | education == 7 | education == 8 ~ 3,
+                               education == 9 | education == 10 | education == 11 | education == 12 | education == 13 | education == 14 | education == 15 ~ 4),
+         date = as.yearmon(date, "%m/%Y"))
+
+sep2019$issue[is.na(
+  sep2019$issue1 & sep2019$issue2 & sep2019$issue3
+) == TRUE] <- NA
+
+# OCTOBER 2019
+
+oct2019.raw <- read_spss("Data/CISBAROMETER/Octubre2019/3263.sav")
+
+oct2019 <- oct2019.raw %>%
+  replace_with_na(replace = list(P601 = c(98, 99),
+                                 P602 = c(98, 99),
+                                 P603 = c(98, 99),
+                                 P26 = 9,
+                                 P18 = c(98, 99),
+                                 P1 = c(8, 9),
+                                 P25A = c(10, 99))) %>%
+  mutate(issue1 = if_else(P601 == 18, 1, 0),
+         issue2 = if_else(P602 == 18, 1, 0),
+         issue3 = if_else(P603 == 18, 1, 0),
+         post = 1,
+         month = 20,
+         simpatiavox = NA,
+         prosp_esp = NA,
+         prosp_pers = NA,
+         date = "10/2019",
+         religiosity = case_when(P27 == 1 | P27 == 2 ~ 1,
+                                 P27 == 3 ~ 2,
+                                 P27 == 4 | P27 == 5 ~ 3,
+                                 P27 == 6 ~ 4,
+                                 TRUE ~ 0)) %>%
+  select(CCAA,
+         sit_esp = P1, 
+         prosp_esp = prosp_esp, 
+         prosp_pers = prosp_pers,
+         ideology = P18,
+         gender = P23,
+         age = P24,
+         education = P25A,
+         unemployed = P26,
+         issue1, 
+         issue2, 
+         issue3, 
+         post, 
+         month,
+         religiosity = religiosity,
+         date,
+         simpatiavox) %>%
+  mutate(issue = unlist(
+    oct2019.raw %>%
+      transmute(
+        inmi = case_when(
+          issue1==1 | issue2==1 | issue3==1 ~ 1,
+          TRUE ~ 0)))) %>%
+  mutate(andalucia = if_else(CCAA == 1, 1, 0),
+         gender = if_else(gender == 1, 1, 0),
+         unemployed = case_when(unemployed == 4 | unemployed == 5 ~ 1, 
+                                TRUE ~ 0),
+         education = case_when(education == 0 ~ 1,
+                               education == 1 | education == 2 ~ 2,
+                               education == 3 | education == 4 | education == 5 | education == 6 | education == 7 ~ 3,
+                               education == 8 | education == 9 ~ 4),
+         date = as.yearmon(date, "%m/%Y"))
+
+oct2019$issue[is.na(
+  oct2019$issue1 & oct2019$issue2 & oct2019$issue3
+) == TRUE] <- NA
+
+# NOVEMBER 2019
+
+nov2019.raw <- read_spss("Data/CISBAROMETER/Noviembre2019/3267.sav")
+
+nov2019 <- nov2019.raw %>%
+  replace_with_na(replace = list(A9_1 = c(98, 99),
+                                 A9_2 = c(98, 99),
+                                 A9_3 = c(98, 99),
+                                 C15 = 9,
+                                 C3 = c(98, 99),
+                                 A1 = c(8, 9),
+                                 A3 = c(8, 9),
+                                 A5 = c(8, 9),
+                                 C11A = c(16, 98, 99))) %>%
+  mutate(issue1 = if_else(A9_1 == 18, 1, 0),
+         issue2 = if_else(A9_2 == 18, 1, 0),
+         issue3 = if_else(A9_3 == 18, 1, 0),
+         post = 1,
+         month = 21,
+         simpatiavox = NA,
+         date = "11/2019",
+         religiosity = case_when(C12 == 1 | C12 == 2 ~ 1,
+                                 C12 == 3 ~ 2,
+                                 C12 == 4 | C12 == 5 ~ 3,
+                                 C12 == 6 ~ 4,
+                                 TRUE ~ 0)) %>%
+  select(CCAA,
+         sit_esp = A1, 
+         prosp_esp = A3, 
+         prosp_pers = A5,
+         ideology = C3,
+         gender = C9,
+         age = C10,
+         education = C11A,
+         unemployed = C15,
+         issue1, 
+         issue2, 
+         issue3, 
+         post, 
+         month,
+         religiosity = religiosity,
+         date,
+         simpatiavox) %>%
+  mutate(issue = unlist(
+    nov2019.raw %>%
+      transmute(
+        inmi = case_when(
+          issue1==1 | issue2==1 | issue3==1 ~ 1,
+          TRUE ~ 0)))) %>%
+  mutate(andalucia = if_else(CCAA == 1, 1, 0),
+         gender = if_else(gender == 1, 1, 0),
+         unemployed = case_when(unemployed == 4 | unemployed == 5 ~ 1, 
+                                TRUE ~ 0),
+         education = case_when(education == 0 ~ 1,
+                               education == 1 | education == 2 ~ 2,
+                               education == 3 | education == 4 | education == 5 | education == 6 | education == 7 | education == 8 ~ 3,
+                               education == 9 | education == 10 | education == 11 | education == 12 | education == 13 | education == 14 | education == 15 ~ 4),
+         date = as.yearmon(date, "%m/%Y"))
+
+nov2019$issue[is.na(
+  nov2019$issue1 & nov2019$issue2 & nov2019$issue3
+) == TRUE] <- NA
+
+# DECEMBER 2019
+
+dec2019.raw <- read_spss("Data/CISBAROMETER/Noviembre2019/3267.sav")
+
+dec2019 <- dec2019.raw %>%
+  replace_with_na(replace = list(A9_1 = c(98, 99),
+                                 A9_2 = c(98, 99),
+                                 A9_3 = c(98, 99),
+                                 C15 = 9,
+                                 C3 = c(98, 99),
+                                 A1 = c(8, 9),
+                                 A3 = c(8, 9),
+                                 A5 = c(8, 9),
+                                 C11A = c(16, 98, 99))) %>%
+  mutate(issue1 = if_else(A9_1 == 18, 1, 0),
+         issue2 = if_else(A9_2 == 18, 1, 0),
+         issue3 = if_else(A9_3 == 18, 1, 0),
+         post = 1,
+         month = 22,
+         simpatiavox = NA,
+         date = "12/2019",
+         religiosity = case_when(C12 == 1 | C12 == 2 ~ 1,
+                                 C12 == 3 ~ 2,
+                                 C12 == 4 | C12 == 5 ~ 3,
+                                 C12 == 6 ~ 4,
+                                 TRUE ~ 0)) %>%
+  select(CCAA,
+         sit_esp = A1, 
+         prosp_esp = A3, 
+         prosp_pers = A5,
+         ideology = C3,
+         gender = C9,
+         age = C10,
+         education = C11A,
+         unemployed = C15,
+         issue1, 
+         issue2, 
+         issue3, 
+         post, 
+         month,
+         religiosity = religiosity,
+         date,
+         simpatiavox) %>%
+  mutate(issue = unlist(
+    dec2019.raw %>%
+      transmute(
+        inmi = case_when(
+          issue1==1 | issue2==1 | issue3==1 ~ 1,
+          TRUE ~ 0)))) %>%
+  mutate(andalucia = if_else(CCAA == 1, 1, 0),
+         gender = if_else(gender == 1, 1, 0),
+         unemployed = case_when(unemployed == 4 | unemployed == 5 ~ 1, 
+                                TRUE ~ 0),
+         education = case_when(education == 0 ~ 1,
+                               education == 1 | education == 2 ~ 2,
+                               education == 3 | education == 4 | education == 5 | education == 6 | education == 7 | education == 8 ~ 3,
+                               education == 9 | education == 10 | education == 11 | education == 12 | education == 13 | education == 14 | education == 15 ~ 4),
+         date = as.yearmon(date, "%m/%Y"))
+
+dec2019$issue[is.na(
+  dec2019$issue1 & dec2019$issue2 & dec2019$issue3
+) == TRUE] <- NA
+
+barometer_data <- rbind(jan2018,
+                        feb2018,
+                        mar2018,
+                        apr2018,
+                        may2018,
+                        jun2018,
+                        jul2018,
+                        sep2018,
+                        oct2018,
+                        nov2018,
+                        dec2018,
+                        jan2019,
+                        feb2019,
+                        mar2019,
+                        apr2019,
+                        may2019,
+                        jun2019,
+                        jul2019,
+                        sep2019,
+                        oct2019,
+                        nov2019,
+                        dec2019)
+barometer_data <- barometer_data |>
+  mutate(ideology = as.numeric(ideology))
+```
+
+```{r fig1, out.width= "90%", fig.cap = "Left panel (A): Percentage of people who report vote intention or sympathy towards Vox across time. Source: CIS Barometer data. Right panel (B): Percentage of seats Vox controls at the end of each year, by type of election (2015-2021). Source: Spanish electoral authorities.", fig.align = 'center', eval = TRUE}
+
+knitr::include_graphics("Figures/Preliminary/Figure1.png")
+
+```
+
+As has been established, events such as elections provide a highly publicized scenario and, in addition to being a mechanism for the election of political representatives, they function as a cue which provides citizens with information about the distribution of preferences in society [@BISCHOF_WAGNER1_2019; @VALENTIM1_2021].
+
+The argument for having chosen a regional election and not a general one for this study, even though regional elections could be considered as second-order elections, is twofold [@REIF_SCHMITT_NORRIS1_1997]. Firstly, these were the elections in which Vox obtained its first "big win", which was also the first time an RRP ever entered the Spanish political institutions since the reinstating of the Spanish democracy [@TURNBULL-DUGARTE1_2019]. On the other hand, the win for the political right in Andalucía that year spoiled what would have been the eleventh consecutive legislature for the main left party in Spain, Partido Socialista Obrero Español (PSOE), which had since 1982 held office in that Autonomous Community. Vox's support, thus, facilitated the formation of a right-wing government by Partido Popular (PP) and Ciudadanos (C's) for the first time in that region.
+
+The following figure (Figure \@ref(fig:fig2)) contains four newspaper covers from different regions of Spain on the day after the Andalusian elections, December 3, 2018. As can be seen, the election results are mentioned in every headline.
+
+```{r fig2, eval = TRUE, fig.cap = "Newspaper covers from the day after Vox’s entry in the Andalusian parliament (December 3, 2018). Sources: Diario de Sevilla (2018), La Voz de Galicia (2018), La Vanguardia (2018) and El País (2018).", out.width = "50%", fig.align='center'}
+knitr::include_graphics("Figures/Preliminary/Figure2.png")
+```
+
+The first one, Diario de Sevilla (A), is one of the most read newspapers in Andalucía, the region in question. La Voz de Galicia (B) and La Vanguardia (C) are also regional newspapers from the autonomous communities Galicia and Catalunya. Finally, El País (D) is a national newspaper with readers from all regions of the country. This figure provides further proof of the impact of Vox's entry in Andalucía not only on Andalusian citizens and media, but on all corners of the country. However, there are some differences between these covers that indicate the importance of the fact in each region. For Andalucía, Vox's entry and the election results occupy all of El Diario de Sevilla's cover. Furthermore, Vox is the protagonist of its headline, even though they did not win the election by far. In the other three covers, Vox's appearance is relegated to a secondary role, and not even mentioned in some head-lines, or substituted by "La ultraderecha" (El País, 2018).
+
+Additionally, for a descriptive preliminary analysis of the differentiated effect in Andalucía and the rest of Spain, the following line plot (Figure \@ref(fig:fig3)) shows how the entry of Vox into Andalusian institutions produced a peak of searches for the political party on Google both at the state and regional levels, followed by the peaks produced by the two general elections the following year.
+
+```{r fig3, fig.cap="Google searches of the political party Vox in Andalucía and the rest of Spain for the last three years. Note: The dashed lines signify the date of the three main elections of 2018 and 2019 where Vox gained political representation. Source: Google Trends data.", fig.align = 'center'}
+# VOX ESPA?A
+googlestats.esp <- read.csv("Data/googletrends/VoxEspaña.csv",
+                            header = FALSE,
+                            sep = ",")
+
+googlestats.esp <- googlestats.esp[-c(1,2),]
+googlestats.esp$V1.rec <- as.Date(googlestats.esp$V1, tryFormats = ("%Y-%m-%d"))
+googlestats.esp <- googlestats.esp[-1]
+googlestats.esp$V2[googlestats.esp$V2 == "<1"] <- 0
+googlestats.esp$V2.rec <- as.numeric(googlestats.esp$V2)
+googlestats.esp <- googlestats.esp[-1]
+names(googlestats.esp) <- c("date", "spain")
+
+
+#### VOX ANDALUC?A
+
+googlestats.and <- read.csv("Data/googletrends/VoxAndalucia.csv",
+                            header = FALSE,
+                            sep = ",")
+
+googlestats.and <- googlestats.and[-c(1,2),]
+googlestats.and$V1.rec <- as.Date(googlestats.and$V1, tryFormats = ("%Y-%m-%d"))
+googlestats.and <- googlestats.and[-1]
+googlestats.and$V2[googlestats.and$V2 == "<1"] <- 0
+googlestats.and$V2.rec <- as.numeric(googlestats.and$V2)
+googlestats.and <- googlestats.and[-1]
+names(googlestats.and) <- c("date", "andalucia")
+
+
+#### VOX CATALUNYA
+
+googlestats.cat <- read.csv("Data/googletrends/VoxCatalunya.csv",
+                            header = FALSE,
+                            sep = ",")
+
+
+googlestats.cat <- googlestats.cat[-c(1,2),]
+googlestats.cat$V1.rec <- as.Date(googlestats.cat$V1, tryFormats = ("%Y-%m-%d"))
+googlestats.cat <- googlestats.cat[-1]
+googlestats.cat$V2[googlestats.cat$V2 == "<1"] <- 0
+googlestats.cat$V2.rec <- as.numeric(googlestats.cat$V2)
+googlestats.cat <- googlestats.cat[-1]
+names(googlestats.cat) <- c("date", "catalunya")
+
+
+#### VOX MADRID
+
+googlestats.mad <- read.csv("Data/googletrends/VoxMadrid.csv",
+                            header = FALSE,
+                            sep = ",")
+
+
+googlestats.mad <- googlestats.mad[-c(1,2),]
+googlestats.mad$V1.rec <- as.Date(googlestats.mad$V1, tryFormats = ("%Y-%m-%d"))
+googlestats.mad <- googlestats.mad[-1]
+googlestats.mad$V2[googlestats.mad$V2 == "<1"] <- 0
+googlestats.mad$V2.rec <- as.numeric(googlestats.mad$V2)
+googlestats.mad <- googlestats.mad[-1]
+names(googlestats.mad) <- c("date", "madrid")
+
+
+
+#### PSOE ANDALUCIA
+
+googlestats.psoe <- read.csv("Data/googletrends/PSOEAndalucia.csv",
+                             header = FALSE,
+                             sep = ",")
+
+
+googlestats.psoe <- googlestats.psoe[-c(1,2),]
+googlestats.psoe$V1.rec <- as.Date(googlestats.psoe$V1, tryFormats = ("%Y-%m-%d"))
+googlestats.psoe <- googlestats.psoe[-1]
+googlestats.psoe$V2[googlestats.psoe$V2 == "<1"] <- 0
+googlestats.psoe$V2.rec <- as.numeric(googlestats.psoe$V2)
+googlestats.psoe <- googlestats.psoe[-1]
+names(googlestats.psoe) <- c("date", "psoe")
+
+
+
+#### PP ANDALUCIA
+
+googlestats.pp <- read.csv("Data/googletrends/PPAndalucia.csv",
+                           header = FALSE,
+                           sep = ",")
+
+
+googlestats.pp <- googlestats.pp[-c(1,2),]
+googlestats.pp$V1.rec <- as.Date(googlestats.pp$V1, tryFormats = ("%Y-%m-%d"))
+googlestats.pp <- googlestats.pp[-1]
+googlestats.pp$V2[googlestats.pp$V2 == "<1"] <- 0
+googlestats.pp$V2.rec <- as.numeric(googlestats.pp$V2)
+googlestats.pp <- googlestats.pp[-1]
+names(googlestats.pp) <- c("date", "pp")
+
+
+
+#### CS ANDALUCA
+
+googlestats.cs <- read.csv("Data/googletrends/CsAndalucia.csv",
+                           header = FALSE,
+                           sep = ",")
+
+
+googlestats.cs <- googlestats.cs[-c(1,2),]
+googlestats.cs$V1.rec <- as.Date(googlestats.cs$V1, tryFormats = ("%Y-%m-%d"))
+googlestats.cs <- googlestats.cs[-1]
+googlestats.cs$V2[googlestats.cs$V2 == "<1"] <- 0
+googlestats.cs$V2.rec <- as.numeric(googlestats.cs$V2)
+googlestats.cs <- googlestats.cs[-1]
+names(googlestats.cs) <- c("date", "cs")
+
+#### GR?FICOS CONJUNTOS
+
+googlestats <- merge(googlestats.and,
+                     googlestats.esp,
+                     by = "date")
+googlestats <- merge(googlestats,
+                     googlestats.cat,
+                     by = "date")
+googlestats <- merge(googlestats,
+                     googlestats.mad,
+                     by = "date")
+googlestats <- merge(googlestats,
+                     googlestats.psoe,
+                     by = "date")
+googlestats <- merge(googlestats,
+                     googlestats.pp,
+                     by = "date")
+googlestats <- merge(googlestats,
+                     googlestats.cs,
+                     by = "date")
+names(googlestats) <- c("date", "andalucia", "españa", "catalunya", "madrid", "psoe", "pp", "cs")
+
+
+figure3 <- ggplot(data = googlestats, mapping = aes(x = date))+
+  geom_line(aes(y = andalucia, color = "Andalucía"), size = 0.5) +
+  geom_line(aes(y = españa, color = "Spain"), size = 0.5) +
+  labs(x = "",
+       y = "Search Index",
+       color = "")+
+  theme(legend.position="top",
+        axis.text.x = element_text(size = 8),
+        axis.title.y = element_text(size = 10),
+        axis.title.x = element_text(size = 10),
+        axis.text.y = element_text(size = 8),
+        legend.text = element_text(size = 8),
+        legend.title = element_text(size = 10),
+        plot.title = element_text(size = 12))+
+  geom_vline(xintercept = googlestats.and$date[46], color = "black", lty = 2, alpha = 0.2, size = 0.5) +
+  geom_vline(xintercept = googlestats.and$date[67], color = "black", lty = 2, alpha = 0.2, size = 0.5) +
+  geom_vline(xintercept = googlestats.and$date[95], color = "black", lty = 2, alpha = 0.2, size = 0.5)+
+  theme_hc()
+
+
+figurea1 <- ggplot(data = googlestats, mapping = aes(x = date))+
+  geom_line(aes(y = andalucia, color = "VOX")) +
+  geom_line(aes(y = psoe, color = "PSOE")) +
+  geom_line(aes(y = pp, color = "Partido Popular")) +
+  geom_line(aes(y = cs, color = "Ciudadanos")) +
+  labs(x = "",
+       y = "Search Index",
+       color = "")+
+  theme(legend.position="top",
+        axis.text.x = element_text(size = 8),
+        axis.title.y = element_text(size = 10),
+        axis.title.x = element_text(size = 10),
+        axis.text.y = element_text(size = 8),
+        legend.text = element_text(size = 8),
+        legend.title = element_text(size = 10),
+        plot.title = element_text(size = 12)
+  ) +
+  geom_vline(xintercept = googlestats$date[46], color = "black", lty = 2, alpha = 0.2, size = 1) +
+  geom_vline(xintercept = googlestats$date[67], color = "black", lty = 2, alpha = 0.2, size = 1) +
+  geom_vline(xintercept = googlestats$date[95], color = "black", lty = 2, alpha = 0.2, size = 1) +
+  theme_hc()
+
+
+figurea2 <- ggplot(data = googlestats, mapping = aes(x = date))+
+  geom_line(aes(y = andalucia, color = "Andalucía")) +
+  geom_line(aes(y = catalunya, color = "Catalunya")) +
+  geom_line(aes(y = madrid, color = "Madrid")) +
+  labs(x = "",
+       y = "Search Index",
+       color = "")+
+  theme(legend.position="top",
+        axis.text.x = element_text(size = 8),
+        axis.title.y = element_text(size = 10),
+        axis.title.x = element_text(size = 10),
+        axis.text.y = element_text(size = 8),
+        legend.text = element_text(size = 8),
+        legend.title = element_text(size = 10),
+        plot.title = element_text(size = 12)) +
+  geom_vline(xintercept = googlestats$date[46], color = "black", lty = 2, alpha = 0.2, size = 1) +
+  geom_vline(xintercept = googlestats$date[67], color = "black", lty = 2, alpha = 0.2, size = 1) +
+  geom_vline(xintercept = googlestats$date[95], color = "black", lty = 2, alpha = 0.2, size = 1) +
+  theme_hc()
+
+print(figure3)
+
+```
+
+As can be seen, the X axis is a time measure by week, and the Y axis represents an index number from 0 to 100, 100 being the moment in which the higher ever number of searches has been registered. That means that, the week of December 2, the week of the Andalusian elections, produced the most searches of Vox both in Andalucía and Spain. But, why do we assume it impacted Andalucía's citizens more than it did Spain's? As Figure \@ref(fig:fig3) shows, on all points but the 100 mark, there is a slight gap between the lines that signify Andalusian and Spanish searches. That means that, in relative terms, the population of Andalucía made more searches on December 2, 2018 than the rest of the country compared to ordinary days. We also rely on the proximity of the effect of these elections: Considering they are the Andalusian regional elections and not the general ones, it is plausible that they had a greater effect on Andalusian citizens.
+
+To make sure that this effect was not generalized and searches of all political forces did not increase in the same way, or that the effect was different in other important regions such as Madrid or Catalunya, several other plots were constructed. In Appendix 1 we can find Figures \@ref(fig:figa1) and \@ref(fig:figa2), which show that initial expectations were going in the right direction. Figure \@ref(fig:figa1) shows a greater gap between ordinary days and the days of election for the searches of Vox than for the searches of other political parties. Figure \@ref(fig:figa2) also supports the expectations, where there is again a gap between Andalucía's results and the ones from Catalunya and Madrid, similar to the plot in Figure \@ref(fig:fig3).
+
+## Data and method
+
+In order to test the hypothesis, this paper carries out a study at the state level, checking whether the effect of Vox's entry into the Andalusian parliament in 2018 increased negative attitudes towards immigration in that region compared to the rest of the country, using data from the Centro de Investigaciones Sociológicas' (CIS) monthly barometers.
+
+The study will employ a quasi-experimental methodology using the difference-in-differences method (DiD), via various linear probability models (the method is replicated in Appendix X using logistic regression instead of LPM). In order to execute these analyses, the main independent variable will be Vox's entry in Andalucía's regional institutions, and the outcome variable, the consideration of immigration as one of the most important problems in the country.
+
+Additionally, the models constructed for the analysis will include some control variables according to existing literature on the factors that might be able to influence public opinion as well. This group of variables consists of demographic and psychological factors: Age, gender, unemployment status, education level, left-right self-placement and religiosity, as well as perception of the economic situation in the country, personal, and national economic prospects.
+
+The equation that allows us to identify the treatment effect in all models is as follows:
+
+```{=tex}
+\begin{equation}
+    Y_{i}{t}= \alpha +\beta_{1}Treated + \beta_{2}Post + \beta_{3}Treated*Post + \beta_{4}\gamma_{i} + u_{i,t}
+\end{equation}
+```
+where $y_{i,t}$ is the dependent variable, attitudes towards immigration of an individual $i$ at a time period $t$; $\beta_{1}$, $\beta_{2}$ and $\beta_{3}$ capture the effect of being in the treatment group and after the time treatment was administered; $\beta_{4}\gamma_{i}$ captures the effect of all individual control variables; and $u_{1,t}$ is the error term.
+
+## Analysis
+
+As has already been established, the data for the analysis is obtained from the CIS' monthly barometers[^1]. Specifically, the outcome variable will be operationalized from the following questions: 'Which is, to your judgement, the main problem that exists currently in Spain? And the second? And third?'.
+
+[^1]: Access to the data used for the analysis can be found here: \url{ http://www.cis.es/cis/opencm/ES/11_barometros/depositados.jsp}
+
+These questions are the only measurement of attitudes towards immigration of Spanish citizens that is available for the period under study in a periodic manner. And, even though other questions such as the ones from the European Social Survey questionnaires [^2] would possibly be a better measure of these attitudes, @KUSTOV1_2022 finds evidence that the consideration of immigration as a problem is typically related to xenophobic attitudes more than concern for immigrant rights.
+
+[^2]: Such as whether immigrants make the country a worse or better place to live, whether the country's cultural life is undermined or enriched by immigrants, whether immigration is bad or good for the country's economy or whether the country should allow more or less immigrants inside its borders.
+
+The cutoff point, by means of which the independent variable is defined and treatment is considered administered, is the date in which Vox entered Andalucía's regional parliament: December 2, 2018. Observations after this date will be coded as having experienced treatment, that is, the entry of Vox in parliament, and thus, as 1, and those before, as 0.
+
+To estimate the effect, several different models were built, each of which includes data from different time-spans. This choice responds to the existence of two possible operating mechanisms that @VALENTIM1_2021 puts forward on his latest research on radical right support normalization. The first of these is the theory of information shock. It states that elections can help normalize certain issues, attitudes or behaviors, by providing information on the real number of individuals in a society that support them. On the one hand, as voting is a secret type of participation, and therefore allows for taboo attitudes or behaviors to emerge without direct consequences, citizens can learn what others are doing, even if it is not what is supposed to be done. On the other hand, the perceived punishment for that "bad" behavior, habit or attitude is lessened, as elections signal that many other individuals have the same predispositions and therefore won't be judgmental of them (p. 7-8).
+
+The second possible mechanism is a signal of norm change by the political institutions in which the RRP enters. Given the importance and centrality that parliaments and governments have in current parliamentary systems, citizens often look at them for cues of what the appropriate and accepted behaviors are in their society. That way, election results and the subsequent parliament configurations work as heuristics for many individuals.
+
+According to @VALENTIM1_2021, if we found ourselves in front of the first of the operating mechanisms, elections as information shocks, we would observe an immediate effect in those places where the RRP had more support or a bigger electoral success. Conversely, when in presence of the second mechanism, normative change signaling, a bigger effect would be found as time goes by after the electoral success of the RRP, due to the citizens' need to become aware of that change (p. 23), which, contrary to the information shock mechanism, cannot occur overnight.
+
+# Results
+
+This section begins by preliminarily observing the following bar chart (Figure \@ref(fig:figure4)). It provides a visual representation of the percentage of population in Spain that believes immigration is one of the most important problems in the country. Right before Vox's entry in Andalucía's regional parliament, the difference between the Andalusian population and the citizens from the rest of Spanish regions was minimal. After their electoral success, however, it is clear that a larger proportion of the Andalusian population considers the issue of immigration as negative.
+
+```{r fig4_Df, results = FALSE}
+library(gmodels)
+nov_f4 <- as.data.frame(CrossTable(nov2018$andalucia, nov2018$issue,
+                                   prop.r = TRUE,
+                                   prop.c = FALSE,
+                                   prop.t = FALSE,
+                                   prop.chisq = FALSE)) %>%
+  select(andalucia = t.x,
+         issue = t.y,
+         perc = prop.row.Freq) %>%
+  mutate(month = "Before Vox entry")
+
+dec_f4 <- as.data.frame(CrossTable(dec2018$andalucia, dec2018$issue,
+                                   prop.r = TRUE,
+                                   prop.c = FALSE,
+                                   prop.t = FALSE,
+                                   prop.chisq = FALSE)) %>%
+  select(andalucia = t.x,
+         issue = t.y,
+         perc = prop.row.Freq) %>%
+  mutate(month = "After Vox entry") 
+
+
+df_f4 <- rbind(nov_f4,
+               dec_f4)
+df_f4 <- df_f4 %>%
+  filter(!issue == 0)%>%
+  mutate(perc = perc*100,
+         andalucia = if_else(andalucia == 1, "Andalucía", "Other"))
+```
+
+```{r figure4, eval = TRUE, fig.cap = "Percentage of people that consider immigration a problem, before and after the entry of Vox in the Andalusian regional parliament, by location. Source: CIS Barometer data.", fig.align = 'center', out.width = "80%"}
+
+ggplot(df_f4,
+                  aes(month,
+                      perc,
+                      fill = andalucia))+
+  geom_bar(stat = "identity",
+           width = 0.5,
+           position = "dodge")+
+  scale_x_discrete(limits = rev)+
+  theme_hc() +
+  labs(
+    x = "",
+    y = "% of people that consider immigration a problem"
+  )+
+  theme(legend.position = "top",
+        legend.title = element_blank(),
+        legend.text = element_text(size = 8),
+        axis.title.y = element_text(size = 10),
+        axis.text.y = element_text(size = 8),
+        axis.text.x = element_text(size = 8))
+
+```
+
+Just like Figure \@ref(fig:fig3), this plot lays the foundation for the analysis, and, furthermore, seems to point to the direction of the proposed hypothesis. However, the employed methodological plan relies on the parallel trends assumption, which in words of @LECHNER1_2010, states that:
+
+> "[...] if the two treated and the two nontreated groups are subject to the same time trends, and if the treatment has had no effect in the pre-treatment period, then an estimate of the"effect" of the treatment in a period in which it is known to have none, can be used to remove the effect of confounding factors to which a comparison of post-treatment outcomes of treated and nontreated may be subject to" (p. 168).
+
+Therefore, there is a need to corroborate that the parallel trends assumption is here verified. The following plot, Figure \@ref(fig:paralleltrends), provides evidence that the means of Andalucía and the rest of Spain have varied similarly during the months prior to the treatment time, i.e. December 2, 2018.[^3]
+
+[^3]: Figure \@ref(fig:parallelall) in Appendix 3 plots the trend for all Autonomous Communities individually.
+
+```{r, include=FALSE}
+jan2018.par <- as.data.frame(CrossTable(jan2018$CCAA, jan2018$issue,
+                                        prop.r = TRUE,
+                                        prop.c = FALSE,
+                                        prop.t = FALSE)) %>%
+  select(CCAA = t.x,
+         issue = t.y,
+         perc = prop.row.Freq) %>%
+  mutate(month = "01-01-2018") %>%
+  filter(issue == 1)
+
+feb2018.par <- as.data.frame(CrossTable(feb2018$CCAA, feb2018$issue,
+                                        prop.r = TRUE,
+                                        prop.c = FALSE,
+                                        prop.t = FALSE)) %>%
+  select(CCAA = t.x,
+         issue = t.y,
+         perc = prop.row.Freq) %>%
+  mutate(month = "01-02-2018") %>%
+  filter(issue == 1)
+
+mar2018.par <- as.data.frame(CrossTable(mar2018$CCAA, mar2018$issue,
+                                        prop.r = TRUE,
+                                        prop.c = FALSE,
+                                        prop.t = FALSE)) %>%
+  select(CCAA = t.x,
+         issue = t.y,
+         perc = prop.row.Freq) %>%
+  mutate(month = "01-03-2018") %>%
+  filter(issue == 1)
+
+apr2018.par <- as.data.frame(CrossTable(apr2018$CCAA, apr2018$issue,
+                                        prop.r = TRUE,
+                                        prop.c = FALSE,
+                                        prop.t = FALSE)) %>%
+  select(CCAA = t.x,
+         issue = t.y,
+         perc = prop.row.Freq) %>%
+  mutate(month = "01-04-2018") %>%
+  filter(issue == 1)
+
+may2018.par <- as.data.frame(CrossTable(may2018$CCAA, may2018$issue,
+                                        prop.r = TRUE,
+                                        prop.c = FALSE,
+                                        prop.t = FALSE)) %>%
+  select(CCAA = t.x,
+         issue = t.y,
+         perc = prop.row.Freq) %>%
+  mutate(month = "01-05-2018") %>%
+  filter(issue == 1)
+
+jun2018.par <- as.data.frame(CrossTable(jun2018$CCAA, jun2018$issue,
+                                        prop.r = TRUE,
+                                        prop.c = FALSE,
+                                        prop.t = FALSE)) %>%
+  select(CCAA = t.x,
+         issue = t.y,
+         perc = prop.row.Freq) %>%
+  mutate(month = "01-06-2018") %>%
+  filter(issue == 1)
+
+jul2018.par <- as.data.frame(CrossTable(jul2018$CCAA, jul2018$issue,
+                                        prop.r = TRUE,
+                                        prop.c = FALSE,
+                                        prop.t = FALSE)) %>%
+  select(CCAA = t.x,
+         issue = t.y,
+         perc = prop.row.Freq) %>%
+  mutate(month = "01-07-2018") %>%
+  filter(issue == 1)
+
+sep2018.par <- as.data.frame(CrossTable(sep2018$CCAA, sep2018$issue,
+                                        prop.r = TRUE,
+                                        prop.c = FALSE,
+                                        prop.t = FALSE)) %>%
+  select(CCAA = t.x,
+         issue = t.y,
+         perc = prop.row.Freq) %>%
+  mutate(month = "01-09-2018") %>% 
+  filter(issue == 1)
+
+oct2018.par <- as.data.frame(CrossTable(oct2018$CCAA, oct2018$issue,
+                                        prop.r = TRUE,
+                                        prop.c = FALSE,
+                                        prop.t = FALSE)) %>%
+  select(CCAA = t.x,
+         issue = t.y,
+         perc = prop.row.Freq) %>%
+  mutate(month = "01-10-2018") %>%
+  filter(issue == 1)
+
+
+nov2018.par <- as.data.frame(CrossTable(nov2018$CCAA, nov2018$issue,
+                                        prop.r = TRUE,
+                                        prop.c = FALSE,
+                                        prop.t = FALSE)) %>%
+  select(CCAA = t.x,
+         issue = t.y,
+         perc = prop.row.Freq) %>%
+  mutate(month = "01-11-2018") %>%
+  filter(issue == 1)
+
+
+dec2018.par <- as.data.frame(CrossTable(dec2018$CCAA, dec2018$issue,
+                                        prop.r = TRUE,
+                                        prop.c = FALSE,
+                                        prop.t = FALSE)) %>%
+  select(CCAA = t.x,
+         issue = t.y,
+         perc = prop.row.Freq) %>%
+  mutate(month = "01-12-2018") %>%
+  filter(issue == 1)
+
+jan2019.par <- as.data.frame(CrossTable(jan2019$CCAA, jan2019$issue,
+                                        prop.r = TRUE,
+                                        prop.c = FALSE,
+                                        prop.t = FALSE)) %>%
+  select(CCAA = t.x,
+         issue = t.y,
+         perc = prop.row.Freq) %>%
+  mutate(month = "01-01-2019") %>%
+  filter(issue == 1)
+
+feb2019.par <- as.data.frame(CrossTable(feb2019$CCAA, feb2019$issue,
+                                        prop.r = TRUE,
+                                        prop.c = FALSE,
+                                        prop.t = FALSE)) %>%
+  select(CCAA = t.x,
+         issue = t.y,
+         perc = prop.row.Freq) %>%
+  mutate(month = "01-02-2019") %>%
+  filter(issue == 1)
+
+mar2019.par <- as.data.frame(CrossTable(mar2019$CCAA, mar2019$issue,
+                                        prop.r = TRUE,
+                                        prop.c = FALSE,
+                                        prop.t = FALSE)) %>%
+  select(CCAA = t.x,
+         issue = t.y,
+         perc = prop.row.Freq) %>%
+  mutate(month = "01-03-2019") %>%
+  filter(issue == 1)
+
+apr2019.par <- as.data.frame(CrossTable(apr2019$CCAA, apr2019$issue,
+                                        prop.r = TRUE,
+                                        prop.c = FALSE,
+                                        prop.t = FALSE)) %>%
+  select(CCAA = t.x,
+         issue = t.y,
+         perc = prop.row.Freq) %>%
+  mutate(month = "01-04-2019") %>%
+  filter(issue == 1)
+
+may2019.par <- as.data.frame(CrossTable(may2019$CCAA, may2019$issue,
+                                        prop.r = TRUE,
+                                        prop.c = FALSE,
+                                        prop.t = FALSE)) %>%
+  select(CCAA = t.x,
+         issue = t.y,
+         perc = prop.row.Freq) %>%
+  mutate(month = "01-05-2019") %>%
+  filter(issue == 1)
+
+jun2019.par <- as.data.frame(CrossTable(jun2019$CCAA, jun2019$issue,
+                                        prop.r = TRUE,
+                                        prop.c = FALSE,
+                                        prop.t = FALSE)) %>%
+  select(CCAA = t.x,
+         issue = t.y,
+         perc = prop.row.Freq) %>%
+  mutate(month = "01-06-2019") %>%
+  filter(issue == 1)
+
+jul2019.par <- as.data.frame(CrossTable(jul2019$CCAA, jul2019$issue,
+                                        prop.r = TRUE,
+                                        prop.c = FALSE,
+                                        prop.t = FALSE)) %>%
+  select(CCAA = t.x,
+         issue = t.y,
+         perc = prop.row.Freq) %>%
+  mutate(month = "01-07-2019") %>%
+  filter(issue == 1)
+
+sep2019.par <- as.data.frame(CrossTable(sep2019$CCAA, sep2019$issue,
+                                        prop.r = TRUE,
+                                        prop.c = FALSE,
+                                        prop.t = FALSE)) %>%
+  select(CCAA = t.x,
+         issue = t.y,
+         perc = prop.row.Freq) %>%
+  mutate(month = "01-09-2019") %>%
+  filter(issue == 1)
+
+oct2019.par <- as.data.frame(CrossTable(oct2019$CCAA, oct2019$issue,
+                                        prop.r = TRUE,
+                                        prop.c = FALSE,
+                                        prop.t = FALSE)) %>%
+  select(CCAA = t.x,
+         issue = t.y,
+         perc = prop.row.Freq) %>%
+  mutate(month = "01-10-2019") %>%
+  filter(issue == 1)
+
+nov2019.par <- as.data.frame(CrossTable(nov2019$CCAA, nov2019$issue,
+                                        prop.r = TRUE,
+                                        prop.c = FALSE,
+                                        prop.t = FALSE)) %>%
+  select(CCAA = t.x,
+         issue = t.y,
+         perc = prop.row.Freq) %>%
+  mutate(month = "01-11-2019") %>%
+  filter(issue == 1)
+
+dec2019.par <- as.data.frame(CrossTable(dec2019$CCAA, dec2019$issue,
+                                        prop.r = TRUE,
+                                        prop.c = FALSE,
+                                        prop.t = FALSE)) %>%
+  select(CCAA = t.x,
+         issue = t.y,
+         perc = prop.row.Freq) %>%
+  mutate(month = "01-12-2019") %>%
+  filter(issue == 1)
+
+par.tr.all <- rbind(jan2018.par,
+                    feb2018.par,
+                    mar2018.par,
+                    apr2018.par,
+                    may2018.par,
+                    jun2018.par,
+                    jul2018.par,
+                    sep2018.par,
+                    oct2018.par,
+                    nov2018.par)
+
+library(lubridate)
+
+par.tr.all <- par.tr.all %>%
+  mutate(month = as_date(month, format = "%d-%m-%Y"))
+
+par.tr.noand <- par.tr.all %>%
+  filter(CCAA != 1) %>%
+  group_by(month) %>%
+  summarise(perc = mean(perc))%>%
+  mutate(region = "Mean of Spain (without Andalucía)")
+
+par.tr.and <- par.tr.all %>%
+  filter(CCAA == 1) %>%
+  select(-issue, -CCAA) %>%
+  mutate(region = "Andalucía")
+
+par.tr.mean <- rbind(par.tr.noand,
+                     par.tr.and)
+
+```
+
+```{r paralleltrends, eval = TRUE, fig.cap="Parallel trends plot for the consideration of immigration as a problem in Andalucía and the rest of Spain. Note: The grey vertical line signifies the moment after which treatment is administered. Source: CIS Barometer's data.", out.width="85%", fig.align = 'center'}
+
+parallel <- ggplot(data = par.tr.mean, aes(x = month, y = perc, group = region, color = region)) +
+  geom_line() +
+  theme_hc() +
+  labs(y = "% of people who consider immingration a problem",
+       x = "",
+       color = "") +
+  scale_x_date(breaks = par.tr.mean$month) +
+  theme(axis.text.x = element_text(size = 8,
+                                   angle = 45),
+        legend.position = "top",
+        axis.title.y = element_text(size = 8),
+        axis.title.x = element_text(size = 8),
+        axis.text.y = element_text(size = 8),
+        legend.text = element_text(size = 8),
+        legend.title = element_text(size = 8)) +
+  geom_vline(xintercept = par.tr.mean$month[10], 
+             color = "black", 
+             alpha = 0.2, 
+             size = 1)
+
+print(parallel)
+```
+
+To test this in a statistical way that allows to assess the significance of this descriptive evidence, several models were built the results of which can be found in Table 1.
+
+The first two models (one without and one with controls) only include the immediately previous and following barometers, while Models 3 and 4 include two barometers with treatment and two without, to allow one more month to let the success of the party sink in among the population. Models 5 and 6, on the other hand, include all barometers available for the years 2018 and 2019, in order to test if this effect is maintained further than those one or two months after entry. Another way to test this is the one used for the two last models for this part of the analysis, Models 7 and 8, which use the same database as the recently discussed Models 5 and 6, but instead of making two subgroups of data, (0 and 1, depending on treatment), gives a coefficient for every month in those two years, in comparison and in reference to the month right before Vox entered parliament, that is, November 2018.
+
+```{r models16, results = "asis", eval = TRUE}
+data_sub1 <- barometer_data %>%
+  filter(month == 10 | month == 11)
+
+m1 <- lm(issue ~ andalucia*post,
+         data = data_sub1)
+
+m2 <- lm(issue ~ andalucia*post + age + I(age^2) + gender + ideology + education + sit_esp + prosp_esp + prosp_pers + unemployed,
+         data = data_sub1)
+
+data_sub2 <- barometer_data %>%
+  filter(month == 9 | month == 10 | month == 11 | month == 12)
+
+m3 <- lm(issue ~ andalucia*post,
+         data = data_sub2)
+m4 <- lm(issue ~ andalucia*post + age + I(age^2) + gender + ideology + education + sit_esp + prosp_esp + prosp_pers + unemployed,
+         data = data_sub2) 
+
+m5 <- lm(issue ~ andalucia*post,
+         data = barometer_data)
+
+m6 <- lm(issue ~ andalucia*post + age + I(age^2) + gender + ideology + education + sit_esp + prosp_esp + prosp_pers + unemployed,
+         data = barometer_data)
+
+library(stargazer)
+
+stargazer(m1, m2, m3, m4, m5, m6,
+          type = "latex",
+          omit = c("age", "gender", "ideology", "education", "sit_esp", "prosp_esp", "prosp_pers", "unemployed"),
+          covariate.labels = c("Andalucía", "After Vox entry", "Andalucía:After Vox entry"),
+          dep.var.labels = "Consideration of immigration as a problem",
+          title = "Estimation models for the effect of the entry of Vox in Andalucia's regional parliament on citizens' attitudes towards immigration (Models 1-6)",
+          style = "ajps",
+          column.sep.width = "2pt",
+          header = FALSE,
+          no.space = TRUE,
+          font.size = "small",
+          keep.stat = c("rsq", "adj.rsq", "n"))
+```
+
+
+```{r}
+summary(m4)
+
+mm1 <- lm(issue ~ andalucia*post*as.factor(ideology) + age + I(age^2) + gender + education + sit_esp + prosp_esp + prosp_pers + unemployed,
+         data = data_sub2)
+summary(mm1)
+
+library(data.table)
+data_sub2_2 <- data_sub2 %>%
+  mutate(ideology_rec = fcase(ideology > 6, "right",
+                              ideology < 4, "left",
+                              default = "center"))
+mm2 <- lm(issue ~ andalucia*post*ideology_rec + age + I(age^2) + gender + education + sit_esp + prosp_esp + prosp_pers + unemployed,
+         data = data_sub2_2)
+
+summary(mm2)
+```
+
+As can be seen, there is indeed an increase in negative attitudes towards immigration after the entry of Vox in the Andalusian parliament in December 2018. The findings are very consistent across each of the models and provide evidence supporting the hypothesis. The entry of Vox had a significant effect in all of Spain, as it meant a political and social shock of the cultural norms among the population. The interest of this investigation, however, is to learn if this effect was larger for the Andalusian population specifically. The positive interaction coefficients indicate that, indeed, Vox's entry had a greater effect amongst Andalusian citizens. Again, this effect is always positive across all 6 Models from Table 1, but becomes significant only for Models 3, 4 and 6.
+
+The fact that for the first two models the effect is positive but unsignificant, and only becomes so after two more barometers for the previous and following months are added to the database (in Models 3 and 4), leads to believe that the operating mechanism behind these results could go in the line of what @VALENTIM1_2021 suggested as his second possible mechanism: Andalusian citizens start to perceive a normative change after Vox enters their regional parliament. This change is also visible in Figure \@ref(fig:figcoefs), which is a visual representation of the coefficients obtained in the six models of Table 1.
+
+```{r figcoefs, fig.cap = "Visual representation of coefficients (Models 1-6).", out.width="85%", fig.align = 'center'}
+
+library(coefplot)
+
+multiplot(m1, m2, m3, m4, m5, m6,
+          title = "Coefficient Plot",
+          xlab = "Coefficients",
+          ylab = "Variables",
+          intercept = FALSE,
+          predictors = c("andalucia", "post"),
+          lwdInner = 0.9,
+          lwdOuter = (Sys.info()["sysname"] != "Windows") * 0.8,
+          legend.position = "top") +
+  theme_gray() +
+  theme(axis.text.x = element_text(size = 8),
+        axis.title.y = element_text(size = 8),
+        axis.title.x = element_text(size = 8),
+        axis.text.y = element_text(size = 8),
+        legend.text = element_text(size = 8),
+        legend.title = element_text(size = 8))
+
+```
+
+Examining the first significant model with controls, Model 4, it can be seen that after December 2018 it was 5.6 percentage points more probable that an Andalusian citizen considered immigration one of the most important problems in the country, compared to citizens from outside of Andalucía (for an Andalusian citizen, the effect was of 8.1, while for an average Spanish citizen was 2.5). Model 6, which includes data from two whole years, 2018 and 2019 -before and after entry-, has a smaller but still significant effect, in the same direction.
+
+Finally, the results of Table 2, which for length reasons is located in Appendix 2, show coefficients for every month of 2018 and 2019 in relation to a month before Vox entered the Andalusian parliament, November 2018. After the results already discussed, this table brings us some new and more specific insights. Additionally, Figure \@ref(fig:figtime) provides a visual representation of the results in Table 2.
+
+```{r figtime, fig.cap="Predicted values of negative attitudes towards immigration in Andalucía vs. Spain according to the findings from Models 1 and 2 (Table 2 in Appendix 2). Note: x = 10 signifies moment after which treatment is administered (November 2018).", out.width="85%", fig.align = 'center'}
+m8 <- lm(issue ~ andalucia*relevel(as.factor(month),
+                                   ref = 10) + age + I(age^2) + gender + factor(education) + sit_esp + prosp_esp + prosp_pers + unemployed,
+         data = barometer_data) 
+
+plot(ggpredict(m8,
+               terms = c("month",
+                         "andalucia"))) +
+  theme_hc() +
+  labs(y = "Consideration of immigration a problem",
+       x = "Month",
+       color = "") +
+  theme(axis.text.x = element_text(size = 8),
+        axis.title.y = element_text(size = 10),
+        axis.title.x = element_text(size = 10),
+        axis.text.y = element_text(size = 8),
+        legend.text = element_text(size = 8),
+        legend.title = element_text(size = 8),
+        plot.title = element_text(size = 12)) +
+  scale_fill_discrete(labels = c("Rest of Spain", "Andalucía"))
+
+  
+```
+
+First of all, focusing on the results of the multiple interaction terms, which can be found at the bottom of the table, the detail that stands up the most is that only one of the coefficients is statistically significant: the one from January 2019, just two months after the entry of Vox in the Andalusian parliament. This finding is especially relevant for this study, insomuch as it helps confirm the hypothesis one step further than the findings recently shown. As discussed, these last two models are made up of 22 months of data, period in which three major elections occurred in Andalucía, and two in the rest of Spain (Andalucía's regional elections in December 2018, and two general elections on April 2019 and November 2019); as well as local and European elections in all of the country in May. The fact that the effect of the entry of Vox is only significant in Andalucía after the Andalusian elections does not mean that other elections did not have an effect on Andalusian citizens, rather, it means that it was not statistically higher than the effect it had on the rest of the Spanish Autonomous Communities.
+
+Secondly, also regarding the coefficients concerning Andalucía, and visually perceivable in Figure \@ref(fig:figtime), it can be seen how the effect of Vox's entry fades as time passes. After time x = 0, that is, November 2018, Andalucía's predicted values increase considerably, but quickly return to levels near the rest of the country. This, however, is not an unprecedented finding. As @FLORES2_2018 states in his 2018 paper on the effect of elite discourse on public attitudes towards immigrants, 'If targeting minorities and immigrants is somewhat controversial for some, hearing a political figure openly chastising them may enable some individuals to express their true opinions. However, after a while, this "social permission" may wear off and there would be a return to the status quo, in which such views may still be somewhat controversial' (p. 1678).
+
+Even though the results of Models 3 and 4 pointed towards the existence of a "normative change mechanism", the fact that the effect does not stick and, as can be observed in Figure \@ref(fig:figtime), there is a fluctuation after Vox's entry in December 2018, seems to indicate that perhaps there is a little more to be discussed about the underlying workings of this effect.
+
+Finally, it is worth mentioning the results in the upper section of Table 2: The ones for the rest of Spain. Contrary to those of Andalucía, there are many significant coefficients among these results; especially around the dates of the previously mentioned elections. Unfortunately, due to lack of data for some variables, the coefficients for March, April and October 2019 are missing. Nevertheless, a clear pattern is visible: After the elections of Andalucía in December 2018 --which, even though did not affect the rest of the country, did indeed mean a shock for all Spanish society--, the general and locals of April and May 2019 and the general again on November 2019, the coefficients turn positive and significant.
+
+On the whole, these results support the hypothesis sustaining that, after the entry of an RRP in Parliament, in this case Vox in Andalucía, there is an increase in the manifestation of negative attitudes towards immigration.
+
+These results are robust when employing alternative dependent and independent variables, as well as other estimation models, all of which can be found in the appendices (Appendix 4 through 6).
+
+# Concluding remarks
+
+In our current party systems, it is more and more common that established parties have to coexist and compete with new radical parties, such as RRPs and radical left parties, inside the walls of political institutions and within governments. These new parties are often characterized as niche parties, and as such, they are expected to behave in different ways and therefore have differing consequences in the environment in which they are introduced [@DEGIORGI_DIAS_BRANISLAV1_2021; @WAGNER_MEYER1_2017]. That is why it is important to explore the potential political and social consequences of not only their existence, but of their presence inside a country's decision-making institutions.
+
+Throughout this paper, the main purpose has been to assess the impact of RRP institutional entry on citizens' attitudes towards immigration. Specifically, exploiting the entry of the new Spanish RRP Vox into the Andalusian regional institutions on December 2, 2018. Given the centrality of the immigration issue among the party's main policy priorities, as well as its nativist ideology, this investigation set out to discover the effect that the entry of its anti-immigration discourse in the political institutions could have on citizens.
+
+Attitudes towards immigration are becoming increasingly relevant in our modern societies: The migration crisis and rapid globalization are facilitating mobility between countries. In this context, citizens have incentives to take cues from relevant political and social actors in order to develop their own views on the matter.
+
+Building upon the work of @BISCHOF_WAGNER1_2019 and @VALENTIM1_2021, using a difference-in-differences method, results have shown that, indeed, RRP entry and political representation can increase reported anti-immigrant attitudes in surveys on the following months to said entry. After December 2, 2018, not only the probability that citizens all around the country listed immigration as one of the main problems of the country increased, but those who were from the region into which Vox entered, Andalucía, were even more likely to do so. Thus, confirming initial expectations and validating this paper's hypothesis.
+
+By means of the monthly models, this paper has shown that there is a fluctuation of negative attitudes towards immigration: Whenever Vox entered parliament (whether the first time in Andalucía or later in 2019 on both general elections), negative attitudes towards immigration spiked, even if that effect would deflate with time --which is a common phenomenon, as @FLORES2_2018 [1678] stated.
+
+Regarding RRP existence and parliamentary or institutional entry, there is also a discussion about whether or not RRPs should be allowed to enter political institutions and offices. One of the reasons given in favor of their banning is supported by the argument that their entry and presence would have a persuasion effect, and thus, convince the population to share their views anti-immigration, therefore lessening the democratic foundations on which modern societies are built.
+
+This study, however, cannot provide confirmation of that argument. The empirical strategy used helped prove the short-term effects of RRP entry: That, indeed, after Vox's entry, reported anti-immigration attitudes increased. Nevertheless, the time difference between treatment and control groups was much too small as to believe that this sudden increase was due to the power of persuasion, and not simple legitimation of preexisting ideas. Thus, insomuch as the existence of a legitimation effect --and not persuasion-- indicates that those attitudes already existed inside citizens' minds, and Vox's entry only helped bring them to surface, it cannot be said that the amount of people that possessed anti-immigration attitudes increased, only that the number of people who admitted to these attitudes increased.
+
+Whether the extent of Vox's influence went as far as to persuade citizens is certainly an avenue that future research should explore. Long-term presence of RRP in political institutions, accompanied by the media attention and increase in resources that inevitably comes with it, might be able to exert that persuasion effect on the population. While going beyond the scope of this study, answering this question would be a step forward in uncovering the full extent of RRP influence on citizens' attitudes.
+
+\newpage
+
+::: {#refs}
+:::
+
+```{=tex}
+\printbibliography
+\def\printbibliography{}
+```
+\newpage
+
+# Appendices
+
+## Appendix 1 - Google searches
+
+```{r figa1, fig.cap="Google searches of the main Spanish political parties in Andalucía during the last 3 years. Note: the dotted lines signify the date of the three main elections of 2018 and 2019 where Vox gained political representation. Source: Google Trends data.", out.width = "80%", fig.align = 'center'}
+print(figurea1)
+```
+
+```{r figa2, fig.cap="Google searches of the political party Vox in Andalucía, Catalunya and Madrid during the last 3 years. Note: the dotted lines signify the date of the three main elections of 2018 and 2019 where Vox gained political representation. Source: Google Trends data.", out.width= "80%", fig.align = 'center'}
+
+print(figurea2)
+
+```
+
+\newpage
+
+## Appendix 2 - Models 7 and 8: results through time
+
+```{r, results = "asis", eval = TRUE}
+
+# PUT THIS IN APPENDICES
+
+m7 <- lm(issue ~ andalucia*relevel(as.factor(month),
+                                   ref = 10),
+         data = barometer_data)
+
+stargazer(m7, m8,
+          type = "latex",
+          title = "Estimation models for the effect of the entry of Vox in Andalucía's regional parliament on citizens' attitudes towards immigration",
+          style = "ajps",
+          omit = c("age", "gender", "ideology", "education", "sit_esp", "prosp_esp", "prosp_pers", "unemployed"),
+          covariate.labels = c("Andalucía", "January 2018", "February 2018", "March 2018", "April 2018", "May 2018", "June 2018", "July 2018", "September 2018", "October 2018", "December 2018", "January 2019", "February 2019", "March 2019", "April 2019", "May 2019", "June 2019", "July 2019", "September 2019", "October 2019", "November 2019", "December 2019", "Andalucía:January 2018", "Andalucía:February 2018", "Andalucía:March 2018", "Andalucía:April 2018", "Andalucía:May 2018", "Andalucía:June 2018", "Andalucía:July 2018", "Andalucía:September 2018", "Andalucía:October 2018", "Andalucía:November 2018", "Andalucía:December 2018", "Andalucía:January 2019", "Andalucía:February 2019", "Andalucía:March 2019", "Andalucía:April 2019", "Andalucía:May 2019", "Andalucía:June 2019", "Andalucía:July 2019", "Andalucía:September 2019", "Andalucía:October 2019", "Andalucía:November 2019", "Andalucía:December 2019"),
+          dep.var.labels = "Consideration of immigration as a problem",
+          column.sep.width = "2pt",
+          header = FALSE,
+          no.space = TRUE,
+          font.size = "small",
+          keep.stat = c("rsq", "adj.rsq", "n"))
+```
+
+\newpage
+
+## Appendix 3 - Parallel trends assumption
+
+```{r parallelall, fig.cap = "Parallel trends plot for the consideration of immigration as a problem in every region of Spain. Note: The black vertical line signifies the moment after which treatment is administered. Source: CIS Barom-eter data. Source: CIS Barometer data.", out.width = "80%", fig.align = 'center'}
+
+par.tr.all <- par.tr.all %>%
+  mutate(CCAA.names = case_when(CCAA == 1 ~ "Andalucía",
+                                CCAA == 2 ~ "Aragón",
+                                CCAA == 3 ~ "Asturias",
+                                CCAA == 4 ~ "Balears",
+                                CCAA == 5 ~ "Canarias",
+                                CCAA == 6 ~ "Cantabria",
+                                CCAA == 7 ~ "Castilla-La Mancha",
+                                CCAA == 8 ~ "Castilla y León",
+                                CCAA == 9 ~ "Catalunya",
+                                CCAA == 10 ~ "Comunitat Valenciana",
+                                CCAA == 11 ~ "Extremadura",
+                                CCAA == 12 ~ "Galicia",
+                                CCAA == 13 ~ "Madrid",
+                                CCAA == 14 ~ "Murcia",
+                                CCAA == 15 ~ "Navarra",
+                                CCAA == 16 ~ "País Vasco",
+                                CCAA == 17 ~ "Rioja",
+                                CCAA == 18 ~ "Ceuta",
+                                CCAA == 19 ~ "Melilla"))
+parallel.total <- ggplot(data = par.tr.all, aes(x = month, y = perc, group = CCAA.names, color = CCAA.names)) +
+  geom_line() +
+  theme_gray() +
+  labs(y = "% of people who consider immingration a problem",
+       x = "",
+       color = "") +
+  scale_x_date(breaks = par.tr.all$month) +
+  theme(axis.text.x = element_text(size = 8,
+                                   angle = 45),
+        legend.position = "top",
+        axis.title.y = element_text(size = 10),
+        axis.title.x = element_text(size = 10),
+        axis.text.y = element_text(size = 8),
+        legend.text = element_text(size = 8),
+        legend.title = element_text(size = 8),
+        plot.title = element_text(size = 12)) +
+  geom_vline(xintercept = par.tr.all$month[10], 
+             color = "black", 
+             alpha = 0.2, 
+             size = 1)
+
+print(parallel.total)
+```
+
+\newpage
+
+## Appendix 4 - Alternative operationalization of the Dependent Variable
+
+As anticipated, an additional analysis was performed using an alternative operationalization of the outcome variable to check the robustness of the results. Instead of considering all three answers as the first, second or third most important issues in the country, this complementary analysis considers solely the first of these answers: The consideration of immigration as the most important issue or problem in the country.
+
+The results of this analysis can be viewed in Tables X and X. As can be observed, all coefficients remain positive, even if not always significant. This outcome is interesting and **brings us** to briefly discuss the possible reasons for it.
+
+It is possible that, having to choose only one main problem in the country, respondents resort to other problems or issues that perhaps have a more immediate effect on their lives, such as healthcare, crime or inflation, and not so much immigration. It can also be that certain inhibitions are still at work, which make it that listing immigration as the most important problem in the country still be perceived as or considered taboo or inadmissible. Whatever the reason, it seems that having only one blank to fill with an important problem, instead of three, limits the expected effect.
+
+```{r, results = "asis", eval = TRUE}
+m1.1 <- lm(issue1 ~ andalucia*post,
+           data = data_sub1)
+
+m1.2 <- lm(issue1 ~ age + I(age^2) + gender + ideology + factor(education) + sit_esp + prosp_esp + prosp_pers + unemployed + andalucia*post,
+           data = data_sub1)
+
+m1.3 <- lm(issue1 ~ andalucia*post,
+           data = data_sub2)
+
+m1.4 <- lm(issue1 ~ age + I(age^2) + gender + ideology + factor(education) + sit_esp + prosp_esp + prosp_pers + unemployed + andalucia*post,
+           data = data_sub2)
+
+m1.5 <- lm(issue1 ~ andalucia*post,
+           data = barometer_data)
+
+m1.6 <- lm(issue1 ~ age + I(age^2) + gender + ideology + factor(education) + sit_esp + prosp_esp + prosp_pers + unemployed + andalucia*post,
+           data = barometer_data)
+
+stargazer(m1.1, m1.2, m1.3, m1.4, m1.5, m1.6,
+          type = "latex",
+          title = "Estimation models for the effect of the entry of Vox in Andalucia's regional parliament on citizens' attitudes towards immigration",
+          style = "ajps",
+          omit = c("age", "gender", "ideology", "education", "sit_esp", "prosp_esp", "prosp_pers", "unemployed"),
+          covariate.labels = c("Andalucía", "After Vox entry", "Andalucía:After Vox entry"),
+          dep.var.labels = "Consideration of immigration as the first problem in the country",
+          header = FALSE,
+          column.sep.width = "2pt",
+          no.space = TRUE,
+          font.size = "small",
+          keep.stat = c("rsq", "adj.rsq", "n"))
+```
+
+```{r, results = "asis", eval = TRUE}
+m1.7 <- lm(issue1 ~ andalucia*relevel(as.factor(month),
+                                      ref = 10),
+           data = barometer_data)
+
+m1.8 <- lm(issue1 ~ andalucia*relevel(as.factor(month),
+                                      ref = 10) + age + I(age^2) + gender + ideology + factor(education) + sit_esp + prosp_esp + prosp_pers + unemployed,
+           data = barometer_data)
+
+stargazer(m1.7, m1.8,
+          type = "latex",
+          title = "Estimation models for the effect of the entry of Vox in Andalucía's regional parliament on citizens' attitudes towards immigration",
+          style = "ajps",
+          omit = c("age", "gender", "ideology", "education", "sit_esp", "prosp_esp", "prosp_pers", "unemployed"),
+          covariate.labels = c("Andalucía", "January 2018", "February 2018", "March 2018", "April 2018", "May 2018", "June 2018", "July 2018", "September 2018", "October 2018", "December 2018", "January 2019", "February 2019", "March 2019", "April 2019", "May 2019", "June 2019", "July 2019", "September 2019", "October 2019", "November 2019", "December 2019", "Andalucía:January 2018", "Andalucía:February 2018", "Andalucía:March 2018", "Andalucía:April 2018", "Andalucía:May 2018", "Andalucía:June 2018", "Andalucía:July 2018", "Andalucía:September 2018", "Andalucía:October 2018", "Andalucía:November 2018", "Andalucía:December 2018", "Andalucía:January 2019", "Andalucía:February 2019", "Andalucía:March 2019", "Andalucía:April 2019", "Andalucía:May 2019", "Andalucía:June 2019", "Andalucía:July 2019", "Andalucía:September 2019", "Andalucía:October 2019", "Andalucía:November 2019", "Andalucía:December 2019"),
+          dep.var.labels = "Consideration of immigration as a problem",
+          column.sep.width = "2pt",
+          header = FALSE,
+          no.space = TRUE,
+          font.size = "small",
+          keep.stat = c("rsq", "adj.rsq", "n"))
+```
+
+\newpage
+
+## Appendix 5 - Alternative method: Logistic regression
+
+Another set of models was constructed, this time switching the method to logistic regression with generalized linear models instead of using linear probability models. Since the dependent variable is dichotomous, a logit model might be fit to estimate coefficients that imply probabilities that fall inside of the unit interval, in this case between 0 and 1. As one can see from tables X through X, the coefficients of interest remain in the same direction as the linear probability models.
+
+```{r echo=FALSE, results="asis"}
+### sin controles
+ml1 <- glm(issue ~ andalucia*post,
+           family = binomial(link = "logit"),
+           data = data_sub1)
+
+### con controles
+ml2 <- glm(issue ~ age + I(age^2) + gender + ideology + factor(education) + sit_esp + prosp_esp + prosp_pers + unemployed + andalucia*post,
+           family = binomial(link = "logit"),
+           data = data_sub1) 
+
+## oct.nov - dic.ene
+### sin controles
+ml3 <- glm(issue ~ andalucia*post,
+           family = binomial(link = "logit"),
+           data = data_sub2)
+### con controles
+ml4 <- glm(issue ~ age + I(age^2) + gender + ideology + factor(education) + sit_esp + prosp_esp + prosp_pers + unemployed + andalucia*post,
+           family = binomial(link = "logit"),
+           data = data_sub2) 
+
+## 2018-2019
+### 0/1
+#### sin controles
+ml5 <- glm(issue ~ andalucia*post,
+           family = binomial(link = "logit"),
+           data = barometer_data)
+
+#### con controles
+ml6 <- glm(issue ~ age + I(age^2) + gender + ideology + factor(education) + sit_esp + prosp_esp + prosp_pers + unemployed + andalucia*post,
+           family = binomial(link = "logit"),
+           data = barometer_data) 
+
+
+stargazer(ml1, ml2, ml3, ml4, ml5, ml6,
+          title = "Estimation models for the effect of the entry of Vox in Andalucia's regional parliament on citizens' attitudes towards immigration (glm)",
+          style = "ajps",
+          omit = c("age", "gender", "ideology", "education", "sit_esp", "prosp_esp", "prosp_pers", "unemployed"),
+          covariate.labels = c("Andalucía", "After Vox entry", "Andalucía:After Vox entry"),
+          dep.var.labels = "Consideration of immigration as the first problem in the country",
+          header = FALSE,
+          column.sep.width = "2pt",
+          no.space = TRUE,
+          font.size = "small",
+          keep.stat = c("rsq", "adj.rsq", "n"))
+
+```
+
+```{r echo=FALSE, results="asis"}
+
+ml7 <- glm(issue ~ andalucia*relevel(as.factor(month),
+                                     ref = 10),
+           family = binomial(link = "logit"),
+           data = barometer_data)
+
+ml8 <- glm(issue ~ age + I(age^2) + gender + ideology + factor(education) + sit_esp + prosp_esp + prosp_pers + unemployed + andalucia*relevel(as.factor(month),
+                                                                                                                                              ref = 10),
+           family = binomial(link = "logit"),
+           data = barometer_data)
+
+stargazer(ml7, ml8,
+          type = "latex",
+          title = "Estimation models for the effect of the entry of Vox in Andalucía's regional parliament on citizens' attitudes towards immigration (glm)",
+          style = "ajps",
+          omit = c("age", "gender", "ideology", "education", "sit_esp", "prosp_esp", "prosp_pers", "unemployed"),
+          covariate.labels = c("Andalucía", "January 2018", "February 2018", "March 2018", "April 2018", "May 2018", "June 2018", "July 2018", "September 2018", "October 2018", "December 2018", "January 2019", "February 2019", "March 2019", "April 2019", "May 2019", "June 2019", "July 2019", "September 2019", "October 2019", "November 2019", "December 2019", "Andalucía:January 2018", "Andalucía:February 2018", "Andalucía:March 2018", "Andalucía:April 2018", "Andalucía:May 2018", "Andalucía:June 2018", "Andalucía:July 2018", "Andalucía:September 2018", "Andalucía:October 2018", "Andalucía:November 2018", "Andalucía:December 2018", "Andalucía:January 2019", "Andalucía:February 2019", "Andalucía:March 2019", "Andalucía:April 2019", "Andalucía:May 2019", "Andalucía:June 2019", "Andalucía:July 2019", "Andalucía:September 2019", "Andalucía:October 2019", "Andalucía:November 2019", "Andalucía:December 2019"),
+          dep.var.labels = "Consideration of immigration as a problem",
+          column.sep.width = "2pt",
+          header = FALSE,
+          no.space = TRUE,
+          font.size = "small",
+          keep.stat = c("rsq", "adj.rsq", "n"))
+```
+
+\newpage
+
+## Appendix 6 - Alternative Dependent Variables: Placebo tests
+
+In order to ensure that the effect on immigration was not mirrored by other variables and attitudes of Andalusian citizens, and that this effect was not caused by a general change in Andalusian citizens' attitudes that did not affect the rest of the country (instead of by Vox's entry), three additional models were constructed with different dependent variables.
+
+Three new variables were chosen that did not necessarily belong to the prime issues of Vox's discourse, and so could have been affected by other factors. These variables are: Government approval (Model 1), the consideration of climate change as a problem in the country (Model 2), and a negative prospect of the country's economy (Model 3).
+
+```{r}
+
+# November
+
+nov2018.raw <- read_spss("Data/CISBAROMETER/Noviembre2018/3231.sav")
+
+nov2018_2 <- nov2018 %>%
+  mutate(P11 = nov2018.raw$P11,
+         P901 = nov2018.raw$P901,
+         P902 = nov2018.raw$P902,
+         P903 = nov2018.raw$P903,
+         P26 = nov2018.raw$P26) %>%
+  replace_with_na(replace = list(P11 = c(3, 8, 9),
+                                 P26 = c(8, 9))) %>%
+  mutate(conf = case_when(P11 == 4 | P11 == 5 ~ 1,
+                          P11 == 1 | P11 == 2 ~ 0),
+         clim1 = if_else(P901 == 23, 1, 0),
+         clim2 = if_else(P902 == 23, 1, 0),
+         clim3 = if_else(P903 == 23, 1, 0),
+         inde1 = if_else(P901 == 45, 1, 0),
+         inde2 = if_else(P902 == 45, 1, 0),
+         inde3 = if_else(P903 == 45, 1, 0),
+         val1 = if_else(P901 == 21, 1, 0),
+         val2 = if_else(P902 == 21, 1, 0),
+         val3 = if_else(P903 == 21, 1, 0),
+         org = case_when(P26 == 1 | P26 == 2 ~ 1,
+                         P26 == 3 | P26 == 4 | P26 == 5 ~ 0)) %>%
+  mutate(clim = unlist(nov2018.raw %>%
+                         transmute(clim = case_when(clim1 == 1 | clim2 == 1 | clim3 == 1 ~ 1,
+                                                    TRUE ~ 0))),
+         inde = unlist(nov2018.raw %>%
+                         transmute(inde = case_when(inde1 == 1 | inde2 == 1 | inde3 == 1 ~ 1,
+                                                    TRUE ~ 0))),
+         val = unlist(nov2018.raw %>%
+                        transmute(val = case_when(val1 == 1 | val2 == 1 | val3 == 1 ~ 1,
+                                                  TRUE ~ 0)))) %>%
+  select(-P26)
+
+nov2018_2$clim[is.na(nov2018$clim1 & nov2018$clim2 & nov2018$clim3) == TRUE] <- NA
+nov2018_2$inde[is.na(nov2018$inde1 & nov2018$inde2 $ nov2018$inde3) == TRUE] <- NA
+nov2018_2$val[is.na(nov2018$val1 & nov2018$val2 $ nov2018$val3) == TRUE] <- NA
+
+# December
+
+dec2018.raw <- read_spss("Data/CISBAROMETER/Diciembre2018/3234.sav")
+
+dec2018_2 <- dec2018 %>%
+  mutate(P11 = dec2018.raw$P11,
+         P901 = dec2018.raw$P901,
+         P902 = dec2018.raw$P902,
+         P903 = dec2018.raw$P903,
+         P35 = dec2018.raw$P35) %>%
+  replace_with_na(replace = list(P11 = c(3, 8, 9),
+                                 P35 = c(8, 9))) %>%
+  mutate(conf = case_when(P11 == 4 | P11 == 5 ~ 1,
+                          P11 == 1 | P11 == 2 ~ 0),
+         clim1 = if_else(P901 == 23, 1, 0),
+         clim2 = if_else(P902 == 23, 1, 0),
+         clim3 = if_else(P903 == 23, 1, 0),
+         inde1 = if_else(P901 == 45, 1, 0),
+         inde2 = if_else(P902 == 45, 1, 0),
+         inde3 = if_else(P903 == 45, 1, 0),
+         val1 = if_else(P901 == 21, 1, 0),
+         val2 = if_else(P902 == 21, 1, 0),
+         val3 = if_else(P903 == 21, 1, 0),
+         org = case_when(P35 == 1 | P35 == 2 ~ 1,
+                         P35 == 3 | P35 == 4 | P35 == 5 ~ 0)) %>%
+  mutate(clim = unlist(dec2018.raw %>%
+                         transmute(clim = case_when(clim1 == 1 | clim2 == 1 | clim3 == 1 ~ 1,
+                                                    TRUE ~ 0))),
+         inde = unlist(dec2018.raw %>%
+                         transmute(inde = case_when(inde1 == 1 | inde2 == 1 | inde3 == 1 ~ 1,
+                                                    TRUE ~ 0))),
+         val = unlist(dec2018.raw %>%
+                        transmute(val = case_when(val1 == 1 | val2 == 1 | val3 == 1 ~ 1,
+                                                  TRUE ~ 0)))) %>%
+  select(-P35)
+
+dec2018_2$clim[is.na(dec2018$clim1 & dec2018$clim2 & dec2018$clim3) == TRUE] <- NA
+dec2018_2$inde[is.na(dec2018$inde1 & dec2018$inde2 & dec2018$inde3) == TRUE] <- NA
+dec2018_2$val[is.na(dec2018$vaal1 & dec2018$val2 & dec2018$val3) == TRUE] <- NA
+
+data_alt1 <- rbind(nov2018_2,
+                   dec2018_2)
+```
+
+```{r, results = "asis", eval = TRUE}
+mc1 <- lm(conf ~ age + I(age^2) + gender + ideology + factor(education) + sit_esp + prosp_esp + prosp_pers + unemployed + andalucia*factor(post),
+          data = data_alt1)
+
+### MODELO CLIMA
+mcl1 <- lm(clim ~ age + I(age^2) + gender + ideology + factor(education) + sit_esp + prosp_esp + prosp_pers + unemployed + andalucia*factor(post),
+           data = data_alt1)
+
+
+### MODELO ECONOMICO
+mec1 <- lm(prosp_esp ~ age + I(age^2) + gender + ideology + factor(education) + sit_esp + prosp_pers + unemployed + andalucia*factor(post),
+           data = data_alt1)
+
+stargazer(mc1, mcl1, mec1,
+          type = "latex",
+          title = "Estimation models for the effect of the entry of Vox in Andalucia's regional parliament on citizens' attitudes",
+          style = "ajps",
+          omit = c("age", "gender", "ideology", "education", "sit_esp", "prosp_esp", "prosp_pers", "unemployed"),
+          covariate.labels = c("Andalucía", "After Vox entry", "Andalucía:After Vox entry"),
+          dep.var.labels = c("Government approval", "Climate change", "Economic prospects"),
+          header = FALSE,
+          column.sep.width = "2pt",
+          no.space = TRUE,
+          font.size = "small",
+          keep.stat = c("rsq", "adj.rsq", "n"))
+```
+
+As one can see from the results on Table X, none of this variables were severely altered after December 2, 2018 in Andalucía. Since none of them are strongly related to Vox's discourse or ideology, this tests take us a step further in affirming that the change in citizens' attitudes towards immigration was due to Vox's entry and not a general attitudinal shift in Andalucía. Additionally, since immigration is only one topic among Vox's repertoire, and therefore other issues might have affected citizens after their entry in parliament, several models were built, this time considering those topics as dependent variables, instead of attitudes towards immigration. The results of these tests can be found in Table X.
+
+The topics chosen as dependent variables respond to their importance and prominence among Vox's ideology and discourse. As has already been discussed during the case selection justification, Vox's discourse is centered, aside from immigration, on authoritarianism and the defense of traditional values, as well as the defense of the unity of Spain, especially after the Catalan referendum and what is commonly known as "El Procés" for Catalan independence.
+
+Hence, three new models were constructed, to assess the effect of Vox's entry on: Catalan independence (Model 1), that is, whether citizens considered Catalan independence a major problem in the country; crisis of values (Model 2) namely if citizens thought that there was a crisis of values and considered it also one of the major issues; and finally territorial organization (Model 3), that is, what citizens thought about the current autonomous communities situation -if the figure of autonomous communities should be abolished, whether they should stay the same or gain or lose some of their autonomy.
+
+```{r, results = "asis", eval = TRUE}
+
+### MODELO INDEPENDENCIA
+mi1 <- lm(inde ~ age + I(age^2) + gender + ideology + factor(education) + sit_esp + prosp_esp + prosp_pers + unemployed + andalucia*factor(post),
+          data = data_alt1)
+mi2 <- lm(inde ~ age + I(age^2) + gender + ideology + factor(education) + sit_esp + prosp_esp + prosp_pers + unemployed + andalucia*factor(post),
+          data = data_alt1)
+
+### MODELO VALORES
+mv1 <- lm(val ~ age + I(age^2) + gender + ideology + factor(education) + sit_esp + prosp_esp + prosp_pers + unemployed + andalucia*factor(post),
+          data = data_alt1)
+mv2 <- lm(val ~ age + I(age^2) + gender + ideology + factor(education) + sit_esp + prosp_esp + prosp_pers + unemployed + andalucia*factor(post),
+          data = data_alt1)
+
+##3 MODELO ORGANIZACION
+mo1 <- lm(org ~ age + I(age^2) + gender + ideology + factor(education) + sit_esp + prosp_esp + prosp_pers + unemployed + andalucia*factor(post),
+          data = data_alt1)
+mo2 <- lm(org ~ age + I(age^2) + gender + ideology + factor(education) + sit_esp + prosp_esp + prosp_pers + unemployed + andalucia*factor(post),
+          data = data_alt1)
+
+stargazer(mi1, mi2, mv1, mv2, mo1, mo2,
+          type = "latex",
+          title = "Estimation models for the effect of the entry of Vox in Andalucia's regional parliament on citizens' attitudes ((Vox’s discourse variables)",
+          style = "ajps",
+          omit = c("age", "gender", "ideology", "education", "sit_esp", "prosp_esp", "prosp_pers", "unemployed"),
+          covariate.labels = c("Andalucía", "After Vox entry", "Andalucía:After Vox entry"),
+          dep.var.labels = c("Catalan independence", "Crisis of values", "Territorial organization"),
+          header = FALSE,
+          column.sep.width = "2pt",
+          no.space = TRUE,
+          font.size = "small",
+          keep.stat = c("rsq", "adj.rsq", "n"))
+
+```
+
+As can be seen in Table X, none of these variables were affected by Vox's entry in the Andalusian parliament, and even sometimes the effect was contrary to what would be expected. The fact that attitudes towards immigration were affected by Vox's entry, and no other variables were, can mean different things: It can be that a special emphasis was made on the topic of immigration during the Andalusian campaign --for which a deep study of the topics and issues discussed and most magnified by media outlets during the campaign would be needed---, or perhaps it is because immigration --or, more specifically, anti-immigration attitudes--- are still considered taboo or unacceptable, and therefore the legitimation effect was greater, given that attitudes about the unity of the nation and traditional values are already legitimated within Spanish society.

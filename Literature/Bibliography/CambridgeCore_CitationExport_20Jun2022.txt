@@ -1,0 +1,1 @@
+@article{bullock_2011, title={Elite Influence on Public Opinion in an Informed Electorate}, volume={105}, DOI={10.1017/S0003055411000165}, number={3}, journal={American Political Science Review}, publisher={Cambridge University Press}, author={BULLOCK, JOHN G.}, year={2011}, pages={496–515}}

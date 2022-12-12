@@ -1,0 +1,15 @@
+@article{10.2307/42956406,
+ ISSN = {00384941, 15406237},
+ URL = {http://www.jstor.org/stable/42956406},
+ abstract = {Objective. Agenda-setting theory is used to motivate hypotheses about how media coverage of immigration influences public perceptions of its importance. The authors seek to offer a more complete explanation of public opinion on immigration by exploring differences in the effects of immigration news in border and nonborder states. Method. This article employs content analyses of newspaper coverage of immigration and Gallup public opinion data over a 12-month period Qanuary-December 2006). Respondents' identification of immigration as a "Most Important Problem" is modeled as a conditional relationship between border state/nonborder state residence and media coverage, ethnic context, and individual-level demographics. Results. Media attention to immigration is greater in border states than in nonborder states; as a result, residents of border states are more likely to identify immigration as a most important problem than are residents of nonborder states. Conclusions. The analyses point to the importance of geography and news coverage in explanations of public opinion on immigration.},
+ author = {Johanna Dunaway and Regina P. Branton and Marisa A. Abrajano},
+ journal = {Social Science Quarterly},
+ number = {2},
+ pages = {359--378},
+ publisher = {[University of Texas Press, Wiley]},
+ title = {Agenda Setting, Public Opinion, and the Issue of Immigration Reform},
+ urldate = {2022-06-21},
+ volume = {91},
+ year = {2010}
+}
+
