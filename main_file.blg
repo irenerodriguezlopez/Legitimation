@@ -1,20 +1,20 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'main_file.blg'
-[71] biber-darwin:340> INFO - === Mon Dec 12, 2022, 17:26:36
-[88] Biber.pm:418> INFO - Reading 'main_file.bcf'
-[207] Biber.pm:972> INFO - Found 54 citekeys in bib section 0
-[225] Biber.pm:4383> INFO - Processing section 0
-[236] Biber.pm:4574> INFO - Looking for bibtex file 'Literature/bibliography.bib' for section 0
-[242] bibtex.pm:1713> INFO - LaTeX decoding ...
-[359] bibtex.pm:1518> INFO - Found BibTeX data source 'Literature/bibliography.bib'
-[750] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[750] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[751] Biber.pm:4203> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'en-US'
-[751] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[827] bbl.pm:654> INFO - Writing 'main_file.bbl' with encoding 'UTF-8'
-[854] bbl.pm:757> INFO - Output to main_file.bbl
-[854] Biber.pm:130> WARN - Entry 'THEHUFFPOST1_2018' (Literature/bibliography.bib): Invalid format '2022-21-06' of date field 'urldate' - ignoring
-[854] Biber.pm:130> WARN - legacy month field 'December 9,' in entry 'ANDUIZA1_2018' is not an integer - this will probably not sort properly.
-[854] Biber.pm:130> WARN - legacy month field 'June 5,' in entry 'ISSEL-DOMBERT1_2020' is not an integer - this will probably not sort properly.
-[854] Biber.pm:130> WARN - legacy year field 'forthcoming' in entry 'KUSTOV1_2022' is not an integer - this will probably not sort properly.
-[854] Biber.pm:132> INFO - WARNINGS: 4
+[70] biber-darwin:340> INFO - === Mon Dec 12, 2022, 18:23:42
+[86] Biber.pm:418> INFO - Reading 'main_file.bcf'
+[191] Biber.pm:972> INFO - Found 44 citekeys in bib section 0
+[209] Biber.pm:4383> INFO - Processing section 0
+[219] Biber.pm:4574> INFO - Looking for bibtex file 'Literature/bibliography.bib' for section 0
+[224] bibtex.pm:1713> INFO - LaTeX decoding ...
+[340] bibtex.pm:1518> INFO - Found BibTeX data source 'Literature/bibliography.bib'
+[612] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[612] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[612] Biber.pm:4203> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'en-US'
+[612] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[665] bbl.pm:654> INFO - Writing 'main_file.bbl' with encoding 'UTF-8'
+[685] bbl.pm:757> INFO - Output to main_file.bbl
+[685] Biber.pm:130> WARN - Entry 'THEHUFFPOST1_2018' (Literature/bibliography.bib): Invalid format '2022-21-06' of date field 'urldate' - ignoring
+[685] Biber.pm:130> WARN - legacy month field 'December 9,' in entry 'ANDUIZA1_2018' is not an integer - this will probably not sort properly.
+[685] Biber.pm:130> WARN - legacy month field 'June 5,' in entry 'ISSEL-DOMBERT1_2020' is not an integer - this will probably not sort properly.
+[685] Biber.pm:130> WARN - legacy year field 'forthcoming' in entry 'KUSTOV1_2022' is not an integer - this will probably not sort properly.
+[685] Biber.pm:132> INFO - WARNINGS: 4
