@@ -1,8 +1,7 @@
 ---
 title: "The dangers of legitimation:"
-subtitle: "The dangers of legitimation: how the presence of an RRP in parliament can increase antiimmigration attitudes"
-author: 
-  - name: Irene Rodríguez López
+subtitle: "How the presence of an RRP in parliament can increase antiimmigration attitudes"
+author: "Irene Rodríguez"
 date: "`r Sys.Date()`"
 output: 
   bookdown::pdf_book:
@@ -1486,11 +1485,14 @@ barometer_data <- rbind(jan2018,
                         oct2019,
                         nov2019,
                         dec2019)
-barometer_data <- barometer_data |>
-  mutate(ideology = as.numeric(ideology))
+barometer_data <- barometer_data %>%
+  mutate(ideology = as.numeric(ideology),
+         prosp_esp = as.numeric(prosp_esp),
+         prosp_pers = as.numeric(prosp_pers),
+         sit_esp = as.numeric(sit_esp))
 ```
 
-```{r fig1, out.width= "90%", fig.cap = "Left panel (A): Percentage of people who report vote intention or sympathy towards Vox across time. Source: CIS Barometer data. Right panel (B): Percentage of seats Vox controls at the end of each year, by type of election (2015-2021). Source: Spanish electoral authorities.", fig.align = 'center', eval = TRUE}
+```{r fig1, out.width= "80%", fig.cap = "Left panel (A): Percentage of people who report vote intention or sympathy towards Vox across time. Source: CIS Barometer data. Right panel (B): Percentage of seats Vox controls at the end of each year, by type of election (2015-2021). Source: Spanish electoral authorities.", fig.align = 'center', eval = TRUE}
 
 knitr::include_graphics("Figures/Preliminary/Figure1.png")
 
@@ -1500,17 +1502,11 @@ As has been established, events such as elections provide a highly publicized sc
 
 The argument for having chosen a regional election and not a general one for this study, even though regional elections could be considered as second-order elections, is twofold [@REIF_SCHMITT_NORRIS1_1997]. Firstly, these were the elections in which Vox obtained its first "big win", which was also the first time an RRP ever entered the Spanish political institutions since the reinstating of the Spanish democracy [@TURNBULL-DUGARTE1_2019]. On the other hand, the win for the political right in Andalucía that year spoiled what would have been the eleventh consecutive legislature for the main left party in Spain, Partido Socialista Obrero Español (PSOE), which had since 1982 held office in that Autonomous Community. Vox's support, thus, facilitated the formation of a right-wing government by Partido Popular (PP) and Ciudadanos (C's) for the first time in that region.
 
-The following figure (Figure \@ref(fig:fig2)) contains four newspaper covers from different regions of Spain on the day after the Andalusian elections, December 3, 2018. As can be seen, the election results are mentioned in every headline.
-
-```{r fig2, eval = TRUE, fig.cap = "Newspaper covers from the day after Vox’s entry in the Andalusian parliament (December 3, 2018). Sources: Diario de Sevilla (2018), La Voz de Galicia (2018), La Vanguardia (2018) and El País (2018).", out.width = "50%", fig.align='center'}
-knitr::include_graphics("Figures/Preliminary/Figure2.png")
-```
-
-The first one, Diario de Sevilla (A), is one of the most read newspapers in Andalucía, the region in question. La Voz de Galicia (B) and La Vanguardia (C) are also regional newspapers from the autonomous communities Galicia and Catalunya. Finally, El País (D) is a national newspaper with readers from all regions of the country. This figure provides further proof of the impact of Vox's entry in Andalucía not only on Andalusian citizens and media, but on all corners of the country. However, there are some differences between these covers that indicate the importance of the fact in each region. For Andalucía, Vox's entry and the election results occupy all of El Diario de Sevilla's cover. Furthermore, Vox is the protagonist of its headline, even though they did not win the election by far. In the other three covers, Vox's appearance is relegated to a secondary role, and not even mentioned in some head-lines, or substituted by "La ultraderecha" (El País, 2018).
+Many newspapers from different regions of Spain covered the news of the elections during the whole campaign, but also the day after the elections. Many newspaper covers had articles and headlines about the Andalusian elections, which shows the importance of these elections not only in Andalucía, but also in the rest of the country. However, Vox's entry had a much bigger role in Andalusian news outlets, often being the protagonist of their main headline (as can be seen in Figure \@ref(fig:figap1) of Appendix 1).
 
 Additionally, for a descriptive preliminary analysis of the differentiated effect in Andalucía and the rest of Spain, the following line plot (Figure \@ref(fig:fig3)) shows how the entry of Vox into Andalusian institutions produced a peak of searches for the political party on Google both at the state and regional levels, followed by the peaks produced by the two general elections the following year.
 
-```{r fig3, fig.cap="Google searches of the political party Vox in Andalucía and the rest of Spain for the last three years. Note: The dashed lines signify the date of the three main elections of 2018 and 2019 where Vox gained political representation. Source: Google Trends data.", fig.align = 'center'}
+```{r fig3, fig.cap="Google searches of the political party Vox in Andalucía and the rest of Spain for the last three years. Note: The dashed lines signify the date of the three main elections of 2018 and 2019 where Vox gained political representation. Source: Google Trends data.", out.width = "70%", fig.align = 'center'}
 # VOX ESPA?A
 googlestats.esp <- read.csv("Data/googletrends/VoxEspaña.csv",
                             header = FALSE,
@@ -1714,7 +1710,7 @@ print(figure3)
 
 As can be seen, the X axis is a time measure by week, and the Y axis represents an index number from 0 to 100, 100 being the moment in which the higher ever number of searches has been registered. That means that, the week of December 2, the week of the Andalusian elections, produced the most searches of Vox both in Andalucía and Spain. But, why do we assume it impacted Andalucía's citizens more than it did Spain's? As Figure \@ref(fig:fig3) shows, on all points but the 100 mark, there is a slight gap between the lines that signify Andalusian and Spanish searches. That means that, in relative terms, the population of Andalucía made more searches on December 2, 2018 than the rest of the country compared to ordinary days. We also rely on the proximity of the effect of these elections: considering they are the Andalusian regional elections and not the general ones, it is plausible that they had a greater effect on Andalusian citizens.
 
-To make sure that this effect was not generalized and searches of all political forces did not increase in the same way, or that the effect was different in other important regions such as Madrid or Catalunya, several other plots were constructed. In Appendix 1 we can find Figures \@ref(fig:figa1) and \@ref(fig:figa2), which show that initial expectations were going in the right direction. Figure \@ref(fig:figa1) shows a greater gap between ordinary days and the days of election for the searches of Vox than for the searches of other political parties. Figure \@ref(fig:figa2) also supports the expectations, where there is again a gap between Andalucía's results and the ones from Catalunya and Madrid, similar to the plot in Figure \@ref(fig:fig3).
+To make sure that this effect was not generalized and searches of all political forces did not increase in the same way, or that the effect was different in other important regions such as Madrid or Catalonia, several other plots were constructed. In Appendix 2 we can find Figures \@ref(fig:figa1) and \@ref(fig:figa2), which show that initial expectations were going in the right direction. Figure \@ref(fig:figa1) shows a greater gap between ordinary days and the days of election for the searches of Vox than for the searches of other political parties. Figure \@ref(fig:figa2) also supports the expectations, where there is again a gap between Andalucía's results and the ones from Catalonia and Madrid, similar to the plot in Figure \@ref(fig:fig3).
 
 ## Data and method
 
@@ -1786,7 +1782,7 @@ df_f4 <- df_f4 %>%
          andalucia = if_else(andalucia == 1, "Andalucía", "Other"))
 ```
 
-```{r figure4, eval = TRUE, fig.cap = "Percentage of people that consider immigration a problem, before and after the entry of Vox in the Andalusian regional parliament, by location. Source: CIS Barometer data.", fig.align = 'center', out.width = "80%"}
+```{r figure4, eval = TRUE, fig.cap = "Percentage of people that consider immigration a problem, before and after the entry of Vox in the Andalusian regional parliament, by location. Source: CIS Barometer data.", fig.align = 'center', out.width = "60%"}
 
 ggplot(df_f4,
                   aes(month,
@@ -1816,7 +1812,7 @@ Just like Figure \@ref(fig:fig3), this plot lays the foundation for the analysis
 
 Therefore, there is a need to corroborate that the parallel trends assumption is here verified. The following plot, Figure \@ref(fig:paralleltrends), provides evidence that the means of Andalucía and the rest of Spain have varied similarly during the months prior to the treatment time, i.e. December 2, 2018.[^3]
 
-[^3]: Figure \@ref(fig:parallelall) in Appendix 3 plots the trend for all Autonomous Communities individually.
+[^3]: Figure \@ref(fig:parallelall) in Appendix 4 plots the trend for all Autonomous Communities individually.
 
 ```{r, include=FALSE}
 jan2018.par <- as.data.frame(CrossTable(jan2018$CCAA, jan2018$issue,
@@ -2073,7 +2069,7 @@ par.tr.mean <- rbind(par.tr.noand,
 
 ```
 
-```{r paralleltrends, eval = TRUE, fig.cap="Parallel trends plot for the consideration of immigration as a problem in Andalucía and the rest of Spain. Note: The grey vertical line signifies the moment after which treatment is administered. Source: CIS Barometer's data.", out.width="85%", fig.align = 'center'}
+```{r paralleltrends, eval = TRUE, fig.cap="Parallel trends plot for the consideration of immigration as a problem in Andalucía and the rest of Spain. Note: The grey vertical line signifies the moment after which treatment is administered. Source: CIS Barometer's data.", out.width="70%", fig.align = 'center'}
 
 parallel <- ggplot(data = par.tr.mean, aes(x = month, y = perc, group = region, color = region)) +
   geom_line() +
@@ -2130,8 +2126,9 @@ library(stargazer)
 
 stargazer(m1, m2, m3, m4, m5, m6,
           type = "latex",
+          intercept.bottom = FALSE,
           omit = c("age", "gender", "ideology", "education", "sit_esp", "prosp_esp", "prosp_pers", "unemployed"),
-          covariate.labels = c("Andalucía", "After Vox entry", "Andalucía:After Vox entry"),
+          covariate.labels = c("Constant", "Andalucía", "After Vox entry", "Andalucía:After Vox entry"),
           dep.var.labels = "Consideration of immigration as a problem",
           title = "Estimation models for the effect of the entry of Vox in Andalucia's regional parliament on citizens' attitudes towards immigration (Models 1-6)",
           style = "ajps",
@@ -2142,30 +2139,11 @@ stargazer(m1, m2, m3, m4, m5, m6,
           keep.stat = c("rsq", "adj.rsq", "n"))
 ```
 
-
-```{r}
-summary(m4)
-
-mm1 <- lm(issue ~ andalucia*post*as.factor(ideology) + age + I(age^2) + gender + education + sit_esp + prosp_esp + prosp_pers + unemployed,
-         data = data_sub2)
-summary(mm1)
-
-library(data.table)
-data_sub2_2 <- data_sub2 %>%
-  mutate(ideology_rec = fcase(ideology > 6, "right",
-                              ideology < 4, "left",
-                              default = "center"))
-mm2 <- lm(issue ~ andalucia*post*ideology_rec + age + I(age^2) + gender + education + sit_esp + prosp_esp + prosp_pers + unemployed,
-         data = data_sub2_2)
-
-summary(mm2)
-```
-
 As can be seen, there is indeed an increase in negative attitudes towards immigration after the entry of Vox in the Andalusian parliament in December 2018. The findings are very consistent across each of the models and provide evidence supporting the hypothesis. The entry of Vox had a significant effect in all of Spain, as it meant a political and social shock of the cultural norms among the population. The interest of this investigation, however, is to learn if this effect was larger for the Andalusian population specifically. The positive interaction coefficients indicate that, indeed, Vox's entry had a greater effect amongst Andalusian citizens. Again, this effect is always positive across all 6 Models from Table 1, but becomes significant only for Models 3, 4 and 6.
 
-The fact that for the first two models the effect is positive but unsignificant, and only becomes so after two more barometers for the previous and following months are added to the database (in Models 3 and 4), leads to believe that the operating mechanism behind these results could go in the line of what @VALENTIM1_2021 suggested as his second possible mechanism: Andalusian citizens start to perceive a normative change after Vox enters their regional parliament. This change is also visible in Figure \@ref(fig:figcoefs), which is a visual representation of the coefficients obtained in the six models of Table 1.
+The fact that for the first two models the effect is positive but non-significant, and only becomes so after two more barometers for the previous and following months are added to the database (in Models 3 and 4), leads to believe that the operating mechanism behind these results could go in the line of what @VALENTIM1_2021 suggested as his second possible mechanism: Andalusian citizens start to perceive a normative change after Vox enters their regional parliament. This change is also visible in Figure \@ref(fig:figcoefs), which is a visual representation of the coefficients obtained in the six models of Table 1.
 
-```{r figcoefs, fig.cap = "Visual representation of coefficients (Models 1-6).", out.width="85%", fig.align = 'center'}
+```{r figcoefs, fig.cap = "Visual representation of coefficients (Models 1-6).", out.width="60%", fig.align = 'center'}
 
 library(coefplot)
 
@@ -2190,9 +2168,9 @@ multiplot(m1, m2, m3, m4, m5, m6,
 
 Examining the first significant model with controls, Model 4, it can be seen that after December 2018 it was 5.6 percentage points more probable that an Andalusian citizen considered immigration one of the most important problems in the country, compared to citizens from outside of Andalucía (for an Andalusian citizen, the effect was of 8.1, while for an average Spanish citizen was 2.5). Model 6, which includes data from two whole years, 2018 and 2019 -before and after entry-, has a smaller but still significant effect, in the same direction.
 
-Finally, the results of Table 2, which for length reasons is located in Appendix 2, show coefficients for every month of 2018 and 2019 in relation to a month before Vox entered the Andalusian parliament, November 2018. After the results already discussed, this table brings us some new and more specific insights. Additionally, Figure \@ref(fig:figtime) provides a visual representation of the results in Table 2.
+Finally, the results of Table 2, which for length reasons is located in Appendix 3, show coefficients for every month of 2018 and 2019 in relation to a month before Vox entered the Andalusian parliament, November 2018. After the results already discussed, this table brings us some new and more specific insights. Additionally, Figure \@ref(fig:figtime) provides a visual representation of the results in Table 2.
 
-```{r figtime, fig.cap="Predicted values of negative attitudes towards immigration in Andalucía vs. Spain according to the findings from Models 1 and 2 (Table 2 in Appendix 2). Note: x = 10 signifies moment after which treatment is administered (November 2018).", out.width="85%", fig.align = 'center'}
+```{r figtime, fig.cap="Predicted values of negative attitudes towards immigration in Andalucía vs. Spain according to the findings from Models 1 and 2 (Table 2 in Appendix 3). Note: x = 10 signifies moment after which treatment is administered (November 2018).", out.width="70%", fig.align = 'center'}
 m8 <- lm(issue ~ andalucia*relevel(as.factor(month),
                                    ref = 10) + age + I(age^2) + gender + factor(education) + sit_esp + prosp_esp + prosp_pers + unemployed,
          data = barometer_data) 
@@ -2222,11 +2200,13 @@ Secondly, also regarding the coefficients concerning Andalucía, and visually pe
 
 Even though the results of Models 3 and 4 pointed towards the existence of a "normative change mechanism", the fact that the effect does not stick and, as can be observed in Figure \@ref(fig:figtime), there is a fluctuation after Vox's entry in December 2018, seems to indicate that perhaps there is a little more to be discussed about the underlying workings of this effect.
 
-Finally, it is worth mentioning the results in the upper section of Table 2: the ones for the rest of Spain. Contrary to those of Andalucía, there are many significant coefficients among these results; especially around the dates of the previously mentioned elections. Unfortunately, due to lack of data for some variables, the coefficients for March, April and October 2019 are missing. Nevertheless, a clear pattern is visible: after the elections of Andalucía in December 2018 --which, even though did not affect the rest of the country, did indeed mean a shock for all Spanish society--, the general and locals of April and May 2019 and the general again on November 2019, the coefficients turn positive and significant.
+It is also worth mentioning the results in the upper section of Table 2: the ones for the rest of Spain. Contrary to those of Andalucía, there are many significant coefficients among these results; especially around the dates of the previously mentioned elections. Unfortunately, due to lack of data for some variables, the coefficients for March, April and October 2019 are missing. Nevertheless, a clear pattern is visible: after the elections of Andalucía in December 2018 --which, even though did not affect the rest of the country, did indeed mean a shock for all Spanish society--, the general and locals of April and May 2019 and the general again on November 2019, the coefficients turn positive and significant.
+
+Finally, given that the literature established the possibility that influence of the transmission of a social norm could be affected by the ideological proximity to the source, a model was constructed interacting the treatment with the respondent's ideology. However, no significant results were found.
 
 On the whole, these results support the hypothesis sustaining that, after the entry of an RRP in Parliament, in this case Vox in Andalucía, there is an increase in the manifestation of negative attitudes towards immigration.
 
-These results are robust when employing alternative dependent and independent variables, as well as other estimation models, all of which can be found in the appendices (Appendix 4 through 6).
+These results are robust when employing alternative dependent and independent variables, as well as other estimation models, all of which can be found in the appendices (Appendix 5 through 7).
 
 # Concluding remarks
 
@@ -2259,13 +2239,19 @@ Whether the extent of Vox's influence went as far as to persuade citizens is cer
 
 # Appendices
 
-## Appendix 1 - Google searches
+## Appendix 1 - Media report on Vox's entry in Parliament
 
-```{r figa1, fig.cap="Google searches of the main Spanish political parties in Andalucía during the last 3 years. Note: the dotted lines signify the date of the three main elections of 2018 and 2019 where Vox gained political representation. Source: Google Trends data.", out.width = "80%", fig.align = 'center'}
+```{r figap1, eval = TRUE, fig.cap = "Newspaper covers from the day after Vox’s entry in the Andalusian parliament (December 3, 2018). Sources: Diario de Sevilla (2018), La Voz de Galicia (2018), La Vanguardia (2018) and El País (2018).", out.width = "50%", fig.align='center'}
+knitr::include_graphics("Figures/Preliminary/Figure2.png")
+```
+
+## Appendix 2 - Google searches
+
+```{r figa1, fig.cap="Google searches of the main Spanish political parties in Andalucía during the last 3 years. Note: the dotted lines signify the date of the three main elections of 2018 and 2019 where Vox gained political representation. Source: Google Trends data.", out.width = "60%", fig.align = 'center'}
 print(figurea1)
 ```
 
-```{r figa2, fig.cap="Google searches of the political party Vox in Andalucía, Catalunya and Madrid during the last 3 years. Note: the dotted lines signify the date of the three main elections of 2018 and 2019 where Vox gained political representation. Source: Google Trends data.", out.width= "80%", fig.align = 'center'}
+```{r figa2, fig.cap="Google searches of the political party Vox in Andalucía, Catalonia and Madrid during the last 3 years. Note: the dotted lines signify the date of the three main elections of 2018 and 2019 where Vox gained political representation. Source: Google Trends data.", out.width= "60%", fig.align = 'center'}
 
 print(figurea2)
 
@@ -2273,11 +2259,9 @@ print(figurea2)
 
 \newpage
 
-## Appendix 2 - Models 7 and 8: results through time
+## Appendix 3 - Models 7 and 8: results through time
 
 ```{r, results = "asis", eval = TRUE}
-
-# PUT THIS IN APPENDICES
 
 m7 <- lm(issue ~ andalucia*relevel(as.factor(month),
                                    ref = 10),
@@ -2285,21 +2269,29 @@ m7 <- lm(issue ~ andalucia*relevel(as.factor(month),
 
 stargazer(m7, m8,
           type = "latex",
+          intercept.top = TRUE,
+          intercept.bottom = FALSE,
           title = "Estimation models for the effect of the entry of Vox in Andalucía's regional parliament on citizens' attitudes towards immigration",
           style = "ajps",
-          omit = c("age", "gender", "ideology", "education", "sit_esp", "prosp_esp", "prosp_pers", "unemployed"),
-          covariate.labels = c("Andalucía", "January 2018", "February 2018", "March 2018", "April 2018", "May 2018", "June 2018", "July 2018", "September 2018", "October 2018", "December 2018", "January 2019", "February 2019", "March 2019", "April 2019", "May 2019", "June 2019", "July 2019", "September 2019", "October 2019", "November 2019", "December 2019", "Andalucía:January 2018", "Andalucía:February 2018", "Andalucía:March 2018", "Andalucía:April 2018", "Andalucía:May 2018", "Andalucía:June 2018", "Andalucía:July 2018", "Andalucía:September 2018", "Andalucía:October 2018", "Andalucía:November 2018", "Andalucía:December 2018", "Andalucía:January 2019", "Andalucía:February 2019", "Andalucía:March 2019", "Andalucía:April 2019", "Andalucía:May 2019", "Andalucía:June 2019", "Andalucía:July 2019", "Andalucía:September 2019", "Andalucía:October 2019", "Andalucía:November 2019", "Andalucía:December 2019"),
+          keep = c(1, 32:53),
+          covariate.labels = c("Constant", "Andalucía:January 2018", "Andalucía:February 2018", "Andalucía:March 2018", "Andalucía:April 2018",
+                               "Andalucía:May 2018", "Andalucía:June 2018", "Andalucía:July 2018", "Andalucía:September 2018",
+                               "Andalucía:October 2018", "Andalucía:December 2018", "Andalucía:January 2019",
+                               "Andalucía:February 2019", "Andalucía:March 2019", "Andalucía:April 2019", "Andalucía:May 2019",
+                               "Andalucía:June 2019", "Andalucía:July 2019", "Andalucía:September 2019", "Andalucía:October 2019",
+                               "Andalucía:November 2019", "Andalucía:December 2019"),
           dep.var.labels = "Consideration of immigration as a problem",
           column.sep.width = "2pt",
           header = FALSE,
           no.space = TRUE,
           font.size = "small",
           keep.stat = c("rsq", "adj.rsq", "n"))
+
 ```
 
 \newpage
 
-## Appendix 3 - Parallel trends assumption
+## Appendix 4 - Parallel trends assumption
 
 ```{r parallelall, fig.cap = "Parallel trends plot for the consideration of immigration as a problem in every region of Spain. Note: The black vertical line signifies the moment after which treatment is administered. Source: CIS Barom-eter data. Source: CIS Barometer data.", out.width = "80%", fig.align = 'center'}
 
@@ -2349,11 +2341,11 @@ print(parallel.total)
 
 \newpage
 
-## Appendix 4 - Alternative operationalization of the Dependent Variable
+## Appendix 5 - Alternative operationalization of the Dependent Variable
 
 As anticipated, an additional analysis was performed using an alternative operationalization of the outcome variable to check the robustness of the results. Instead of considering all three answers as the first, second or third most important issues in the country, this complementary analysis considers solely the first of these answers: the consideration of immigration as the most important issue or problem in the country.
 
-The results of this analysis can be viewed in Tables X and X. As can be observed, all coefficients remain positive, even if not always significant. This outcome is interesting and **brings us** to briefly discuss the possible reasons for it.
+The results of this analysis can be viewed in Tables 3 and 4. As can be observed, all coefficients remain positive, even if not always significant. This outcome is interesting and **brings us** to briefly discuss the possible reasons for it.
 
 It is possible that, having to choose only one main problem in the country, respondents resort to other problems or issues that perhaps have a more immediate effect on their lives, such as healthcare, crime or inflation, and not so much immigration. It can also be that certain inhibitions are still at work, which make it that listing immigration as the most important problem in the country still be perceived as or considered taboo or inadmissible. Whatever the reason, it seems that having only one blank to fill with an important problem, instead of three, limits the expected effect.
 
@@ -2378,10 +2370,11 @@ m1.6 <- lm(issue1 ~ age + I(age^2) + gender + ideology + factor(education) + sit
 
 stargazer(m1.1, m1.2, m1.3, m1.4, m1.5, m1.6,
           type = "latex",
+          intercept.bottom = FALSE,
           title = "Estimation models for the effect of the entry of Vox in Andalucia's regional parliament on citizens' attitudes towards immigration",
           style = "ajps",
           omit = c("age", "gender", "ideology", "education", "sit_esp", "prosp_esp", "prosp_pers", "unemployed"),
-          covariate.labels = c("Andalucía", "After Vox entry", "Andalucía:After Vox entry"),
+          covariate.labels = c("Constant", "Andalucía", "After Vox entry", "Andalucía:After Vox entry"),
           dep.var.labels = "Consideration of immigration as the first problem in the country",
           header = FALSE,
           column.sep.width = "2pt",
@@ -2401,23 +2394,26 @@ m1.8 <- lm(issue1 ~ andalucia*relevel(as.factor(month),
 
 stargazer(m1.7, m1.8,
           type = "latex",
+          intercept.top = TRUE,
+          intercept.bottom = FALSE,
           title = "Estimation models for the effect of the entry of Vox in Andalucía's regional parliament on citizens' attitudes towards immigration",
           style = "ajps",
-          omit = c("age", "gender", "ideology", "education", "sit_esp", "prosp_esp", "prosp_pers", "unemployed"),
-          covariate.labels = c("Andalucía", "January 2018", "February 2018", "March 2018", "April 2018", "May 2018", "June 2018", "July 2018", "September 2018", "October 2018", "December 2018", "January 2019", "February 2019", "March 2019", "April 2019", "May 2019", "June 2019", "July 2019", "September 2019", "October 2019", "November 2019", "December 2019", "Andalucía:January 2018", "Andalucía:February 2018", "Andalucía:March 2018", "Andalucía:April 2018", "Andalucía:May 2018", "Andalucía:June 2018", "Andalucía:July 2018", "Andalucía:September 2018", "Andalucía:October 2018", "Andalucía:November 2018", "Andalucía:December 2018", "Andalucía:January 2019", "Andalucía:February 2019", "Andalucía:March 2019", "Andalucía:April 2019", "Andalucía:May 2019", "Andalucía:June 2019", "Andalucía:July 2019", "Andalucía:September 2019", "Andalucía:October 2019", "Andalucía:November 2019", "Andalucía:December 2019"),
+          keep = c(1, 34:55),
+          covariate.labels = c("Constant", "Andalucía:January 2018", "Andalucía:February 2018", "Andalucía:March 2018", "Andalucía:April 2018", "Andalucía:May 2018", "Andalucía:June 2018", "Andalucía:July 2018", "Andalucía:September 2018", "Andalucía:October 2018", "Andalucía:December 2018", "Andalucía:January 2019", "Andalucía:February 2019", "Andalucía:March 2019", "Andalucía:April 2019", "Andalucía:May 2019", "Andalucía:June 2019", "Andalucía:July 2019", "Andalucía:September 2019", "Andalucía:October 2019", "Andalucía:November 2019", "Andalucía:December 2019"),
           dep.var.labels = "Consideration of immigration as a problem",
           column.sep.width = "2pt",
           header = FALSE,
           no.space = TRUE,
           font.size = "small",
-          keep.stat = c("rsq", "adj.rsq", "n"))
+          keep.stat = c("rsq", "adj.rsq", "n"),
+          notes = "Note: November 2018 as reference")
 ```
 
 \newpage
 
-## Appendix 5 - Alternative method: logistic regression
+## Appendix 6 - Alternative method: logistic regression
 
-Another set of models was constructed, this time switching the method to logistic regression with generalized linear models instead of using linear probability models. Since the dependent variable is dichotomous, a logit model might be fit to estimate coefficients that imply probabilities that fall inside of the unit interval, in this case between 0 and 1. As one can see from tables X through X, the coefficients of interest remain in the same direction as the linear probability models.
+Another set of models was constructed, this time switching the method to logistic regression with generalized linear models instead of using linear probability models. Since the dependent variable is dichotomous, a logit model might be fit to estimate coefficients that imply probabilities that fall inside of the unit interval, in this case between 0 and 1. As one can see from tables 5 and 6, the coefficients of interest remain in the same direction as the linear probability models.
 
 ```{r echo=FALSE, results="asis"}
 ### sin controles
@@ -2456,8 +2452,10 @@ ml6 <- glm(issue ~ age + I(age^2) + gender + ideology + factor(education) + sit_
 stargazer(ml1, ml2, ml3, ml4, ml5, ml6,
           title = "Estimation models for the effect of the entry of Vox in Andalucia's regional parliament on citizens' attitudes towards immigration (glm)",
           style = "ajps",
+          type = "latex",
+          intercept.bottom = FALSE,
           omit = c("age", "gender", "ideology", "education", "sit_esp", "prosp_esp", "prosp_pers", "unemployed"),
-          covariate.labels = c("Andalucía", "After Vox entry", "Andalucía:After Vox entry"),
+          covariate.labels = c("Constant", "Andalucía", "After Vox entry", "Andalucía:After Vox entry"),
           dep.var.labels = "Consideration of immigration as the first problem in the country",
           header = FALSE,
           column.sep.width = "2pt",
@@ -2481,23 +2479,26 @@ ml8 <- glm(issue ~ age + I(age^2) + gender + ideology + factor(education) + sit_
 
 stargazer(ml7, ml8,
           type = "latex",
+          intercept.bottom = FALSE,
+          intercept.top = TRUE,
           title = "Estimation models for the effect of the entry of Vox in Andalucía's regional parliament on citizens' attitudes towards immigration (glm)",
           style = "ajps",
-          omit = c("age", "gender", "ideology", "education", "sit_esp", "prosp_esp", "prosp_pers", "unemployed"),
-          covariate.labels = c("Andalucía", "January 2018", "February 2018", "March 2018", "April 2018", "May 2018", "June 2018", "July 2018", "September 2018", "October 2018", "December 2018", "January 2019", "February 2019", "March 2019", "April 2019", "May 2019", "June 2019", "July 2019", "September 2019", "October 2019", "November 2019", "December 2019", "Andalucía:January 2018", "Andalucía:February 2018", "Andalucía:March 2018", "Andalucía:April 2018", "Andalucía:May 2018", "Andalucía:June 2018", "Andalucía:July 2018", "Andalucía:September 2018", "Andalucía:October 2018", "Andalucía:November 2018", "Andalucía:December 2018", "Andalucía:January 2019", "Andalucía:February 2019", "Andalucía:March 2019", "Andalucía:April 2019", "Andalucía:May 2019", "Andalucía:June 2019", "Andalucía:July 2019", "Andalucía:September 2019", "Andalucía:October 2019", "Andalucía:November 2019", "Andalucía:December 2019"),
+          keep = c(1, 34:54),
           dep.var.labels = "Consideration of immigration as a problem",
+          covariate.labels = c("Constant", "Andalucía:January 2018", "Andalucía:February 2018", "Andalucía:March 2018", "Andalucía:April 2018", "Andalucía:May 2018", "Andalucía:June 2018", "Andalucía:July 2018", "Andalucía:September 2018", "Andalucía:October 2018", "Andalucía:December 2018", "Andalucía:January 2019", "Andalucía:February 2019", "Andalucía:March 2019", "Andalucía:April 2019", "Andalucía:May 2019", "Andalucía:June 2019", "Andalucía:July 2019", "Andalucía:September 2019", "Andalucía:October 2019", "Andalucía:November 2019", "Andalucía:December 2019"),
           column.sep.width = "2pt",
           header = FALSE,
           no.space = TRUE,
           font.size = "small",
-          keep.stat = c("rsq", "adj.rsq", "n"))
+          keep.stat = c("rsq", "adj.rsq", "n"),
+          notes = "Note: November 2018 as reference")
 ```
 
 \newpage
 
-## Appendix 6 - Alternative Dependent Variables: placebo tests
+## Appendix 7 - Alternative Dependent Variables: placebo tests
 
-In order to ensure that the effect on immigration was not mirrored by other variables and attitudes of Andalusian citizens, and that this effect was not caused by a general change in Andalusian citizens' attitudes that did not affect the rest of the country (instead of by Vox's entry), three additional models were constructed with different dependent variables.
+In order to ensure that the effect on immigration was not mirrored by other variables and attitudes of Andalusian citizens, and that this effect was not caused by a general change in Andalusian citizens' attitudes that did not affect the rest of the country (instead of by Vox's entry), three additional models were constructed with different dependent variables (Table 7).
 
 Three new variables were chosen that did not necessarily belong to the prime issues of Vox's discourse, and so could have been affected by other factors. These variables are: government approval (Model 1), the consideration of climate change as a problem in the country (Model 2), and a negative prospect of the country's economy (Model 3).
 
@@ -2602,10 +2603,11 @@ mec1 <- lm(prosp_esp ~ age + I(age^2) + gender + ideology + factor(education) + 
 
 stargazer(mc1, mcl1, mec1,
           type = "latex",
+          intercept.bottom = FALSE,
           title = "Estimation models for the effect of the entry of Vox in Andalucia's regional parliament on citizens' attitudes",
           style = "ajps",
           omit = c("age", "gender", "ideology", "education", "sit_esp", "prosp_esp", "prosp_pers", "unemployed"),
-          covariate.labels = c("Andalucía", "After Vox entry", "Andalucía:After Vox entry"),
+          covariate.labels = c("Constant", "Andalucía", "After Vox entry", "Andalucía:After Vox entry"),
           dep.var.labels = c("Government approval", "Climate change", "Economic prospects"),
           header = FALSE,
           column.sep.width = "2pt",
@@ -2614,7 +2616,9 @@ stargazer(mc1, mcl1, mec1,
           keep.stat = c("rsq", "adj.rsq", "n"))
 ```
 
-As one can see from the results on Table X, none of this variables were severely altered after December 2, 2018 in Andalucía. Since none of them are strongly related to Vox's discourse or ideology, this tests take us a step further in affirming that the change in citizens' attitudes towards immigration was due to Vox's entry and not a general attitudinal shift in Andalucía. Additionally, since immigration is only one topic among Vox's repertoire, and therefore other issues might have affected citizens after their entry in parliament, several models were built, this time considering those topics as dependent variables, instead of attitudes towards immigration. The results of these tests can be found in Table X.
+As one can see from the results on Table 7, none of this variables were severely altered after December 2, 2018 in Andalucía. Since none of them are strongly related to Vox's discourse or ideology, this tests take us a step further in affirming that the change in citizens' attitudes towards immigration was due to Vox's entry and not a general attitudinal shift in Andalucía.
+
+Additionally, since immigration is only one topic among Vox's repertoire, and therefore other issues might have affected citizens after their entry in parliament, several models were built, this time considering those topics as dependent variables, instead of attitudes towards immigration. The results of these tests can be found in Table 8.
 
 The topics chosen as dependent variables respond to their importance and prominence among Vox's ideology and discourse. As has already been discussed during the case selection justification, Vox's discourse is centered, aside from immigration, on authoritarianism and the defense of traditional values, as well as the defense of the unity of Spain, especially after the Catalan referendum and what is commonly known as "El Procés" for Catalan independence.
 
@@ -2642,10 +2646,11 @@ mo2 <- lm(org ~ age + I(age^2) + gender + ideology + factor(education) + sit_esp
 
 stargazer(mi1, mi2, mv1, mv2, mo1, mo2,
           type = "latex",
+          intercept.bottom = FALSE,
           title = "Estimation models for the effect of the entry of Vox in Andalucia's regional parliament on citizens' attitudes ((Vox’s discourse variables)",
           style = "ajps",
           omit = c("age", "gender", "ideology", "education", "sit_esp", "prosp_esp", "prosp_pers", "unemployed"),
-          covariate.labels = c("Andalucía", "After Vox entry", "Andalucía:After Vox entry"),
+          covariate.labels = c("Constant", "Andalucía", "After Vox entry", "Andalucía:After Vox entry"),
           dep.var.labels = c("Catalan independence", "Crisis of values", "Territorial organization"),
           header = FALSE,
           column.sep.width = "2pt",
@@ -2655,4 +2660,4 @@ stargazer(mi1, mi2, mv1, mv2, mo1, mo2,
 
 ```
 
-As can be seen in Table X, none of these variables were affected by Vox's entry in the Andalusian parliament, and even sometimes the effect was contrary to what would be expected. The fact that attitudes towards immigration were affected by Vox's entry, and no other variables were, can mean different things: it can be that a special emphasis was made on the topic of immigration during the Andalusian campaign --for which a deep study of the topics and issues discussed and most magnified by media outlets during the campaign would be needed---, or perhaps it is because immigration --or, more specifically, anti-immigration attitudes--- are still considered taboo or unacceptable, and therefore the legitimation effect was greater, given that attitudes about the unity of the nation and traditional values are already legitimated within Spanish society.
+As can be seen in Table 8, none of these variables were affected by Vox's entry in the Andalusian parliament, and even sometimes the effect was contrary to what would be expected. The fact that attitudes towards immigration were affected by Vox's entry, and no other variables were, can mean different things: it can be that a special emphasis was made on the topic of immigration during the Andalusian campaign --for which a deep study of the topics and issues discussed and most magnified by media outlets during the campaign would be needed---, or perhaps it is because immigration --or, more specifically, anti-immigration attitudes--- are still considered taboo or unacceptable, and therefore the legitimation effect was greater, given that attitudes about the unity of the nation and traditional values are already legitimated within Spanish society.
