@@ -3,7 +3,7 @@
     "path": "~/Library/CloudStorage/GoogleDrive-irewrl@gmail.com/Mi unidad/UNIVERSITAT/WORK/GITHUB/Crises-and-extremism/main_file.Rmd",
     "project_path": "main_file.Rmd",
     "type": "r_markdown",
-    "hash": "0",
+    "hash": "1713220736",
     "contents": "",
     "dirty": false,
     "created": 1670862296191.0,
@@ -12,16 +12,16 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "1537,0",
-        "scrollLine": "1531",
+        "cursorPosition": "13,1184",
+        "scrollLine": "12",
         "last_setup_crc32": "EBF2C3B09ee12493"
     },
-    "folds": "143|22|1492|0|\n1753|31|1782|0|\n1816|21|2069|0|\n2071|310|2094|0|\n2100|46|2139|0|\n",
-    "lastKnownWriteTime": 1670929692,
+    "folds": "144|22|1493|0|\n1754|31|1783|0|\n1817|21|2070|0|\n2072|310|2095|0|\n2101|46|2140|0|\n",
+    "lastKnownWriteTime": 1670937469,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1670929692855,
+    "last_content_update": 1670937469703,
     "read_only": false,
     "read_only_alternatives": []
 }

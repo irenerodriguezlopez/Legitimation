@@ -1,8 +1,7 @@
 ---
-title: "The dangers of legitimation:"
-subtitle: "How the presence of an RRP in parliament can increase antiimmigration attitudes"
-author: "Irene Rodríguez"
-date: "`r Sys.Date()`"
+title: ""
+author: ""
+date: ""
 output: 
   bookdown::pdf_book:
     citation_package: biblatex
@@ -10,8 +9,6 @@ output:
     toc: false
     number_sections: false
     latex_engine: lualatex
-abstract: |
-  Are citizens hiding their true preferences? The entry of nativist and nationalist radical right parties can help normalize certain attitudes considered taboo among the population. This paper argues that the presence of an RPP in parliament has a legitimation effect that allows citizens to declare their antiimmigration attitudes, previously hidden. I test this argument using a difference-in-differences (DiD) methodology, examining whether the population expresses more negative attitudes towards immigration after the entry of Vox, a Spanish RRP, in the Andalusian Regional Parliament in 2018. Results show a strong positive relationship between Vox’s entry in parliament and people’s proclivity of expressing negative attitudes towards immigrants of the Andalusian population immediately after the election, compared to citizens from other regions of Spain. However, this effect does not hold in the long term. This article has important implications for our understanding of attitude normalization and RRP effects on society. \par \textbf{Keywords:} Attitudes towards immigration, legitimation, persuasion, radical right parties, social norms, Vox. \par \textbf{Wordcount:} 8462. \newpage
 header-includes:
   - \usepackage{titling}
   - \usepackage{setspace}
@@ -48,6 +45,14 @@ library(gmodels) #crosstables
 
 
 \newpage
+
+## Abstract
+
+Are citizens hiding their true preferences? The entry of nativist and nationalist radical right parties can help normalize certain attitudes considered taboo among the population. This paper argues that the presence of an RPP in parliament has a legitimation effect that allows citizens to declare their antiimmigration attitudes, previously hidden. I test this argument using a difference-in-differences (DiD) methodology, examining whether the population expresses more negative attitudes towards immigration after the entry of Vox, a Spanish RRP, in the Andalusian Regional Parliament in 2018. Results show a strong positive relationship between Vox’s entry in parliament and people’s proclivity of expressing negative attitudes towards immigrants of the Andalusian population immediately after the election, compared to citizens from other regions of Spain. However, this effect does not hold in the long term. This article has important implications for our understanding of attitude normalization and RRP effects on society.
+  
+**Keywords:** Attitudes towards immigration, legitimation, persuasion, radical right parties, social norms, Vox.
+
+**Wordcount:** 8462.
 
 # Introduction
 
@@ -2144,7 +2149,7 @@ As can be seen, there is indeed an increase in negative attitudes towards immigr
 
 The fact that for the first two models the effect is positive but non-significant, and only becomes so after two more barometers for the previous and following months are added to the database (in Models 3 and 4), leads to believe that the operating mechanism behind these results could go in the line of what @VALENTIM1_2021 suggested as his second possible mechanism: Andalusian citizens start to perceive a normative change after Vox enters their regional parliament. This change is also visible in Figure \@ref(fig:figcoefs), which is a visual representation of the coefficients obtained in the six models of Table 1.
 
-```{r figcoefs, fig.cap = "Visual representation of coefficients (Models 1-6).", out.width="60%", fig.align = 'center'}
+```{r figcoefs, fig.cap = "Visual representation of coefficients (Models 1-6).", out.width="70%", fig.align = 'center'}
 
 library(coefplot)
 
@@ -2171,7 +2176,9 @@ Examining the first significant model with controls, Model 4, it can be seen tha
 
 Finally, the results of Table 2, which for length reasons is located in Appendix 3, show coefficients for every month of 2018 and 2019 in relation to a month before Vox entered the Andalusian parliament, November 2018. After the results already discussed, this table brings us some new and more specific insights. Additionally, Figure \@ref(fig:figtime) provides a visual representation of the results in Table 2.
 
-```{r figtime, fig.cap="Predicted values of negative attitudes towards immigration in Andalucía vs. Spain according to the findings from Models 1 and 2 (Table 2 in Appendix 3). Note: x = 10 signifies moment after which treatment is administered (November 2018).", out.width="70%", fig.align = 'center'}
+First of all, focusing on the results of the multiple interaction terms, which can be found at the bottom of the table, the detail that stands up the most is that only one of the coefficients is statistically significant: the one from January 2019, just two months after the entry of Vox in the Andalusian parliament. This finding is especially relevant for this study, insomuch as it helps confirm the hypothesis one step further than the findings recently shown. As discussed, these last two models are made up of 22 months of data, period in which three major elections occurred in Andalucía, and two in the rest of Spain (Andalucía's regional elections in December 2018, and two general elections on April 2019 and November 2019); as well as local and European elections in all of the country in May. The fact that the effect of the entry of Vox is only significant in Andalucía after the Andalusian elections does not mean that other elections did not have an effect on Andalusian citizens, rather, it means that it was not statistically higher than the effect it had on the rest of the Spanish Autonomous Communities.
+
+```{r figtime, fig.cap="Predicted values of negative attitudes towards immigration in Andalucía vs. Spain according to Models 1 and 2 (Table 2 in App.3). Note: x = 10 signifies moment after which treatment is administered (November 2018).", out.width="70%", fig.align = 'center'}
 m8 <- lm(issue ~ andalucia*relevel(as.factor(month),
                                    ref = 10) + age + I(age^2) + gender + factor(education) + sit_esp + prosp_esp + prosp_pers + unemployed,
          data = barometer_data) 
@@ -2190,12 +2197,11 @@ plot(ggpredict(m8,
         legend.text = element_text(size = 8),
         legend.title = element_text(size = 8),
         plot.title = element_text(size = 12)) +
-  scale_fill_discrete(labels = c("Rest of Spain", "Andalucía"))
+  scale_color_discrete(labels = c("Rest of Spain", "Andalucía"))
 
   
 ```
 
-First of all, focusing on the results of the multiple interaction terms, which can be found at the bottom of the table, the detail that stands up the most is that only one of the coefficients is statistically significant: the one from January 2019, just two months after the entry of Vox in the Andalusian parliament. This finding is especially relevant for this study, insomuch as it helps confirm the hypothesis one step further than the findings recently shown. As discussed, these last two models are made up of 22 months of data, period in which three major elections occurred in Andalucía, and two in the rest of Spain (Andalucía's regional elections in December 2018, and two general elections on April 2019 and November 2019); as well as local and European elections in all of the country in May. The fact that the effect of the entry of Vox is only significant in Andalucía after the Andalusian elections does not mean that other elections did not have an effect on Andalusian citizens, rather, it means that it was not statistically higher than the effect it had on the rest of the Spanish Autonomous Communities.
 
 Secondly, also regarding the coefficients concerning Andalucía, and visually perceivable in Figure \@ref(fig:figtime), it can be seen how the effect of Vox's entry fades as time passes. After time x = 0, that is, November 2018, Andalucía's predicted values increase considerably, but quickly return to levels near the rest of the country. This, however, is not an unprecedented finding. As @FLORES2_2018 states in his 2018 paper on the effect of elite discourse on public attitudes towards immigrants, 'If targeting minorities and immigrants is somewhat controversial for some, hearing a political figure openly chastising them may enable some individuals to express their true opinions. However, after a while, this "social permission" may wear off and there would be a return to the status quo, in which such views may still be somewhat controversial' (p. 1678).
 

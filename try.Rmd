@@ -1,0 +1,58 @@
+---
+title: ""
+author: "Irene Rodríguez"
+date: "`r Sys.Date()`"
+output: 
+  bookdown::pdf_book:
+    citation_package: biblatex
+    use-biblatex: true
+    toc: false
+    number_sections: false
+    latex_engine: lualatex
+header-includes:
+  - \usepackage{titling}
+  - \usepackage{setspace}
+  - \doublespacing
+  - \usepackage[nottoc, numbib]{tocbibind}
+  - \usepackage{wrapfig}
+  - \usepackage{float}
+  - \floatplacement{figure}{H}
+  - \usepackage{booktabs}
+  - \usepackage{longtable}
+  - \usepackage{array}
+  - \usepackage{multirow}
+bibliography: ["Literature/bibliography.bib"]
+link-citations: true
+biblio-style: apa
+colorlinks: citecolor
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, error = FALSE, fig.pos = 'H')
+```
+
+```{r library}
+library(expss) #import SPSS data sets
+library(naniar) #turn into NA
+library(tidyverse)
+library(zoo) #manage Dates
+library(sjlabelled) #label values in variables
+library(stargazer) #build regression tables
+library(ggeffects) #build plots of predicted values
+library(ggthemes) #change plot themes (not default ggplot themes)
+library(gmodels) #crosstables
+```
+
+
+\begin{titlepage}
+\begin{center}
+\vspace*{2\baselineskip}
+\LARGE{\textbf{The dangers of legitimation:} \\How the presence of RRPs in Parliament can increase anti-immigration attitudes}\\
+\vspace*{1\baselineskip}
+\small{By}\\
+\Large{\textbf{Irene Rodríguez, PhD Candidate}}\footnote{\textbf{Affiliation:} Universitat Pompeu Fabra}\footnote{\textbf{Contact:} \href{mailto:irene.rodriguez@upf.edu}{irene.rodriguez@upf.edu}}
+\end{center}
+\vspace*{5\baselineskip}
+The author has no conflicts of interest to dislose, nor has she received funding for the elaboration of this article.\\
+Raw data for this article can be found at \href{https://www.cis.es/cis/opencm/ES/11_barometros/index.jsp}{Centro de Investigaciones Sociológicas}, and processed data for the analysis can be found on \href{https://github.com/irenerodriguezlopez/Legitimation.git}{GitHub}.
+\end{titlepage}
